@@ -3,10 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+// 메모장
+
 public class EnemyCtrl : MonoBehaviour
 {
-    public float move_Speed = 3.0f; // 이동 속도 
-    public float rotation_Speed = 120.0f; // 회전 속도 
+    // 체력
+    public float Enemy_HP;
+   
+    // 이동속도
+    public float Enemy_move_Speed;
+    
+    // 회전 속도 
+    public float Enemy_rotation_Speed; 
+    
+    //능력 #미완성#
+    public string Enemy_Spell;
     
     private Transform target;
     private NavMeshAgent agent;
@@ -16,8 +27,8 @@ public class EnemyCtrl : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         target = GameObject.Find("TARGET").transform;
 
-        agent.speed = move_Speed;
-        agent.angularSpeed = rotation_Speed;
+        agent.speed = Enemy_move_Speed;
+        agent.angularSpeed = Enemy_rotation_Speed;
         
         agent.SetDestination(target.position);
     }
