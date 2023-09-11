@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -948392507298007270}
   - component: {fileID: -3978663403448778022}
   m_Layer: 0
-  m_Name: Skeleton
+  m_Name: Kobold
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9fc05b3dfa67e456f8af868e3dd83a0d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -142,6 +142,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Enemy_HP: 80
-  Enemy_move_Speed: 2
+  Enemy_move_Speed: 3
   Enemy_rotation_Speed: 120
-  Enemy_Spell: 
+  Enemy_Spell: Hide

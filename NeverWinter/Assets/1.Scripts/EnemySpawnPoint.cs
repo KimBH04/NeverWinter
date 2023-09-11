@@ -4,20 +4,31 @@ using UnityEngine;
 
 public class EnemySpawnPoint : MonoBehaviour
 {
-    public GameObject[] enemy;
+    public List<GameObject> enemyWave = new List<GameObject>();
     public Transform spawnPoint;
+
+    
+    
+
+    private bool hasSpawnedWave = false;
 
     IEnumerator Start()
     {
-        while (true)
+        if (enemyWave.Count > 0 && !hasSpawnedWave)
         {
-            int randomIndex = Random.Range(0, enemy.Length);
-            GameObject selectEnemy = enemy[randomIndex];
-            
-            
-            Instantiate(selectEnemy, spawnPoint.position, Quaternion.Euler(Vector3.forward));
-
-            yield return new WaitForSeconds(3);
+            foreach (GameObject enemy in enemyWave)
+            {
+                SpawnEnemy(enemy);
+                yield return new WaitForSeconds(1);
+            }
+            hasSpawnedWave = true;
         }
+
+        yield return null;
+    }
+
+    void SpawnEnemy(GameObject enemyPrefab)
+    {
+        Instantiate(enemyPrefab, spawnPoint.position, Quaternion.identity);
     }
 }

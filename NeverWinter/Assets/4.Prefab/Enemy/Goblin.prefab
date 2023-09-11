@@ -141,5 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b04a3cc236dd8d54da618a0f68f440d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  move_Speed: 10
-  rotation_Speed: 80
+  Enemy_HP: 100
+  Enemy_move_Speed: 5
+  Enemy_rotation_Speed: 120
+  Enemy_Spell: 
