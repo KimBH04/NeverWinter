@@ -486,17 +486,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d3ef1293945e084498e084c499f07f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyWave:
+  enemyWave1:
+  - {fileID: 8715451510042568939, guid: eefcc6fad1196445098c42a27d8a5015, type: 3}
+  enemyWave2:
+  - {fileID: 8715451510042568939, guid: eefcc6fad1196445098c42a27d8a5015, type: 3}
+  - {fileID: 8715451510042568939, guid: eefcc6fad1196445098c42a27d8a5015, type: 3}
+  enemyWave3:
+  - {fileID: 8715451510042568939, guid: eefcc6fad1196445098c42a27d8a5015, type: 3}
+  - {fileID: 8715451510042568939, guid: eefcc6fad1196445098c42a27d8a5015, type: 3}
+  - {fileID: 8715451510042568939, guid: eefcc6fad1196445098c42a27d8a5015, type: 3}
+  enemyWave4:
   - {fileID: 8715451510042568939, guid: eefcc6fad1196445098c42a27d8a5015, type: 3}
   - {fileID: 8715451510042568939, guid: eefcc6fad1196445098c42a27d8a5015, type: 3}
   - {fileID: 8715451510042568939, guid: eefcc6fad1196445098c42a27d8a5015, type: 3}
   - {fileID: 8715451510042568939, guid: eefcc6fad1196445098c42a27d8a5015, type: 3}
-  - {fileID: 8715451510042568939, guid: 7dce640c46eca4398a14b25e52ad6a1b, type: 3}
-  - {fileID: 8715451510042568939, guid: 7dce640c46eca4398a14b25e52ad6a1b, type: 3}
-  - {fileID: 8715451510042568939, guid: 7dce640c46eca4398a14b25e52ad6a1b, type: 3}
-  - {fileID: 8715451510042568939, guid: 7dce640c46eca4398a14b25e52ad6a1b, type: 3}
-  - {fileID: 8715451510042568939, guid: 3848daa5d37e64533b757abc51ada936, type: 3}
-  - {fileID: 8715451510042568939, guid: 3848daa5d37e64533b757abc51ada936, type: 3}
+  enemyWave5: []
+  enemyWave6: []
+  enemyWave7: []
+  enemyWave8: []
+  enemyWave9: []
+  enemyWave10: []
   spawnPoint: {fileID: 551341901}
 --- !u!4 &551341901
 Transform:
@@ -987,7 +996,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d3ef1293945e084498e084c499f07f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyWave: []
+  enemyWave1: []
+  enemyWave2: []
+  enemyWave3: []
+  enemyWave4: []
+  enemyWave5: []
+  enemyWave6: []
+  enemyWave7: []
+  enemyWave8: []
+  enemyWave9: []
+  enemyWave10: []
   spawnPoint: {fileID: 1174719048}
 --- !u!4 &1174719048
 Transform:

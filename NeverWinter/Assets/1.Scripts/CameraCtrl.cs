@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class CameraCtrl : MonoBehaviour
@@ -11,6 +12,8 @@ public class CameraCtrl : MonoBehaviour
 
     private bool isPanning = false;
     private Vector3 lastMousePosition;
+    
+    
 
     void Update()
     {
