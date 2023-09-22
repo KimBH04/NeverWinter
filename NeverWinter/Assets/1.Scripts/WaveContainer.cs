@@ -7,7 +7,6 @@ public class WaveContainer : MonoBehaviour
 
     public GameObject GetEnemy()
     {
-        Debug.Log(enemyCount);
         if (enemyCount >= enemies.Length)
             return null;
 

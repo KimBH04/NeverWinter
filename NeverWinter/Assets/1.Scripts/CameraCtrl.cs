@@ -6,14 +6,11 @@ public class CameraCtrl : MonoBehaviour
     public float  wSpeed, hSpeed, zoomInOutSpeed;
     private float X, Z, Zoom;
     
-
     private float w = Screen.width / 25f;
     private float h = Screen.height / 10f;
 
     private bool isPanning = false;
     private Vector3 lastMousePosition;
-    
-    
 
     void Update()
     {
@@ -38,7 +35,7 @@ public class CameraCtrl : MonoBehaviour
             lastMousePosition = Input.mousePosition;
         }
         
-        
+        /*
         if (Input.mousePosition.x > Screen.width - w)
         {
             X = Mathf.Clamp(X + wSpeed, -10, 10);
@@ -56,7 +53,7 @@ public class CameraCtrl : MonoBehaviour
         {
             Z = Mathf.Clamp(Z - hSpeed, -10, -2);
         }
-
+*/
         float x = Input.GetAxisRaw("Horizontal")/5;
         float z = Input.GetAxisRaw("Vertical")/5;
 

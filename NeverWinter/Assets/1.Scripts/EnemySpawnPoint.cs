@@ -6,19 +6,30 @@ public class EnemySpawnPoint : MonoBehaviour
     public float spawnDelay = 1f;
 
     public WaveContainer[] containers;
-    //public Transform spawnPoint;
+
     int containerIndex = 0;
+    bool isFinishedCoroutine = true;
 
     public void WaveStart()
     {
-        StartCoroutine(EnemySpawn());
-        Debug.Log("STart");
+        if (isFinishedCoroutine)
+        {
+            isFinishedCoroutine = false;
+            StartCoroutine(EnemySpawn());
+        }
+        else
+        {
+            Debug.Log("Unfinished wave!");
+        }
     }
 
     IEnumerator EnemySpawn()
     {
         if (containerIndex >= containers.Length)
+        {
+            isFinishedCoroutine = true;
             yield break;
+        }
 
         for (; ; )
         {
@@ -32,5 +43,6 @@ public class EnemySpawnPoint : MonoBehaviour
             yield return new WaitForSeconds(spawnDelay);
         }
         containerIndex++;
+        isFinishedCoroutine = true;
     }
 }
