@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 8361385754720654747}
   - component: {fileID: -948392507298007270}
   - component: {fileID: -3978663403448778022}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Kobold
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -145,3 +145,4 @@ MonoBehaviour:
   Enemy_move_Speed: 3
   Enemy_rotation_Speed: 120
   Enemy_Spell: Hide
+  isEnemyDie: 0

@@ -41,8 +41,6 @@ public class EnemyCtrl : MonoBehaviour
     {
         if (isEnemyDie)
             return;
-
-        
         Enemy_HP -= damage;
 
         
@@ -67,7 +65,7 @@ public class EnemyCtrl : MonoBehaviour
         GetComponent<Collider>().enabled = false;
 
         
-        Destroy(gameObject, 2.0f);
+        Destroy(gameObject, 1.0f);
 
     }
 }
