@@ -1,8 +1,10 @@
-using System;
 using UnityEngine;
 
 public class CameraCtrl : MonoBehaviour
 {
+    [SerializeField]
+    private float floorIns;
+    public static float floorPos;
     public float zoomInOutSpeed;
     private float X, Z, Zoom;
     
@@ -12,7 +14,13 @@ public class CameraCtrl : MonoBehaviour
     private bool isPanning = false;
     private Vector3 lastMousePosition;
 
-    void Update()
+    private void Start()
+    {
+        X = transform.position.x;
+        Z = transform.position.z;
+    }
+
+    private void Update()
     {
         if (Input.GetMouseButtonDown(2))
         {
@@ -66,5 +74,6 @@ public class CameraCtrl : MonoBehaviour
         Z = Mathf.Clamp(Z + z, -(4 * Zoom + 10), 4 * Zoom - 2);
 
         transform.position = new Vector3(X, 10, Z) + (Zoom * zoomInOutSpeed * transform.forward);
+        floorPos = transform.position.y - floorIns;
     }
 }

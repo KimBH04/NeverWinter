@@ -41,7 +41,7 @@ public class Attack : MonoBehaviour
     //}
     void OnTriggerEnter(Collider collision)
     {
-        Debug.Log(collision);
+        //Debug.Log(collision);
 
         if (collision.gameObject.layer == LayerMask.NameToLayer("Unit"))
         {
