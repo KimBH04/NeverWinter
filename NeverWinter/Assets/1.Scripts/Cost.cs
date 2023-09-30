@@ -7,7 +7,7 @@ using TMPro;
 public class Cost : MonoBehaviour
 {
     public int Coin;
-    public float GetCoin = 1f;
+    public int GetCoin;
     public TextMeshProUGUI CoinText;
 
     private float timer;
@@ -21,7 +21,25 @@ public class Cost : MonoBehaviour
             timer -= 1.0f;
         }
 
-        CoinText.text = ""+Coin;
+        CoinText.text = "" + Coin;
+
+    }
+
+    public void Summon()
+    {
+        if (Coin >= 100)
+        {
+            Coin -= 100;
+// 유닛 랜덤 생성 넣을 예정
+        }
+        
+        else
+        {
+            Debug.Log("돈없쩡");
+        }
+            
         
     }
+    
+    
 }

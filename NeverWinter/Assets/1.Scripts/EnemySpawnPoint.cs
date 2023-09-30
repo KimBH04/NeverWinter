@@ -8,8 +8,15 @@ public class EnemySpawnPoint : MonoBehaviour
     public WaveContainer[] containers;
 
     int containerIndex = 0;
+    
+    
     bool isFinishedCoroutine = true;
+     
 
+     
+
+
+   
     public void WaveStart()
     {
         if (isFinishedCoroutine)
@@ -23,7 +30,7 @@ public class EnemySpawnPoint : MonoBehaviour
         }
     }
 
-    IEnumerator EnemySpawn()
+   public IEnumerator EnemySpawn()
     {
         if (containerIndex >= containers.Length)
         {
@@ -33,7 +40,7 @@ public class EnemySpawnPoint : MonoBehaviour
 
         for (; ; )
         {
-            GameObject enemy = containers[containerIndex].GetEnemy();
+             GameObject enemy = containers[containerIndex].GetEnemy();
             if (enemy == null)
             {
                 break;
