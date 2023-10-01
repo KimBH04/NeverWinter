@@ -9,6 +9,8 @@ public class Cost : MonoBehaviour
     public int Coin;
     public int GetCoin;
     public TextMeshProUGUI CoinText;
+    public TextMeshProUGUI NoMoneyText;
+  
 
     private float timer;
 
@@ -35,9 +37,22 @@ public class Cost : MonoBehaviour
         
         else
         {
+            NoMoneyText.text = "가넷이 부족합니다";
             Debug.Log("돈없쩡");
+            StartCoroutine(TextHide(1));
         }
             
+        
+    }
+
+    
+    IEnumerator TextHide(float delay)
+    {
+     
+      // 모션 넣을 예정
+        yield return new WaitForSeconds(delay);
+        NoMoneyText.text = "";
+         
         
     }
     
