@@ -1090,7 +1090,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &585515800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1111,7 +1111,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: "\uAC00\uB137\uC774 \uBD80\uC871\uD569\uB2C8\uB2E4"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4c09d7c060de3413285226c9d8aaa519, type: 2}
   m_sharedMaterial: {fileID: 2871415735938811225, guid: 4c09d7c060de3413285226c9d8aaa519, type: 2}
@@ -1145,7 +1145,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1623,7 +1623,7 @@ MonoBehaviour:
   Coin: 500
   GetCoin: 5
   CoinText: {fileID: 738369864}
-  NoMoneyText: {fileID: 585515800}
+  NoMoneyText: {fileID: 585515799}
 --- !u!1 &786813437
 GameObject:
   m_ObjectHideFlags: 0
