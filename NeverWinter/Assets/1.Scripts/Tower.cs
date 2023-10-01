@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Tower : MonoBehaviour
@@ -7,7 +8,9 @@ public class Tower : MonoBehaviour
 
     [Header("Visualizing")]
     [SerializeField]
-    private GameObject towerVisualize;
+    private GameObject visualTower;
+    [SerializeField]
+    private GameObject visualBox;
     private MeshRenderer visualMesh;
 
     [SerializeField]
@@ -18,19 +21,19 @@ public class Tower : MonoBehaviour
     private Material blue;
 
     private Vector3 beforePos;
-    private bool successMove = true;
+    private bool move = true;
     private bool isClick;
 
     private void Start()
     {
-        visualMesh = towerVisualize.GetComponent<MeshRenderer>();
+        visualMesh = visualBox.GetComponent<MeshRenderer>();
     }
 
     private void OnMouseDown()
     {
         isClick = true;
         beforePos = transform.position;
-        towerVisualize.SetActive(true);
+        visualTower.SetActive(true);
     }
 
     private void OnMouseDrag()
@@ -39,15 +42,19 @@ public class Tower : MonoBehaviour
         Vector3 direction = mousePos.direction;
         float multi = -CameraCtrl.floorPos / direction.y;
 
-        transform.position = Camera.main.transform.position + (direction * multi);
+        transform.position = direction * multi + Camera.main.transform.position;
     }
+
+    private bool readiedMerging;
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log(other);
+
         if (!isClick)
             return;
 
-        if (successMove = other.TryGetComponent(out Tower target) && target.ID == ID)
+        if (readiedMerging = other.TryGetComponent(out Tower target) && target.ID == ID)
         {
             visualMesh.material = blue;
         }
@@ -55,6 +62,8 @@ public class Tower : MonoBehaviour
         {
             visualMesh.material = red;
         }
+        
+        move = false;
     }
 
     private void OnTriggerExit(Collider other)
@@ -62,14 +71,18 @@ public class Tower : MonoBehaviour
         if (!isClick)
             return;
 
+        readiedMerging = false;
         visualMesh.material = green;
+
+        move = true;
     }
 
     private void OnMouseUp()
     {
-        if (successMove)
+        if (move)
         {
-
+            transform.parent.position = transform.position;
+            transform.localPosition = Vector3.zero;
         }
         else
         {
@@ -77,7 +90,8 @@ public class Tower : MonoBehaviour
         }
 
         isClick = false;
-        successMove = true;
-        towerVisualize.SetActive(false);
+        move = true;
+        readiedMerging = false;
+        visualTower.SetActive(false);
     }
 }
