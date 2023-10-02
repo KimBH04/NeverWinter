@@ -129,6 +129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ID>k__BackingField: 1
+  highRankTower: {fileID: 5676657948261787703, guid: f7342deb6dd826f4c94ef3a8c25c5e14, type: 3}
   visualTower: {fileID: 106995733746619691}
   visualBox: {fileID: 2251531207314292929}
   red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}

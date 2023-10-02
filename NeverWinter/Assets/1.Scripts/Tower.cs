@@ -6,6 +6,9 @@ public class Tower : MonoBehaviour
     [field: SerializeField]
     public int ID { get; private set; }
 
+    [SerializeField]
+    private GameObject highRankTower;
+
     [Header("Visualizing")]
     [SerializeField]
     private GameObject visualTower;
@@ -46,6 +49,7 @@ public class Tower : MonoBehaviour
     }
 
     private bool readiedMerging;
+    private Collider target;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -54,8 +58,9 @@ public class Tower : MonoBehaviour
         if (!isClick)
             return;
 
-        if (readiedMerging = other.TryGetComponent(out Tower target) && target.ID == ID)
+        if (readiedMerging = other.TryGetComponent(out Tower tower) && tower.ID == ID)
         {
+            target = other;
             visualMesh.material = blue;
         }
         else
@@ -71,7 +76,11 @@ public class Tower : MonoBehaviour
         if (!isClick)
             return;
 
-        readiedMerging = false;
+        if (target == other)
+        {
+            readiedMerging = false;
+        }
+
         visualMesh.material = green;
 
         move = true;
@@ -79,7 +88,14 @@ public class Tower : MonoBehaviour
 
     private void OnMouseUp()
     {
-        if (move)
+        if (readiedMerging)
+        {
+            Instantiate(highRankTower, target.transform.position, Quaternion.identity);
+
+            Destroy(transform.parent.gameObject);
+            Destroy(target.transform.parent.gameObject);
+        }
+        else if (move)
         {
             transform.parent.position = transform.position;
             transform.localPosition = Vector3.zero;
