@@ -6,6 +6,8 @@ using TMPro;
 
 public class Cost : MonoBehaviour
 {
+    public GameObject[] Towers;
+    
     public int Coin;
     public int GetCoin;
     public TextMeshProUGUI CoinText;
@@ -36,7 +38,8 @@ public class Cost : MonoBehaviour
         if (Coin >= 100)
         {
             Coin -= 100;
-// 유닛 랜덤 생성 넣을 예정
+            SummonRandomTower();
+
         }
         
         else
@@ -46,6 +49,13 @@ public class Cost : MonoBehaviour
 
         }
             
+        
+    }
+    
+    private void SummonRandomTower()
+    {
+        int randomIndex = UnityEngine.Random.Range(0, Towers.Length);
+        GameObject randomTower = Instantiate(Towers[randomIndex], transform.position, Quaternion.identity);
         
     }
 
