@@ -58,7 +58,7 @@ public class Tower : MonoBehaviour
         if (!isClick)
             return;
 
-        if (readiedMerging = other.TryGetComponent(out Tower tower) && tower.ID == ID)
+        if (readiedMerging = other.TryGetComponent(out Tower tower) && tower.ID == ID && highRankTower != null)
         {
             target = other;
             visualMesh.material = blue;

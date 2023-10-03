@@ -22,6 +22,11 @@ public class CameraCtrl : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetMouseButtonDown(1))
+        {
+
+        }
+
         if (Input.GetMouseButtonDown(2))
         {
             isPanning = true;
