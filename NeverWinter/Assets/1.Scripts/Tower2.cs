@@ -9,6 +9,7 @@ public class Tower2 : EnemyCtrl
     public float shootDelay = 0.8f;
     public float distance = 7.0f;
     public float spin = 50f;
+    public float attack = 5.0f;
 
 
     private float temp;

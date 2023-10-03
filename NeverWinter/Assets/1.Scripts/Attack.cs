@@ -9,6 +9,7 @@ public class Attack : MonoBehaviour
     public Tower2 tower1 = null;
     public bool isMove = true;
     public int lifeTime = 100;
+    public float AD = 10.0f;  
     // Start is called before the first frame update
 
     public void MoveStart(Tower2 tower)
@@ -49,7 +50,7 @@ public class Attack : MonoBehaviour
             if (unit)
             {
                 //Damage(Random.Range(3, 6)); µ¥¹ÌÁö
-                unit.TakeDamage(Random.Range(10,30));
+                unit.TakeDamage(AD);
             }
         }
 
