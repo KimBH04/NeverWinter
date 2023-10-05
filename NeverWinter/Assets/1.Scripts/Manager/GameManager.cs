@@ -10,7 +10,8 @@ namespace NeverWiter
         public GameObject levelUpPanel = null;
         public UiUpgrade[] upgradeItems = new UiUpgrade[3];
         public int[] upgradeItemLevel = new int[(int)UpgradeItemType.max+1];
-        public Tower2 Canon = null; 
+        public GameObject tower = null;
+        
 
         void Awake()
         {
@@ -73,36 +74,73 @@ namespace NeverWiter
 
             switch (uType)
             {
-                case UpgradeItemType.CanonAttack:
-                    {
+                case UpgradeItemType.Potion:
+                    
                         if (Bullet)
                         {
                             Bullet.AD += 5.0f; 
                         }
 
-                    }
+                    
                     break;
-                case UpgradeItemType.Coin:
-                    {
+                case UpgradeItemType.Axe:
+                    
                         Debug.Log("코인이 증가합니다");
-                    }
-                    break;
-                case UpgradeItemType.Spell:
-                    {
-                        Debug.Log("스펠 쿨타임 감소");
-                    }
-                    break;
-                case UpgradeItemType.HP:
-                    {
-                        Debug.Log("넥서스 Hp 증가");
-                    }
-                    break;
-                case UpgradeItemType.Reload:
-                    {
-                        Canon.shootDelay -= 0.2f;
-                    }
+                    
                     break;
 
+                case UpgradeItemType.Book:
+                    
+                        Debug.Log("스펠 쿨타임 감소");
+                    
+                    break;
+                case UpgradeItemType.Xbow:
+                    
+                        Debug.Log("넥서스 Hp 증가");
+                    
+                    break;
+                case UpgradeItemType.Pub:
+
+                    //Canon.shootDelay -= 0.2f;
+                    
+                    break;
+                case UpgradeItemType.scout:
+                    
+                        Debug.Log("정찰대 ");                      
+                    
+                    break;
+
+                case UpgradeItemType.Knight:
+                    
+                        Debug.Log("기마병");
+                    
+                    break;
+
+                case UpgradeItemType.Gold:
+                    
+                        Debug.Log("코인이 증가합니다");
+                    
+                    break;
+
+                case UpgradeItemType.Clover:
+                    
+                        Debug.Log("클로버");
+                    Vector3 a = new Vector3(0.05f, 0.2f, -1.75f);
+                    Instantiate(tower, a, Quaternion.identity);
+
+                    break;
+
+                case UpgradeItemType.Shield:
+                    
+                        Debug.Log("방패");
+                    
+                    break;
+
+                case UpgradeItemType.Crown:
+                    
+                        Debug.Log("방패");
+                    
+                    break;
             } }
 
             

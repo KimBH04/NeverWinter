@@ -6,12 +6,17 @@ namespace NeverWiter
 {
     public enum UpgradeItemType
     {
-        CanonAttack,
-        Coin,
-        Spell,
-        HP,
-        Reload,
-        DeBuff,
+        Potion,
+        Axe,
+        Book,
+        Xbow,
+        Pub,
+        scout,
+        Knight,
+        Gold,
+        Clover,
+        Shield,
+        Crown,
 
         max
     }
@@ -46,65 +51,76 @@ namespace NeverWiter
 
             switch (upradeItemType)
             {
-                case UpgradeItemType.CanonAttack:
+                case UpgradeItemType.Potion:
                     {
                         if (icon)
-                            icon.sprite = Resources.Load<Sprite>("Sprites/Screenshot_20230914-212152_Gallery-removebg-preview");
+                            icon.sprite = Resources.Load<Sprite>("Sprites/증강 물약");
 
                         if (title)
-                            title.text = string.Format("{0} Lv. {1}", "대포 강화", level);
+                            title.text = string.Format("{0} Lv. {1}", "물약", level);
                         if (explain)
-                            explain.text = "대포의 공격력이 소폭 증가합니다.";
+                            explain.text = "주문 스킬 쿨타임 감소";
                     }
                     break;
-                case UpgradeItemType.Coin:
+                case UpgradeItemType.Axe:
                     {
                         if (icon)
-                            icon.sprite = Resources.Load<Sprite>("Sprites/SELL");
+                            icon.sprite = Resources.Load<Sprite>("Sprites/증강 도끼");
 
                         if (title)
-                            title.text = string.Format("{0} Lv. {1}", "코인 획득량 증가", level);
+                            title.text = string.Format("{0} Lv. {1}", "도끼", level);
                         if (explain)
-                            explain.text = "코인 획득량이 증가합니다.";
+                            explain.text = "주문 스킬 공격력 증가";
                     }
                     break;
-                case UpgradeItemType.Spell:
+                case UpgradeItemType.Book:
                     {
                         if (icon)
-                            icon.sprite = Resources.Load<Sprite>("Sprites/x1");
+                            icon.sprite = Resources.Load<Sprite>("Sprites/증강 고서");
 
                         if (title)
-                            title.text = string.Format("{0} Lv. {1}", "스펠 쿨 감소", level);
+                            title.text = string.Format("{0} Lv. {1}", "증강 고서", level);
                         if (explain)
-                            explain.text = "스펠 쿨타임이 5초 감소합니다.";
+                            explain.text = "마법 타워의 공격력과 공격속도가 상승.";
                     }
                     break;
-                case UpgradeItemType.HP:
+                case UpgradeItemType.Xbow:
                     {
                         if (icon)
-                            icon.sprite = Resources.Load<Sprite>("Sprites/x1.5");
+                            icon.sprite = Resources.Load<Sprite>("Sprites/증강 석궁");
 
                         if (title)
-                            title.text = string.Format("{0} Lv. {1}", "체력 증가", level);
+                            title.text = string.Format("{0} Lv. {1}", "증강 석궁", level);
                         if (explain)
-                            explain.text = "성 체력이 3만큼 증가합니다.";
+                            explain.text = "석궁 타워의 공격력과 공격속도 상승";
                     }
                     break;
-                case UpgradeItemType.Reload:
+                case UpgradeItemType.Pub:
                     {
                         if (icon)
-                            icon.sprite = Resources.Load<Sprite>("Sprites/x2");
+                            icon.sprite = Resources.Load<Sprite>("Sprites/증강 선술집");
 
                         if (title)
-                            title.text = string.Format("{0} Lv. {1}", "공격속도 증가", level);
+                            title.text = string.Format("{0} Lv. {1}", "증강 선술집", level);
                         if (explain)
-                            explain.text = "타워 공격속도가 증가합니다.";
+                            explain.text = "선술집의 골드 수급량 증가";
                     }
                     break;
-                case UpgradeItemType.DeBuff:
+                case UpgradeItemType.scout:
                     {
                         if (icon)
-                            icon.sprite = Resources.Load<Sprite>("Sprites/LEAVE");
+                            icon.sprite = Resources.Load<Sprite>("Sprites/증강 정찰대");
+
+                        if (title)
+                            title.text = string.Format("{0} Lv. {1}", "증강 정찰대", level);
+                        if (explain)
+                            explain.text = "적 몬스터들의 방어력 감소";
+                    }
+                    break;
+                case UpgradeItemType.Knight:
+                    {
+                        if (icon)
+                            icon.sprite = Resources.Load<Sprite>("Sprites/증강 기마병");
 
                         if (title)
                             title.text = string.Format("{0} Lv. {1}", "적 이동속도 감소", level);
@@ -112,6 +128,55 @@ namespace NeverWiter
                             explain.text = "적 이동속도가 10만큼 감소합니다.";
                     }
                     break;
+                case UpgradeItemType.Gold:
+                    {
+                        if (icon)
+                            icon.sprite = Resources.Load<Sprite>("Sprites/증강 골드");
+
+                        if (title)
+                            title.text = string.Format("{0} Lv. {1}", "증강 골드", level);
+                        if (explain)
+                            explain.text = "적 몬스터 처치시 획득 골드량 증가";
+                    }
+                    break;
+                case UpgradeItemType.Clover:
+                    {
+                        if (icon)
+                            icon.sprite = Resources.Load<Sprite>("Sprites/증강 클로버");
+
+                        if (title)
+                            title.text = string.Format("{0} Lv. {1}", "증강 클로버", level);
+                        if (explain)
+                            explain.text = "무작위 타워 1기 획득 (1~3성)";
+                    }
+                    break;
+                case UpgradeItemType.Shield:
+                    {
+                        if (icon)
+                            icon.sprite = Resources.Load<Sprite>("Sprites/증강 방패");
+
+                        if (title)
+                            title.text = string.Format("{0} Lv. {1}", "증강 방패", level);
+                        if (explain)
+                            explain.text = "공성 내구도 수치 증가";
+                    }
+
+                    break;
+
+
+                case UpgradeItemType.Crown:
+                    {
+                        if (icon)
+                            icon.sprite = Resources.Load<Sprite>("Sprites/증강 왕관");
+
+                        if (title)
+                            title.text = string.Format("{0} Lv. {1}", "증강 왕관", level);
+                        if (explain)
+                            explain.text = "적 이동속도가 10만큼 감소합니다.";
+                    }
+
+                    break;
+                    
             }
         }
     }
