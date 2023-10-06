@@ -18,15 +18,19 @@ public class EnemyCtrl : MonoBehaviour
     
     //능력 #미완성#
     public string Enemy_Spell;
+
+    // 현상금
+    public int Reward;
     
-    //적 사망여부 #미완성#
+    //적 사망여부 
     public bool isEnemyDie = false;
     
     private Transform target;
     private NavMeshAgent agent;
-
+    public Cost EnemyReward;
     void Start()
     {
+        
         agent = GetComponent<NavMeshAgent>();
         target = GameObject.Find("TARGET").transform;
 
@@ -64,7 +68,7 @@ public class EnemyCtrl : MonoBehaviour
         
         GetComponent<Collider>().enabled = false;
 
-        
+            Cost.Coin += Reward;
         Destroy(gameObject, 1.0f);
 
     }
