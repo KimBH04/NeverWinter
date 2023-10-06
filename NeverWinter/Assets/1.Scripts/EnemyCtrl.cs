@@ -27,7 +27,7 @@ public class EnemyCtrl : MonoBehaviour
     
     private Transform target;
     private NavMeshAgent agent;
-    public Cost EnemyReward;
+    
     void Start()
     {
         
