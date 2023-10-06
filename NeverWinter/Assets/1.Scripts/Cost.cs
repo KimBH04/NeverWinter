@@ -33,6 +33,8 @@ public class Cost : MonoBehaviour
 
     }
 
+    
+
     public void Summon()
     {
         if (Coin >= 100)

@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class Tower2 : EnemyCtrl
 {
+    // íƒ€ì›Œ íŒŒëŠ” ê²ƒ #ë¯¸ì™„ì„±#
+    public GameObject TowerSelf;
     public GameObject shootPoint;
     EnemyCtrl targetUnit = null;
     public float shootDelay = 0.8f;
     public float distance = 7.0f;
     public float spin = 50f;
     public float attack = 5.0f;
+    public int TowerSell;
 
 
     private float temp;
@@ -47,9 +50,9 @@ public class Tower2 : EnemyCtrl
             
             Quaternion rot = Quaternion.LookRotation(viewPos);
             //rot.y += 90;
-            //ÇØ´ç È¸Àü°ª ¸¸Å­ ³» ¸öÀ» È¸Àü ½ÃÅ´.
+            //ï¿½Ø´ï¿½ È¸ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å­ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ È¸ï¿½ï¿½ ï¿½ï¿½Å´.
             gameObject.transform.rotation = Quaternion.Lerp(gameObject.transform.rotation, rot, Time.deltaTime * spin);
-            //¸¶¹ý»ç Å¸¿ö´Â 80, ´ëÆ÷´Â 50~60
+            //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Å¸ï¿½ï¿½ï¿½ï¿½ 80, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 50~60
             //shootPoint.transform.rotation =;
             if (shootDelay <= 0f)
             {
@@ -63,9 +66,17 @@ public class Tower2 : EnemyCtrl
         }
 
     }
+
+    // UI ë¯¸ì ìš©
+    public void Sell()
+    {
+        
+        Cost.Coin += TowerSell;
+        Destroy(TowerSelf);
+    }
     public void BulletShoot()
     {
-        //ÃÑ¾ËÀ» »ý¼ºÇÑ´Ù
+        //ï¿½Ñ¾ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½
         GameObject bullet = Instantiate(Resources.Load<GameObject>("Objects/Bullet"));
         if (bullet)
         {
@@ -83,9 +94,9 @@ public class Tower2 : EnemyCtrl
     {
         for (int i = 0; i < 3; i++)
         {
-            //ÃÑ¾Ë ¹ß»ç
+            //ï¿½Ñ¾ï¿½ ï¿½ß»ï¿½
             BulletShoot();
-            //0.2ÃÊ °£ Àá½Ã µô·¹ÀÌ
+            //0.2ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             yield return new WaitForSeconds(0.2f);
 
         }
