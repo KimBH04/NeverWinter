@@ -12,6 +12,7 @@ public class Cost : MonoBehaviour
     public int GetCoin;
     public TextMeshProUGUI CoinText;
     public GameObject NoMoneyText;
+    public Transform SummonPos; 
     
   
 
@@ -57,7 +58,7 @@ public class Cost : MonoBehaviour
     private void SummonRandomTower()
     {
         int randomIndex = UnityEngine.Random.Range(0, Towers.Length);
-        GameObject randomTower = Instantiate(Towers[randomIndex], transform.position, Quaternion.identity);
+        GameObject randomTower = Instantiate(Towers[randomIndex], SummonPos.position, Quaternion.identity);
         
     }
 

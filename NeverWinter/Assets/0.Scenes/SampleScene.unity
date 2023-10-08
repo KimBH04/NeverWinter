@@ -7071,6 +7071,7 @@ MonoBehaviour:
   GetCoin: 5
   CoinText: {fileID: 738369864}
   NoMoneyText: {fileID: 585515799}
+  SummonPos: {fileID: 1272503231}
 --- !u!1 &758206705 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7674558272973502135, guid: 533cd69c9d2fc664fb1bc951958c2f91, type: 3}
@@ -7974,6 +7975,37 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 758206710}
   m_SourcePrefab: {fileID: 100100000, guid: 533cd69c9d2fc664fb1bc951958c2f91, type: 3}
+--- !u!1 &1272503230
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1272503231}
+  m_Layer: 0
+  m_Name: SummmnPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1272503231
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1272503230}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -12.72, y: 0, z: 5.95}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1283593307
 GameObject:
   m_ObjectHideFlags: 0
@@ -19874,3 +19906,4 @@ SceneRoots:
   - {fileID: 328336315}
   - {fileID: 1706166041}
   - {fileID: 755973297}
+  - {fileID: 1272503231}
