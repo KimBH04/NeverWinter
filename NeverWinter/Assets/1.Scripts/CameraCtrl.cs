@@ -4,7 +4,7 @@ public class CameraCtrl : MonoBehaviour
 {
     [SerializeField]
     private float floorIns;
-    public static float floorPos;
+    public static float floorPos { get; private set; }
     public float zoomInOutSpeed;
     private float X, Z, Zoom;
     
