@@ -67,13 +67,7 @@ public class Tower2 : EnemyCtrl
 
     }
 
-    // UI 미적용
-    public void Sell()
-    {
-        
-        Cost.Coin += TowerSell;
-        Destroy(TowerSelf);
-    }
+    
     public void BulletShoot()
     {
         //�Ѿ��� �����Ѵ�
