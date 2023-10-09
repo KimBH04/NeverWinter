@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace NeverWiter
@@ -14,11 +15,14 @@ namespace NeverWiter
      
         
         
-        public Attack Bullet = null;
+
         public GameObject levelUpPanel = null;
         public UiUpgrade[] upgradeItems = new UiUpgrade[3];
         public int[] upgradeItemLevel = new int[(int)UpgradeItemType.max+1];
         public GameObject tower = null;
+        public GameObject[] TowerAD = new GameObject[6];
+        public EnemyCtrl[] EnemySpeed = new EnemyCtrl[4];
+       
         
 
         void Awake()
@@ -29,7 +33,7 @@ namespace NeverWiter
         void Start()
         {
             Application.targetFrameRate = 60;
-            Bullet.AD = 10f;
+            
         }
 
         public int Lives
@@ -112,13 +116,13 @@ namespace NeverWiter
             switch (uType)
             {
                 case UpgradeItemType.Potion:
-                    
-                        if (Bullet)
-                        {
-                            Bullet.AD += 5.0f; 
-                        }
 
                     
+                    //for(int i =0; i<TowerAD.Length; i++)
+                    //{
+                    //    TowerAD[i].AD += 5.0f;
+                    //}
+
                     break;
                 case UpgradeItemType.Axe:
                     
@@ -132,8 +136,12 @@ namespace NeverWiter
                     
                     break;
                 case UpgradeItemType.Xbow:
+
+                    //for (int i = 0; i < TowerAD.Length; i++)
+                    //{
+                    //    TowerAD[i].shootDelay *= 0.9f;
+                    //}
                     
-                        Debug.Log("�ؼ��� Hp ����");
                     
                     break;
                 case UpgradeItemType.Pub:
@@ -149,8 +157,11 @@ namespace NeverWiter
 
                 case UpgradeItemType.Knight:
                     
-                        Debug.Log("�⸶��");
-                    
+                    for(int i =0; i<EnemySpeed.Length; i++)
+                    {
+                        EnemySpeed[i].Enemy_move_Speed *= 0.5f;
+                    }
+
                     break;
 
                 case UpgradeItemType.Gold:

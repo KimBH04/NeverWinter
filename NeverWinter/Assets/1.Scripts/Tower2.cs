@@ -11,8 +11,11 @@ public class Tower2 : EnemyCtrl
     public float shootDelay = 0.8f;
     public float distance = 7.0f;
     public float spin = 50f;
-    public float attack = 5.0f;
     public int TowerSell;
+    public float AD;
+    private float Dist;
+    public int cnt;
+    public GameObject Bullet;
 
 
     private float temp;
@@ -32,7 +35,6 @@ public class Tower2 : EnemyCtrl
 
             for (int i = 0; i < colliderList.Length; i++)
             {
-
                 EnemyCtrl searchTarget = colliderList[i].GetComponent<EnemyCtrl>();
                 if (searchTarget) //&& searchTarget.isDie == false)
                 {
@@ -43,17 +45,13 @@ public class Tower2 : EnemyCtrl
 
             }
         }
+        
+
         if (targetUnit != null)
         {
+
             Vector3 viewPos = targetUnit.transform.position - gameObject.transform.position;
 
-            
-            Quaternion rot = Quaternion.LookRotation(viewPos);
-            //rot.y += 90;
-            //�ش� ȸ���� ��ŭ �� ���� ȸ�� ��Ŵ.
-            gameObject.transform.rotation = Quaternion.Lerp(gameObject.transform.rotation, rot, Time.deltaTime * spin);
-            //������ Ÿ���� 80, ������ 50~60
-            //shootPoint.transform.rotation =;
             if (shootDelay <= 0f)
             {
                 BulletShoot();
@@ -63,6 +61,19 @@ public class Tower2 : EnemyCtrl
             {
                 shootDelay -= Time.deltaTime;
             }
+
+            Quaternion rot = Quaternion.LookRotation(viewPos);
+            //rot.y += 90;
+            //�ش� ȸ���� ��ŭ �� ���� ȸ�� ��Ŵ.
+            gameObject.transform.rotation = Quaternion.Lerp(gameObject.transform.rotation, rot, Time.deltaTime * spin);
+            //������ Ÿ���� 80, ������ 50~60
+            //shootPoint.transform.rotation =;      
+            Dist = Vector3.Distance(gameObject.transform.position, targetUnit.transform.position);
+            if (Dist > distance)
+            {
+                targetUnit = null;
+
+            }
         }
 
     }
@@ -71,7 +82,7 @@ public class Tower2 : EnemyCtrl
     public void BulletShoot()
     {
         //�Ѿ��� �����Ѵ�
-        GameObject bullet = Instantiate(Resources.Load<GameObject>("Objects/Bullet"));
+        GameObject bullet = Instantiate(Bullet.gameObject,shootPoint.transform.position,Quaternion.identity);
         if (bullet)
         {
             bullet.transform.position = shootPoint.transform.position;
