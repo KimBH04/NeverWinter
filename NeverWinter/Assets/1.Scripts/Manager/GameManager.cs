@@ -5,8 +5,8 @@ using UnityEngine;
 namespace NeverWiter
 {
     public class GameManager : MonoBehaviour
-    {
-        private int lives;
+    { 
+        private static int lives=100;
         private bool gameOver = false;
 
 [SerializeField]
