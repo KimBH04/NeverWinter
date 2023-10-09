@@ -5,7 +5,15 @@ using UnityEngine;
 namespace NeverWiter
 {
     public class GameManager : MonoBehaviour
-    {
+    { 
+        private static int lives=100;
+        private bool gameOver = false;
+
+[SerializeField]
+        private GameObject penel, gameoverUI, waveBtn;
+     
+        
+        
         public Attack Bullet = null;
         public GameObject levelUpPanel = null;
         public UiUpgrade[] upgradeItems = new UiUpgrade[3];
@@ -22,6 +30,35 @@ namespace NeverWiter
         {
             Application.targetFrameRate = 60;
             Bullet.AD = 10f;
+        }
+
+        public int Lives
+        {
+            get { return lives; }
+            set
+            {
+                lives = value;
+
+                if (lives <= 0)
+                {
+                    lives = 0;
+                    GameOver();
+                }
+            }
+        }
+
+        public void GameOver()
+        {
+            if (!gameOver)
+            {
+                gameOver = true;
+                Time.timeScale = 0;
+                /*
+                 * penel.SetActive()
+                 * gameoverUI.SetActive(true);
+                 * waveBtn.SetActive(false);
+                 */
+            }
         }
 
         
@@ -85,18 +122,18 @@ namespace NeverWiter
                     break;
                 case UpgradeItemType.Axe:
                     
-                        Debug.Log("ÄÚÀÎÀÌ Áõ°¡ÇÕ´Ï´Ù");
+                        Debug.Log("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½");
                     
                     break;
 
                 case UpgradeItemType.Book:
                     
-                        Debug.Log("½ºÆç ÄðÅ¸ÀÓ °¨¼Ò");
+                        Debug.Log("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
                     
                     break;
                 case UpgradeItemType.Xbow:
                     
-                        Debug.Log("³Ø¼­½º Hp Áõ°¡");
+                        Debug.Log("ï¿½Ø¼ï¿½ï¿½ï¿½ Hp ï¿½ï¿½ï¿½ï¿½");
                     
                     break;
                 case UpgradeItemType.Pub:
@@ -106,25 +143,25 @@ namespace NeverWiter
                     break;
                 case UpgradeItemType.scout:
                     
-                        Debug.Log("Á¤Âû´ë ");                      
+                        Debug.Log("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ");                      
                     
                     break;
 
                 case UpgradeItemType.Knight:
                     
-                        Debug.Log("±â¸¶º´");
+                        Debug.Log("ï¿½â¸¶ï¿½ï¿½");
                     
                     break;
 
                 case UpgradeItemType.Gold:
                     
-                        Debug.Log("ÄÚÀÎÀÌ Áõ°¡ÇÕ´Ï´Ù");
+                        Debug.Log("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½");
                     
                     break;
 
                 case UpgradeItemType.Clover:
                     
-                        Debug.Log("Å¬·Î¹ö");
+                        Debug.Log("Å¬ï¿½Î¹ï¿½");
                     Vector3 a = new Vector3(0.05f, 0.2f, -1.75f);
                     Instantiate(tower, a, Quaternion.identity);
 
@@ -132,13 +169,13 @@ namespace NeverWiter
 
                 case UpgradeItemType.Shield:
                     
-                        Debug.Log("¹æÆÐ");
+                        Debug.Log("ï¿½ï¿½ï¿½ï¿½");
                     
                     break;
 
                 case UpgradeItemType.Crown:
                     
-                        Debug.Log("¹æÆÐ");
+                        Debug.Log("ï¿½ï¿½ï¿½ï¿½");
                     
                     break;
             } }
