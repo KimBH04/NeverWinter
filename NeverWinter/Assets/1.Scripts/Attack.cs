@@ -5,33 +5,30 @@ using UnityEngine;
 public class Attack : MonoBehaviour
 {
     // Start is called before the first frame update
-    public float speed = 70.0f;
+    public float speed;
     public Tower2 tower1 = null;
     public bool isMove = true;
     public int lifeTime = 100;
-    public float AD = 10.0f;  
+    //public float AD = 10.0f;  
     // Start is called before the first frame update
 
     public void MoveStart(Tower2 tower)
     {
 
         tower1 = tower;
-
         transform.rotation = tower1.shootPoint.transform.rotation;
-
         isMove = true;
     }
 
     void Start()
     {
-        Destroy(gameObject, 5f);
+        Destroy(gameObject, 5.0f);
     }
 
     void Update()
     {
         if (isMove)
         {
-
             transform.Translate(Vector3.forward * Time.deltaTime * speed);
         }
     }
@@ -50,11 +47,12 @@ public class Attack : MonoBehaviour
             if (unit)
             {
                 //Damage(Random.Range(3, 6)); µ¥¹ÌÁö
-                unit.TakeDamage(AD);
+                unit.TakeDamage(tower1.AD);
             }
+            Destroy(gameObject);
         }
 
-        Destroy(gameObject,0.5f);
+       
     }
     //IEnumerator Disapear()
     //{

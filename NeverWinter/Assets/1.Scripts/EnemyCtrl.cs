@@ -9,7 +9,7 @@ public class EnemyCtrl : MonoBehaviour
 {
     // 체력  #미완성#
     public float Enemy_HP;
-   
+    public float Max_Hp;
     // 이동속도
     public float Enemy_move_Speed;
     
@@ -38,6 +38,7 @@ public class EnemyCtrl : MonoBehaviour
         agent.angularSpeed = Enemy_rotation_Speed;
         
         agent.SetDestination(target.position);
+        Enemy_HP = Max_Hp;
     }
     
     // 적이 데미지 받았을 때 쓰는 함수
@@ -54,6 +55,11 @@ public class EnemyCtrl : MonoBehaviour
         }
     }
 
+    public void Attack()
+    {
+        GameManager.instance.Lives -= 10;
+    }
+
     // 적이 죽었을 때 쓰는 함수  # 미완성 #
     // 애니메이션 추가 예정
     private void EnemyDie()
@@ -68,7 +74,7 @@ public class EnemyCtrl : MonoBehaviour
         
         GetComponent<Collider>().enabled = false;
 
-            Cost.Coin += Reward;
+        Cost.Coin += Reward;
         Destroy(gameObject, 1.0f);
 
     }
