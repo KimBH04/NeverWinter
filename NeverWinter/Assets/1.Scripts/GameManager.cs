@@ -1,8 +1,11 @@
+using System;
 using NeverWiter;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using Random = UnityEngine.Random;
+
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
@@ -68,6 +71,17 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("Enemy"))
+            takeCastle();
+    }
+
+    public void takeCastle()
+    {
+        Lives--;
+    }
+    
 
     public void WAVEEvent()
     {
