@@ -41,6 +41,8 @@ public class UiHpbar : MonoBehaviour
 
             transform.rotation = Camera.main.transform.rotation;
         }
+
+        Vector3 v = Camera.main.transform.position;
+        transform.LookAt(new Vector3(transform.position.x, v.y, v.z));
     }
-        }
-    
+}

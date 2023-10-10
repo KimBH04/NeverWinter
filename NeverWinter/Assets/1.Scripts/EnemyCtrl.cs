@@ -55,6 +55,11 @@ public class EnemyCtrl : MonoBehaviour
         }
     }
 
+    public void Attack()
+    {
+        GameManager.instance.Lives -= 10;
+    }
+
     // 적이 죽었을 때 쓰는 함수  # 미완성 #
     // 애니메이션 추가 예정
     private void EnemyDie()
@@ -69,7 +74,7 @@ public class EnemyCtrl : MonoBehaviour
         
         GetComponent<Collider>().enabled = false;
 
-            Cost.Coin += Reward;
+        Cost.Coin += Reward;
         Destroy(gameObject, 1.0f);
 
     }
