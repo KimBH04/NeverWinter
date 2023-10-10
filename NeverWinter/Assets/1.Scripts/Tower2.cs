@@ -8,6 +8,8 @@ public class Tower2 : EnemyCtrl
     public GameObject TowerSelf;
     public GameObject shootPoint;
     EnemyCtrl targetUnit = null;
+    public static float shootdelay = 1.0f;
+    public static float ad = 0f;
     public float shootDelay = 0.8f;
     public float distance = 7.0f;
     public float spin = 50f;
@@ -55,6 +57,7 @@ public class Tower2 : EnemyCtrl
             if (shootDelay <= 0f)
             {
                 BulletShoot();
+
                 shootDelay = temp;
             }
             else

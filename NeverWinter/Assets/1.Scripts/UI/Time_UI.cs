@@ -9,8 +9,13 @@ public class Time_UI : MonoBehaviour
     public GameObject Attach_2;
     public GameObject GamePause;
     public GameObject GameAgain;
-    
-    
+
+
+    public void Start()
+    {
+        GameAgain.SetActive(true);
+        GamePause.SetActive(false);
+    }
     public void attach_1()
     {
         Time.timeScale = 1.5f;
@@ -35,16 +40,16 @@ public class Time_UI : MonoBehaviour
     
     public void gameStop()
     {
-        GamePause.SetActive(false);
-        GameAgain.SetActive(true);
+        GamePause.SetActive(true);
+        GameAgain.SetActive(false);
         Time.timeScale = 0f;
         Debug.Log("타임 스토브");
     }
     
     public void gameAgain()
     {
-        GamePause.SetActive(true);
-        GameAgain.SetActive(false);
+        GamePause.SetActive(false);
+        GameAgain.SetActive(true);
         
         Time.timeScale = 1f;
         Debug.Log("요시 카이쵸");

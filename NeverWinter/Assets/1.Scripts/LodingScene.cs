@@ -11,6 +11,7 @@ public class LodingScene : MonoBehaviour
 
     private void Start()
     {
+        
         StartCoroutine(LoadScene());
     }
 
@@ -18,6 +19,7 @@ public class LodingScene : MonoBehaviour
     {
         nextScene = sceneName;
         int result = Random.Range(1, 4);
+        
         SceneManager.LoadScene(result.ToString());
     }
 
@@ -49,6 +51,7 @@ public class LodingScene : MonoBehaviour
                 }
             }
         }
+        
     }
 
 }

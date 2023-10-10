@@ -47,7 +47,7 @@ public class Attack : MonoBehaviour
             if (unit)
             {
                 //Damage(Random.Range(3, 6)); µ¥¹ÌÁö
-                unit.TakeDamage(tower1.AD);
+                unit.TakeDamage(tower1.AD+Tower2.ad);
             }
             Destroy(gameObject);
         }

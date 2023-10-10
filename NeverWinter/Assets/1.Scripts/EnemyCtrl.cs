@@ -26,7 +26,7 @@ public class EnemyCtrl : MonoBehaviour
     public bool isEnemyDie = false;
     
     private Transform target;
-    private NavMeshAgent agent;
+    public NavMeshAgent agent;
     
     void Start()
     {

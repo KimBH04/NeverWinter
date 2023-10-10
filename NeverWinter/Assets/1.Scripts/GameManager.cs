@@ -71,8 +71,8 @@ public class GameManager : MonoBehaviour
         }
     }
 
-   
-    
+
+
 
     public void WAVEEvent()
     {
@@ -123,33 +123,26 @@ public class GameManager : MonoBehaviour
 
         switch (uType)
         {
-            case UpgradeItemType.Potion:
-
-
-                //for(int i =0; i<TowerAD.Length; i++)
-                //{
-                //    TowerAD[i].AD += 5.0f;
-                //}
-
-                break;
             case UpgradeItemType.Axe:
 
-                Debug.Log("������ �����մϴ�");
+                Tower2.ad += 5.0f;
+                Debug.Log("포션");
+
+                break;
+            case UpgradeItemType.Potion:
+
+                Debug.Log("도끼");
 
                 break;
 
             case UpgradeItemType.Book:
 
-                Debug.Log("���� ��Ÿ�� ����");
+                Debug.Log("책");
 
                 break;
             case UpgradeItemType.Xbow:
 
-                //for (int i = 0; i < TowerAD.Length; i++)
-                //{
-                //    TowerAD[i].shootDelay *= 0.9f;
-                //}
-
+                Tower2.shootdelay *= 0.9f;
 
                 break;
             case UpgradeItemType.Pub:
@@ -159,7 +152,7 @@ public class GameManager : MonoBehaviour
                 break;
             case UpgradeItemType.scout:
 
-                Debug.Log("������ ");
+                Debug.Log("아아아 ");
 
                 break;
 
@@ -167,14 +160,14 @@ public class GameManager : MonoBehaviour
 
                 for (int i = 0; i < EnemySpeed.Length; i++)
                 {
-                    EnemySpeed[i].Enemy_move_Speed *= 0.5f;
+                    EnemySpeed[i].agent.speed *= 0.5f;
                 }
 
                 break;
 
             case UpgradeItemType.Gold:
 
-                Debug.Log("������ �����մϴ�");
+                Debug.Log("아아아아");
 
                 break;
 
