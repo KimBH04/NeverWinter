@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class Time_UI : MonoBehaviour
 {
-    public GameObject Attach_1;
-    public GameObject Attach_1_5;
-    public GameObject Attach_2;
-    public GameObject GamePause;
-    public GameObject GameAgain;
+    [SerializeField]  private GameObject Attach_1;
+    [SerializeField]private GameObject Attach_1_5;
+    [SerializeField]  private GameObject Attach_2;
+    [SerializeField] private GameObject GamePause;
+    
 
 
     public void Start()
     {
-        GameAgain.SetActive(true);
+       
         GamePause.SetActive(false);
     }
     public void attach_1()
@@ -41,18 +41,19 @@ public class Time_UI : MonoBehaviour
     public void gameStop()
     {
         GamePause.SetActive(true);
-        GameAgain.SetActive(false);
+       
         Time.timeScale = 0f;
         Debug.Log("타임 스토브");
     }
     
     public void gameAgain()
     {
-        GamePause.SetActive(false);
-        GameAgain.SetActive(true);
-        
-        Time.timeScale = 1f;
         Debug.Log("요시 카이쵸");
+        GamePause.SetActive(false);
+        Time.timeScale = 1f;
+        
+        
+        
     }
 
 
