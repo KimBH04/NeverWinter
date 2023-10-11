@@ -7695,8 +7695,8 @@ GameObject:
   m_Component:
   - component: {fileID: 755973297}
   - component: {fileID: 755973298}
-  - component: {fileID: 755973296}
   - component: {fileID: 755973299}
+  - component: {fileID: 755973300}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -7704,40 +7704,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &755973296
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 755973295}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98d1a25e39a8a3c4dbf5777033a4b51d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  penel: {fileID: 0}
-  gameoverUI: {fileID: 0}
-  waveBtn: {fileID: 0}
-  levelUpPanel: {fileID: 2105737816}
-  upgradeItems:
-  - {fileID: 851330602}
-  - {fileID: 2144607168}
-  - {fileID: 758206710}
-  upgradeItemLevel: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  tower: {fileID: 5808695279913773933, guid: a096eb46f082de7478c667ce7e478c2e, type: 3}
-  TowerAD:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  EnemySpeed:
-  - {fileID: -3978663403448778022, guid: 8deb177b55b654c0ea7eca2abf988cf1, type: 3}
-  - {fileID: -3978663403448778022, guid: 7dce640c46eca4398a14b25e52ad6a1b, type: 3}
-  - {fileID: -3978663403448778022, guid: 3848daa5d37e64533b757abc51ada936, type: 3}
-  - {fileID: -3978663403448778022, guid: eefcc6fad1196445098c42a27d8a5015, type: 3}
 --- !u!4 &755973297
 Transform:
   m_ObjectHideFlags: 0
@@ -7790,6 +7756,40 @@ MonoBehaviour:
   CoinText: {fileID: 738369864}
   NoMoneyText: {fileID: 585515799}
   SummonPos: {fileID: 1272503231}
+--- !u!114 &755973300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 755973295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15de3d3eb4c0e47d99fc5a46240f3b44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  penel: {fileID: 0}
+  gameoverUI: {fileID: 0}
+  waveBtn: {fileID: 0}
+  levelUpPanel: {fileID: 2105737816}
+  upgradeItems:
+  - {fileID: 851330602}
+  - {fileID: 2144607168}
+  - {fileID: 758206710}
+  upgradeItemLevel: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  tower: {fileID: 0}
+  TowerAD:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  EnemySpeed:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &758206705 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7674558272973502135, guid: 533cd69c9d2fc664fb1bc951958c2f91, type: 3}
@@ -7824,7 +7824,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisButton: {fileID: 758206707}
-  manager: {fileID: 755973296}
+  manager: {fileID: 0}
   upradeItemType: 6
   icon: {fileID: 1587363919}
   title: {fileID: 889411755}
@@ -7976,7 +7976,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisButton: {fileID: 851330599}
-  manager: {fileID: 755973296}
+  manager: {fileID: 0}
   upradeItemType: 6
   icon: {fileID: 1843958242}
   title: {fileID: 506076419}
@@ -9268,8 +9268,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 755973296}
-        m_TargetAssemblyTypeName: NeverWiter.GameManager, Assembly-CSharp
+      - m_Target: {fileID: 755973300}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: WAVEEvent
         m_Mode: 1
         m_Arguments:
@@ -21484,7 +21484,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisButton: {fileID: 2144607165}
-  manager: {fileID: 755973296}
+  manager: {fileID: 0}
   upradeItemType: 6
   icon: {fileID: 1480945308}
   title: {fileID: 1819202676}
