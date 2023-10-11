@@ -7824,7 +7824,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisButton: {fileID: 758206707}
-  manager: {fileID: 0}
+  manager: {fileID: 755973300}
   upradeItemType: 6
   icon: {fileID: 1587363919}
   title: {fileID: 889411755}
@@ -7976,7 +7976,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisButton: {fileID: 851330599}
-  manager: {fileID: 0}
+  manager: {fileID: 755973300}
   upradeItemType: 6
   icon: {fileID: 1843958242}
   title: {fileID: 506076419}
@@ -21484,7 +21484,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisButton: {fileID: 2144607165}
-  manager: {fileID: 0}
+  manager: {fileID: 755973300}
   upradeItemType: 6
   icon: {fileID: 1480945308}
   title: {fileID: 1819202676}
