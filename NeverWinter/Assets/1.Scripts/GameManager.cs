@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     private bool gameOver = false;
 
     [SerializeField]
-    private GameObject penel, gameoverUI, waveBtn;
+    private GameObject  gameoverUI, waveBtn;
 
     public GameObject levelUpPanel = null;
     public UiUpgrade[] upgradeItems = new UiUpgrade[3];
@@ -63,11 +63,11 @@ public class GameManager : MonoBehaviour
         {
             gameOver = true;
             Time.timeScale = 0;
-            /*
-             * penel.SetActive()
-             * gameoverUI.SetActive(true);
-             * waveBtn.SetActive(false);
-             */
+
+            
+             gameoverUI.SetActive(true);
+            waveBtn.SetActive(false);
+            
         }
     }
 
