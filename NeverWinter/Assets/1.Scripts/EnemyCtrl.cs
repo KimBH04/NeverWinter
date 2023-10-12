@@ -26,18 +26,18 @@ public class EnemyCtrl : MonoBehaviour
     public bool isEnemyDie = false;
     
     private Transform target;
-    public NavMeshAgent agent;
+    //public NavMeshAgent agent;
     
     void Start()
     {
         
-        agent = GetComponent<NavMeshAgent>();
-        target = GameObject.Find("TARGET").transform;
+        //agent = GetComponent<NavMeshAgent>();
+        //target = GameObject.Find("TARGET").transform;
 
-        agent.speed = Enemy_move_Speed;
-        agent.angularSpeed = Enemy_rotation_Speed;
+        //agent.speed = Enemy_move_Speed;
+        //agent.angularSpeed = Enemy_rotation_Speed;
         
-        agent.SetDestination(target.position);
+        //agent.SetDestination(target.position);
         Enemy_HP = Max_Hp;
     }
     
@@ -69,7 +69,7 @@ public class EnemyCtrl : MonoBehaviour
         
 
         
-        agent.enabled = false;
+        //agent.enabled = false;
 
         
         GetComponent<Collider>().enabled = false;

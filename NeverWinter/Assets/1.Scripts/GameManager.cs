@@ -157,12 +157,12 @@ public class GameManager : MonoBehaviour
                 break;
 
             case UpgradeItemType.Knight:
-
+/*
                 for (int i = 0; i < EnemySpeed.Length; i++)
                 {
                     EnemySpeed[i].agent.speed *= 0.5f;
                 }
-
+*/
                 break;
 
             case UpgradeItemType.Gold:
