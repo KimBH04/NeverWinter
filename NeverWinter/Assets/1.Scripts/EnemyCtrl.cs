@@ -30,9 +30,13 @@ public class EnemyCtrl : MonoBehaviour
     
     private Transform target;
     //public NavMeshAgent agent;
+
+    private Animator animator;
+    //private readonly int hashRun = Animator.StringToHash("");
     
     void Start()
     {
+        animator = GetComponent<Animator>();
         container = GameObject.Find("WayContainer").GetComponent<WayContainer>();
         Enemy_HP = Max_Hp;
     }

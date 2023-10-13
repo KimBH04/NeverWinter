@@ -10578,10 +10578,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnDelay: 1
   containers:
-  - {fileID: 1960978317}
   - {fileID: 2118992444}
-  - {fileID: 649476819}
-  - {fileID: 1697161727}
 --- !u!1 &1535082664
 GameObject:
   m_ObjectHideFlags: 0
@@ -22563,10 +22560,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemies:
-  - {fileID: 8715451510042568939, guid: 7dce640c46eca4398a14b25e52ad6a1b, type: 3}
-  - {fileID: 8715451510042568939, guid: 7dce640c46eca4398a14b25e52ad6a1b, type: 3}
-  - {fileID: 8715451510042568939, guid: 7dce640c46eca4398a14b25e52ad6a1b, type: 3}
-  - {fileID: 8715451510042568939, guid: 7dce640c46eca4398a14b25e52ad6a1b, type: 3}
+  - {fileID: 851250910817121569, guid: 4f51ad191bf6ec0479ffe94504bd27bc, type: 3}
+  - {fileID: 851250910817121569, guid: 4f51ad191bf6ec0479ffe94504bd27bc, type: 3}
+  - {fileID: 851250910817121569, guid: 4f51ad191bf6ec0479ffe94504bd27bc, type: 3}
 --- !u!4 &2118992445
 Transform:
   m_ObjectHideFlags: 0
@@ -22782,63 +22778,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 493e432aa4f64f842af84ef8436ee375, type: 3}
---- !u!1001 &3819573661936499312
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 43787629187772315, guid: 4f51ad191bf6ec0479ffe94504bd27bc, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 43787629187772315, guid: 4f51ad191bf6ec0479ffe94504bd27bc, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 43787629187772315, guid: 4f51ad191bf6ec0479ffe94504bd27bc, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 43787629187772315, guid: 4f51ad191bf6ec0479ffe94504bd27bc, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 43787629187772315, guid: 4f51ad191bf6ec0479ffe94504bd27bc, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 43787629187772315, guid: 4f51ad191bf6ec0479ffe94504bd27bc, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 43787629187772315, guid: 4f51ad191bf6ec0479ffe94504bd27bc, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 43787629187772315, guid: 4f51ad191bf6ec0479ffe94504bd27bc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 43787629187772315, guid: 4f51ad191bf6ec0479ffe94504bd27bc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 43787629187772315, guid: 4f51ad191bf6ec0479ffe94504bd27bc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 851250910817121569, guid: 4f51ad191bf6ec0479ffe94504bd27bc, type: 3}
-      propertyPath: m_Name
-      value: BabyGoblin_Run_Test
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 4f51ad191bf6ec0479ffe94504bd27bc, type: 3}
 --- !u!1001 &5680636622511949335
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22996,4 +22935,3 @@ SceneRoots:
   - {fileID: 1723578068}
   - {fileID: 1168792567}
   - {fileID: 1829091101}
-  - {fileID: 3819573661936499312}
