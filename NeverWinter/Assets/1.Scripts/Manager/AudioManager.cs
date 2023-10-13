@@ -24,7 +24,7 @@ public class AudioManager : MonoBehaviour
     //  AudioManager.instance.PlaySfx(AudioManager.Sfx.무엇);
     //AudioManager.instance.PlayBgm(false);
     //AudioManager.instance.PlayBgm(true);
-    public enum Sfx {  }
+    public enum Sfx { Dead }
 
     void Awake()
     {

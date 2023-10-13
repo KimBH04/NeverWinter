@@ -89,6 +89,7 @@ public class EnemyCtrl : MonoBehaviour
     private void EnemyDie()
     {
         isEnemyDie = true;
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Dead);
 
         
 
