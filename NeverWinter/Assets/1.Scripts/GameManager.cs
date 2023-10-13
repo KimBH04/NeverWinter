@@ -12,10 +12,14 @@ public class GameManager : MonoBehaviour
 
     private static int lives = 100;
     private bool gameOver = false;
+    private bool gameWon = false;
 
     [SerializeField]
-    private GameObject  gameoverUI, waveBtn;
+    private GameObject  gameoverUI, AnyBtn;
 
+    [SerializeField] 
+    private GameObject gamewonUI;
+    
     public GameObject levelUpPanel = null;
     public UiUpgrade[] upgradeItems = new UiUpgrade[3];
     public int[] upgradeItemLevel = new int[(int)UpgradeItemType.max + 1];
@@ -48,12 +52,27 @@ public class GameManager : MonoBehaviour
         set
         {
             lives = value;
+            Debug.Log(lives);
 
             if (lives <= 0)
             {
                 lives = 0;
                 GameOver();
             }
+        }
+    }
+
+    public void GameVictory()
+    {
+        if (!gameWon)
+        {
+            gameWon = true;
+            Time.timeScale = 0;
+            
+            /*
+             * gamewon.SetActive(true);
+             *  AnyBtn.SetActive(false);
+             */
         }
     }
 
@@ -66,7 +85,7 @@ public class GameManager : MonoBehaviour
 
             
              gameoverUI.SetActive(true);
-            waveBtn.SetActive(false);
+             AnyBtn.SetActive(false);
             
         }
     }

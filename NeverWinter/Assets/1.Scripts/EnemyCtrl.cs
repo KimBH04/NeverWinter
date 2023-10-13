@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.tvOS;
 
 // 메모장
 
@@ -13,6 +14,8 @@ public class EnemyCtrl : MonoBehaviour
     public Transform[] movePoints;
 
     // 체력  #미완성#
+    
+    
     public float Enemy_HP;
     public float Max_Hp;
     // 이동속도
@@ -33,6 +36,8 @@ public class EnemyCtrl : MonoBehaviour
 
     private Animator animator;
     //private readonly int hashRun = Animator.StringToHash("");
+    
+    
     
     void Start()
     {
@@ -59,6 +64,20 @@ public class EnemyCtrl : MonoBehaviour
             EnemyDie();
         }
     }
+    
+    public void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("Castle"))
+            takeCastle();
+        Debug.Log("콜라이더 반응중");
+    }
+
+    public void takeCastle()
+    {
+        GameManager.instance.Lives--;
+        Destroy(gameObject);
+    }
+    
 
     public void Attack()
     {

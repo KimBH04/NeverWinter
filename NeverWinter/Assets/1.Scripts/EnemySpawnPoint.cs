@@ -11,11 +11,8 @@ public class EnemySpawnPoint : MonoBehaviour
     
     
     bool isFinishedCoroutine = true;
-     
 
-     
-
-
+    
    
     public void WaveStart()
     {
@@ -52,4 +49,6 @@ public class EnemySpawnPoint : MonoBehaviour
         containerIndex++;
         isFinishedCoroutine = true;
     }
+
+   
 }
