@@ -46,7 +46,7 @@ public class EnemySpawnPoint : MonoBehaviour
                 break;
             }
 
-            Instantiate(enemy, transform);
+            Instantiate(enemy, transform.position, Quaternion.Euler(0f, 0f, 90f));
             yield return new WaitForSeconds(spawnDelay);
         }
         containerIndex++;

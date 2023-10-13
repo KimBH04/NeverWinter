@@ -7,14 +7,16 @@ using UnityEngine.AI;
 
 public class EnemyCtrl : MonoBehaviour
 {
+    private WayContainer container;
+    private int idx;
+
+    public Transform[] movePoints;
+
     // 체력  #미완성#
     public float Enemy_HP;
     public float Max_Hp;
     // 이동속도
     public float Enemy_move_Speed;
-    
-    // 회전 속도 
-    public float Enemy_rotation_Speed; 
     
     //능력 #미완성#
     public string Enemy_Spell;
@@ -24,23 +26,22 @@ public class EnemyCtrl : MonoBehaviour
     
     //적 사망여부 
     public bool isEnemyDie = false;
+    private bool isEnd = false;
     
     private Transform target;
     //public NavMeshAgent agent;
     
     void Start()
     {
-        
-        //agent = GetComponent<NavMeshAgent>();
-        //target = GameObject.Find("TARGET").transform;
-
-        //agent.speed = Enemy_move_Speed;
-        //agent.angularSpeed = Enemy_rotation_Speed;
-        
-        //agent.SetDestination(target.position);
+        container = GameObject.Find("WayContainer").GetComponent<WayContainer>();
         Enemy_HP = Max_Hp;
     }
-    
+
+    private void Update()
+    {
+        MoveWay();
+    }
+
     // 적이 데미지 받았을 때 쓰는 함수
     public void TakeDamage(float damage)
     {
@@ -77,5 +78,25 @@ public class EnemyCtrl : MonoBehaviour
         Cost.Coin += Reward;
         Destroy(gameObject, 1.0f);
 
+    }
+
+    void MoveWay()
+    {
+        if (!isEnd)
+        {
+            Transform tr = container.WayPoints[idx];
+            transform.LookAt(tr);
+
+            transform.position = Vector3.MoveTowards(transform.position, tr.position, Enemy_move_Speed * Time.deltaTime);
+
+            if ((transform.position - tr.position).sqrMagnitude < 0.05f)
+            {
+                idx++;
+                if (idx >= container.WayPoints.Length)
+                {
+                    isEnd = true;
+                }
+            }
+        }
     }
 }
