@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tower2 : EnemyCtrl
+public class Tower2 : MonoBehaviour
 {
     // 타워 파는 것 #미완성#
     public GameObject TowerSelf;
@@ -23,7 +23,7 @@ public class Tower2 : EnemyCtrl
     private float temp;
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         temp = shootDelay;
     }

@@ -4,7 +4,6 @@ public class CameraCtrl : MonoBehaviour
 {
     [SerializeField]
     private float floorIns;
-    public static float floorPos { get; private set; }
     public float zoomInOutSpeed;
     private float X, Z, Zoom;
     
@@ -13,6 +12,8 @@ public class CameraCtrl : MonoBehaviour
 
     private bool isPanning = false;
     private Vector3 lastMousePosition;
+
+    public static float floorPos { get; private set; }
 
     private void Start()
     {

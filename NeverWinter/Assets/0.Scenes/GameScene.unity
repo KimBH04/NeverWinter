@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.451401, g: 0.5008942, b: 0.5723129, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8054,6 +8054,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3946500030719795700, guid: f36c6cda18370834c8cf38ef0bc5ef00, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8087,17 +8091,17 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 1, g: 0.95, b: 0.9, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
-    m_Resolution: -1
+    m_Type: 1
+    m_Resolution: 0
     m_CustomResolution: -1
-    m_Strength: 1
+    m_Strength: 0.2
     m_Bias: 0.05
     m_NormalBias: 0.4
     m_NearPlane: 0.2
@@ -8146,13 +8150,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalRotation: {x: 0.2588191, y: 0, z: 0, w: 0.9659258}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 30, y: 0, z: 0}
 --- !u!1 &710555106
 GameObject:
   m_ObjectHideFlags: 0
@@ -8421,6 +8425,10 @@ PrefabInstance:
     - target: {fileID: 1077156703709552230, guid: f36c6cda18370834c8cf38ef0bc5ef00, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3946500030719795700, guid: f36c6cda18370834c8cf38ef0bc5ef00, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6126354433544135551, guid: f36c6cda18370834c8cf38ef0bc5ef00, type: 3}
       propertyPath: distance
@@ -10083,6 +10091,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919378762807584844, guid: 3c0ff538f0473554a8336f7503994a0b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1424381589}
     - targetCorrespondingSourceObject: {fileID: 5397765240442805583, guid: 3c0ff538f0473554a8336f7503994a0b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 399539263}
@@ -11019,6 +11030,33 @@ RectTransform:
   m_AnchoredPosition: {x: -875, y: 460}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1424381585 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919378762807584844, guid: 3c0ff538f0473554a8336f7503994a0b, type: 3}
+  m_PrefabInstance: {fileID: 1168792567}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1424381589
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1424381585}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 1466850820345451325, guid: 3c0ff538f0473554a8336f7503994a0b, type: 3}
 --- !u!1 &1452662768
 GameObject:
   m_ObjectHideFlags: 0
@@ -23486,6 +23524,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3946500030719795700, guid: f36c6cda18370834c8cf38ef0bc5ef00, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -23499,6 +23541,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 583096210747918775, guid: 493e432aa4f64f842af84ef8436ee375, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6933090811289958345, guid: 493e432aa4f64f842af84ef8436ee375, type: 3}
       propertyPath: m_Name
       value: CannonTower_3
@@ -23629,6 +23675,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5796311607468771962, guid: 5f24b3ffbdb376d439aed41a788cd47a, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8428675745859846122, guid: 5f24b3ffbdb376d439aed41a788cd47a, type: 3}
       propertyPath: m_Name
       value: CannonTower_2

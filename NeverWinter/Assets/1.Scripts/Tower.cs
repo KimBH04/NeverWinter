@@ -40,51 +40,48 @@ public class Tower : MonoBehaviour
 
     private void OnMouseDown()
     {
-        popup.OpenPopup(this, transform, OnStartMove);
-    }
-
-    public void OnStartMove()
-    {
         isClick = true;
         beforePos = transform.position;
         visualTower.SetActive(true);
     }
 
-    private void Update()
+    private void OnMouseDrag()
     {
-        if (isClick)
+        Ray mousePos = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Vector3 direction = mousePos.direction;
+        float multi = -CameraCtrl.floorPos / direction.y;
+
+        transform.position = direction * multi + Camera.main.transform.position;
+
+        if (target != null)
         {
-            Ray mousePos = Camera.main.ScreenPointToRay(Input.mousePosition);
-            Vector3 direction = mousePos.direction;
-            float multi = -CameraCtrl.floorPos / direction.y;
-
-            transform.position = direction * multi + Camera.main.transform.position;
-
-            if (Input.GetMouseButtonDown(0))
-            {
-                if (readiedMerging)
-                {
-                    Instantiate(highRankTower, target.transform.position, Quaternion.identity);
-
-                    Destroy(transform.parent.gameObject);
-                    Destroy(target.transform.parent.gameObject);
-                }
-                else if (move)
-                {
-                    transform.parent.position = transform.position;
-                    transform.localPosition = Vector3.zero;
-                }
-                else
-                {
-                    transform.position = beforePos;
-                }
-
-                isClick = false;
-                move = true;
-                readiedMerging = false;
-                visualTower.SetActive(false);
-            }
+            visualMesh.material = blue;
         }
+    }
+
+    private void OnMouseUp()
+    {
+        if (readiedMerging)
+        {
+            Instantiate(highRankTower, target.transform.position, Quaternion.identity);
+
+            Destroy(transform.parent.gameObject);
+            Destroy(target.transform.parent.gameObject);
+        }
+        else if (move)
+        {
+            transform.parent.position = transform.position;
+            transform.localPosition = Vector3.zero;
+        }
+        else
+        {
+            transform.position = beforePos;
+        }
+
+        isClick = false;
+        move = true;
+        readiedMerging = false;
+        visualTower.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -97,9 +94,8 @@ public class Tower : MonoBehaviour
         if (readiedMerging = other.TryGetComponent(out Tower tower) && tower.ID == ID && highRankTower != null)
         {
             target = other;
-            visualMesh.material = blue;
         }
-        else
+        else if (target == null)
         {
             visualMesh.material = red;
         }
@@ -114,6 +110,7 @@ public class Tower : MonoBehaviour
 
         if (target == other)
         {
+            target = null;
             readiedMerging = false;
         }
 
