@@ -16,8 +16,9 @@ public class Tower2 : MonoBehaviour
     public int TowerSell;
     public float AD;
     private float Dist;
-    public int cnt;
     public GameObject Bullet;
+    public float PlusAD;
+
 
 
     private float temp;
@@ -30,7 +31,9 @@ public class Tower2 : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {      
+    {
+        
+
         if (targetUnit == null)
         {
             Collider[] colliderList = Physics.OverlapSphere(transform.position, distance, LayerMask.GetMask("Unit"));
@@ -75,7 +78,6 @@ public class Tower2 : MonoBehaviour
             if (Dist > distance)
             {
                 targetUnit = null;
-
             }
         }
 
@@ -97,6 +99,27 @@ public class Tower2 : MonoBehaviour
             }
         }
     }
+
+    public void plus(int a)
+    {
+        if (PlusAD != a)
+        {
+            PlusAD += a;
+            ad += a;
+            Debug.Log(ad);
+        }
+    }
+
+    public void exit(int a)
+    {
+        if (PlusAD == a)
+        {
+            PlusAD -= a;
+            ad -= a;
+        }
+    }
+
+
 
     /*public IEnumerator BulletBustShoot()
     {

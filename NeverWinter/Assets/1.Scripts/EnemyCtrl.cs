@@ -10,7 +10,7 @@ public class EnemyCtrl : MonoBehaviour
 {
     private WayContainer container;
     private int idx;
-
+    public Renderer render = null;
     public Transform[] movePoints;
 
     // 체력  #미완성#
@@ -30,7 +30,8 @@ public class EnemyCtrl : MonoBehaviour
     //적 사망여부 
     public bool isEnemyDie = false;
     private bool isEnd = false;
-    
+    private Coroutine damageCoroutine = null;
+
     private Transform target;
     //public NavMeshAgent agent;
 
@@ -57,7 +58,10 @@ public class EnemyCtrl : MonoBehaviour
         if (isEnemyDie)
             return;
         Enemy_HP -= damage;
+        if (damageCoroutine != null)
+            StopCoroutine(damageCoroutine);
 
+        damageCoroutine = StartCoroutine(DamageEvent());
         
         if (Enemy_HP <= 0)
         {
@@ -102,6 +106,16 @@ public class EnemyCtrl : MonoBehaviour
         Cost.Coin += Reward;
         Destroy(gameObject, 1.0f);
 
+    }
+
+    IEnumerator DamageEvent()
+    {
+        if (render)
+            render.material.color = Color.red;
+
+        yield return new WaitForSeconds(0.1f);
+        if (render)
+            render.material.color = Color.white;
     }
 
     void MoveWay()

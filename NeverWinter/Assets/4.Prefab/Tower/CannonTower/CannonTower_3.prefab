@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6758060784758456901}
   - component: {fileID: 7152638510661576045}
   - component: {fileID: 1187493965403432738}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -115,7 +115,7 @@ GameObject:
   - component: {fileID: 491473987825352393}
   - component: {fileID: 4155991428738359385}
   - component: {fileID: 5316233990189132706}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Visualize
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -196,7 +196,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6554277434330528617}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ShootPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -226,9 +226,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8545310910061558653}
     m_Modifications:
+    - target: {fileID: 4790907548056767107, guid: 9a6f888cff78e484e87b2e8d68a06435, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6383794042143330898, guid: 9a6f888cff78e484e87b2e8d68a06435, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 6933090811289958345, guid: 9a6f888cff78e484e87b2e8d68a06435, type: 3}
       propertyPath: m_Name
       value: CannonTower_3_Visual
+      objectReference: {fileID: 0}
+    - target: {fileID: 6933090811289958345, guid: 9a6f888cff78e484e87b2e8d68a06435, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6933090811289958345, guid: 9a6f888cff78e484e87b2e8d68a06435, type: 3}
       propertyPath: m_IsActive
@@ -273,6 +285,10 @@ PrefabInstance:
     - target: {fileID: 7745234717402082675, guid: 9a6f888cff78e484e87b2e8d68a06435, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8098809328858235814, guid: 9a6f888cff78e484e87b2e8d68a06435, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -344,9 +360,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5869710363925020645, guid: 47a4a4507486ab749b624b535dd121d2, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: -5448816418125637430, guid: 47a4a4507486ab749b624b535dd121d2, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 47a4a4507486ab749b624b535dd121d2, type: 3}
       propertyPath: m_Name
       value: CannonTower_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 47a4a4507486ab749b624b535dd121d2, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2058954962297964862, guid: 47a4a4507486ab749b624b535dd121d2, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -361,6 +393,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2058954962297964862, guid: 47a4a4507486ab749b624b535dd121d2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7906051178948230736}
+    - targetCorrespondingSourceObject: {fileID: 2058954962297964862, guid: 47a4a4507486ab749b624b535dd121d2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1291861435109578597}
   m_SourcePrefab: {fileID: 100100000, guid: 47a4a4507486ab749b624b535dd121d2, type: 3}
 --- !u!4 &5360888930364541410 stripped
 Transform:
@@ -389,13 +424,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d8130d8fc5b74c40883534adcd678bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Enemy_HP: 0
-  Max_Hp: 0
-  Enemy_move_Speed: 0
-  Enemy_rotation_Speed: 0
-  Enemy_Spell: 
-  Reward: 0
-  isEnemyDie: 0
   TowerSelf: {fileID: 0}
   shootPoint: {fileID: 2874388158406794387}
   shootDelay: 0.7
@@ -405,3 +433,27 @@ MonoBehaviour:
   AD: 23
   cnt: 0
   Bullet: {fileID: 8520817353141550526, guid: d04d15af43a5ec44bbe62adb98e6d44b, type: 3}
+  PlusAD: 0
+--- !u!136 &1291861435109578597
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8098809328858235814}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 51.628418
+  m_Height: 53.28598
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
