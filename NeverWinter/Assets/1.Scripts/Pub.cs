@@ -11,12 +11,12 @@ public class Pub : MonoBehaviour
 
     [SerializeField] private GameObject diameter;
 
-    private bool isTower = false;
+    //private bool isTower = false;
     private Tower2 istower1;
  
     //public Collider[] colliderList;
     public int a = 0;
-    Tower2 TowerCheck = null;
+    //Tower2 TowerCheck = null;
     private void Start()
     {
         diameter.SetActive(false);      
