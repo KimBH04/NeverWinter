@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3997670050543476693
+--- !u!1 &3064351892153979078
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,7 +8,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 9038425779173396824}
+  - component: {fileID: 5473538258990718843}
   m_Layer: 0
   m_Name: ShootPoint
   m_TagString: Untagged
@@ -16,22 +16,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &9038425779173396824
+--- !u!4 &5473538258990718843
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3997670050543476693}
+  m_GameObject: {fileID: 3064351892153979078}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.00003, y: -0.00848, z: -0.0005}
+  m_LocalPosition: {x: -0, y: -0.01072, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2451954709264141501}
+  m_Father: {fileID: 3243202570064151866}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &4177531360378552965
+--- !u!1001 &3962234183713868546
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -41,15 +41,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 1f1ba5bb7cff3504b8f6bd013359ef72, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.235052
+      value: 4.511716
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1f1ba5bb7cff3504b8f6bd013359ef72, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.20372581
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1f1ba5bb7cff3504b8f6bd013359ef72, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.292719
+      value: 5.813195
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1f1ba5bb7cff3504b8f6bd013359ef72, type: 3}
       propertyPath: m_LocalRotation.w
@@ -88,40 +88,40 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: -7206175626147787208, guid: 1f1ba5bb7cff3504b8f6bd013359ef72, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 9038425779173396824}
+      addedObject: {fileID: 5473538258990718843}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: -8761909141947372711, guid: 1f1ba5bb7cff3504b8f6bd013359ef72, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5295909395606273260}
+      addedObject: {fileID: 7860803341298068501}
   m_SourcePrefab: {fileID: 100100000, guid: 1f1ba5bb7cff3504b8f6bd013359ef72, type: 3}
---- !u!4 &2451954709264141501 stripped
+--- !u!4 &3243202570064151866 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -7206175626147787208, guid: 1f1ba5bb7cff3504b8f6bd013359ef72, type: 3}
-  m_PrefabInstance: {fileID: 4177531360378552965}
+  m_PrefabInstance: {fileID: 3962234183713868546}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &4584348505728985564 stripped
+--- !u!1 &3502636065453662299 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8761909141947372711, guid: 1f1ba5bb7cff3504b8f6bd013359ef72, type: 3}
-  m_PrefabInstance: {fileID: 4177531360378552965}
+  m_PrefabInstance: {fileID: 3962234183713868546}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &5295909395606273260
+--- !u!114 &7860803341298068501
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4584348505728985564}
+  m_GameObject: {fileID: 3502636065453662299}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0d8130d8fc5b74c40883534adcd678bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   TowerSelf: {fileID: 0}
-  shootPoint: {fileID: 3997670050543476693}
-  shootDelay: 1.5
+  shootPoint: {fileID: 3064351892153979078}
+  shootDelay: 1.8
   distance: 7
   spin: 50
   TowerSell: 0
-  AD: 15
+  AD: 0
   Bullet: {fileID: 1048888425377164901, guid: f70b97cdb00a9044587eadbfa29cfbb6, type: 3}
   PlusAD: 0

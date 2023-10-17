@@ -69,11 +69,8 @@ public class Tower2 : MonoBehaviour
             }
 
             Quaternion rot = Quaternion.LookRotation(viewPos);
-            //rot.y += 90;
-            //�ش� ȸ���� ��ŭ �� ���� ȸ�� ��Ŵ.
             gameObject.transform.rotation = Quaternion.Lerp(gameObject.transform.rotation, rot, Time.deltaTime * spin);
-            //������ Ÿ���� 80, ������ 50~60
-            //shootPoint.transform.rotation =;      
+                 
             Dist = Vector3.Distance(gameObject.transform.position, targetUnit.transform.position);
             if (Dist > distance)
             {
