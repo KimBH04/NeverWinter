@@ -5,14 +5,21 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    private static int lives = 100;
+    private static int lives = 10;
+    public int Max_lives;
+    public Slider Castle_Hpbar;
+
     private bool gameOver = false;
     private bool gameWon = false;
+
+
+    
 
     [SerializeField]
     private GameObject  gameoverUI, AnyBtn;
@@ -42,9 +49,16 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+
+        Max_lives = lives;
+        
         Application.targetFrameRate = 60;
+        Castle_Hpbar.value = Max_lives;
 
     }
+
+   
+    
 
     public int Lives
     {
@@ -52,11 +66,18 @@ public class GameManager : MonoBehaviour
         set
         {
             lives = value;
-            Debug.Log(lives);
+
+            
+            Castle_Hpbar.value = lives;
+            Debug.Log(Castle_Hpbar.value);
 
             if (lives <= 0)
             {
+
                 lives = 0;
+                Castle_Hpbar.gameObject.SetActive(false);
+
+                
                 GameOver();
             }
         }

@@ -8,7 +8,7 @@ public class Cost : MonoBehaviour
 {
     public GameObject[] Towers;
     
-    public static int Coin=500;
+    public static int Coin=900;
     public int GetCoin;
     public TextMeshProUGUI CoinText;
     public GameObject NoMoneyText;

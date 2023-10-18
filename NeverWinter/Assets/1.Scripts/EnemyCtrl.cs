@@ -36,13 +36,13 @@ public class EnemyCtrl : MonoBehaviour
     //public NavMeshAgent agent;
 
     private Animator animator;
-    //private readonly int hashRun = Animator.StringToHash("");
-    
-    
+    private readonly int hashAttack = Animator.StringToHash("Attack");
+    private readonly int hashDie = Animator.StringToHash("Die");
     
     void Start()
     {
         animator = GetComponent<Animator>();
+        
         container = GameObject.Find("WayContainer").GetComponent<WayContainer>();
         Enemy_HP = Max_Hp;
     }
@@ -73,12 +73,14 @@ public class EnemyCtrl : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Castle"))
             takeCastle();
-        Debug.Log("콜라이더 반응중");
+        
     }
 
     public void takeCastle()
     {
+
         GameManager.instance.Lives--;
+        //Debug.Log("콜라이더 반응중");
         Destroy(gameObject);
     }
     
@@ -92,6 +94,7 @@ public class EnemyCtrl : MonoBehaviour
     // 애니메이션 추가 예정
     private void EnemyDie()
     {
+        isEnd = true;
         isEnemyDie = true;
         AudioManager.instance.PlaySfx(AudioManager.Sfx.Dead);
 
@@ -104,8 +107,14 @@ public class EnemyCtrl : MonoBehaviour
         GetComponent<Collider>().enabled = false;
 
         Cost.Coin += Reward;
-        Destroy(gameObject, 1.0f);
+        //Destroy(gameObject, 1.0f);
+        Debug.Log("주금   ");
+        animator.SetTrigger(hashDie);
+    }
 
+    public void Die()
+    {
+        Destroy(gameObject);
     }
 
     IEnumerator DamageEvent()
