@@ -45,15 +45,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d8130d8fc5b74c40883534adcd678bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Enemy_HP: 0
-  Enemy_move_Speed: 0
-  Enemy_rotation_Speed: 0
-  Enemy_Spell: 
-  isEnemyDie: 0
+  TowerSelf: {fileID: 0}
   shootPoint: {fileID: 6349785221372600656}
   shootDelay: 2
   distance: 9
   spin: 90
+  TowerSell: 0
+  AD: 0
+  Bullet: {fileID: 0}
+  PlusAD: 0
 --- !u!1 &5951978199646067480
 GameObject:
   m_ObjectHideFlags: 0
@@ -364,6 +364,10 @@ PrefabInstance:
     - target: {fileID: 5676657948261787703, guid: 447bfed534b97c94baeed0e437008fac, type: 3}
       propertyPath: m_Name
       value: MT_Co_Hs_Visual
+      objectReference: {fileID: 0}
+    - target: {fileID: 5676657948261787703, guid: 447bfed534b97c94baeed0e437008fac, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

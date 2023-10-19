@@ -74,7 +74,7 @@ public class CameraCtrl : MonoBehaviour
 
         float zoom = Input.GetAxis("Mouse ScrollWheel");
 
-        Zoom = Mathf.Clamp(Zoom + zoom, -1, 0);
+        Zoom = Mathf.Clamp(Zoom + zoom, -1, 0.5f);
 
         X = Mathf.Clamp(X + x, -(10 * Zoom + 10), 10 * Zoom + 10);
         Z = Mathf.Clamp(Z + z, -(4 * Zoom + 10), 4 * Zoom - 2);

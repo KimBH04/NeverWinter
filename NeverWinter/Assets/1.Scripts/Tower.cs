@@ -82,12 +82,13 @@ public class Tower : MonoBehaviour
         move = true;
         readiedMerging = false;
         visualTower.SetActive(false);
+        target = null;
+
+        Debug.Log(target);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other);
-
         if (!isClick)
             return;
 

@@ -54,7 +54,6 @@ public class Tower2 : MonoBehaviour
 
         if (targetUnit != null)
         {
-
             Vector3 viewPos = targetUnit.transform.position - gameObject.transform.position;
 
             if (shootDelay <= 0f)
@@ -67,12 +66,12 @@ public class Tower2 : MonoBehaviour
             {
                 shootDelay -= Time.deltaTime;
             }
-
+      
             Quaternion rot = Quaternion.LookRotation(viewPos);
             gameObject.transform.rotation = Quaternion.Lerp(gameObject.transform.rotation, rot, Time.deltaTime * spin);
                  
             Dist = Vector3.Distance(gameObject.transform.position, targetUnit.transform.position);
-            if (Dist > distance)
+            if (Dist > distance|| targetUnit.isEnd != true)
             {
                 targetUnit = null;
             }
@@ -84,14 +83,13 @@ public class Tower2 : MonoBehaviour
     public void BulletShoot()
     {
         //�Ѿ��� �����Ѵ�
-        GameObject bullet = Instantiate(Bullet.gameObject,shootPoint.transform.position,Quaternion.identity);
+        GameObject bullet = Instantiate(Bullet, shootPoint.transform.position, Quaternion.identity);
         if (bullet)
         {
             bullet.transform.position = shootPoint.transform.position;
             Attack obj = bullet.GetComponent<Attack>();
             if (obj)
             {
-
                 obj.MoveStart(this);
             }
         }

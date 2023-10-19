@@ -393,9 +393,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2058954962297964862, guid: 47a4a4507486ab749b624b535dd121d2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7906051178948230736}
-    - targetCorrespondingSourceObject: {fileID: 2058954962297964862, guid: 47a4a4507486ab749b624b535dd121d2, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1291861435109578597}
   m_SourcePrefab: {fileID: 100100000, guid: 47a4a4507486ab749b624b535dd121d2, type: 3}
 --- !u!4 &5360888930364541410 stripped
 Transform:
@@ -431,29 +428,5 @@ MonoBehaviour:
   spin: 50
   TowerSell: 0
   AD: 23
-  cnt: 0
   Bullet: {fileID: 8520817353141550526, guid: d04d15af43a5ec44bbe62adb98e6d44b, type: 3}
   PlusAD: 0
---- !u!136 &1291861435109578597
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8098809328858235814}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 51.628418
-  m_Height: 53.28598
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}

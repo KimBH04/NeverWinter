@@ -18,6 +18,7 @@ public class EnemyCtrl : MonoBehaviour
     
     public float Enemy_HP;
     public float Max_Hp;
+    public int atk;
     // 이동속도
     public float Enemy_move_Speed;
     
@@ -29,7 +30,7 @@ public class EnemyCtrl : MonoBehaviour
     
     //적 사망여부 
     public bool isEnemyDie = false;
-    private bool isEnd = false;
+    public bool isEnd = false;
     private Coroutine damageCoroutine = null;
 
     private Transform target;
@@ -72,22 +73,13 @@ public class EnemyCtrl : MonoBehaviour
     public void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.CompareTag("Castle"))
-            takeCastle();
-        
+            animator.SetBool(hashAttack, true);
     }
-
-    public void takeCastle()
-    {
-
-        GameManager.instance.Lives--;
-        //Debug.Log("콜라이더 반응중");
-        Destroy(gameObject);
-    }
-    
 
     public void Attack()
     {
-        GameManager.instance.Lives -= 10;
+        GameManager.instance.Lives -= atk;
+        Debug.Log("아야");
     }
 
     // 적이 죽었을 때 쓰는 함수  # 미완성 #
@@ -98,11 +90,7 @@ public class EnemyCtrl : MonoBehaviour
         isEnemyDie = true;
         AudioManager.instance.PlaySfx(AudioManager.Sfx.Dead);
 
-        
-
-        
         //agent.enabled = false;
-
         
         GetComponent<Collider>().enabled = false;
 

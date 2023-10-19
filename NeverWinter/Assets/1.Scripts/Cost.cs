@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -57,9 +56,8 @@ public class Cost : MonoBehaviour
     
     private void SummonRandomTower()
     {
-        int randomIndex = UnityEngine.Random.Range(0, Towers.Length);
+        int randomIndex = Random.Range(0, Towers.Length);
         GameObject randomTower = Instantiate(Towers[randomIndex], SummonPos.position, Quaternion.identity);
-        
     }
 
     IEnumerator TextOff(float delay)
