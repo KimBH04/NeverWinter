@@ -31,7 +31,7 @@ public class Pub : MonoBehaviour
         for (int i = 0; i < colliderList.Length; i++)
         {
             Tower2 searchTarget = colliderList[i].GetComponent<Tower2>();
-            searchTarget.plus(a);
+            //searchTarget.plus(a);
             //TowerCheck = searchTarget;
         }
 

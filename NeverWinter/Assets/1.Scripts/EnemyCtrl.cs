@@ -12,7 +12,7 @@ public class EnemyCtrl : MonoBehaviour
     private int idx;
     public Renderer render = null;
     public Transform[] movePoints;
-
+    public GameManager manager;
     // 체력  #미완성#
     
     
