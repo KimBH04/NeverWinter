@@ -13,12 +13,8 @@ public class Cost : MonoBehaviour
     public GameObject NoMoneyText;
     public Transform SummonPos; 
     
-  
-
     private float timer;
 
-
-  
 
     private void Update()
     {

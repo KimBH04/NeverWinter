@@ -743,12 +743,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   render: {fileID: 602465022151060635}
   movePoints: []
+  manager: {fileID: 0}
   Enemy_HP: 20
   Max_Hp: 0
+  atk: 1
   Enemy_move_Speed: 5
   Enemy_Spell: 
   Reward: 10
   isEnemyDie: 0
+  isEnd: 0
 --- !u!54 &5142834387861282162
 Rigidbody:
   m_ObjectHideFlags: 0

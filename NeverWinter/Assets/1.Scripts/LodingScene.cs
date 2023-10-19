@@ -6,12 +6,13 @@ using UnityEngine.UI;
 
 public class LodingScene : MonoBehaviour
 {
-    public static string nextScene;
-    [SerializeField] Image progressBar;
+    static string nextScene;
+    [SerializeField]
 
+    Image progressBar;
     private void Start()
+
     {
-        
         StartCoroutine(LoadScene());
     }
 
@@ -19,7 +20,6 @@ public class LodingScene : MonoBehaviour
     {
         nextScene = sceneName;
         int result = Random.Range(1, 4);
-        
         SceneManager.LoadScene(result.ToString());
     }
 
@@ -27,31 +27,30 @@ public class LodingScene : MonoBehaviour
     {
         yield return null;
         AsyncOperation op = SceneManager.LoadSceneAsync(nextScene);
+
         op.allowSceneActivation = false;
         float timer = 0.0f;
         while (!op.isDone)
         {
             yield return null;
-            timer += Time.deltaTime / 3;
-            if (op.progress < 0.8f)
+
+            if (op.progress < 0.9f)
             {
-                progressBar.fillAmount = Mathf.Lerp(progressBar.fillAmount, op.progress, timer);
-                if (progressBar.fillAmount >= op.progress)
-                {
-                    timer = 0f;
-                }
+                progressBar.fillAmount = op.progress;
             }
+
             else
             {
-                progressBar.fillAmount = Mathf.Lerp(progressBar.fillAmount, 1.0f, timer);
-                if (progressBar.fillAmount == 1.0f)
+                timer += Time.unscaledDeltaTime;
+                progressBar.fillAmount = Mathf.Lerp(0.9f, 1f, timer);
+                if (progressBar.fillAmount >= 1.0f)
                 {
                     op.allowSceneActivation = true;
-                    yield break;
+                    yield break; 
                 }
             }
         }
-        
+
     }
 
 }
