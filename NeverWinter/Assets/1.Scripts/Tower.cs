@@ -6,28 +6,23 @@ public class Tower : MonoBehaviour
     [field: SerializeField]
     public int ID { get; private set; }
 
-    [SerializeField]
-    private GameObject highRankTower;
+    [SerializeField] private GameObject highRankTower;
 
     [Header("Visualizing")]
-    [SerializeField]
-    private GameObject visualTower;
-    [SerializeField]
-    private GameObject visualBox;
+    [SerializeField] private GameObject visualBox;
     private MeshRenderer visualMesh;
 
-    [SerializeField]
-    private Material red;
-    [SerializeField]
-    private Material green;
-    [SerializeField]
-    private Material blue;
+    [SerializeField] private Material red;
+    [SerializeField] private Material green;
+    [SerializeField] private Material blue;
 
-    private Vector3 beforePos;
-    private bool move = true;
     private bool isClick;
 
+    private Vector3 beforePos;
     private bool readiedMerging;
+    private bool move = true;
+    private int triggeredCount;
+
     private Collider target;
 
     private TowerExplanationPopup popup;
@@ -42,7 +37,7 @@ public class Tower : MonoBehaviour
     {
         isClick = true;
         beforePos = transform.position;
-        visualTower.SetActive(true);
+        visualBox.SetActive(true);
     }
 
     private void OnMouseDrag()
@@ -79,18 +74,24 @@ public class Tower : MonoBehaviour
         }
 
         isClick = false;
-        move = true;
-        readiedMerging = false;
-        visualTower.SetActive(false);
-        target = null;
 
-        Debug.Log(target);
+        readiedMerging = false;
+        move = true;
+
+        visualMesh.material = green;
+        visualBox.SetActive(false);
+
+        triggeredCount = 0;
+
+        target = null;
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (!isClick)
             return;
+
+        triggeredCount++;
 
         if (readiedMerging = other.TryGetComponent(out Tower tower) && tower.ID == ID && highRankTower != null)
         {
@@ -109,14 +110,17 @@ public class Tower : MonoBehaviour
         if (!isClick)
             return;
 
+        triggeredCount--;
+
         if (target == other)
         {
             target = null;
             readiedMerging = false;
         }
-
-        visualMesh.material = green;
-
-        move = true;
+        else if (triggeredCount < 1)
+        {
+            visualMesh.material = green;
+            move = true;
+        }
     }
 }

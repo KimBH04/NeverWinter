@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.451401, g: 0.5008942, b: 0.5723129, a: 1}
+  m_IndirectSpecularColor: {r: 0.45140028, g: 0.5008927, b: 0.57231224, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8332,9 +8332,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Towers:
-  - {fileID: 8107989695835265422, guid: 96cb37d192e30754aa2b48b1c8446090, type: 3}
-  - {fileID: 2113388554426780331, guid: 89c4815f1bb9ed9499f4df806c659e25, type: 3}
-  - {fileID: 3086216093486033695, guid: 38e1008609b6e3e428bfdc85523cc23f, type: 3}
+  - {fileID: 4005720223881764746, guid: c6cd10ba6c2f2f946becf9c763af09fe, type: 3}
+  - {fileID: 8171931340022320175, guid: 8d9283b1fa8422e4c8a58a2257e87983, type: 3}
+  - {fileID: 798227400495738838, guid: 38e1008609b6e3e428bfdc85523cc23f, type: 3}
+  - {fileID: 2612451267439458554, guid: 6f6a7b66541643548bd8807a5016dfbd, type: 3}
   GetCoin: 5
   CoinText: {fileID: 738369864}
   NoMoneyText: {fileID: 585515799}
