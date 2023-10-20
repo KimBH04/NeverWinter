@@ -5,14 +5,33 @@ using UnityEngine.SceneManagement;
 
 public class Scene : MonoBehaviour
 {
-    // Start is called before the first frame update
-    public void Move(string sceneName)
+    
+
+    
+
+    public void Move()
     {
-        LodingScene.LoadScene(sceneName);
+        Debug.Log("Start");
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Ck);
+        StartCoroutine(move());
+
     }
+
+    IEnumerator move()
+    {
+
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene("GameScene");
+
+    }
+
+
+
+
 
     public void NoLoding(string sceneName)
     {
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Ck);
         SceneManager.LoadScene(sceneName);
     }
 }

@@ -20,11 +20,12 @@ public class AudioManager : MonoBehaviour
     AudioSource[] sfxPlayers;
     int channelIndex;
 
-    
-    //  AudioManager.instance.PlaySfx(AudioManager.Sfx.무엇);
+
+    //AudioManager.instance.PlaySfx(AudioManager.Sfx.무엇);
     //AudioManager.instance.PlayBgm(false);
     //AudioManager.instance.PlayBgm(true);
-    public enum Sfx { Dead }
+
+    public enum Sfx { Dead ,Ck}
 
     void Awake()
     {
@@ -34,7 +35,7 @@ public class AudioManager : MonoBehaviour
             return;
         }
 
-        
+
         instance = this;
         DontDestroyOnLoad(this.gameObject);
         Init();
