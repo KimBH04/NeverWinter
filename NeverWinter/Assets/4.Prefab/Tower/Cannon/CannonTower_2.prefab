@@ -84,6 +84,37 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &7503547181387763293
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3142416301191800581}
+  m_Layer: 0
+  m_Name: shootPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3142416301191800581
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7503547181387763293}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 59}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8127855096705875241}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8232608141714029336
 GameObject:
   m_ObjectHideFlags: 0
@@ -133,7 +164,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <ID>k__BackingField: 2
   highRankTower: {fileID: 7503228120775296053, guid: b5c555ad9e8b2ac4e976c93c5ccae5d9, type: 3}
-  visualTower: {fileID: 8255888072604905709}
   visualBox: {fileID: 548296364965128044}
   red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
   green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
@@ -246,11 +276,48 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: e0b50998c9a6bbf4f9c04b8870dd1ff8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7999133851091917235}
-    m_AddedComponents: []
+    - targetCorrespondingSourceObject: {fileID: -2884152334126187701, guid: e0b50998c9a6bbf4f9c04b8870dd1ff8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3142416301191800581}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: -4653178087591467776, guid: e0b50998c9a6bbf4f9c04b8870dd1ff8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1562040896483485314}
   m_SourcePrefab: {fileID: 100100000, guid: e0b50998c9a6bbf4f9c04b8870dd1ff8, type: 3}
+--- !u!1 &1755850460003148642 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -4653178087591467776, guid: e0b50998c9a6bbf4f9c04b8870dd1ff8, type: 3}
+  m_PrefabInstance: {fileID: 2824495417659164258}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1562040896483485314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1755850460003148642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d8130d8fc5b74c40883534adcd678bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TowerSelf: {fileID: 0}
+  shootPoint: {fileID: 7503547181387763293}
+  shootDelay: 0.8
+  distance: 7
+  spin: 130
+  TowerSell: 0
+  AD: 10
+  Bullet: {fileID: 8520817353141550526, guid: d04d15af43a5ec44bbe62adb98e6d44b, type: 3}
+  PlusAD: 0
 --- !u!4 &2357677163105640841 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e0b50998c9a6bbf4f9c04b8870dd1ff8, type: 3}
+  m_PrefabInstance: {fileID: 2824495417659164258}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8127855096705875241 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -2884152334126187701, guid: e0b50998c9a6bbf4f9c04b8870dd1ff8, type: 3}
   m_PrefabInstance: {fileID: 2824495417659164258}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6440490764206722014
@@ -322,11 +389,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1b1e214ea189ed4da6836878274b9a9, type: 3}
---- !u!1 &8255888072604905709 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3167145786215906099, guid: c1b1e214ea189ed4da6836878274b9a9, type: 3}
-  m_PrefabInstance: {fileID: 6440490764206722014}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8780082867944270423 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2357677163105640841, guid: c1b1e214ea189ed4da6836878274b9a9, type: 3}

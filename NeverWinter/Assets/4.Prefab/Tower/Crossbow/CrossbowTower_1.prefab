@@ -49,7 +49,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <ID>k__BackingField: 4
   highRankTower: {fileID: 7212395481395608511, guid: 6d22a5ef5c783844fbed48b92ad0e0aa, type: 3}
-  visualTower: {fileID: 6385598591672717767}
   visualBox: {fileID: 4758528599987774896}
   red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
   green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
@@ -104,6 +103,37 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &609214837490548786
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 912325267180302465}
+  m_Layer: 0
+  m_Name: ShootPoINT
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &912325267180302465
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609214837490548786}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 3.3, z: 57.9}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8840643255438495379}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4758528599987774896
 GameObject:
   m_ObjectHideFlags: 0
@@ -262,11 +292,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8800975873090639509, guid: 2a9b4670d5dedd54baf5e5d451966937, type: 3}
   m_PrefabInstance: {fileID: 3023811285902597608}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &6385598591672717767 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8171931340022320175, guid: 2a9b4670d5dedd54baf5e5d451966937, type: 3}
-  m_PrefabInstance: {fileID: 3023811285902597608}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &9055016535183372670
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -325,10 +350,47 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3e6c3855f95baf04d96fc833628a52be, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3363010394052262399}
-    m_AddedComponents: []
+    - targetCorrespondingSourceObject: {fileID: -8711747684228530195, guid: 3e6c3855f95baf04d96fc833628a52be, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 912325267180302465}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: -6909492416654750466, guid: 3e6c3855f95baf04d96fc833628a52be, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7884781112960504325}
   m_SourcePrefab: {fileID: 100100000, guid: 3e6c3855f95baf04d96fc833628a52be, type: 3}
+--- !u!1 &6752422862858845568 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -6909492416654750466, guid: 3e6c3855f95baf04d96fc833628a52be, type: 3}
+  m_PrefabInstance: {fileID: 9055016535183372670}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7884781112960504325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6752422862858845568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d8130d8fc5b74c40883534adcd678bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TowerSelf: {fileID: 0}
+  shootPoint: {fileID: 609214837490548786}
+  shootDelay: 0.8
+  distance: 7
+  spin: 50
+  TowerSell: 0
+  AD: 0
+  Bullet: {fileID: 0}
+  PlusAD: 0
 --- !u!4 &8800975873090639509 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3e6c3855f95baf04d96fc833628a52be, type: 3}
+  m_PrefabInstance: {fileID: 9055016535183372670}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8840643255438495379 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8711747684228530195, guid: 3e6c3855f95baf04d96fc833628a52be, type: 3}
   m_PrefabInstance: {fileID: 9055016535183372670}
   m_PrefabAsset: {fileID: 0}

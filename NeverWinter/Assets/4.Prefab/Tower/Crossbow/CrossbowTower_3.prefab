@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1404386078964623095
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 575499648079754862}
+  m_Layer: 0
+  m_Name: ShootPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &575499648079754862
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404386078964623095}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 56.4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2853612529191417216}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1777609778762703471
 GameObject:
   m_ObjectHideFlags: 0
@@ -49,7 +80,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <ID>k__BackingField: 6
   highRankTower: {fileID: 0}
-  visualTower: {fileID: 5961502293255935739}
   visualBox: {fileID: 5224007397021506757}
   red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
   green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
@@ -246,11 +276,48 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9c51203ab8aa35449b9873727dde73a8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4579074434707821402}
-    m_AddedComponents: []
+    - targetCorrespondingSourceObject: {fileID: 3846290837482914602, guid: 9c51203ab8aa35449b9873727dde73a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 575499648079754862}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 931271811887603179, guid: 9c51203ab8aa35449b9873727dde73a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8654258909661889500}
   m_SourcePrefab: {fileID: 100100000, guid: 9c51203ab8aa35449b9873727dde73a8, type: 3}
 --- !u!4 &1544854689826328897 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9c51203ab8aa35449b9873727dde73a8, type: 3}
+  m_PrefabInstance: {fileID: 1367638922926798506}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2168024302633986881 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 931271811887603179, guid: 9c51203ab8aa35449b9873727dde73a8, type: 3}
+  m_PrefabInstance: {fileID: 1367638922926798506}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8654258909661889500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2168024302633986881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d8130d8fc5b74c40883534adcd678bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TowerSelf: {fileID: 0}
+  shootPoint: {fileID: 1404386078964623095}
+  shootDelay: 0.8
+  distance: 7
+  spin: 50
+  TowerSell: 0
+  AD: 0
+  Bullet: {fileID: 0}
+  PlusAD: 0
+--- !u!4 &2853612529191417216 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3846290837482914602, guid: 9c51203ab8aa35449b9873727dde73a8, type: 3}
   m_PrefabInstance: {fileID: 1367638922926798506}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5512475536451165440
@@ -322,11 +389,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65819f53c1b9065479e0b8e957f80cbb, type: 3}
---- !u!1 &5961502293255935739 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2178543250837703675, guid: 65819f53c1b9065479e0b8e957f80cbb, type: 3}
-  m_PrefabInstance: {fileID: 5512475536451165440}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6480770490003754049 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1544854689826328897, guid: 65819f53c1b9065479e0b8e957f80cbb, type: 3}
