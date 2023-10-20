@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.451401, g: 0.5008942, b: 0.5723129, a: 1}
+  m_IndirectSpecularColor: {r: 0.4514004, g: 0.5008928, b: 0.57231236, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -741,7 +741,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Main
+          m_StringArgument: GameScene
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &114327680
@@ -7264,16 +7264,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 755973295}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 325954924}
+        m_TargetAssemblyTypeName: Scene, Assembly-CSharp
+        m_MethodName: NoLoding
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Main
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &523690341
@@ -7959,7 +7959,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 595015364}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.6718, y: 1.6718, z: 1.6718}
   m_ConstrainProportionsScale: 0
@@ -8103,7 +8103,6 @@ MonoBehaviour:
   - {fileID: 2518611383634868257, guid: 93baae5d9592da7408304543f60d55c7, type: 3}
   - {fileID: 2518611383634868257, guid: 93baae5d9592da7408304543f60d55c7, type: 3}
   - {fileID: 2518611383634868257, guid: 93baae5d9592da7408304543f60d55c7, type: 3}
-  UI: {fileID: 0}
 --- !u!4 &649476820
 Transform:
   m_ObjectHideFlags: 0
@@ -9442,7 +9441,7 @@ RectTransform:
   m_LocalScale: {x: 12.504392, y: 2.03852, z: 2.0395784}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1937897388}
+  m_Father: {fileID: 1966160915}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -11653,7 +11652,6 @@ MonoBehaviour:
   - {fileID: 2518611383634868257, guid: 93baae5d9592da7408304543f60d55c7, type: 3}
   - {fileID: 2518611383634868257, guid: 93baae5d9592da7408304543f60d55c7, type: 3}
   - {fileID: 2518611383634868257, guid: 93baae5d9592da7408304543f60d55c7, type: 3}
-  UI: {fileID: 0}
 --- !u!114 &1480945308 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1908945341426931790, guid: 533cd69c9d2fc664fb1bc951958c2f91, type: 3}
@@ -11946,7 +11944,6 @@ MonoBehaviour:
   - {fileID: 2518611383634868257, guid: 93baae5d9592da7408304543f60d55c7, type: 3}
   - {fileID: 2518611383634868257, guid: 93baae5d9592da7408304543f60d55c7, type: 3}
   - {fileID: 2518611383634868257, guid: 93baae5d9592da7408304543f60d55c7, type: 3}
-  UI: {fileID: 0}
 --- !u!114 &1587363919 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1908945341426931790, guid: 533cd69c9d2fc664fb1bc951958c2f91, type: 3}
@@ -17113,7 +17110,6 @@ MonoBehaviour:
   - {fileID: 2518611383634868257, guid: 93baae5d9592da7408304543f60d55c7, type: 3}
   - {fileID: 2518611383634868257, guid: 93baae5d9592da7408304543f60d55c7, type: 3}
   - {fileID: 2518611383634868257, guid: 93baae5d9592da7408304543f60d55c7, type: 3}
-  UI: {fileID: 0}
 --- !u!4 &1697161728
 Transform:
   m_ObjectHideFlags: 0
@@ -17158,12 +17154,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f0493f05e5794fab89531b5341ca090, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bgmClip: {fileID: 0}
-  bgmVolume: 0.5
+  bgmClip: {fileID: 8300000, guid: 7c2e88cbccfb74d26822186fa53f852a, type: 3}
+  bgmVolume: 0.3
   sfxClips:
   - {fileID: 8300000, guid: 3da1bf3e1e846084b90f743508ad7324, type: 3}
-  sfxVolume: 0.5
-  channels: 0
+  - {fileID: 8300000, guid: fb78fa5bedbf694419221ff27194df0f, type: 3}
+  - {fileID: 8300000, guid: 1cea8af612c924185bb014f74759fde3, type: 3}
+  sfxVolume: 0.3
+  channels: 10
 --- !u!4 &1706166041
 Transform:
   m_ObjectHideFlags: 0
@@ -22595,12 +22593,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1906699423}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2.4170158, y: 2.4170158, z: 2.4170158}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1937897388}
+  m_Father: {fileID: 1966160915}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -22821,9 +22819,6 @@ RectTransform:
   - {fileID: 595015365}
   - {fileID: 1458211288}
   - {fileID: 1966160915}
-  - {fileID: 942295271}
-  - {fileID: 1906699424}
-  - {fileID: 2092356398}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -22873,7 +22868,6 @@ MonoBehaviour:
   - {fileID: 2518611383634868257, guid: 93baae5d9592da7408304543f60d55c7, type: 3}
   - {fileID: 2518611383634868257, guid: 93baae5d9592da7408304543f60d55c7, type: 3}
   - {fileID: 2518611383634868257, guid: 93baae5d9592da7408304543f60d55c7, type: 3}
-  UI: {fileID: 0}
 --- !u!4 &1960978318
 Transform:
   m_ObjectHideFlags: 0
@@ -22930,6 +22924,9 @@ RectTransform:
   - {fileID: 2105737817}
   - {fileID: 1356222682}
   - {fileID: 1981078758}
+  - {fileID: 942295271}
+  - {fileID: 1906699424}
+  - {fileID: 2092356398}
   m_Father: {fileID: 1937897388}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -23363,16 +23360,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 755973295}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 325954924}
+        m_TargetAssemblyTypeName: Scene, Assembly-CSharp
+        m_MethodName: NoLoding
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: GameScene
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2072990582
@@ -23437,14 +23434,14 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2092356397}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2132164585}
   - {fileID: 276179842}
-  m_Father: {fileID: 1937897388}
+  m_Father: {fileID: 1966160915}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -23612,7 +23609,6 @@ MonoBehaviour:
   - {fileID: 2518611383634868257, guid: 93baae5d9592da7408304543f60d55c7, type: 3}
   - {fileID: 2518611383634868257, guid: 93baae5d9592da7408304543f60d55c7, type: 3}
   - {fileID: 2518611383634868257, guid: 93baae5d9592da7408304543f60d55c7, type: 3}
-  UI: {fileID: 0}
 --- !u!4 &2118992445
 Transform:
   m_ObjectHideFlags: 0

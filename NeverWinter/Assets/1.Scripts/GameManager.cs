@@ -76,11 +76,13 @@ public class GameManager : MonoBehaviour
                 WAVEEvent();
                 wavecount += 1;
 
-                //코인 멈추기
-                
-                //wavecount += 1;
+               
 
             }
+        }
+        else
+        {
+            GameVictory();
         }
         
     }
@@ -113,15 +115,17 @@ public class GameManager : MonoBehaviour
 
     public void GameVictory()
     {
+
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Won);
         if (!gameWon)
         {
             gameWon = true;
             Time.timeScale = 0;
+
+
+            gamewonUI.SetActive(true);
+             AnyBtn.SetActive(false);
             
-            /*
-             * gamewon.SetActive(true);
-             *  AnyBtn.SetActive(false);
-             */
         }
     }
 

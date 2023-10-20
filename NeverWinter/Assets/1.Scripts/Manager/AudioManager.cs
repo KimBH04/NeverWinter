@@ -25,19 +25,20 @@ public class AudioManager : MonoBehaviour
     //AudioManager.instance.PlayBgm(false);
     //AudioManager.instance.PlayBgm(true);
 
-    public enum Sfx { Dead ,Ck}
+    
+    public enum Sfx { Dead ,Ck,Won}
 
     void Awake()
     {
-        if (instance != null && instance != this)
-        {
-            Destroy(this.gameObject);
-            return;
-        }
-
-
+        // if (instance != null && instance != this)
+        // {
+        //     Destroy(this.gameObject);
+        //     return;
+        // }
         instance = this;
-        DontDestroyOnLoad(this.gameObject);
+        // DontDestroyOnLoad(this.gameObject);
+        
+        
         Init();
         PlayBgm(true);
     }

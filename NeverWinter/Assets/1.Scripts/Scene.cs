@@ -20,7 +20,7 @@ public class Scene : MonoBehaviour
     IEnumerator move()
     {
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         SceneManager.LoadScene("GameScene");
 
     }

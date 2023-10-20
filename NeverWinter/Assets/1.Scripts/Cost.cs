@@ -1,10 +1,15 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Random = UnityEngine.Random;
 
 public class Cost : MonoBehaviour
 {
+    
+   // public static Cost instance;
+    
     public GameObject[] Towers;
     
     public static int Coin=900;
@@ -15,17 +20,30 @@ public class Cost : MonoBehaviour
     
     private float timer;
 
+    private void Awake()
+    {
+        
+        // if (instance != null && instance != this)
+        // {
+        //     Destroy(this.gameObject);
+        //     return;
+        // }
+        //
+        //
+        // instance = this;
+        // DontDestroyOnLoad(this.gameObject);
+    }
 
     private void Update()
     {
-        timer += Time.deltaTime;
-        if (timer >= 1.0f)
-        {
-            Coin += Mathf.FloorToInt(GetCoin);
-            timer -= 1.0f;
-        }
-
-        CoinText.text = "" + Coin;
+      //   timer += Time.deltaTime;
+      //   if (timer >= 1.0f)
+      //   {
+      //   Coin += Mathf.FloorToInt(GetCoin);
+      //    timer -= 1.0f;
+      // }
+      
+     CoinText.text = "" + Coin;
 
     }
 
@@ -33,6 +51,8 @@ public class Cost : MonoBehaviour
 
     public void Summon()
     {
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Ck);
+        
         if (Coin >= 100)
         {
             Coin -= 100;

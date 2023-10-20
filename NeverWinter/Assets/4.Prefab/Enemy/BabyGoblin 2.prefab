@@ -254,13 +254,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   render: {fileID: 0}
   movePoints: []
-  manager: {fileID: 0}
   Enemy_HP: 10
   Max_Hp: 0
   atk: 1
   Enemy_move_Speed: 3.5
   Enemy_Spell: 
-  Reward: 0
+  Reward: 30
   isEnemyDie: 0
   isEnd: 0
 --- !u!95 &2529824243225045227

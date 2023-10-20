@@ -7,7 +7,7 @@ public class WaveContainer : MonoBehaviour
     int enemyCount = 0;
 
     
-    public GameObject UI;
+   
 
 
 
@@ -16,7 +16,7 @@ public class WaveContainer : MonoBehaviour
 
         if (enemyCount >= enemies.Length)
         {
-            //UI.SetActive(true);
+           
              return null;
         }
 
