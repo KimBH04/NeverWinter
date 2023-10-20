@@ -84,6 +84,37 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &3595985080804619159
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1865834232247870287}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1865834232247870287
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3595985080804619159}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 0.011}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2030053831456791743}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4508989939788028152
 GameObject:
   m_ObjectHideFlags: 0
@@ -133,7 +164,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <ID>k__BackingField: 7
   highRankTower: {fileID: 7331116140587621504, guid: 37dd09264710e5843805e935e2540c68, type: 3}
-  visualTower: {fileID: 3752443374192998946}
   visualBox: {fileID: 687953169708010797}
   red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
   green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
@@ -246,11 +276,48 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9fbeafd39a1babf4890cf2817060c22c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6950080275080235149}
-    m_AddedComponents: []
+    - targetCorrespondingSourceObject: {fileID: -7206175626147787208, guid: 9fbeafd39a1babf4890cf2817060c22c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1865834232247870287}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: -8761909141947372711, guid: 9fbeafd39a1babf4890cf2817060c22c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1751307746015396026}
   m_SourcePrefab: {fileID: 100100000, guid: 9fbeafd39a1babf4890cf2817060c22c, type: 3}
 --- !u!4 &24786547957593452 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9fbeafd39a1babf4890cf2817060c22c, type: 3}
+  m_PrefabInstance: {fileID: 563713317630448263}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &123220379471690206 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -8761909141947372711, guid: 9fbeafd39a1babf4890cf2817060c22c, type: 3}
+  m_PrefabInstance: {fileID: 563713317630448263}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1751307746015396026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 123220379471690206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d8130d8fc5b74c40883534adcd678bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TowerSelf: {fileID: 0}
+  shootPoint: {fileID: 3595985080804619159}
+  shootDelay: 2.3
+  distance: 7
+  spin: 100
+  TowerSell: 0
+  AD: 15
+  Bullet: {fileID: 0}
+  PlusAD: 0
+--- !u!4 &2030053831456791743 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -7206175626147787208, guid: 9fbeafd39a1babf4890cf2817060c22c, type: 3}
   m_PrefabInstance: {fileID: 563713317630448263}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4539774424924198388
@@ -322,11 +389,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2f4566fdb7de474cae063586fe6f84d, type: 3}
---- !u!1 &3752443374192998946 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 798227400495738838, guid: d2f4566fdb7de474cae063586fe6f84d, type: 3}
-  m_PrefabInstance: {fileID: 4539774424924198388}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4564552096191013016 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 24786547957593452, guid: d2f4566fdb7de474cae063586fe6f84d, type: 3}

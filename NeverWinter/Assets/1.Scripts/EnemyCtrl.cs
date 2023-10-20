@@ -12,10 +12,9 @@ public class EnemyCtrl : MonoBehaviour
     private int idx;
     public Renderer render = null;
     public Transform[] movePoints;
-    public GameManager manager;
+    private GameManager manager;
     // 체력  #미완성#
-    
-    
+   
     public float Enemy_HP;
     public float Max_Hp;
     public int atk;
@@ -45,6 +44,7 @@ public class EnemyCtrl : MonoBehaviour
         animator = GetComponent<Animator>();
         
         container = GameObject.Find("WayContainer").GetComponent<WayContainer>();
+        manager = GameObject.Find("GameManager").GetComponent<GameManager>();
         Enemy_HP = Max_Hp;
     }
 
@@ -67,6 +67,7 @@ public class EnemyCtrl : MonoBehaviour
         if (Enemy_HP <= 0)
         {
             EnemyDie();
+
         }
     }
     
@@ -98,6 +99,10 @@ public class EnemyCtrl : MonoBehaviour
         //Destroy(gameObject, 1.0f);
         Debug.Log("주금   ");
         animator.SetTrigger(hashDie);
+
+        manager.count += 1;
+        
+
     }
 
     public void Die()

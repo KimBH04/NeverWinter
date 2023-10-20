@@ -133,7 +133,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <ID>k__BackingField: 3
   highRankTower: {fileID: 0}
-  visualTower: {fileID: 1221675552235973049}
   visualBox: {fileID: 4413144658531897204}
   red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
   green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
@@ -188,6 +187,37 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &9081959910683245316
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7463617178122498562}
+  m_Layer: 0
+  m_Name: ShootPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7463617178122498562
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9081959910683245316}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4787941516147243550}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &7269297883818867044
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -246,13 +276,50 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 982f66c2c2bd41441ace589b4cef2fe4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2024766633125172168}
-    m_AddedComponents: []
+    - targetCorrespondingSourceObject: {fileID: -6443643253617556614, guid: 982f66c2c2bd41441ace589b4cef2fe4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7463617178122498562}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2058954962297964862, guid: 982f66c2c2bd41441ace589b4cef2fe4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4203984664668721666}
   m_SourcePrefab: {fileID: 100100000, guid: 982f66c2c2bd41441ace589b4cef2fe4, type: 3}
+--- !u!4 &4787941516147243550 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -6443643253617556614, guid: 982f66c2c2bd41441ace589b4cef2fe4, type: 3}
+  m_PrefabInstance: {fileID: 7269297883818867044}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7163822468236893839 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 982f66c2c2bd41441ace589b4cef2fe4, type: 3}
   m_PrefabInstance: {fileID: 7269297883818867044}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &8679381272000852058 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2058954962297964862, guid: 982f66c2c2bd41441ace589b4cef2fe4, type: 3}
+  m_PrefabInstance: {fileID: 7269297883818867044}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4203984664668721666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8679381272000852058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d8130d8fc5b74c40883534adcd678bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TowerSelf: {fileID: 0}
+  shootPoint: {fileID: 9081959910683245316}
+  shootDelay: 0.8
+  distance: 7
+  spin: 150
+  TowerSell: 0
+  AD: 10
+  Bullet: {fileID: 8520817353141550526, guid: d04d15af43a5ec44bbe62adb98e6d44b, type: 3}
+  PlusAD: 0
 --- !u!1001 &8706743726598614412
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -322,11 +389,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44c6e237a8f46974da9172cf1db134da, type: 3}
---- !u!1 &1221675552235973049 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7503228120775296053, guid: 44c6e237a8f46974da9172cf1db134da, type: 3}
-  m_PrefabInstance: {fileID: 8706743726598614412}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1999479339984204547 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7163822468236893839, guid: 44c6e237a8f46974da9172cf1db134da, type: 3}

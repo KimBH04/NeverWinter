@@ -18,8 +18,13 @@ public class GameManager : MonoBehaviour
     private bool gameOver = false;
     private bool gameWon = false;
 
-
+    public int count = 0;
+    public WaveContainer []wave;
+    //public WaveContainer[] WaveContainer;
+    public Button Wavebutton;
+    public Button Sumonbutton;
     
+    public int wavecount = -1;
 
     [SerializeField]
     private GameObject  gameoverUI, AnyBtn;
@@ -31,8 +36,8 @@ public class GameManager : MonoBehaviour
     public UiUpgrade[] upgradeItems = new UiUpgrade[3];
     public int[] upgradeItemLevel = new int[(int)UpgradeItemType.max + 1];
     public GameObject tower = null;
-    public GameObject[] TowerAD = new GameObject[6];
-    public EnemyCtrl[] EnemySpeed = new EnemyCtrl[4];
+    //public GameObject[] TowerAD = new GameObject[6];
+    //public EnemyCtrl[] EnemySpeed = new EnemyCtrl[4];
 
     void Awake()
     {
@@ -57,8 +62,31 @@ public class GameManager : MonoBehaviour
 
     }
 
-   
+
+    private void Update()
+    {
+        if (wavecount != 6)
+        {
+            if (count >= wave[wavecount].enemies.Length)
+            {
+                Debug.Log(wavecount);
+                Wavebutton.gameObject.SetActive(true);
+                Sumonbutton.gameObject.SetActive(true);
+                count = 0;
+                WAVEEvent();
+                wavecount += 1;
+
+                //코인 멈추기
+                
+                //wavecount += 1;
+
+            }
+        }
+        
+    }
+
     
+
 
     public int Lives
     {

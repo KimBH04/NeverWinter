@@ -4,7 +4,7 @@ using UnityEngine;
 public class EnemySpawnPoint : MonoBehaviour
 {
     public float spawnDelay = 1f;
-
+    public GameManager manager;
     public WaveContainer[] containers;
 
     int containerIndex = 0;
@@ -16,6 +16,11 @@ public class EnemySpawnPoint : MonoBehaviour
    
     public void WaveStart()
     {
+        manager.Sumonbutton.gameObject.SetActive(false);
+        manager.Wavebutton.gameObject.SetActive(false);
+        Debug.Log(manager.wavecount);
+        
+
         if (isFinishedCoroutine)
         {
             isFinishedCoroutine = false;
