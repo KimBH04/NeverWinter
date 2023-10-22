@@ -148,7 +148,7 @@ public class GameManager : MonoBehaviour
 
     public void WAVEEvent()
     {
-        Time.timeScale = 0.0f;
+        //Time.timeScale = 0.0f;
         if (levelUpPanel)
             levelUpPanel.SetActive(true);
 
