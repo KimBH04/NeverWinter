@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class Tower2 : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class Tower2 : MonoBehaviour
     private float Dist;
     public GameObject Bullet;
     public float PlusAD;
+    
 
 
 
@@ -55,10 +57,12 @@ public class Tower2 : MonoBehaviour
         if (targetUnit != null)
         {
             Vector3 viewPos = targetUnit.transform.position - gameObject.transform.position;
+            
 
             if (shootDelay <= 0f)
             {
-                BulletShoot();
+                
+                BulletShoot(targetUnit);
 
                 shootDelay = temp;
             }
@@ -66,10 +70,12 @@ public class Tower2 : MonoBehaviour
             {
                 shootDelay -= Time.deltaTime;
             }
-      
-            Quaternion rot = Quaternion.LookRotation(viewPos);
+
+            Quaternion rot = Quaternion.LookRotation(viewPos) ;
+            
             gameObject.transform.rotation = Quaternion.Lerp(gameObject.transform.rotation, rot, Time.deltaTime * spin);
-                 
+
+            
             Dist = Vector3.Distance(gameObject.transform.position, targetUnit.transform.position);
             if (Dist > distance|| targetUnit.isEnd != true)
             {
@@ -80,7 +86,7 @@ public class Tower2 : MonoBehaviour
     }
 
     
-    public void BulletShoot()
+    public void BulletShoot(EnemyCtrl a)
     {
         //�Ѿ��� �����Ѵ�
         GameObject bullet = Instantiate(Bullet, shootPoint.transform.position, Quaternion.identity);
@@ -90,7 +96,7 @@ public class Tower2 : MonoBehaviour
             Attack obj = bullet.GetComponent<Attack>();
             if (obj)
             {
-                obj.MoveStart(this);
+                obj.MoveStart(this,a);
             }
         }
     }

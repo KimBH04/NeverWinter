@@ -7,10 +7,6 @@ public class WaveContainer : MonoBehaviour
     int enemyCount = 0;
 
     
-   
-
-
-
     public GameObject GetEnemy()
     {
 

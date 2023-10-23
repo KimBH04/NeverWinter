@@ -17,9 +17,11 @@ public class GameManager : MonoBehaviour
 
     private bool gameOver = false;
     private bool gameWon = false;
+    public Image dddd = null;
 
     public int count = 0;
     public WaveContainer []wave;
+    public Sprite []image;
     //public WaveContainer[] WaveContainer;
     public Button Wavebutton;
     public Button Sumonbutton;
@@ -59,6 +61,8 @@ public class GameManager : MonoBehaviour
         
         Application.targetFrameRate = 60;
         Castle_Hpbar.value = Max_lives;
+        
+
 
     }
 
@@ -75,9 +79,7 @@ public class GameManager : MonoBehaviour
                 count = 0;
                 WAVEEvent();
                 wavecount += 1;
-
-               
-
+                dddd.sprite = image[wavecount];
             }
         }
         else

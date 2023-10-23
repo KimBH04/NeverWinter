@@ -313,7 +313,7 @@ MonoBehaviour:
   spin: 100
   TowerSell: 0
   AD: 15
-  Bullet: {fileID: 0}
+  Bullet: {fileID: 1048888425377164901, guid: f70b97cdb00a9044587eadbfa29cfbb6, type: 3}
   PlusAD: 0
 --- !u!4 &2030053831456791743 stripped
 Transform:
