@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Time_UI : MonoBehaviour
 {
@@ -57,8 +58,13 @@ public class Time_UI : MonoBehaviour
         GamePause.SetActive(false);
         Time.timeScale = 1f;
         
-        
-        
+    }
+
+    public void GameTry()
+    {
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Ck);
+        Debug.Log("다시하기");
+        SceneManager.LoadScene("GameScene");
     }
 
 
