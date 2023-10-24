@@ -42,11 +42,17 @@ namespace NeverWiter
         public void UpgradeItemAction()
         {
             if (manager)
+            {
                 manager.SelectUpgrade(upradeItemType);
+                AudioManager.instance.PlaySfx(AudioManager.Sfx.Ck);
+            }
+
+
         }
 
         public void SetUpgradeInfo(UpgradeItemType uType, int level)
         {
+            
             upradeItemType = uType;
 
             switch (upradeItemType)

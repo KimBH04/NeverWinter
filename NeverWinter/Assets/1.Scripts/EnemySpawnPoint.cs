@@ -16,6 +16,8 @@ public class EnemySpawnPoint : MonoBehaviour
    
     public void WaveStart()
     {
+
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Wave);
         manager.Sumonbutton.gameObject.SetActive(false);
         manager.Wavebutton.gameObject.SetActive(false);
         Debug.Log(manager.wavecount);

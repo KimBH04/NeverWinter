@@ -22,7 +22,7 @@ public class Cost : MonoBehaviour
 
     private void Awake()
     {
-        
+        Coin = 900;
         // if (instance != null && instance != this)
         // {
         //     Destroy(this.gameObject);
@@ -51,7 +51,7 @@ public class Cost : MonoBehaviour
 
     public void Summon()
     {
-        AudioManager.instance.PlaySfx(AudioManager.Sfx.Ck);
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Sum);
         
         if (Coin >= 100)
         {
