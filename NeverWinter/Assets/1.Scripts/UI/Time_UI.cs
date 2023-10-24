@@ -9,6 +9,8 @@ public class Time_UI : MonoBehaviour
     [SerializeField]private GameObject Attach_1_5;
     [SerializeField]  private GameObject Attach_2;
     [SerializeField] private GameObject GamePause;
+
+    private float nowattach;
     
 
 
@@ -19,6 +21,7 @@ public class Time_UI : MonoBehaviour
     }
     public void attach_1()
     {
+        nowattach = 1.5f;
         AudioManager.instance.PlaySfx(AudioManager.Sfx.Ck);
         Time.timeScale = 1.5f;
         Attach_1.SetActive(false);
@@ -27,6 +30,7 @@ public class Time_UI : MonoBehaviour
     }
     public void attach_1_5()
     {
+        nowattach = 2f;
         AudioManager.instance.PlaySfx(AudioManager.Sfx.Ck);
         Time.timeScale = 2f;
         Attach_1_5.SetActive(false);
@@ -35,6 +39,7 @@ public class Time_UI : MonoBehaviour
     }
     public void attach_2()
     {
+        nowattach = 1f;
         AudioManager.instance.PlaySfx(AudioManager.Sfx.Ck);
         Time.timeScale = 1f;
         Attach_2.SetActive(false);
@@ -56,7 +61,7 @@ public class Time_UI : MonoBehaviour
         AudioManager.instance.PlaySfx(AudioManager.Sfx.Ck);
         Debug.Log("요시 카이쵸");
         GamePause.SetActive(false);
-        Time.timeScale = 1f;
+        Time.timeScale = nowattach;
         
     }
 

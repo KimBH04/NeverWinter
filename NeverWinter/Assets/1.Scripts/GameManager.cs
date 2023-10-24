@@ -80,11 +80,17 @@ public class GameManager : MonoBehaviour
                 WAVEEvent();
                 wavecount += 1;
                 dddd.sprite = image[wavecount];
+              
             }
+
+          
+          
         }
         else
         {
+            AudioManager.instance.PlayBgm(false);
             GameVictory();
+            enabled = false;
         }
         
     }
@@ -187,7 +193,7 @@ public class GameManager : MonoBehaviour
 
     public void SelectUpgrade(UpgradeItemType uType)
     {
-        Time.timeScale = 1.0f;
+        //Time.timeScale = 1.0f;
         if (levelUpPanel)
             levelUpPanel.SetActive(false);
 
