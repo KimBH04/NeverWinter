@@ -6,6 +6,8 @@ using TMPro;
 
 public class SkillControl : MonoBehaviour
 {
+    public GameObject pen;
+
     public GameObject hideSkillButton;
     public GameObject textPro;
     public TextMeshProUGUI hideSkillTimeText;
@@ -19,6 +21,7 @@ public class SkillControl : MonoBehaviour
     {
         hideSkillTimeText = textPro.GetComponent<TextMeshProUGUI>();
         hideSkillButton.SetActive(false);
+        pen.SetActive(false);
     }
 
     // Update is called once per frame
@@ -31,6 +34,7 @@ public class SkillControl : MonoBehaviour
     public void HideSkiiSetting(int skillNum)
     {
         hideSkillButton.SetActive(true);
+        pen.SetActive(true);
         getSkillTime = skiiTimes;
         isHideSkill = true;
     }
@@ -56,6 +60,8 @@ public class SkillControl : MonoBehaviour
                 getSkillTime = 0;
                 isHideSkill = false;
                 hideSkillButton.SetActive(false);
+                pen.SetActive(false);
+
             }
             hideSkillTimeText.text = getSkillTime.ToString("00");
 
