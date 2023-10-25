@@ -25,8 +25,18 @@ public class Scene : MonoBehaviour
     //}
     public void MainMove(string sceneName)
     {
-        LodingScene.LoadScene(sceneName);
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Ck);
+        StartCoroutine(Delay());
+        
     }
+
+    IEnumerator Delay()
+    {
+        yield return new WaitForSeconds(0.5f);
+        LodingScene.LoadScene("GameScene");
+    }
+
+
 
     public void NoLoding(string sceneName)
     {
