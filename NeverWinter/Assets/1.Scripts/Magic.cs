@@ -1,40 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
 
 public class Magic : MonoBehaviour
 {
+    public Transform area;
     public GameObject Fire;
     public bool attack = false;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
-        if (attack == true&& Input.GetMouseButtonDown(0))
+        if (attack == true && Input.GetMouseButtonDown(0))
         {
-            if (attack == true)
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out RaycastHit hit, 100f, 1 << 10))
             {
-                Vector3 point = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x,
-                Input.mousePosition.y, -Camera.main.transform.position.z));
-                Debug.Log("dk");
-                point.y += 0.5f;
-                Instantiate(Fire, point, Quaternion.identity);
                 attack = false;
+                area.position = hit.point + new Vector3(0f, 0.1f, 0f);
+                Vector3 masicPoint = hit.point + new Vector3(0f, 10f, 0f);
+                GameObject fire = Instantiate(Fire, masicPoint, Quaternion.Euler(-90f, 0f, 0f));
+
+                Meteo meteo = fire.GetComponent<Meteo>();
+
+                float radius = meteo.radius / 5f;
+                area.localScale = new Vector3(radius, radius, radius);
+                meteo.magic = this;
             }
         }   
     }
-
 
     public void click()
     {
         attack = true;
     }
-    
 }
