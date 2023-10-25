@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.4514004, g: 0.5008928, b: 0.57231236, a: 1}
+  m_IndirectSpecularColor: {r: 0.451401, g: 0.5008942, b: 0.5723129, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -27533,18 +27533,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemies:
+  - {fileID: 1343443061787699522, guid: 4a26836d28ec2d34ab87cf43e839987d, type: 3}
+  - {fileID: 1343443061787699522, guid: 4a26836d28ec2d34ab87cf43e839987d, type: 3}
+  - {fileID: 1343443061787699522, guid: 4a26836d28ec2d34ab87cf43e839987d, type: 3}
+  - {fileID: 3445041466351488875, guid: df6c8ddb57f87bd4db7c06fef52dbabb, type: 3}
+  - {fileID: 3445041466351488875, guid: df6c8ddb57f87bd4db7c06fef52dbabb, type: 3}
+  - {fileID: 3445041466351488875, guid: df6c8ddb57f87bd4db7c06fef52dbabb, type: 3}
+  - {fileID: 4559710553614697059, guid: 20912da4d5b65e24d8349e70ea91393f, type: 3}
+  - {fileID: 4559710553614697059, guid: 20912da4d5b65e24d8349e70ea91393f, type: 3}
+  - {fileID: 4559710553614697059, guid: 20912da4d5b65e24d8349e70ea91393f, type: 3}
   - {fileID: 1746535084019054320, guid: 58f112b383db98f42aca0abe86eb7a72, type: 3}
   - {fileID: 1746535084019054320, guid: 58f112b383db98f42aca0abe86eb7a72, type: 3}
   - {fileID: 1746535084019054320, guid: 58f112b383db98f42aca0abe86eb7a72, type: 3}
-  - {fileID: 1746535084019054320, guid: 58f112b383db98f42aca0abe86eb7a72, type: 3}
-  - {fileID: 1746535084019054320, guid: 58f112b383db98f42aca0abe86eb7a72, type: 3}
-  - {fileID: 1746535084019054320, guid: 58f112b383db98f42aca0abe86eb7a72, type: 3}
-  - {fileID: 2518611383634868257, guid: 93baae5d9592da7408304543f60d55c7, type: 3}
-  - {fileID: 2518611383634868257, guid: 93baae5d9592da7408304543f60d55c7, type: 3}
-  - {fileID: 2518611383634868257, guid: 93baae5d9592da7408304543f60d55c7, type: 3}
-  - {fileID: 2518611383634868257, guid: 93baae5d9592da7408304543f60d55c7, type: 3}
-  - {fileID: 2518611383634868257, guid: 93baae5d9592da7408304543f60d55c7, type: 3}
-  - {fileID: 2518611383634868257, guid: 93baae5d9592da7408304543f60d55c7, type: 3}
 --- !u!4 &1960978318
 Transform:
   m_ObjectHideFlags: 0
@@ -27628,7 +27628,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1981078758
 RectTransform:
   m_ObjectHideFlags: 0

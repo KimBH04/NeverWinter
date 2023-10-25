@@ -77,7 +77,7 @@ public class Tower2 : MonoBehaviour
 
             
             Dist = Vector3.Distance(gameObject.transform.position, targetUnit.transform.position);
-            if (Dist > distance|| targetUnit.isEnd != true)
+            if (Dist > distance+2.0f|| targetUnit.isEnd != true)
             {
                 targetUnit = null;
             }
