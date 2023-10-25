@@ -146,6 +146,7 @@ public class GameManager : MonoBehaviour
 
     public void WAVEEvent()
     {
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Level);
         //Time.timeScale = 0.0f;
         if (levelUpPanel)
             levelUpPanel.SetActive(true);

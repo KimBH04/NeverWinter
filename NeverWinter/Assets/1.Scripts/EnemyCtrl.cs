@@ -9,6 +9,7 @@ using UnityEngine.tvOS;
 
 public class EnemyCtrl : MonoBehaviour
 {
+    public string EnemyName;
     private WayContainer container;
     private int idx;
     public Renderer render = null;
@@ -100,10 +101,12 @@ public class EnemyCtrl : MonoBehaviour
     {
         isEnd = true;
         isEnemyDie = true;
-        AudioManager.instance.PlaySfx(AudioManager.Sfx.Dead);
+        if(EnemyName == "BabyGoblin") AudioManager.instance.PlaySfx(AudioManager.Sfx.BabyGoblin);
+        else AudioManager.instance.PlaySfx(AudioManager.Sfx.Dead);
+
 
         //agent.enabled = false;
-        
+
         GetComponent<Collider>().enabled = false;
 
         Cost.Coin += Reward;
