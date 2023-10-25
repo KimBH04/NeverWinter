@@ -102,6 +102,11 @@ public class EnemyCtrl : MonoBehaviour
         isEnd = true;
         isEnemyDie = true;
         if(EnemyName == "BabyGoblin") AudioManager.instance.PlaySfx(AudioManager.Sfx.BabyGoblin);
+        else if(EnemyName == "BasicGoblin") AudioManager.instance.PlaySfx(AudioManager.Sfx.BasicGoblin);
+        else if (EnemyName == "BugBear") AudioManager.instance.PlaySfx(AudioManager.Sfx.BugBear);
+        else if (EnemyName == "MagicGoblin") AudioManager.instance.PlaySfx(AudioManager.Sfx.MagicGoblin);
+        else if (EnemyName == "VikingGoblin") AudioManager.instance.PlaySfx(AudioManager.Sfx.VikingGoblin);
+        else if (EnemyName == "ArcherGoblin") AudioManager.instance.PlaySfx(AudioManager.Sfx.ArcherGoblin);
         else AudioManager.instance.PlaySfx(AudioManager.Sfx.Dead);
 
 

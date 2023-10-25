@@ -26,7 +26,8 @@ public class AudioManager : MonoBehaviour
     //AudioManager.instance.PlayBgm(true);
 
     
-    public enum Sfx { Dead ,Ck,Won,Sum,Wave,Level, BabyGoblin }
+    public enum Sfx { Dead ,Ck,Won,Sum,Wave,Level, BabyGoblin, ArcherGoblin , BasicGoblin , BugBear,
+    MagicGoblin, VikingGoblin}
 
     void Awake()
     {

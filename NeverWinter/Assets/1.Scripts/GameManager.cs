@@ -56,9 +56,15 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-
+        lives = 30;
         Max_lives = lives;
-        
+      
+        Debug.Log(lives);
+      
+
+
+
+
         Application.targetFrameRate = 60;
         Castle_Hpbar.value = Max_lives;
     }
