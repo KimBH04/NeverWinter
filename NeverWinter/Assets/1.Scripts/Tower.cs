@@ -3,8 +3,10 @@ using UnityEngine;
 
 public class Tower : MonoBehaviour
 {
+
     [field: SerializeField]
     public int ID { get; private set; }
+
 
     [SerializeField] private GameObject highRankTower;
 
@@ -17,6 +19,8 @@ public class Tower : MonoBehaviour
     [SerializeField] private Material blue;
 
     private bool isClick;
+    
+
 
     private Vector3 beforePos;
     private bool readiedMerging;
@@ -31,6 +35,10 @@ public class Tower : MonoBehaviour
     {
         popup = GameObject.Find("TowerPopup").transform.Find("Popup").GetComponent<TowerExplanationPopup>();
         visualMesh = visualBox.GetComponent<MeshRenderer>();
+       
+    
+        
+
     }
 
     private void OnMouseDown()
@@ -38,6 +46,7 @@ public class Tower : MonoBehaviour
         isClick = true;
         beforePos = transform.position;
         visualBox.SetActive(true);
+       
     }
 
     private void OnMouseDrag()
@@ -47,6 +56,7 @@ public class Tower : MonoBehaviour
         float multi = -CameraCtrl.floorPos / direction.y;
 
         transform.position = direction * multi + Camera.main.transform.position;
+        
 
         if (target != null)
         {
@@ -74,12 +84,14 @@ public class Tower : MonoBehaviour
         }
 
         isClick = false;
+        
 
         readiedMerging = false;
         move = true;
 
         visualMesh.material = green;
         visualBox.SetActive(false);
+       
 
         triggeredCount = 0;
 
