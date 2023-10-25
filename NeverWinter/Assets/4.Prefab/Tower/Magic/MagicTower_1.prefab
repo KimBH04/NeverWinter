@@ -109,7 +109,7 @@ Transform:
   m_GameObject: {fileID: 3595985080804619159}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0.011}
+  m_LocalPosition: {x: -0, y: 0, z: 0.01259}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -313,7 +313,7 @@ MonoBehaviour:
   spin: 100
   TowerSell: 0
   AD: 15
-  Bullet: {fileID: 1048888425377164901, guid: f70b97cdb00a9044587eadbfa29cfbb6, type: 3}
+  Bullet: {fileID: 8520817353141550526, guid: 3819d4554c7a5f54da5420b3e1add5f7, type: 3}
   PlusAD: 0
 --- !u!4 &2030053831456791743 stripped
 Transform:

@@ -95,6 +95,8 @@ public class Tower2 : MonoBehaviour
                 obj.MoveStart(this,a);
             }
         }
+
+
     }
 
     public void plus(int a)
