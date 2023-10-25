@@ -10,7 +10,7 @@ public class Magic : MonoBehaviour
 
     void Update()
     {
-        if (attack == true && Input.GetMouseButtonDown(0))
+        if (attack && Input.GetMouseButtonDown(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out RaycastHit hit, 100f, 1 << 10))
