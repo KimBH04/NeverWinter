@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    private static int lives = 10;
+    public static int lives = 30;
     public int Max_lives;
     public Slider Castle_Hpbar;
 
@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
     {
         //if (instance == null)
         //{
-        //    instance = this;
+            instance = this;
         //}
         //else if (instance != this)
         //{
@@ -61,9 +61,6 @@ public class GameManager : MonoBehaviour
         
         Application.targetFrameRate = 60;
         Castle_Hpbar.value = Max_lives;
-        
-
-
     }
 
 
@@ -80,23 +77,17 @@ public class GameManager : MonoBehaviour
                 WAVEEvent();
                 wavecount += 1;
                 dddd.sprite = image[wavecount];
-              
             }
-
-          
-          
         }
         else
         {
             AudioManager.instance.PlayBgm(false);
             GameVictory();
+            wavecount = 0;
             enabled = false;
         }
         
     }
-
-    
-
 
     public int Lives
     {
@@ -114,8 +105,7 @@ public class GameManager : MonoBehaviour
 
                 lives = 0;
                 Castle_Hpbar.gameObject.SetActive(false);
-
-                
+ 
                 GameOver();
             }
         }

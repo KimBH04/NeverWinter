@@ -5,19 +5,22 @@ using UnityEngine;
 
 public class MagicBullet : Attack
 {
-    // Start is called before the first frame update
-    private void OnCollisionEnter(Collision collision)
+    // Start is called before the first frame update  
+    public void OnCollisionEnter(Collision other)
     {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Unit"))
+        Debug.Log("dkdk0");
+        if (other.gameObject.layer == LayerMask.NameToLayer("Unit"))
         {
-            EnemyCtrl unit = collision.gameObject.GetComponent<EnemyCtrl>();
+            EnemyCtrl unit = other.gameObject.GetComponent<EnemyCtrl>();
             if (unit)
             {
                 //Damage(Random.Range(3, 6)); µ¥¹ÌÁö
                 unit.TakeDamage(tower1.AD + Tower2.ad);
             }
-            Destroy(gameObject, 0.5f);
+            Destroy(gameObject,0.5f);
         }
     }
+
+
 }
 

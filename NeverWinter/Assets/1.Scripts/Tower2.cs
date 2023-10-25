@@ -19,7 +19,8 @@ public class Tower2 : MonoBehaviour
     private float Dist;
     public GameObject Bullet;
     public float PlusAD;
-    
+    Transform head;
+
 
 
 
@@ -33,9 +34,7 @@ public class Tower2 : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        
-
+    {       
         if (targetUnit == null)
         {
             Collider[] colliderList = Physics.OverlapSphere(transform.position, distance, LayerMask.GetMask("Unit"));
@@ -49,19 +48,16 @@ public class Tower2 : MonoBehaviour
                     targetUnit = searchTarget;
                     break;
                 }
-
             }
         }
         
-
         if (targetUnit != null)
         {
-            Vector3 viewPos = targetUnit.transform.position - gameObject.transform.position;
-            
+            head = targetUnit.transform.Find("Target");
+            Vector3 viewPos = head.transform.position - gameObject.transform.position;
 
             if (shootDelay <= 0f)
-            {
-                
+            {     
                 BulletShoot(targetUnit);
 
                 shootDelay = temp;
@@ -119,8 +115,6 @@ public class Tower2 : MonoBehaviour
             ad -= a;
         }
     }
-
-
 
     /*public IEnumerator BulletBustShoot()
     {

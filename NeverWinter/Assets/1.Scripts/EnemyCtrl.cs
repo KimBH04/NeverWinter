@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.tvOS;
@@ -71,11 +72,21 @@ public class EnemyCtrl : MonoBehaviour
         }
     }
     
+    
+/*
     public void OnCollisionEnter(Collision other)
     {
+        Debug.Log(other.gameObject.tag);
         if (other.gameObject.CompareTag("Castle"))
+        {
+            Debug.Log("othe");
             animator.SetBool(hashAttack, true);
+            //Attack();
+            
+        }
     }
+*/
+    
 
     public void Attack()
     {
@@ -102,8 +113,19 @@ public class EnemyCtrl : MonoBehaviour
 
         manager.count += 1;
         
-
     }
+
+    //public void OnCollisionEnter(Collision other)
+    //{
+    //    return;
+    //}
+
+
+    IEnumerator Castle()
+    {
+        yield return new WaitForSeconds(1f); 
+}
+
 
     public void Die()
     {
@@ -137,6 +159,10 @@ public class EnemyCtrl : MonoBehaviour
                     isEnd = true;
                 }
             }
+        }
+        else
+        {
+            animator.SetBool(hashAttack, true);
         }
     }
 }
