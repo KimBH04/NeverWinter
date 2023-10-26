@@ -8,7 +8,6 @@ public class LodingScene : MonoBehaviour
 {
     static string nextScene;
     [SerializeField]
-
     Image progressBar;
     private void Start()
 
@@ -19,7 +18,7 @@ public class LodingScene : MonoBehaviour
     public static void LoadScene(string sceneName)
     {
         nextScene = sceneName;
-        int result = Random.Range(1, 4);
+        int result = Random.Range(1, 3);
         SceneManager.LoadScene(result.ToString());
     }
 

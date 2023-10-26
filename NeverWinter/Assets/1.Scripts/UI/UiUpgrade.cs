@@ -164,7 +164,7 @@ namespace NeverWiter
                         if (title)
                             title.text = string.Format("{0} Lv. {1}", "증강 방패", level);
                         if (explain)
-                            explain.text = "공성 내구도 수치 증가";
+                            explain.text = "공성 내구도 수치 증가 (피 회복)";
                     }
 
                     break;

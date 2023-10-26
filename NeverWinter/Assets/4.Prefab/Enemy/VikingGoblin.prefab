@@ -1172,12 +1172,12 @@ MonoBehaviour:
   EnemyName: VikingGoblin
   render: {fileID: 0}
   movePoints: []
-  Enemy_HP: 300
-  Max_Hp: 300
+  Enemy_HP: 500
+  Max_Hp: 500
   atk: 3
   Enemy_move_Speed: 2.7
   Enemy_Spell: 
-  Reward: 30
+  Reward: 50
   isEnemyDie: 0
   isEnd: 0
 --- !u!136 &5456099134319313492

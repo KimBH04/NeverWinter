@@ -78,6 +78,18 @@ PrefabInstance:
       value: intersection
       objectReference: {fileID: 0}
     - target: {fileID: 6197716484863540319, guid: 3167c0cc268947145b50af9c45e95535, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6197716484863540319, guid: 3167c0cc268947145b50af9c45e95535, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6197716484863540319, guid: 3167c0cc268947145b50af9c45e95535, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6197716484863540319, guid: 3167c0cc268947145b50af9c45e95535, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}

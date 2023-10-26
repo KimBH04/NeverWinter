@@ -62,9 +62,6 @@ public class GameManager : MonoBehaviour
         Debug.Log(lives);
 
 
-
-
-
         Application.targetFrameRate = 60;
         Castle_Hpbar.value = Max_lives;
     }
@@ -80,16 +77,12 @@ public class GameManager : MonoBehaviour
                 Wavebutton.gameObject.SetActive(true);
                 Sumonbutton.gameObject.SetActive(true);
                 count = 0;
-                
-
 
                 if (wavecount < 6)
                 {
                     wavecount++;
                     WAVEEvent();
 
-
-                   
                     waveFlag.sprite = image[wavecount];
                 }
                
@@ -101,7 +94,6 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-
             Invoke(nameof(GameSet), 1f);
         }
     }
@@ -115,9 +107,6 @@ public class GameManager : MonoBehaviour
     }
 
    
-
-     
-
     public int Lives
     {
         get { return lives; }
@@ -147,8 +136,6 @@ public class GameManager : MonoBehaviour
         if (!gameWon)
         {
             gameWon = true;
-            
-
 
             gamewonUI.SetActive(true);
              AnyBtn.SetActive(false);
@@ -169,9 +156,6 @@ public class GameManager : MonoBehaviour
             
         }
     }
-
-
-
 
     public void WAVEEvent()
     {
@@ -225,7 +209,7 @@ public class GameManager : MonoBehaviour
         {
             case UpgradeItemType.Axe:
 
-                Tower2.ad += 5.0f;
+                //Tower2.ad += 5.0f;
                 Debug.Log("포션");
 
                 break;
@@ -242,7 +226,7 @@ public class GameManager : MonoBehaviour
                 break;
             case UpgradeItemType.Xbow:
 
-                Tower2.shootdelay *= 0.9f;
+                //Tower2.shootdelay *= 0.9f;
 
                 break;
             case UpgradeItemType.Pub:
@@ -273,21 +257,24 @@ public class GameManager : MonoBehaviour
 
             case UpgradeItemType.Clover:
 
-                Debug.Log("Ŭ�ι�");
-                Vector3 a = new Vector3(0.05f, 0.2f, -1.75f);
-                Instantiate(tower, a, Quaternion.identity);
+                
+                //Vector3 a = new Vector3(0.05f, 0.2f, -1.75f);
+                //Instantiate(tower, a, Quaternion.identity);
 
                 break;
 
             case UpgradeItemType.Shield:
+                lives += 20;
+                Max_lives += 20;
+                Castle_Hpbar.value += 20;
 
-                Debug.Log("����");
+
 
                 break;
 
             case UpgradeItemType.Crown:
 
-                Debug.Log("����");
+               
 
                 break;
         }
