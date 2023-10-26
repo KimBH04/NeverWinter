@@ -954,8 +954,8 @@ MonoBehaviour:
   EnemyName: BugBear
   render: {fileID: 0}
   movePoints: []
-  Enemy_HP: 10
-  Max_Hp: 10
+  Enemy_HP: 600
+  Max_Hp: 600
   atk: 10
   Enemy_move_Speed: 3
   Enemy_Spell: 

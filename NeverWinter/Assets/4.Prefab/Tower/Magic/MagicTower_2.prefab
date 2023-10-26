@@ -303,11 +303,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TowerSelf: {fileID: 0}
   shootPoint: {fileID: 7655779071701810282}
-  shootDelay: 2.3
+  shootDelay: 2
   distance: 7
   spin: 100
   TowerSell: 0
-  AD: 13
+  AD: 25
   Bullet: {fileID: 8520817353141550526, guid: 3819d4554c7a5f54da5420b3e1add5f7, type: 3}
   PlusAD: 0
 --- !u!4 &7428507306554027191 stripped

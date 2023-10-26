@@ -11,13 +11,13 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    public static int lives = 30;
+    public static int lives = 100;
     public int Max_lives;
     public Slider Castle_Hpbar;
 
     private bool gameOver = false;
     private bool gameWon = false;
-    public Image dddd = null;
+    public Image waveFlag;
 
     public int count = 0;
     public WaveContainer []wave;
@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
     public Button Wavebutton;
     public Button Sumonbutton;
     
-    public int wavecount = -1;
+    public int wavecount = 0;
 
     [SerializeField]
     private GameObject  gameoverUI, AnyBtn;
@@ -56,11 +56,11 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        lives = 30;
+        lives = 100;
         Max_lives = lives;
-      
+       
         Debug.Log(lives);
-      
+
 
 
 
@@ -80,20 +80,43 @@ public class GameManager : MonoBehaviour
                 Wavebutton.gameObject.SetActive(true);
                 Sumonbutton.gameObject.SetActive(true);
                 count = 0;
-                WAVEEvent();
-                wavecount += 1;
-                dddd.sprite = image[wavecount];
+                
+
+
+                if (wavecount < 6)
+                {
+                    wavecount++;
+                    WAVEEvent();
+
+
+                   
+                    waveFlag.sprite = image[wavecount];
+                }
+               
+
+
+
+
             }
         }
         else
         {
-            AudioManager.instance.PlayBgm(false);
-            GameVictory();
-            wavecount = 0;
-            enabled = false;
+
+            Invoke(nameof(GameSet), 1f);
         }
-        
     }
+
+    void GameSet()
+    {
+        AudioManager.instance.PlayBgm(false);
+        GameVictory();
+        wavecount = 0;
+        enabled = false;
+    }
+
+   
+
+     
 
     public int Lives
     {
@@ -124,7 +147,7 @@ public class GameManager : MonoBehaviour
         if (!gameWon)
         {
             gameWon = true;
-            Time.timeScale = 0;
+            
 
 
             gamewonUI.SetActive(true);
