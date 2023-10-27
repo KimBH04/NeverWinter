@@ -1560,8 +1560,8 @@ MonoBehaviour:
   EnemyName: ArcherGoblin
   render: {fileID: 0}
   movePoints: []
-  Enemy_HP: 180
-  Max_Hp: 180
+  Enemy_HP: 15
+  Max_Hp: 15
   atk: 4
   Enemy_move_Speed: 2.8
   Enemy_Spell: 

@@ -30,7 +30,7 @@ public class MagicBullet : Attack
 
     private void OnCollisionEnter(Collision other)
     {
-        Debug.Log("dkdk0");
+        //Debug.Log("dkdk0");
         if (other.gameObject.layer == LayerMask.NameToLayer("Unit"))
         {
             EnemyCtrl unit = other.gameObject.GetComponent<EnemyCtrl>();

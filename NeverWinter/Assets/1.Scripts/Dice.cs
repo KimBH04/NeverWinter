@@ -13,42 +13,42 @@ public class Dice : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Debug.DrawRay(transform.position, transform.up * 2f, Color.red);
+        /*Debug.DrawRay(transform.position, transform.up * 2f, Color.red);
         Debug.DrawRay(transform.position, transform.right * 2f, Color.red);
         Debug.DrawRay(transform.position, transform.forward * 2f, Color.red);
         Debug.DrawRay(transform.position, -transform.up * 2f, Color.red);
         Debug.DrawRay(transform.position, -transform.right * 2f, Color.red);
-        Debug.DrawRay(transform.position, -transform.forward * 2f, Color.red);
+        Debug.DrawRay(transform.position, -transform.forward * 2f, Color.red);*/
 
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.up, out hit, 2f) && hit.transform.name == "Plane")
         {
-            Debug.Log(6);
+            //Debug.Log(6);
         }
 
         if (Physics.Raycast(transform.position, -transform.up, out hit, 2f) && hit.transform.name == "Plane")
         {
-            Debug.Log(1);
+            //Debug.Log(1);
         }
 
         if (Physics.Raycast(transform.position, transform.right, out hit, 2f) && hit.transform.name == "Plane")
         {
-            Debug.Log(3);
+            //Debug.Log(3);
         }
 
         if (Physics.Raycast(transform.position, -transform.right, out hit, 2f) && hit.transform.name == "Plane")
         {
-            Debug.Log(4);
+            //Debug.Log(4);
         }
 
         if (Physics.Raycast(transform.position, transform.forward, out hit, 2f) && hit.transform.name == "Plane")
         {
-            Debug.Log(2);
+            //Debug.Log(2);
         }
 
         if (Physics.Raycast(transform.position, -transform.forward, out hit, 2f) && hit.transform.name == "Plane")
         {
-            Debug.Log(5);
+            //Debug.Log(5);
         }
     }
 

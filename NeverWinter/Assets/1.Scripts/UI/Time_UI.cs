@@ -26,7 +26,7 @@ public class Time_UI : MonoBehaviour
         Time.timeScale = 1.5f;
         Attach_1.SetActive(false);
         Attach_1_5.SetActive(true);
-        Debug.Log("1.5배");
+        //Debug.Log("1.5배");
     }
     public void attach_1_5()
     {
@@ -35,7 +35,7 @@ public class Time_UI : MonoBehaviour
         Time.timeScale = 2f;
         Attach_1_5.SetActive(false);
         Attach_2.SetActive(true);
-        Debug.Log("2배");
+        //Debug.Log("2배");
     }
     public void attach_2()
     {
@@ -44,7 +44,7 @@ public class Time_UI : MonoBehaviour
         Time.timeScale = 1f;
         Attach_2.SetActive(false);
         Attach_1.SetActive(true);
-        Debug.Log("1배");
+        //Debug.Log("1배");
     }
     
     public void gameStop()
@@ -53,13 +53,13 @@ public class Time_UI : MonoBehaviour
         GamePause.SetActive(true);
        
         Time.timeScale = 0f;
-        Debug.Log("타임 스토브");
+        //Debug.Log("타임 스토브");
     }
     
     public void gameAgain()
     {
         AudioManager.instance.PlaySfx(AudioManager.Sfx.Ck);
-        Debug.Log("요시 카이쵸");
+        //Debug.Log("요시 카이쵸");
         GamePause.SetActive(false);
         Time.timeScale = nowattach;
         
@@ -70,7 +70,7 @@ public class Time_UI : MonoBehaviour
 
         
         AudioManager.instance.PlaySfx(AudioManager.Sfx.Ck);
-        Debug.Log("다시하기");
+        //Debug.Log("다시하기");
         SceneManager.LoadScene("GameScene");
     }
 

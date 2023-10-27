@@ -59,7 +59,7 @@ public class GameManager : MonoBehaviour
         lives = 100;
         Max_lives = lives;
        
-        Debug.Log(lives);
+        //Debug.Log(lives);
 
 
         Application.targetFrameRate = 60;
@@ -73,7 +73,7 @@ public class GameManager : MonoBehaviour
         {
             if (count >= wave[wavecount].enemies.Length)
             {
-                Debug.Log(wavecount);
+                //ebug.Log(wavecount);
                 Wavebutton.gameObject.SetActive(true);
                 Sumonbutton.gameObject.SetActive(true);
                 count = 0;
@@ -116,7 +116,7 @@ public class GameManager : MonoBehaviour
 
             
             Castle_Hpbar.value = lives;
-            Debug.Log(Castle_Hpbar.value);
+            //Debug.Log(Castle_Hpbar.value);
 
             if (lives <= 0)
             {
@@ -210,18 +210,18 @@ public class GameManager : MonoBehaviour
             case UpgradeItemType.Axe:
 
                 //Tower2.ad += 5.0f;
-                Debug.Log("포션");
+                //Debug.Log("포션");
 
                 break;
             case UpgradeItemType.Potion:
 
-                Debug.Log("도끼");
+                //Debug.Log("도끼");
 
                 break;
 
             case UpgradeItemType.Book:
 
-                Debug.Log("책");
+                //Debug.Log("책");
 
                 break;
             case UpgradeItemType.Xbow:
@@ -236,7 +236,7 @@ public class GameManager : MonoBehaviour
                 break;
             case UpgradeItemType.scout:
 
-                Debug.Log("아아아 ");
+                //Debug.Log("아아아 ");
 
                 break;
 
@@ -251,7 +251,7 @@ public class GameManager : MonoBehaviour
 
             case UpgradeItemType.Gold:
 
-                Debug.Log("아아아아");
+                //Debug.Log("아아아아");
 
                 break;
 

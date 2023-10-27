@@ -105,7 +105,6 @@ public class Tower2 : MonoBehaviour
         {
             PlusAD += a;
             ad += a;
-            Debug.Log(ad);
         }
     }
 

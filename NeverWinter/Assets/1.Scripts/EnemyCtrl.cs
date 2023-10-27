@@ -92,7 +92,7 @@ public class EnemyCtrl : MonoBehaviour
     public void Attack()
     {
         GameManager.instance.Lives -= atk;
-        Debug.Log("아야");
+        //Debug.Log("아야");
     }
 
     // 적이 죽었을 때 쓰는 함수  # 미완성 #
@@ -116,7 +116,7 @@ public class EnemyCtrl : MonoBehaviour
 
         Cost.Coin += Reward;
         //Destroy(gameObject, 1.0f);
-        Debug.Log("주금   ");
+        //Debug.Log("주금   ");
         animator.SetTrigger(hashDie);
 
         manager.count += 1;

@@ -20,7 +20,7 @@ public class EnemySpawnPoint : MonoBehaviour
         AudioManager.instance.PlaySfx(AudioManager.Sfx.Wave);
         manager.Sumonbutton.gameObject.SetActive(false);
         manager.Wavebutton.gameObject.SetActive(false);
-        Debug.Log(manager.wavecount);
+        //Debug.Log(manager.wavecount);
         
 
         if (isFinishedCoroutine)
@@ -30,7 +30,7 @@ public class EnemySpawnPoint : MonoBehaviour
         }
         else
         {
-            Debug.Log("Unfinished wave!");
+            //Debug.Log("Unfinished wave!");
         }
     }
 

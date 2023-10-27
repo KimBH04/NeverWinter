@@ -26,7 +26,7 @@ public class Attack : MonoBehaviour
     void Start()
     {
         a = target.transform.Find("Target");
-        Debug.Log(a);
+        //Debug.Log(a);
         Destroy(gameObject, 5.0f);
     }
 
@@ -68,7 +68,7 @@ public class Attack : MonoBehaviour
             if (unit)
             {
                 //Damage(Random.Range(3, 6)); µ¥¹ÌÁö
-                Debug.Log(unit);
+                //Debug.Log(unit);
                 unit.TakeDamage(tower1.AD/*+Tower2.ad*/);
             }
             Destroy(gameObject);

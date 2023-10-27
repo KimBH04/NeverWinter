@@ -253,7 +253,7 @@ namespace Plugins.Baedrick.ColoredHeaderCreator.Editor
 		private static void CreateHeadersFromPreset(ColoredHeaderPreset presetFile)
 		{
 			if (presetFile == null) {
-				Debug.LogError("Invalid operation.");
+				//Debug.LogError("Invalid operation.");
 				return;
 			}
 
@@ -266,7 +266,7 @@ namespace Plugins.Baedrick.ColoredHeaderCreator.Editor
 		{
 			var path = EditorUtility.SaveFilePanelInProject(Strings.SAVE_PRESET_PANEL_TITLE, "New Header Preset", "asset", "Enter a file name.");
 			if (path.Length <= 0) {
-				Debug.LogError("Invalid operation.");
+				//Debug.LogError("Invalid operation.");
 				return;
 			}
 

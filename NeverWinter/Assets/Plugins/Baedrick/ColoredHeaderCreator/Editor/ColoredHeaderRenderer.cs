@@ -48,7 +48,7 @@ namespace Plugins.Baedrick.ColoredHeaderCreator.Editor
 					headerFontStyle.alignment = TextAnchor.MiddleRight;
 					break;
 				default:
-					Debug.LogError(header.gameObject.name + " has a invalid text alignment selected.");
+					//Debug.LogError(header.gameObject.name + " has a invalid text alignment selected.");
 					Selection.activeObject = header.gameObject;
 					return;
 			}
@@ -67,7 +67,7 @@ namespace Plugins.Baedrick.ColoredHeaderCreator.Editor
 					headerFontStyle.fontStyle = FontStyle.BoldAndItalic;
 					break;
 				default:
-					Debug.LogError(header.gameObject.name + " has a invalid font style selected.");
+					//Debug.LogError(header.gameObject.name + " has a invalid font style selected.");
 					Selection.activeObject = header.gameObject;
 					return;
 			}
