@@ -707,8 +707,8 @@ MonoBehaviour:
   EnemyName: MagicGoblin
   render: {fileID: 0}
   movePoints: []
-  Enemy_HP: 400
-  Max_Hp: 400
+  Enemy_HP: 350
+  Max_Hp: 350
   atk: 6
   Enemy_move_Speed: 3.3
   Enemy_Spell: 

@@ -1172,8 +1172,8 @@ MonoBehaviour:
   EnemyName: VikingGoblin
   render: {fileID: 0}
   movePoints: []
-  Enemy_HP: 500
-  Max_Hp: 500
+  Enemy_HP: 460
+  Max_Hp: 460
   atk: 3
   Enemy_move_Speed: 2.7
   Enemy_Spell: 

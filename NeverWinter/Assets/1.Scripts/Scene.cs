@@ -4,9 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Scene : MonoBehaviour
-{
-
-
+{ 
     public void MainMove(string sceneName)
     {
         AudioManager.instance.PlaySfx(AudioManager.Sfx.Ck);
@@ -20,16 +18,18 @@ public class Scene : MonoBehaviour
         
     }
 
-
-
     public void NoLoding(string sceneName)
     {
         AudioManager.instance.PlaySfx(AudioManager.Sfx.Ck);
         SceneManager.LoadScene(sceneName);
     }
 
-    
-
-
-
+    public void Quit()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif
+    }
 }
