@@ -77,10 +77,11 @@ public class GameManager : MonoBehaviour
                 Wavebutton.gameObject.SetActive(true);
                 Sumonbutton.gameObject.SetActive(true);
                 count = 0;
+                wavecount++;
 
                 if (wavecount < 6)
                 {
-                    wavecount++;
+                   
                     WAVEEvent();
 
                     waveFlag.sprite = image[wavecount];
@@ -132,9 +133,10 @@ public class GameManager : MonoBehaviour
     public void GameVictory()
     {
 
-        AudioManager.instance.PlaySfx(AudioManager.Sfx.Won);
+        
         if (!gameWon)
         {
+            AudioManager.instance.PlaySfx(AudioManager.Sfx.Won);
             gameWon = true;
 
             gamewonUI.SetActive(true);
@@ -160,7 +162,6 @@ public class GameManager : MonoBehaviour
     public void WAVEEvent()
     {
         AudioManager.instance.PlaySfx(AudioManager.Sfx.Level);
-        //Time.timeScale = 0.0f;
         if (levelUpPanel)
             levelUpPanel.SetActive(true);
 
