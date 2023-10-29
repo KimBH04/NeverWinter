@@ -24,6 +24,12 @@ public class Scene : MonoBehaviour
         SceneManager.LoadScene(sceneName);
     }
 
+    public void MainMenu()
+    {
+        
+        SceneManager.LoadScene("Main");
+    }
+
     public void Quit()
     {
 #if UNITY_EDITOR
