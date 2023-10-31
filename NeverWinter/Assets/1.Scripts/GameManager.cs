@@ -6,6 +6,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class GameManager : MonoBehaviour
 {
@@ -74,7 +75,9 @@ public class GameManager : MonoBehaviour
             if (count >= wave[wavecount].enemies.Length)
             {
                 //ebug.Log(wavecount);
-                Wavebutton.gameObject.SetActive(true);
+                Wavebutton.gameObject.transform.DOLocalMoveY(-441, 1f);
+                Sumonbutton.gameObject.transform.DOLocalMoveY(-441, 1f);
+                //Wavebutton.gameObject.SetActive(true);
                 Sumonbutton.gameObject.SetActive(true);
                 count = 0;
                 wavecount++;

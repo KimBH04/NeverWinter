@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using DG.Tweening;
 
 public class EnemySpawnPoint : MonoBehaviour
 {
@@ -18,10 +19,13 @@ public class EnemySpawnPoint : MonoBehaviour
     {
 
         AudioManager.instance.PlaySfx(AudioManager.Sfx.Wave);
-        manager.Sumonbutton.gameObject.SetActive(false);
-        manager.Wavebutton.gameObject.SetActive(false);
-        //Debug.Log(manager.wavecount);
+        manager.Sumonbutton.gameObject.transform.DOLocalMoveY(-658, 1f);
+        manager.Wavebutton.gameObject.transform.DOLocalMoveY(-658, 1f);
         
+        //manager.Sumonbutton.gameObject.SetActive(false);
+        //manager.Wavebutton.gameObject.SetActive(false);
+        //Debug.Log(manager.wavecount);
+
 
         if (isFinishedCoroutine)
         {
