@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,11 +8,14 @@ public class Magic : MonoBehaviour
     public Transform area;
     public GameObject Fire;
     public bool attack = false;
+    
 
+    
     void Update()
     {
         if (attack && Input.GetMouseButtonDown(0))
         {
+            
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out RaycastHit hit, 100f, 1 << 10))
             {

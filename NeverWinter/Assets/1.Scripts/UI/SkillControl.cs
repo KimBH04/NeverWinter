@@ -6,6 +6,8 @@ using TMPro;
 
 public class SkillControl : MonoBehaviour
 {
+    
+   
     public GameObject pen;
 
     public GameObject hideSkillButton;
@@ -15,6 +17,7 @@ public class SkillControl : MonoBehaviour
     private bool isHideSkill= false;
     private float skiiTimes = 10;
     private float getSkillTime = 0;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -22,12 +25,13 @@ public class SkillControl : MonoBehaviour
         hideSkillTimeText = textPro.GetComponent<TextMeshProUGUI>();
         hideSkillButton.SetActive(false);
         pen.SetActive(false);
+      
     }
 
     // Update is called once per frame
     void Update()
     {
-        HideSkillChk();
+            HideSkillChk();
     }
 
 
@@ -43,6 +47,7 @@ public class SkillControl : MonoBehaviour
     {
         if(isHideSkill)
         {
+            
             StartCoroutine(SkillTimeChk());
         }
     }

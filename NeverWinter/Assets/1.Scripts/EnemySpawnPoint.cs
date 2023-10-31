@@ -22,8 +22,8 @@ public class EnemySpawnPoint : MonoBehaviour
         manager.Sumonbutton.gameObject.transform.DOLocalMoveY(-658, 1f);
         manager.Wavebutton.gameObject.transform.DOLocalMoveY(-658, 1f);
         
-        //manager.Sumonbutton.gameObject.SetActive(false);
-        //manager.Wavebutton.gameObject.SetActive(false);
+        // manager.Sumonbutton.gameObject.SetActive(false);
+        // manager.Wavebutton.gameObject.SetActive(false);
         //Debug.Log(manager.wavecount);
 
 

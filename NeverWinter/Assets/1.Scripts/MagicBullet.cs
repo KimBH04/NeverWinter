@@ -20,7 +20,7 @@ public class MagicBullet : Attack
     //        EnemyCtrl unit = other.gameObject.GetComponent<EnemyCtrl>();
     //        if (unit)
     //        {
-    //            //Damage(Random.Range(3, 6)); µ¥¹ÌÁö
+    //            //Damage(Random.Range(3, 6)); ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     //            unit.TakeDamage(tower1.AD + Tower2.ad);
     //        }
     //        Destroy(gameObject, 0.5f);
@@ -30,13 +30,14 @@ public class MagicBullet : Attack
 
     private void OnCollisionEnter(Collision other)
     {
+        
         //Debug.Log("dkdk0");
         if (other.gameObject.layer == LayerMask.NameToLayer("Unit"))
         {
             EnemyCtrl unit = other.gameObject.GetComponent<EnemyCtrl>();
             if (unit)
             {
-                //Damage(Random.Range(3, 6)); µ¥¹ÌÁö
+                //Damage(Random.Range(3, 6)); ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
                 unit.TakeDamage(tower1.AD + Tower2.ad);
             }
             Destroy(gameObject, 0.1f);
