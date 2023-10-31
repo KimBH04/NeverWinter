@@ -78,7 +78,7 @@ public class GameManager : MonoBehaviour
                 Wavebutton.gameObject.transform.DOLocalMoveY(-441, 1f);
                 Sumonbutton.gameObject.transform.DOLocalMoveY(-441, 1f);
                 //Wavebutton.gameObject.SetActive(true);
-                Sumonbutton.gameObject.SetActive(true);
+                //Sumonbutton.gameObject.SetActive(true);
                 count = 0;
                 wavecount++;
 
