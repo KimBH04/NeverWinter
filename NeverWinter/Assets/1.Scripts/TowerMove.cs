@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tower : MonoBehaviour
+public class TowerMove : MonoBehaviour
 {
 
     [field: SerializeField]
@@ -22,7 +22,7 @@ public class Tower : MonoBehaviour
     
 
 
-    private Vector3 beforePos;
+    private Vector3 beginPos;
     private bool readiedMerging;
     private bool move = true;
     private int triggeredCount;
@@ -44,7 +44,7 @@ public class Tower : MonoBehaviour
     private void OnMouseDown()
     {
         isClick = true;
-        beforePos = transform.position;
+        beginPos = transform.position;
         visualBox.SetActive(true);
        
     }
@@ -80,7 +80,7 @@ public class Tower : MonoBehaviour
         }
         else
         {
-            transform.position = beforePos;
+            transform.position = beginPos;
         }
 
         isClick = false;
@@ -105,7 +105,7 @@ public class Tower : MonoBehaviour
 
         triggeredCount++;
 
-        if (readiedMerging = other.TryGetComponent(out Tower tower) && tower.ID == ID && highRankTower != null)
+        if (readiedMerging = other.TryGetComponent(out TowerMove tower) && tower.ID == ID && highRankTower != null)
         {
             target = other;
         }
