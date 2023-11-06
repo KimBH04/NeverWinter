@@ -244,9 +244,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   havingTower: {fileID: 0}
   havingTowerParent: {fileID: 0}
-  green: {fileID: 2100000, guid: 4ad87c138ca784345aca97dd4c1507ea, type: 2}
-  blue: {fileID: 2100000, guid: 4c8d56a9ec00248cbb903febb3e21a15, type: 2}
-  red: {fileID: 2100000, guid: 9fc05b3dfa67e456f8af868e3dd83a0d, type: 2}
+  green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
+  blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
+  red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
 --- !u!1 &91347202
 GameObject:
   m_ObjectHideFlags: 0
@@ -368,9 +368,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   havingTower: {fileID: 0}
   havingTowerParent: {fileID: 0}
-  green: {fileID: 2100000, guid: 4ad87c138ca784345aca97dd4c1507ea, type: 2}
-  blue: {fileID: 2100000, guid: 4c8d56a9ec00248cbb903febb3e21a15, type: 2}
-  red: {fileID: 2100000, guid: 9fc05b3dfa67e456f8af868e3dd83a0d, type: 2}
+  green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
+  blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
+  red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
 --- !u!1 &104746867
 GameObject:
   m_ObjectHideFlags: 0
@@ -492,9 +492,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   havingTower: {fileID: 0}
   havingTowerParent: {fileID: 0}
-  green: {fileID: 2100000, guid: 4ad87c138ca784345aca97dd4c1507ea, type: 2}
-  blue: {fileID: 2100000, guid: 4c8d56a9ec00248cbb903febb3e21a15, type: 2}
-  red: {fileID: 2100000, guid: 9fc05b3dfa67e456f8af868e3dd83a0d, type: 2}
+  green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
+  blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
+  red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
 --- !u!1 &191931627
 GameObject:
   m_ObjectHideFlags: 0
@@ -616,9 +616,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   havingTower: {fileID: 0}
   havingTowerParent: {fileID: 0}
-  green: {fileID: 2100000, guid: 4ad87c138ca784345aca97dd4c1507ea, type: 2}
-  blue: {fileID: 2100000, guid: 4c8d56a9ec00248cbb903febb3e21a15, type: 2}
-  red: {fileID: 2100000, guid: 9fc05b3dfa67e456f8af868e3dd83a0d, type: 2}
+  green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
+  blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
+  red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
 --- !u!1 &198901023
 GameObject:
   m_ObjectHideFlags: 0
@@ -740,9 +740,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   havingTower: {fileID: 0}
   havingTowerParent: {fileID: 0}
-  green: {fileID: 2100000, guid: 4ad87c138ca784345aca97dd4c1507ea, type: 2}
-  blue: {fileID: 2100000, guid: 4c8d56a9ec00248cbb903febb3e21a15, type: 2}
-  red: {fileID: 2100000, guid: 9fc05b3dfa67e456f8af868e3dd83a0d, type: 2}
+  green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
+  blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
+  red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
 --- !u!1 &218369459
 GameObject:
   m_ObjectHideFlags: 0
@@ -966,9 +966,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   havingTower: {fileID: 0}
   havingTowerParent: {fileID: 0}
-  green: {fileID: 2100000, guid: 4ad87c138ca784345aca97dd4c1507ea, type: 2}
-  blue: {fileID: 2100000, guid: 4c8d56a9ec00248cbb903febb3e21a15, type: 2}
-  red: {fileID: 2100000, guid: 9fc05b3dfa67e456f8af868e3dd83a0d, type: 2}
+  green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
+  blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
+  red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
 --- !u!1 &288554561
 GameObject:
   m_ObjectHideFlags: 0
@@ -1090,9 +1090,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   havingTower: {fileID: 0}
   havingTowerParent: {fileID: 0}
-  green: {fileID: 2100000, guid: 4ad87c138ca784345aca97dd4c1507ea, type: 2}
-  blue: {fileID: 2100000, guid: 4c8d56a9ec00248cbb903febb3e21a15, type: 2}
-  red: {fileID: 2100000, guid: 9fc05b3dfa67e456f8af868e3dd83a0d, type: 2}
+  green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
+  blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
+  red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
 --- !u!1 &298262484
 GameObject:
   m_ObjectHideFlags: 0
@@ -1214,9 +1214,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   havingTower: {fileID: 0}
   havingTowerParent: {fileID: 0}
-  green: {fileID: 2100000, guid: 4ad87c138ca784345aca97dd4c1507ea, type: 2}
-  blue: {fileID: 2100000, guid: 4c8d56a9ec00248cbb903febb3e21a15, type: 2}
-  red: {fileID: 2100000, guid: 9fc05b3dfa67e456f8af868e3dd83a0d, type: 2}
+  green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
+  blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
+  red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
 --- !u!1 &312642738
 GameObject:
   m_ObjectHideFlags: 0
@@ -1338,9 +1338,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   havingTower: {fileID: 0}
   havingTowerParent: {fileID: 0}
-  green: {fileID: 2100000, guid: 4ad87c138ca784345aca97dd4c1507ea, type: 2}
-  blue: {fileID: 2100000, guid: 4c8d56a9ec00248cbb903febb3e21a15, type: 2}
-  red: {fileID: 2100000, guid: 9fc05b3dfa67e456f8af868e3dd83a0d, type: 2}
+  green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
+  blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
+  red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
 --- !u!1 &320671683
 GameObject:
   m_ObjectHideFlags: 0
@@ -1462,9 +1462,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   havingTower: {fileID: 0}
   havingTowerParent: {fileID: 0}
-  green: {fileID: 2100000, guid: 4ad87c138ca784345aca97dd4c1507ea, type: 2}
-  blue: {fileID: 2100000, guid: 4c8d56a9ec00248cbb903febb3e21a15, type: 2}
-  red: {fileID: 2100000, guid: 9fc05b3dfa67e456f8af868e3dd83a0d, type: 2}
+  green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
+  blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
+  red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
 --- !u!1 &329281241
 GameObject:
   m_ObjectHideFlags: 0
@@ -1586,9 +1586,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   havingTower: {fileID: 0}
   havingTowerParent: {fileID: 0}
-  green: {fileID: 2100000, guid: 4ad87c138ca784345aca97dd4c1507ea, type: 2}
-  blue: {fileID: 2100000, guid: 4c8d56a9ec00248cbb903febb3e21a15, type: 2}
-  red: {fileID: 2100000, guid: 9fc05b3dfa67e456f8af868e3dd83a0d, type: 2}
+  green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
+  blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
+  red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
 --- !u!1 &338515637
 GameObject:
   m_ObjectHideFlags: 0
@@ -1710,9 +1710,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   havingTower: {fileID: 0}
   havingTowerParent: {fileID: 0}
-  green: {fileID: 2100000, guid: 4ad87c138ca784345aca97dd4c1507ea, type: 2}
-  blue: {fileID: 2100000, guid: 4c8d56a9ec00248cbb903febb3e21a15, type: 2}
-  red: {fileID: 2100000, guid: 9fc05b3dfa67e456f8af868e3dd83a0d, type: 2}
+  green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
+  blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
+  red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
 --- !u!1 &349329776
 GameObject:
   m_ObjectHideFlags: 0
@@ -1926,9 +1926,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   havingTower: {fileID: 0}
   havingTowerParent: {fileID: 0}
-  green: {fileID: 2100000, guid: 4ad87c138ca784345aca97dd4c1507ea, type: 2}
-  blue: {fileID: 2100000, guid: 4c8d56a9ec00248cbb903febb3e21a15, type: 2}
-  red: {fileID: 2100000, guid: 9fc05b3dfa67e456f8af868e3dd83a0d, type: 2}
+  green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
+  blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
+  red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
 --- !u!1 &428008043
 GameObject:
   m_ObjectHideFlags: 0
@@ -2050,9 +2050,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   havingTower: {fileID: 0}
   havingTowerParent: {fileID: 0}
-  green: {fileID: 2100000, guid: 4ad87c138ca784345aca97dd4c1507ea, type: 2}
-  blue: {fileID: 2100000, guid: 4c8d56a9ec00248cbb903febb3e21a15, type: 2}
-  red: {fileID: 2100000, guid: 9fc05b3dfa67e456f8af868e3dd83a0d, type: 2}
+  green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
+  blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
+  red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
 --- !u!1 &468926133
 GameObject:
   m_ObjectHideFlags: 0
@@ -2174,9 +2174,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   havingTower: {fileID: 0}
   havingTowerParent: {fileID: 0}
-  green: {fileID: 2100000, guid: 4ad87c138ca784345aca97dd4c1507ea, type: 2}
-  blue: {fileID: 2100000, guid: 4c8d56a9ec00248cbb903febb3e21a15, type: 2}
-  red: {fileID: 2100000, guid: 9fc05b3dfa67e456f8af868e3dd83a0d, type: 2}
+  green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
+  blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
+  red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
 --- !u!1 &479465912
 GameObject:
   m_ObjectHideFlags: 0
@@ -2298,9 +2298,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   havingTower: {fileID: 0}
   havingTowerParent: {fileID: 0}
-  green: {fileID: 2100000, guid: 4ad87c138ca784345aca97dd4c1507ea, type: 2}
-  blue: {fileID: 2100000, guid: 4c8d56a9ec00248cbb903febb3e21a15, type: 2}
-  red: {fileID: 2100000, guid: 9fc05b3dfa67e456f8af868e3dd83a0d, type: 2}
+  green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
+  blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
+  red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
 --- !u!1 &484320656
 GameObject:
   m_ObjectHideFlags: 0
@@ -2422,9 +2422,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   havingTower: {fileID: 0}
   havingTowerParent: {fileID: 0}
-  green: {fileID: 2100000, guid: 4ad87c138ca784345aca97dd4c1507ea, type: 2}
-  blue: {fileID: 2100000, guid: 4c8d56a9ec00248cbb903febb3e21a15, type: 2}
-  red: {fileID: 2100000, guid: 9fc05b3dfa67e456f8af868e3dd83a0d, type: 2}
+  green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
+  blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
+  red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
 --- !u!1 &507369870
 GameObject:
   m_ObjectHideFlags: 0
@@ -2546,9 +2546,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   havingTower: {fileID: 0}
   havingTowerParent: {fileID: 0}
-  green: {fileID: 2100000, guid: 4ad87c138ca784345aca97dd4c1507ea, type: 2}
-  blue: {fileID: 2100000, guid: 4c8d56a9ec00248cbb903febb3e21a15, type: 2}
-  red: {fileID: 2100000, guid: 9fc05b3dfa67e456f8af868e3dd83a0d, type: 2}
+  green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
+  blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
+  red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
 --- !u!1 &640059503
 GameObject:
   m_ObjectHideFlags: 0
@@ -2670,9 +2670,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   havingTower: {fileID: 0}
   havingTowerParent: {fileID: 0}
-  green: {fileID: 2100000, guid: 4ad87c138ca784345aca97dd4c1507ea, type: 2}
-  blue: {fileID: 2100000, guid: 4c8d56a9ec00248cbb903febb3e21a15, type: 2}
-  red: {fileID: 2100000, guid: 9fc05b3dfa67e456f8af868e3dd83a0d, type: 2}
+  green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
+  blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
+  red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
 --- !u!1 &722596998
 GameObject:
   m_ObjectHideFlags: 0
@@ -2794,9 +2794,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   havingTower: {fileID: 0}
   havingTowerParent: {fileID: 0}
-  green: {fileID: 2100000, guid: 4ad87c138ca784345aca97dd4c1507ea, type: 2}
-  blue: {fileID: 2100000, guid: 4c8d56a9ec00248cbb903febb3e21a15, type: 2}
-  red: {fileID: 2100000, guid: 9fc05b3dfa67e456f8af868e3dd83a0d, type: 2}
+  green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
+  blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
+  red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
 --- !u!1 &737769599
 GameObject:
   m_ObjectHideFlags: 0
@@ -3051,9 +3051,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   havingTower: {fileID: 0}
   havingTowerParent: {fileID: 0}
-  green: {fileID: 2100000, guid: 4ad87c138ca784345aca97dd4c1507ea, type: 2}
-  blue: {fileID: 2100000, guid: 4c8d56a9ec00248cbb903febb3e21a15, type: 2}
-  red: {fileID: 2100000, guid: 9fc05b3dfa67e456f8af868e3dd83a0d, type: 2}
+  green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
+  blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
+  red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
 --- !u!1 &793193803
 GameObject:
   m_ObjectHideFlags: 0
@@ -3175,9 +3175,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   havingTower: {fileID: 0}
   havingTowerParent: {fileID: 0}
-  green: {fileID: 2100000, guid: 4ad87c138ca784345aca97dd4c1507ea, type: 2}
-  blue: {fileID: 2100000, guid: 4c8d56a9ec00248cbb903febb3e21a15, type: 2}
-  red: {fileID: 2100000, guid: 9fc05b3dfa67e456f8af868e3dd83a0d, type: 2}
+  green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
+  blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
+  red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
 --- !u!1 &888840627
 GameObject:
   m_ObjectHideFlags: 0
@@ -3299,9 +3299,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   havingTower: {fileID: 0}
   havingTowerParent: {fileID: 0}
-  green: {fileID: 2100000, guid: 4ad87c138ca784345aca97dd4c1507ea, type: 2}
-  blue: {fileID: 2100000, guid: 4c8d56a9ec00248cbb903febb3e21a15, type: 2}
-  red: {fileID: 2100000, guid: 9fc05b3dfa67e456f8af868e3dd83a0d, type: 2}
+  green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
+  blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
+  red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
 --- !u!1 &904248413
 GameObject:
   m_ObjectHideFlags: 0
@@ -3423,9 +3423,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   havingTower: {fileID: 0}
   havingTowerParent: {fileID: 0}
-  green: {fileID: 2100000, guid: 4ad87c138ca784345aca97dd4c1507ea, type: 2}
-  blue: {fileID: 2100000, guid: 4c8d56a9ec00248cbb903febb3e21a15, type: 2}
-  red: {fileID: 2100000, guid: 9fc05b3dfa67e456f8af868e3dd83a0d, type: 2}
+  green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
+  blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
+  red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
 --- !u!1 &954869147
 GameObject:
   m_ObjectHideFlags: 0
@@ -3547,9 +3547,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   havingTower: {fileID: 0}
   havingTowerParent: {fileID: 0}
-  green: {fileID: 2100000, guid: 4ad87c138ca784345aca97dd4c1507ea, type: 2}
-  blue: {fileID: 2100000, guid: 4c8d56a9ec00248cbb903febb3e21a15, type: 2}
-  red: {fileID: 2100000, guid: 9fc05b3dfa67e456f8af868e3dd83a0d, type: 2}
+  green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
+  blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
+  red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
 --- !u!1 &964107994
 GameObject:
   m_ObjectHideFlags: 0
@@ -3671,9 +3671,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   havingTower: {fileID: 0}
   havingTowerParent: {fileID: 0}
-  green: {fileID: 2100000, guid: 4ad87c138ca784345aca97dd4c1507ea, type: 2}
-  blue: {fileID: 2100000, guid: 4c8d56a9ec00248cbb903febb3e21a15, type: 2}
-  red: {fileID: 2100000, guid: 9fc05b3dfa67e456f8af868e3dd83a0d, type: 2}
+  green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
+  blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
+  red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
 --- !u!1 &974886877
 GameObject:
   m_ObjectHideFlags: 0
@@ -3795,9 +3795,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   havingTower: {fileID: 0}
   havingTowerParent: {fileID: 0}
-  green: {fileID: 2100000, guid: 4ad87c138ca784345aca97dd4c1507ea, type: 2}
-  blue: {fileID: 2100000, guid: 4c8d56a9ec00248cbb903febb3e21a15, type: 2}
-  red: {fileID: 2100000, guid: 9fc05b3dfa67e456f8af868e3dd83a0d, type: 2}
+  green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
+  blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
+  red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
 --- !u!1 &979962311
 GameObject:
   m_ObjectHideFlags: 0
@@ -3919,9 +3919,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   havingTower: {fileID: 0}
   havingTowerParent: {fileID: 0}
-  green: {fileID: 2100000, guid: 4ad87c138ca784345aca97dd4c1507ea, type: 2}
-  blue: {fileID: 2100000, guid: 4c8d56a9ec00248cbb903febb3e21a15, type: 2}
-  red: {fileID: 2100000, guid: 9fc05b3dfa67e456f8af868e3dd83a0d, type: 2}
+  green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
+  blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
+  red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
 --- !u!1 &997320761
 GameObject:
   m_ObjectHideFlags: 0
@@ -4043,9 +4043,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   havingTower: {fileID: 0}
   havingTowerParent: {fileID: 0}
-  green: {fileID: 2100000, guid: 4ad87c138ca784345aca97dd4c1507ea, type: 2}
-  blue: {fileID: 2100000, guid: 4c8d56a9ec00248cbb903febb3e21a15, type: 2}
-  red: {fileID: 2100000, guid: 9fc05b3dfa67e456f8af868e3dd83a0d, type: 2}
+  green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
+  blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
+  red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
 --- !u!1 &1006272816
 GameObject:
   m_ObjectHideFlags: 0
@@ -4167,9 +4167,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   havingTower: {fileID: 0}
   havingTowerParent: {fileID: 0}
-  green: {fileID: 2100000, guid: 4ad87c138ca784345aca97dd4c1507ea, type: 2}
-  blue: {fileID: 2100000, guid: 4c8d56a9ec00248cbb903febb3e21a15, type: 2}
-  red: {fileID: 2100000, guid: 9fc05b3dfa67e456f8af868e3dd83a0d, type: 2}
+  green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
+  blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
+  red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
 --- !u!1 &1006734646
 GameObject:
   m_ObjectHideFlags: 0
@@ -4291,9 +4291,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   havingTower: {fileID: 0}
   havingTowerParent: {fileID: 0}
-  green: {fileID: 2100000, guid: 4ad87c138ca784345aca97dd4c1507ea, type: 2}
-  blue: {fileID: 2100000, guid: 4c8d56a9ec00248cbb903febb3e21a15, type: 2}
-  red: {fileID: 2100000, guid: 9fc05b3dfa67e456f8af868e3dd83a0d, type: 2}
+  green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
+  blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
+  red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
 --- !u!1 &1109042105
 GameObject:
   m_ObjectHideFlags: 0
@@ -4415,9 +4415,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   havingTower: {fileID: 0}
   havingTowerParent: {fileID: 0}
-  green: {fileID: 2100000, guid: 4ad87c138ca784345aca97dd4c1507ea, type: 2}
-  blue: {fileID: 2100000, guid: 4c8d56a9ec00248cbb903febb3e21a15, type: 2}
-  red: {fileID: 2100000, guid: 9fc05b3dfa67e456f8af868e3dd83a0d, type: 2}
+  green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
+  blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
+  red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
 --- !u!1 &1132008344
 GameObject:
   m_ObjectHideFlags: 0
@@ -4539,9 +4539,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   havingTower: {fileID: 0}
   havingTowerParent: {fileID: 0}
-  green: {fileID: 2100000, guid: 4ad87c138ca784345aca97dd4c1507ea, type: 2}
-  blue: {fileID: 2100000, guid: 4c8d56a9ec00248cbb903febb3e21a15, type: 2}
-  red: {fileID: 2100000, guid: 9fc05b3dfa67e456f8af868e3dd83a0d, type: 2}
+  green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
+  blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
+  red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
 --- !u!1 &1168350359
 GameObject:
   m_ObjectHideFlags: 0
@@ -4663,9 +4663,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   havingTower: {fileID: 0}
   havingTowerParent: {fileID: 0}
-  green: {fileID: 2100000, guid: 4ad87c138ca784345aca97dd4c1507ea, type: 2}
-  blue: {fileID: 2100000, guid: 4c8d56a9ec00248cbb903febb3e21a15, type: 2}
-  red: {fileID: 2100000, guid: 9fc05b3dfa67e456f8af868e3dd83a0d, type: 2}
+  green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
+  blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
+  red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
 --- !u!1 &1184655757
 GameObject:
   m_ObjectHideFlags: 0
@@ -4881,9 +4881,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   havingTower: {fileID: 0}
   havingTowerParent: {fileID: 0}
-  green: {fileID: 2100000, guid: 4ad87c138ca784345aca97dd4c1507ea, type: 2}
-  blue: {fileID: 2100000, guid: 4c8d56a9ec00248cbb903febb3e21a15, type: 2}
-  red: {fileID: 2100000, guid: 9fc05b3dfa67e456f8af868e3dd83a0d, type: 2}
+  green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
+  blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
+  red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
 --- !u!1 &1270672725
 GameObject:
   m_ObjectHideFlags: 0
@@ -5005,9 +5005,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   havingTower: {fileID: 0}
   havingTowerParent: {fileID: 0}
-  green: {fileID: 2100000, guid: 4ad87c138ca784345aca97dd4c1507ea, type: 2}
-  blue: {fileID: 2100000, guid: 4c8d56a9ec00248cbb903febb3e21a15, type: 2}
-  red: {fileID: 2100000, guid: 9fc05b3dfa67e456f8af868e3dd83a0d, type: 2}
+  green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
+  blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
+  red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
 --- !u!1 &1293988139
 GameObject:
   m_ObjectHideFlags: 0
@@ -5129,9 +5129,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   havingTower: {fileID: 0}
   havingTowerParent: {fileID: 0}
-  green: {fileID: 2100000, guid: 4ad87c138ca784345aca97dd4c1507ea, type: 2}
-  blue: {fileID: 2100000, guid: 4c8d56a9ec00248cbb903febb3e21a15, type: 2}
-  red: {fileID: 2100000, guid: 9fc05b3dfa67e456f8af868e3dd83a0d, type: 2}
+  green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
+  blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
+  red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
 --- !u!1 &1300777790
 GameObject:
   m_ObjectHideFlags: 0
@@ -5253,9 +5253,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   havingTower: {fileID: 0}
   havingTowerParent: {fileID: 0}
-  green: {fileID: 2100000, guid: 4ad87c138ca784345aca97dd4c1507ea, type: 2}
-  blue: {fileID: 2100000, guid: 4c8d56a9ec00248cbb903febb3e21a15, type: 2}
-  red: {fileID: 2100000, guid: 9fc05b3dfa67e456f8af868e3dd83a0d, type: 2}
+  green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
+  blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
+  red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
 --- !u!1 &1319029632
 GameObject:
   m_ObjectHideFlags: 0
@@ -5377,9 +5377,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   havingTower: {fileID: 0}
   havingTowerParent: {fileID: 0}
-  green: {fileID: 2100000, guid: 4ad87c138ca784345aca97dd4c1507ea, type: 2}
-  blue: {fileID: 2100000, guid: 4c8d56a9ec00248cbb903febb3e21a15, type: 2}
-  red: {fileID: 2100000, guid: 9fc05b3dfa67e456f8af868e3dd83a0d, type: 2}
+  green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
+  blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
+  red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
 --- !u!1 &1381637866
 GameObject:
   m_ObjectHideFlags: 0
@@ -5501,9 +5501,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   havingTower: {fileID: 0}
   havingTowerParent: {fileID: 0}
-  green: {fileID: 2100000, guid: 4ad87c138ca784345aca97dd4c1507ea, type: 2}
-  blue: {fileID: 2100000, guid: 4c8d56a9ec00248cbb903febb3e21a15, type: 2}
-  red: {fileID: 2100000, guid: 9fc05b3dfa67e456f8af868e3dd83a0d, type: 2}
+  green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
+  blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
+  red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
 --- !u!1 &1394988287
 GameObject:
   m_ObjectHideFlags: 0
@@ -5625,9 +5625,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   havingTower: {fileID: 0}
   havingTowerParent: {fileID: 0}
-  green: {fileID: 2100000, guid: 4ad87c138ca784345aca97dd4c1507ea, type: 2}
-  blue: {fileID: 2100000, guid: 4c8d56a9ec00248cbb903febb3e21a15, type: 2}
-  red: {fileID: 2100000, guid: 9fc05b3dfa67e456f8af868e3dd83a0d, type: 2}
+  green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
+  blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
+  red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
 --- !u!1 &1476424980
 GameObject:
   m_ObjectHideFlags: 0
@@ -5871,7 +5871,7 @@ MonoBehaviour:
   - {fileID: 479465917}
   - {fileID: 954869152}
   - {fileID: 329281246}
-  spawnMaxCount: 5
+  spawnMaxCount: 10
 --- !u!1 &1541818622
 GameObject:
   m_ObjectHideFlags: 0
@@ -5993,9 +5993,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   havingTower: {fileID: 0}
   havingTowerParent: {fileID: 0}
-  green: {fileID: 2100000, guid: 4ad87c138ca784345aca97dd4c1507ea, type: 2}
-  blue: {fileID: 2100000, guid: 4c8d56a9ec00248cbb903febb3e21a15, type: 2}
-  red: {fileID: 2100000, guid: 9fc05b3dfa67e456f8af868e3dd83a0d, type: 2}
+  green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
+  blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
+  red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
 --- !u!1 &1554823263
 GameObject:
   m_ObjectHideFlags: 0
@@ -6117,9 +6117,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   havingTower: {fileID: 0}
   havingTowerParent: {fileID: 0}
-  green: {fileID: 2100000, guid: 4ad87c138ca784345aca97dd4c1507ea, type: 2}
-  blue: {fileID: 2100000, guid: 4c8d56a9ec00248cbb903febb3e21a15, type: 2}
-  red: {fileID: 2100000, guid: 9fc05b3dfa67e456f8af868e3dd83a0d, type: 2}
+  green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
+  blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
+  red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
 --- !u!1 &1603544863
 GameObject:
   m_ObjectHideFlags: 0
@@ -6241,9 +6241,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   havingTower: {fileID: 0}
   havingTowerParent: {fileID: 0}
-  green: {fileID: 2100000, guid: 4ad87c138ca784345aca97dd4c1507ea, type: 2}
-  blue: {fileID: 2100000, guid: 4c8d56a9ec00248cbb903febb3e21a15, type: 2}
-  red: {fileID: 2100000, guid: 9fc05b3dfa67e456f8af868e3dd83a0d, type: 2}
+  green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
+  blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
+  red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
 --- !u!1 &1614759700
 GameObject:
   m_ObjectHideFlags: 0
@@ -6365,9 +6365,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   havingTower: {fileID: 0}
   havingTowerParent: {fileID: 0}
-  green: {fileID: 2100000, guid: 4ad87c138ca784345aca97dd4c1507ea, type: 2}
-  blue: {fileID: 2100000, guid: 4c8d56a9ec00248cbb903febb3e21a15, type: 2}
-  red: {fileID: 2100000, guid: 9fc05b3dfa67e456f8af868e3dd83a0d, type: 2}
+  green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
+  blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
+  red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
 --- !u!1 &1628984217
 GameObject:
   m_ObjectHideFlags: 0
@@ -6489,9 +6489,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   havingTower: {fileID: 0}
   havingTowerParent: {fileID: 0}
-  green: {fileID: 2100000, guid: 4ad87c138ca784345aca97dd4c1507ea, type: 2}
-  blue: {fileID: 2100000, guid: 4c8d56a9ec00248cbb903febb3e21a15, type: 2}
-  red: {fileID: 2100000, guid: 9fc05b3dfa67e456f8af868e3dd83a0d, type: 2}
+  green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
+  blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
+  red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
 --- !u!1 &1643299856
 GameObject:
   m_ObjectHideFlags: 0
@@ -6613,9 +6613,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   havingTower: {fileID: 0}
   havingTowerParent: {fileID: 0}
-  green: {fileID: 2100000, guid: 4ad87c138ca784345aca97dd4c1507ea, type: 2}
-  blue: {fileID: 2100000, guid: 4c8d56a9ec00248cbb903febb3e21a15, type: 2}
-  red: {fileID: 2100000, guid: 9fc05b3dfa67e456f8af868e3dd83a0d, type: 2}
+  green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
+  blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
+  red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
 --- !u!1 &1669909648
 GameObject:
   m_ObjectHideFlags: 0
@@ -6737,9 +6737,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   havingTower: {fileID: 0}
   havingTowerParent: {fileID: 0}
-  green: {fileID: 2100000, guid: 4ad87c138ca784345aca97dd4c1507ea, type: 2}
-  blue: {fileID: 2100000, guid: 4c8d56a9ec00248cbb903febb3e21a15, type: 2}
-  red: {fileID: 2100000, guid: 9fc05b3dfa67e456f8af868e3dd83a0d, type: 2}
+  green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
+  blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
+  red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
 --- !u!1 &1731396440
 GameObject:
   m_ObjectHideFlags: 0
@@ -6861,9 +6861,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   havingTower: {fileID: 0}
   havingTowerParent: {fileID: 0}
-  green: {fileID: 2100000, guid: 4ad87c138ca784345aca97dd4c1507ea, type: 2}
-  blue: {fileID: 2100000, guid: 4c8d56a9ec00248cbb903febb3e21a15, type: 2}
-  red: {fileID: 2100000, guid: 9fc05b3dfa67e456f8af868e3dd83a0d, type: 2}
+  green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
+  blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
+  red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
 --- !u!1 &1759187737
 GameObject:
   m_ObjectHideFlags: 0
@@ -6985,9 +6985,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   havingTower: {fileID: 0}
   havingTowerParent: {fileID: 0}
-  green: {fileID: 2100000, guid: 4ad87c138ca784345aca97dd4c1507ea, type: 2}
-  blue: {fileID: 2100000, guid: 4c8d56a9ec00248cbb903febb3e21a15, type: 2}
-  red: {fileID: 2100000, guid: 9fc05b3dfa67e456f8af868e3dd83a0d, type: 2}
+  green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
+  blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
+  red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
 --- !u!1 &1761558891
 GameObject:
   m_ObjectHideFlags: 0
@@ -7109,9 +7109,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   havingTower: {fileID: 0}
   havingTowerParent: {fileID: 0}
-  green: {fileID: 2100000, guid: 4ad87c138ca784345aca97dd4c1507ea, type: 2}
-  blue: {fileID: 2100000, guid: 4c8d56a9ec00248cbb903febb3e21a15, type: 2}
-  red: {fileID: 2100000, guid: 9fc05b3dfa67e456f8af868e3dd83a0d, type: 2}
+  green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
+  blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
+  red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
 --- !u!1 &1796029118
 GameObject:
   m_ObjectHideFlags: 0
@@ -7233,9 +7233,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   havingTower: {fileID: 0}
   havingTowerParent: {fileID: 0}
-  green: {fileID: 2100000, guid: 4ad87c138ca784345aca97dd4c1507ea, type: 2}
-  blue: {fileID: 2100000, guid: 4c8d56a9ec00248cbb903febb3e21a15, type: 2}
-  red: {fileID: 2100000, guid: 9fc05b3dfa67e456f8af868e3dd83a0d, type: 2}
+  green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
+  blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
+  red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
 --- !u!1 &1824478698
 GameObject:
   m_ObjectHideFlags: 0
@@ -7436,9 +7436,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   havingTower: {fileID: 0}
   havingTowerParent: {fileID: 0}
-  green: {fileID: 2100000, guid: 4ad87c138ca784345aca97dd4c1507ea, type: 2}
-  blue: {fileID: 2100000, guid: 4c8d56a9ec00248cbb903febb3e21a15, type: 2}
-  red: {fileID: 2100000, guid: 9fc05b3dfa67e456f8af868e3dd83a0d, type: 2}
+  green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
+  blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
+  red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
 --- !u!1 &1871800807
 GameObject:
   m_ObjectHideFlags: 0
@@ -7560,9 +7560,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   havingTower: {fileID: 0}
   havingTowerParent: {fileID: 0}
-  green: {fileID: 2100000, guid: 4ad87c138ca784345aca97dd4c1507ea, type: 2}
-  blue: {fileID: 2100000, guid: 4c8d56a9ec00248cbb903febb3e21a15, type: 2}
-  red: {fileID: 2100000, guid: 9fc05b3dfa67e456f8af868e3dd83a0d, type: 2}
+  green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
+  blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
+  red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
 --- !u!1 &1970307467
 GameObject:
   m_ObjectHideFlags: 0
@@ -7684,9 +7684,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   havingTower: {fileID: 0}
   havingTowerParent: {fileID: 0}
-  green: {fileID: 2100000, guid: 4ad87c138ca784345aca97dd4c1507ea, type: 2}
-  blue: {fileID: 2100000, guid: 4c8d56a9ec00248cbb903febb3e21a15, type: 2}
-  red: {fileID: 2100000, guid: 9fc05b3dfa67e456f8af868e3dd83a0d, type: 2}
+  green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
+  blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
+  red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
 --- !u!1 &1975818367
 GameObject:
   m_ObjectHideFlags: 0
@@ -7808,9 +7808,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   havingTower: {fileID: 0}
   havingTowerParent: {fileID: 0}
-  green: {fileID: 2100000, guid: 4ad87c138ca784345aca97dd4c1507ea, type: 2}
-  blue: {fileID: 2100000, guid: 4c8d56a9ec00248cbb903febb3e21a15, type: 2}
-  red: {fileID: 2100000, guid: 9fc05b3dfa67e456f8af868e3dd83a0d, type: 2}
+  green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
+  blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
+  red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
 --- !u!1 &1988411300
 GameObject:
   m_ObjectHideFlags: 0
@@ -7932,9 +7932,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   havingTower: {fileID: 0}
   havingTowerParent: {fileID: 0}
-  green: {fileID: 2100000, guid: 4ad87c138ca784345aca97dd4c1507ea, type: 2}
-  blue: {fileID: 2100000, guid: 4c8d56a9ec00248cbb903febb3e21a15, type: 2}
-  red: {fileID: 2100000, guid: 9fc05b3dfa67e456f8af868e3dd83a0d, type: 2}
+  green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
+  blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
+  red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
 --- !u!1 &1995205374
 GameObject:
   m_ObjectHideFlags: 0
@@ -8056,9 +8056,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   havingTower: {fileID: 0}
   havingTowerParent: {fileID: 0}
-  green: {fileID: 2100000, guid: 4ad87c138ca784345aca97dd4c1507ea, type: 2}
-  blue: {fileID: 2100000, guid: 4c8d56a9ec00248cbb903febb3e21a15, type: 2}
-  red: {fileID: 2100000, guid: 9fc05b3dfa67e456f8af868e3dd83a0d, type: 2}
+  green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
+  blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
+  red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
 --- !u!1 &1998787907
 GameObject:
   m_ObjectHideFlags: 0
@@ -8180,9 +8180,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   havingTower: {fileID: 0}
   havingTowerParent: {fileID: 0}
-  green: {fileID: 2100000, guid: 4ad87c138ca784345aca97dd4c1507ea, type: 2}
-  blue: {fileID: 2100000, guid: 4c8d56a9ec00248cbb903febb3e21a15, type: 2}
-  red: {fileID: 2100000, guid: 9fc05b3dfa67e456f8af868e3dd83a0d, type: 2}
+  green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
+  blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
+  red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
 --- !u!1 &2004213286
 GameObject:
   m_ObjectHideFlags: 0
@@ -8304,9 +8304,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   havingTower: {fileID: 0}
   havingTowerParent: {fileID: 0}
-  green: {fileID: 2100000, guid: 4ad87c138ca784345aca97dd4c1507ea, type: 2}
-  blue: {fileID: 2100000, guid: 4c8d56a9ec00248cbb903febb3e21a15, type: 2}
-  red: {fileID: 2100000, guid: 9fc05b3dfa67e456f8af868e3dd83a0d, type: 2}
+  green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
+  blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
+  red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
 --- !u!1 &2082203630
 GameObject:
   m_ObjectHideFlags: 0
@@ -8428,9 +8428,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   havingTower: {fileID: 0}
   havingTowerParent: {fileID: 0}
-  green: {fileID: 2100000, guid: 4ad87c138ca784345aca97dd4c1507ea, type: 2}
-  blue: {fileID: 2100000, guid: 4c8d56a9ec00248cbb903febb3e21a15, type: 2}
-  red: {fileID: 2100000, guid: 9fc05b3dfa67e456f8af868e3dd83a0d, type: 2}
+  green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
+  blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
+  red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
 --- !u!1 &2100851322
 GameObject:
   m_ObjectHideFlags: 0
@@ -8552,9 +8552,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   havingTower: {fileID: 0}
   havingTowerParent: {fileID: 0}
-  green: {fileID: 2100000, guid: 4ad87c138ca784345aca97dd4c1507ea, type: 2}
-  blue: {fileID: 2100000, guid: 4c8d56a9ec00248cbb903febb3e21a15, type: 2}
-  red: {fileID: 2100000, guid: 9fc05b3dfa67e456f8af868e3dd83a0d, type: 2}
+  green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
+  blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
+  red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
 --- !u!1 &2133529795
 GameObject:
   m_ObjectHideFlags: 0
@@ -8676,9 +8676,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   havingTower: {fileID: 0}
   havingTowerParent: {fileID: 0}
-  green: {fileID: 2100000, guid: 4ad87c138ca784345aca97dd4c1507ea, type: 2}
-  blue: {fileID: 2100000, guid: 4c8d56a9ec00248cbb903febb3e21a15, type: 2}
-  red: {fileID: 2100000, guid: 9fc05b3dfa67e456f8af868e3dd83a0d, type: 2}
+  green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
+  blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
+  red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
 --- !u!1 &2136409714
 GameObject:
   m_ObjectHideFlags: 0
@@ -8800,9 +8800,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   havingTower: {fileID: 0}
   havingTowerParent: {fileID: 0}
-  green: {fileID: 2100000, guid: 4ad87c138ca784345aca97dd4c1507ea, type: 2}
-  blue: {fileID: 2100000, guid: 4c8d56a9ec00248cbb903febb3e21a15, type: 2}
-  red: {fileID: 2100000, guid: 9fc05b3dfa67e456f8af868e3dd83a0d, type: 2}
+  green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
+  blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
+  red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

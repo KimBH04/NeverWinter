@@ -6,8 +6,7 @@ using Unity.VisualScripting;
 
 public class GridTower : MonoBehaviour
 {
-    [field: SerializeField]
-    public int ID { get; private set; }
+    [field: SerializeField] public int ID { get; private set; }
 
     [SerializeField] private GameObject highRankTower;
     public GameObject HighRankTower => highRankTower;
@@ -17,7 +16,8 @@ public class GridTower : MonoBehaviour
     private MeshRenderer visualMesh;
     private Vector3 boxPosition;
 
-    private GridField field;
+    private GridField targetField;
+    public GridField field;
 
     private void Start()
     {
@@ -35,22 +35,28 @@ public class GridTower : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out RaycastHit hit, 100f, 1 << 12))
         {
-            field = hit.transform.GetComponent<GridField>();
+            targetField = hit.transform.GetComponent<GridField>();
 
             transform.DOMove(hit.transform.position, 0.2f).SetEase(Ease.OutSine);
-            field.VisualizeMovable(this, visualMesh);
+            targetField.VisualizeMovable(this, visualMesh);
         }
     }
 
     private void OnMouseUp()
     {
-        if (field.MovingTower(this, transform.parent))
+        bool t = targetField.MovingTower(this, transform.parent);
+
+        //목표 그리드에 이동 및 병합 성공시 현재 위치의 그리드의 타워 정보를 지우고 
+        //현재 인스턴스의 그리드 정보를 목표 그리드로 변경
+        if (t)
         {
             field.havingTower = null;
             field.havingTowerParent = null;
+            field = targetField;
         }
-        field = null;
+        targetField = null;
 
+        transform.DOKill();
         transform.localPosition = boxPosition;
 
         visualBox.SetActive(false);

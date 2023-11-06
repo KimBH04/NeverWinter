@@ -7,6 +7,7 @@ public class GridField : MonoBehaviour
     public GridTower havingTower;
     public Transform havingTowerParent;
 
+    [Header("Visual")]
     [SerializeField] private Material green;
     [SerializeField] private Material blue;
     [SerializeField] private Material red;
@@ -17,7 +18,7 @@ public class GridField : MonoBehaviour
         {
             visual.material = green;
         }
-        else if (havingTower.ID == tower.ID && havingTower.HighRankTower != null && havingTower != tower)
+        else if (havingTower != tower && havingTower.HighRankTower != null && tower.ID == havingTower.ID)
         {
             visual.material = blue;
         }
@@ -38,16 +39,17 @@ public class GridField : MonoBehaviour
 
             return true;
         }
-        else if (tower.ID == havingTower.ID && havingTower.HighRankTower != null && havingTower != tower)
+        else if (havingTower != tower && havingTower.HighRankTower != null && tower.ID == havingTower.ID)
         {
-            GameObject having = havingTower.HighRankTower;
-            Instantiate(having, transform.position, Quaternion.identity);
+            GameObject high = Instantiate(havingTower.HighRankTower, transform.position, Quaternion.identity);
 
-            Destroy(parent);
-            Destroy(havingTower.transform.parent);
+            Destroy(parent.gameObject);
+            Destroy(havingTowerParent.gameObject);
 
-            havingTower = tower;
-            havingTowerParent = parent;
+            havingTower = high.GetComponentInChildren<GridTower>();
+            havingTowerParent = high.transform;
+
+            havingTower.field = this;
 
             return true;
         }

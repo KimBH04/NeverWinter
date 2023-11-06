@@ -17,6 +17,16 @@ public class GridTowerRandomSpawn : MonoBehaviour
         gridsCount = grids.Length;
     }
 
+    private void Update()
+    {
+#if UNITY_EDITOR
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            UnityEditor.EditorApplication.isPaused = !UnityEditor.EditorApplication.isPaused;
+        }
+#endif
+    }
+
     public void SpawningTowerToRandomPosition()
     {
         if (spawnMaxCount-- <= 0)
@@ -33,9 +43,9 @@ public class GridTowerRandomSpawn : MonoBehaviour
         Transform gridTr = grids[gridIdx].transform;
 
         int towerIdx = Random.Range(0, towersCount);
-        GridTower tower = towers[towerIdx].GetComponentInChildren<GridTower>();
 
-        grids[gridIdx].havingTower = tower;
         grids[gridIdx].havingTowerParent = Instantiate(towers[towerIdx], gridTr.position, Quaternion.identity);
+        grids[gridIdx].havingTower = grids[gridIdx].havingTowerParent.GetComponentInChildren<GridTower>();
+        grids[gridIdx].havingTower.field = grids[gridIdx];
     }
 }
