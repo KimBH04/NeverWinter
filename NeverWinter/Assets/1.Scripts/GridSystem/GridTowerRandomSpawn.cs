@@ -4,23 +4,24 @@ using UnityEngine;
 
 public class GridTowerRandomSpawn : MonoBehaviour
 {
-    [SerializeField] private Transform[] towers;
-    [SerializeField] private GridField[] grids;
+    [SerializeField] private GameObject noCoinMessage;              //코인 부족 메시지
+    [SerializeField] private Transform[] towers;                    //생성할 타워 프리팹들
+    public static List<GridField> grids = new List<GridField>();    //전체 그리드
 
-    private int towersCount;
-    private int gridsCount;
-    [SerializeField] private int spawnMaxCount;
+    private int towersCount;    //타워 프리팹 최대 개수
+
+    //[SerializeField] private int spawnMaxCount;
 
     private void Start()
     {
+        GetComponentsInChildren<GridField>(grids);
         towersCount = towers.Length;
-        gridsCount = grids.Length;
     }
 
     private void Update()
     {
 #if UNITY_EDITOR
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             UnityEditor.EditorApplication.isPaused = !UnityEditor.EditorApplication.isPaused;
         }
@@ -29,23 +30,41 @@ public class GridTowerRandomSpawn : MonoBehaviour
 
     public void SpawningTowerToRandomPosition()
     {
-        if (spawnMaxCount-- <= 0)
+        if (Cost.Coin < 100)
         {
+            noCoinMessage.SetActive(true);
+            StartCoroutine(CloseNoCoinMessage());
             return;
         }
 
-        int gridIdx;
-        do
+        if (grids.Count == 0)
         {
-            gridIdx = Random.Range(0, gridsCount);
+            //소환할 수 있는 그리드가 다 떨어졌을 때
+            //더이상 타워를 소환할 수 없습니다 메시지 띄우기
+            Debug.Log("더이상 타워를 소환할 수 없습니다");
+            return;
         }
-        while (grids[gridIdx].havingTower != null);
-        Transform gridTr = grids[gridIdx].transform;
 
+        Cost.Coin -= 100;
+
+        int gridIdx = Random.Range(0, grids.Count);
         int towerIdx = Random.Range(0, towersCount);
 
-        grids[gridIdx].havingTowerParent = Instantiate(towers[towerIdx], gridTr.position, Quaternion.identity);
+        //랜덤한 그리드 위치에 타워 생성
+        grids[gridIdx].havingTowerParent = Instantiate(towers[towerIdx], grids[gridIdx].transform.position, Quaternion.identity);
+
+        //생성된 위치의 그리드에 타워 정보 대입
         grids[gridIdx].havingTower = grids[gridIdx].havingTowerParent.GetComponentInChildren<GridTower>();
+
+        //타워에 그리드 정보 대입
         grids[gridIdx].havingTower.field = grids[gridIdx];
+
+        grids.RemoveAt(gridIdx);
+    }
+
+    private IEnumerator CloseNoCoinMessage()
+    {
+        yield return new WaitForSeconds(1);
+        noCoinMessage.SetActive(false);
     }
 }

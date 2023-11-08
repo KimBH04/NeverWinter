@@ -22,7 +22,7 @@ public class Cost : MonoBehaviour
 
     private void Awake()
     {
-        Coin = 900;
+        Coin = 5300;
         // if (instance != null && instance != this)
         // {
         //     Destroy(this.gameObject);
@@ -43,7 +43,7 @@ public class Cost : MonoBehaviour
       //    timer -= 1.0f;
       // }
       
-     CoinText.text = "" + Coin;
+     CoinText.text = Coin.ToString();
 
     }
 

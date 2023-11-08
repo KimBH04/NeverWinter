@@ -6,18 +6,18 @@ using Unity.VisualScripting;
 
 public class GridTower : MonoBehaviour
 {
-    [field: SerializeField] public int ID { get; private set; }
+    [field: SerializeField] public int ID { get; private set; } //타워 고유 아이디
 
-    [SerializeField] private GameObject highRankTower;
+    [SerializeField] private GameObject highRankTower;          //상위 타워
     public GameObject HighRankTower => highRankTower;
 
     [Header("Visualizing")]
     [SerializeField] private GameObject visualBox;
     private MeshRenderer visualMesh;
-    private Vector3 boxPosition;
+    private Vector3 boxPosition;        //설치 가능 시각화 상자의 이동 전 위치
 
-    private GridField targetField;
-    public GridField field;
+    private GridField targetField;      //새로 이동하려는 위치의 그리드
+    public GridField field;             //현재 있는 위치의 그리드
 
     private void Start()
     {
@@ -52,6 +52,8 @@ public class GridTower : MonoBehaviour
         {
             field.havingTower = null;
             field.havingTowerParent = null;
+            GridTowerRandomSpawn.grids.Add(field);
+
             field = targetField;
         }
         targetField = null;
