@@ -72,6 +72,16 @@ public class Time_UI : MonoBehaviour
         AudioManager.instance.PlaySfx(AudioManager.Sfx.Ck);
         //Debug.Log("다시하기");
         SceneManager.LoadScene("GameScene");
+        nowattach = 1f;
+        Time.timeScale = nowattach;
+    }
+
+    public void MainMenu()
+    {
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Ck);
+        SceneManager.LoadScene("Main");
+        nowattach = 1f;
+        Time.timeScale = nowattach;
     }
 
 

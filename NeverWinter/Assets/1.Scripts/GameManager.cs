@@ -106,7 +106,7 @@ public class GameManager : MonoBehaviour
     {
         AudioManager.instance.PlayBgm(false);
         GameVictory();
-        wavecount = 0;
+        // wavecount = 0;
         enabled = false;
     }
 

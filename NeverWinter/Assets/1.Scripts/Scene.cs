@@ -30,6 +30,13 @@ public class Scene : MonoBehaviour
         SceneManager.LoadScene("Main");
     }
 
+    public void GameTry()
+    {
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Ck);
+        SceneManager.LoadScene("GameScene");
+        Time.timeScale = 1f;
+    }
+
     public void Quit()
     {
 #if UNITY_EDITOR
