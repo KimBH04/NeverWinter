@@ -16,13 +16,13 @@ public class Cost : MonoBehaviour
     public int GetCoin;
     public TextMeshProUGUI CoinText;
     public GameObject NoMoneyText;
-    public Transform SummonPos; 
+    // public Transform SummonPos; 
     
     private float timer;
 
     private void Awake()
     {
-        Coin = 1000;
+        Coin = 900;
         // if (instance != null && instance != this)
         // {
         //     Destroy(this.gameObject);
@@ -49,40 +49,40 @@ public class Cost : MonoBehaviour
 
     
 
-    public void Summon()
-    {
-        AudioManager.instance.PlaySfx(AudioManager.Sfx.Sum);
-        
-        if (Coin >= 100)
-        {
-            Coin -= 100;
-            SummonRandomTower();
-
-        }
-        
-        else
-        {
-            NoMoneyText.SetActive(true);
-            StartCoroutine(TextOff(1));
-
-        }
-            
-        
-    }
-    
-    private void SummonRandomTower()
-    {
-        int randomIndex = Random.Range(0, Towers.Length);
-        GameObject randomTower = Instantiate(Towers[randomIndex], SummonPos.position, Quaternion.identity);
-    }
-
-    IEnumerator TextOff(float delay)
-    {
-       
-        yield return new WaitForSeconds(delay);
-        NoMoneyText.SetActive(false);
-        
-    }
+    // public void Summon()
+    // {
+    //     AudioManager.instance.PlaySfx(AudioManager.Sfx.Sum);
+    //     
+    //     if (Coin >= 100)
+    //     {
+    //         Coin -= 100;
+    //         SummonRandomTower();
+    //
+    //     }
+    //     
+    //     else
+    //     {
+    //         NoMoneyText.SetActive(true);
+    //         StartCoroutine(TextOff(1));
+    //
+    //     }
+    //         
+    //     
+    // }
+    //
+    // private void SummonRandomTower()
+    // {
+    //     int randomIndex = Random.Range(0, Towers.Length);
+    //     GameObject randomTower = Instantiate(Towers[randomIndex], SummonPos.position, Quaternion.identity);
+    // }
+    //
+    // IEnumerator TextOff(float delay)
+    // {
+    //    
+    //     yield return new WaitForSeconds(delay);
+    //     NoMoneyText.SetActive(false);
+    //     
+    // }
     
     
     

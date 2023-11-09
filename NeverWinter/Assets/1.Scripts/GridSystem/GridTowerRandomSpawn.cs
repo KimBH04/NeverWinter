@@ -1,16 +1,26 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class GridTowerRandomSpawn : MonoBehaviour
 {
-    [SerializeField] private GameObject noCoinMessage;              //ÄÚÀÎ ºÎÁ· ¸Ş½ÃÁö
-    [SerializeField] private Transform[] towers;                    //»ı¼ºÇÒ Å¸¿ö ÇÁ¸®ÆÕµé
-    public static List<GridField> grids = new List<GridField>();    //ÀüÃ¼ ±×¸®µå
+    [SerializeField] private GameObject noCoinMessage;              //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ş½ï¿½ï¿½ï¿½
+    [SerializeField] private GameObject MaxTowerMessage;    //  ê·¸ë¦¬ë“œ íƒ€ì›Œë¡œ ê½‰ ì°¨ì„œ ë”ì´ìƒ íƒ€ì›Œë¥¼ ìƒì„±í•  ìˆ˜ ì—†ì„ ë•Œ ëœ¨ëŠ” ë©”ì„¸ì§€
+    [SerializeField] private Transform[] towers;                    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Å¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õµï¿½
+    public static List<GridField> grids = new List<GridField>();    //ï¿½ï¿½Ã¼ ï¿½×¸ï¿½ï¿½ï¿½
 
-    private int towersCount;    //Å¸¿ö ÇÁ¸®ÆÕ ÃÖ´ë °³¼ö
+    private int towersCount;    //Å¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½
 
     //[SerializeField] private int spawnMaxCount;
+
+
+    private void Awake()
+    {
+        noCoinMessage.SetActive(false);
+        MaxTowerMessage.SetActive(false);
+    }
 
     private void Start()
     {
@@ -32,6 +42,7 @@ public class GridTowerRandomSpawn : MonoBehaviour
     {
         if (Cost.Coin < 100)
         {
+            AudioManager.instance.PlaySfx(AudioManager.Sfx.Sum);
             noCoinMessage.SetActive(true);
             StartCoroutine(CloseNoCoinMessage());
             return;
@@ -39,9 +50,9 @@ public class GridTowerRandomSpawn : MonoBehaviour
 
         if (grids.Count == 0)
         {
-            //¼ÒÈ¯ÇÒ ¼ö ÀÖ´Â ±×¸®µå°¡ ´Ù ¶³¾îÁ³À» ¶§
-            //´õÀÌ»ó Å¸¿ö¸¦ ¼ÒÈ¯ÇÒ ¼ö ¾ø½À´Ï´Ù ¸Ş½ÃÁö ¶ç¿ì±â
-            Debug.Log("´õÀÌ»ó Å¸¿ö¸¦ ¼ÒÈ¯ÇÒ ¼ö ¾ø½À´Ï´Ù");
+            AudioManager.instance.PlaySfx(AudioManager.Sfx.Sum);
+            MaxTowerMessage.SetActive(true);
+            StartCoroutine(CloseMaxTowerMessage());
             return;
         }
 
@@ -50,13 +61,13 @@ public class GridTowerRandomSpawn : MonoBehaviour
         int gridIdx = Random.Range(0, grids.Count);
         int towerIdx = Random.Range(0, towersCount);
 
-        //·£´ıÇÑ ±×¸®µå À§Ä¡¿¡ Å¸¿ö »ı¼º
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½×¸ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ Å¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         grids[gridIdx].havingTowerParent = Instantiate(towers[towerIdx], grids[gridIdx].transform.position, Quaternion.identity);
 
-        //»ı¼ºµÈ À§Ä¡ÀÇ ±×¸®µå¿¡ Å¸¿ö Á¤º¸ ´ëÀÔ
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½×¸ï¿½ï¿½å¿¡ Å¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         grids[gridIdx].havingTower = grids[gridIdx].havingTowerParent.GetComponentInChildren<GridTower>();
 
-        //Å¸¿ö¿¡ ±×¸®µå Á¤º¸ ´ëÀÔ
+        //Å¸ï¿½ï¿½ï¿½ï¿½ ï¿½×¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         grids[gridIdx].havingTower.field = grids[gridIdx];
 
         grids.RemoveAt(gridIdx);
@@ -66,5 +77,10 @@ public class GridTowerRandomSpawn : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         noCoinMessage.SetActive(false);
+    }
+    private IEnumerator CloseMaxTowerMessage()
+    {
+        yield return new WaitForSeconds(1);
+        MaxTowerMessage.SetActive(false);
     }
 }

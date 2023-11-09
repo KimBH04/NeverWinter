@@ -7,6 +7,7 @@ using UnityEngine;
 using Random = UnityEngine.Random;
 using UnityEngine.UI;
 using DG.Tweening;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class GameManager : MonoBehaviour
     public static int lives = 100;
     public int Max_lives;
     public Slider Castle_Hpbar;
+    public TextMeshProUGUI Castle_HpText;
 
     private bool gameOver = false;
     private bool gameWon = false;
@@ -45,6 +47,7 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         Time.timeScale = 1f;
+        
         //if (instance == null)
         //{
             instance = this;
@@ -58,6 +61,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        Castle_HpText.text = 100.ToString();
         lives = 100;
         Max_lives = lives;
        
@@ -113,6 +117,7 @@ public class GameManager : MonoBehaviour
 
             
             Castle_Hpbar.value = lives;
+            Castle_HpText.text = lives.ToString();
             //Debug.Log(Castle_Hpbar.value);
 
             if (lives <= 0)
