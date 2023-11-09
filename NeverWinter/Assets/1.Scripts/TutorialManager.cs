@@ -10,9 +10,9 @@ public class TutorialManager : MonoBehaviour
     
     
    
-    void Start()
+    void Awake()
     {
-        AllTutorial.SetActive(true);
+        
     }
 
     public void Nexttutorial(int index)
@@ -22,6 +22,7 @@ public class TutorialManager : MonoBehaviour
         {
             if (index == 6)
             {
+                SkipButton.SetActive(false);
                 return;
             }
             tutorial[index + 1].SetActive(true);

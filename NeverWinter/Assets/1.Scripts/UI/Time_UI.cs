@@ -68,7 +68,7 @@ public class Time_UI : MonoBehaviour
     public void GameTry()
     {
         AudioManager.instance.PlaySfx(AudioManager.Sfx.Ck);
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene("GridGameScene");
         nowattach = 1f;
         Time.timeScale = nowattach;
     }
