@@ -37,7 +37,7 @@ public class GridTower : MonoBehaviour
         {
             targetField = hit.transform.GetComponent<GridField>();
 
-            transform.DOMove(hit.transform.position, 0.2f).SetEase(Ease.OutSine);
+            transform.DOMove(hit.transform.position, 0.1f).SetEase(Ease.OutSine);
             targetField.VisualizeMovable(this, visualMesh);
         }
     }

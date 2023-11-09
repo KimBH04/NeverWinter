@@ -44,6 +44,7 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
+        Time.timeScale = 1f;
         //if (instance == null)
         //{
             instance = this;
@@ -70,36 +71,28 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (wavecount != 6)
+        if (wavecount < 6)
         {
             if (count >= wave[wavecount].enemies.Length)
             {
-                //ebug.Log(wavecount);
                 Wavebutton.gameObject.transform.DOLocalMoveY(-441, 1f);
                 Sumonbutton.gameObject.transform.DOLocalMoveY(-441, 1f);
-                // Wavebutton.gameObject.SetActive(true);
-                // Sumonbutton.gameObject.SetActive(true);
                 count = 0;
+               
                 wavecount++;
-
                 if (wavecount < 6)
                 {
-                   
                     WAVEEvent();
 
                     waveFlag.sprite = image[wavecount];
+                    return;
                 }
-               
-
-
-
-
             }
+            return;
         }
-        else
-        {
-            Invoke(nameof(GameSet), 1f);
-        }
+
+        GameSet();
+        //Invoke(nameof(GameSet), 1f);
     }
 
     void GameSet()
