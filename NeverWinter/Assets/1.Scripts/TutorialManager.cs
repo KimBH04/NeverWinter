@@ -8,16 +8,12 @@ public class TutorialManager : MonoBehaviour
     [SerializeField] private GameObject[] tutorial;
     [SerializeField] private GameObject SkipButton;
     
-    
-   
-    void Awake()
-    {
-        
-    }
 
     public void Nexttutorial(int index)
     {
         tutorial[index].SetActive(false);
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Ck);
+
         if (index < 7)
         {
             if (index == 6)

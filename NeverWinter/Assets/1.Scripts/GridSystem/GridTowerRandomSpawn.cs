@@ -6,14 +6,14 @@ using Random = UnityEngine.Random;
 
 public class GridTowerRandomSpawn : MonoBehaviour
 {
-    [SerializeField] private GameObject noCoinMessage;              //���� ���� �޽���
-    [SerializeField] private GameObject MaxTowerMessage;    //  그리드 타워로 꽉 차서 더이상 타워를 생성할 수 없을 때 뜨는 메세지
-    [SerializeField] private Transform[] towers;                    //������ Ÿ�� �����յ�
-    public static List<GridField> grids = new List<GridField>();    //��ü �׸���
+    [SerializeField] private GameObject noCoinMessage;              
+    [SerializeField] private GameObject MaxTowerMessage;    
+    [SerializeField] private Transform[] towers;                    
+    public static List<GridField> grids = new List<GridField>();    
 
-    private int towersCount;    //Ÿ�� ������ �ִ� ����
+    private int towersCount;    
 
-    //[SerializeField] private int spawnMaxCount;
+    // [SerializeField] private int spawnMaxCount;
 
 
     private void Awake()
@@ -61,13 +61,13 @@ public class GridTowerRandomSpawn : MonoBehaviour
         int gridIdx = Random.Range(0, grids.Count);
         int towerIdx = Random.Range(0, towersCount);
 
-        //������ �׸��� ��ġ�� Ÿ�� ����
+        
         grids[gridIdx].havingTowerParent = Instantiate(towers[towerIdx], grids[gridIdx].transform.position, Quaternion.identity);
 
-        //������ ��ġ�� �׸��忡 Ÿ�� ���� ����
+        
         grids[gridIdx].havingTower = grids[gridIdx].havingTowerParent.GetComponentInChildren<GridTower>();
 
-        //Ÿ���� �׸��� ���� ����
+        
         grids[gridIdx].havingTower.field = grids[gridIdx];
 
         grids.RemoveAt(gridIdx);
