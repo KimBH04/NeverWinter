@@ -1,4 +1,4 @@
-﻿[*.cs]
+﻿root = true
+[*]
 
-# Default severity for all analyzer diagnostics
-dotnet_analyzer_diagnostic.severity = none
+charset = utf-8

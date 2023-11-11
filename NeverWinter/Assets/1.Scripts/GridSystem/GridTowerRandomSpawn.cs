@@ -1,13 +1,11 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
 public class GridTowerRandomSpawn : MonoBehaviour
 {
     [SerializeField] private GameObject noCoinMessage;              
-    [SerializeField] private GameObject MaxTowerMessage;    
+    [SerializeField] private GameObject maxTowerMessage;    
     [SerializeField] private Transform[] towers;                    
     public static List<GridField> grids = new List<GridField>();    
 
@@ -19,7 +17,7 @@ public class GridTowerRandomSpawn : MonoBehaviour
     private void Awake()
     {
         noCoinMessage.SetActive(false);
-        MaxTowerMessage.SetActive(false);
+        maxTowerMessage.SetActive(false);
     }
 
     private void Start()
@@ -44,15 +42,15 @@ public class GridTowerRandomSpawn : MonoBehaviour
         {
             AudioManager.instance.PlaySfx(AudioManager.Sfx.Sum);
             noCoinMessage.SetActive(true);
-            StartCoroutine(CloseNoCoinMessage());
+            StartCoroutine(CloseMessage(noCoinMessage));
             return;
         }
 
         if (grids.Count == 0)
         {
             AudioManager.instance.PlaySfx(AudioManager.Sfx.Sum);
-            MaxTowerMessage.SetActive(true);
-            StartCoroutine(CloseMaxTowerMessage());
+            maxTowerMessage.SetActive(true);
+            StartCoroutine(CloseMessage(maxTowerMessage));
             return;
         }
 
@@ -73,14 +71,9 @@ public class GridTowerRandomSpawn : MonoBehaviour
         grids.RemoveAt(gridIdx);
     }
 
-    private IEnumerator CloseNoCoinMessage()
+    private IEnumerator CloseMessage(GameObject obj)
     {
         yield return new WaitForSeconds(1);
-        noCoinMessage.SetActive(false);
-    }
-    private IEnumerator CloseMaxTowerMessage()
-    {
-        yield return new WaitForSeconds(1);
-        MaxTowerMessage.SetActive(false);
+        obj.SetActive(false);
     }
 }

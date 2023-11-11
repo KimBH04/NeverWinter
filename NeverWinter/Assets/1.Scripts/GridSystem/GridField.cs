@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class GridField : MonoBehaviour
 {
-    public GridTower havingTower;       //ÇöÀç À§Ä¡ÇØ ÀÖ´Â Å¸¿ö Á¤º¸
-    public Transform havingTowerParent; //ÇöÀç À§Ä¡ÇØ ÀÖ´Â Å¸¿ö ¿ÀºêÁ§Æ®
+    public GridTower havingTower;       //í˜„ì¬ ìœ„ì¹˜í•´ ìˆëŠ” íƒ€ì›Œ ì •ë³´
+    public Transform havingTowerParent; //í˜„ì¬ ìœ„ì¹˜í•´ ìˆëŠ” íƒ€ì›Œ ì˜¤ë¸Œì íŠ¸
 
     [Header("Visual")]
     [SerializeField] private Material green;
@@ -13,10 +13,10 @@ public class GridField : MonoBehaviour
     [SerializeField] private Material red;
 
     /// <summary>
-    /// Å¬¸¯ ÈÄ Å¸¿ö ÀÌµ¿ °¡´É È®ÀÎ »óÀÚ Ç¥½Ã
+    /// í´ë¦­ í›„ íƒ€ì›Œ ì´ë™ ê°€ëŠ¥ í™•ì¸ ìƒì í‘œì‹œ
     /// </summary>
-    /// <param name="tower">Å¸¿ö</param>
-    /// <param name="visual">ºñÁÖ¾ó ¹Ú½º</param>
+    /// <param name="tower">íƒ€ì›Œ</param>
+    /// <param name="visual">ë¹„ì£¼ì–¼ ë°•ìŠ¤</param>
     public void VisualizeMovable(GridTower tower, MeshRenderer visual)
     {
         if (havingTower == null)
@@ -34,11 +34,11 @@ public class GridField : MonoBehaviour
     }
 
     /// <summary>
-    /// Å¬¸¯ ÇØÁ¦ ½Ã Å¸¿ö ÀÌµ¿ ½Ãµµ
+    /// í´ë¦­ í•´ì œ ì‹œ íƒ€ì›Œ ì´ë™ ì‹œë„
     /// </summary>
-    /// <param name="tower">Å¸¿ö Á¤º¸</param>
-    /// <param name="parent">Å¸¿ö ¿ÀºêÁ§Æ®</param>
-    /// <returns>ÀÌµ¿ ¹× º´ÇÕ ¼º°ø ¿©ºÎ</returns>
+    /// <param name="tower">íƒ€ì›Œ ì •ë³´</param>
+    /// <param name="parent">íƒ€ì›Œ ì˜¤ë¸Œì íŠ¸</param>
+    /// <returns>ì´ë™ ë° ë³‘í•© ì„±ê³µ ì—¬ë¶€</returns>
     public bool MovingTower(GridTower tower, Transform parent)
     {
         if (havingTower == null)

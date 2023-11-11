@@ -2,24 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
-using Unity.VisualScripting;
 
 public class GridTower : MonoBehaviour
 {
-    [field: SerializeField] public int ID { get; private set; } //Å¸¿ö °íÀ¯ ¾ÆÀÌµğ
+    [field: SerializeField] public int ID { get; private set; } //íƒ€ì›Œ ê³ ìœ  ì•„ì´ë””
 
-    [SerializeField] private GameObject highRankTower;          //»óÀ§ Å¸¿ö
+    [SerializeField] private GameObject highRankTower;          //ìƒìœ„ íƒ€ì›Œ
     public GameObject HighRankTower => highRankTower;
 
     [Header("Visualizing")]
     [SerializeField] private GameObject visualBox;
     private MeshRenderer visualMesh;
-    private Vector3 boxPosition;        //¼³Ä¡ °¡´É ½Ã°¢È­ »óÀÚÀÇ ÀÌµ¿ Àü À§Ä¡
+    private Vector3 boxPosition;        //ì„¤ì¹˜ ê°€ëŠ¥ ì‹œê°í™” ìƒìì˜ ì´ë™ ì „ ìœ„ì¹˜
 
-    private GridField targetField;      //»õ·Î ÀÌµ¿ÇÏ·Á´Â À§Ä¡ÀÇ ±×¸®µå
-    public GridField field;             //ÇöÀç ÀÖ´Â À§Ä¡ÀÇ ±×¸®µå
+    private GridField targetField;      //ìƒˆë¡œ ì´ë™í•˜ë ¤ëŠ” ìœ„ì¹˜ì˜ ê·¸ë¦¬ë“œ
+    public GridField field;             //í˜„ì¬ ìˆëŠ” ìœ„ì¹˜ì˜ ê·¸ë¦¬ë“œ
 
-    private void Start()
+    protected void Start()
     {
         visualMesh = visualBox.GetComponent<MeshRenderer>();
         boxPosition = transform.localPosition;
@@ -42,12 +41,14 @@ public class GridTower : MonoBehaviour
         }
     }
 
-    private void OnMouseUp()
+    protected void OnMouseUp()
     {
         bool t = targetField.MovingTower(this, transform.parent);
 
-        //¸ñÇ¥ ±×¸®µå¿¡ ÀÌµ¿ ¹× º´ÇÕ ¼º°ø½Ã ÇöÀç À§Ä¡ÀÇ ±×¸®µåÀÇ Å¸¿ö Á¤º¸¸¦ Áö¿ì°í 
-        //ÇöÀç ÀÎ½ºÅÏ½ºÀÇ ±×¸®µå Á¤º¸¸¦ ¸ñÇ¥ ±×¸®µå·Î º¯°æ
+        //ëª©í‘œ ê·¸ë¦¬ë“œì— ì´ë™ ë° ë³‘í•© ì„±ê³µì‹œ í˜„ì¬ ìœ„ì¹˜ì˜ ê·¸ë¦¬ë“œì˜ íƒ€ì›Œ ì •ë³´ë¥¼ ì§€ìš°ê³  
+        //í˜„ì¬ ì¸ìŠ¤í„´ìŠ¤ì˜ ê·¸ë¦¬ë“œ ì •ë³´ë¥¼ ëª©í‘œ ê·¸ë¦¬ë“œë¡œ ë³€ê²½
+
+        //íƒ€ì›Œë¥¼ ì˜®ê²¨ì„œ ë¹„ê²Œ ëœ ê·¸ë¦¬ë“œë¥¼ ëœë¤ ìŠ¤í° ê·¸ë¦¬ë“œë¡œ ì¶”ê°€í•˜ê³  ì˜®ê²¨ì§„ ê³³ì€ ì‚­ì œ
         if (t)
         {
             field.havingTower = null;
@@ -55,6 +56,7 @@ public class GridTower : MonoBehaviour
             GridTowerRandomSpawn.grids.Add(field);
 
             field = targetField;
+            GridTowerRandomSpawn.grids.Remove(field);
         }
         targetField = null;
 
