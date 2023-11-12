@@ -38,9 +38,9 @@ public class GridTowerRandomSpawn : MonoBehaviour
 
     public void SpawningTowerToRandomPosition()
     {
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Sum);
         if (Cost.Coin < 100)
         {
-            AudioManager.instance.PlaySfx(AudioManager.Sfx.Sum);
             noCoinMessage.SetActive(true);
             StartCoroutine(CloseMessage(noCoinMessage));
             return;
@@ -48,7 +48,6 @@ public class GridTowerRandomSpawn : MonoBehaviour
 
         if (grids.Count == 0)
         {
-            AudioManager.instance.PlaySfx(AudioManager.Sfx.Sum);
             maxTowerMessage.SetActive(true);
             StartCoroutine(CloseMessage(maxTowerMessage));
             return;

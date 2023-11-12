@@ -61,7 +61,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        Castle_HpText.text = 100.ToString();
+        Castle_HpText.text = 100+" / 100";
         lives = 100;
         Max_lives = lives;
        
@@ -117,7 +117,7 @@ public class GameManager : MonoBehaviour
 
             
             Castle_Hpbar.value = lives;
-            Castle_HpText.text = lives.ToString();
+            Castle_HpText.text = lives+ " / 100";
             //Debug.Log(Castle_Hpbar.value);
 
             if (lives <= 0)
@@ -150,6 +150,7 @@ public class GameManager : MonoBehaviour
     {
         if (!gameOver)
         {
+            AudioManager.instance.PlayBgm(false);
             gameOver = true;
             Time.timeScale = 0;
 
