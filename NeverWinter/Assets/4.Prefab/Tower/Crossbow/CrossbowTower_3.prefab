@@ -84,6 +84,7 @@ MonoBehaviour:
   red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
   green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
   blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
+  tower2: {fileID: 8654258909661889500}
 --- !u!136 &6557693934022036506
 CapsuleCollider:
   m_ObjectHideFlags: 0

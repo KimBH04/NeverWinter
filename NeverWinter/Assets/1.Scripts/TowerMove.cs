@@ -19,9 +19,9 @@ public class TowerMove : MonoBehaviour
     [SerializeField] private Material blue;
 
     private bool isClick;
-    
 
 
+    public Tower2 tower2;
     private Vector3 beginPos;
     private bool readiedMerging;
     private bool move = true;
@@ -35,10 +35,16 @@ public class TowerMove : MonoBehaviour
     {
         popup = GameObject.Find("TowerPopup").transform.Find("Popup").GetComponent<TowerExplanationPopup>();
         visualMesh = visualBox.GetComponent<MeshRenderer>();
-       
-    
-        
+    }
 
+    public void TowerADUP(float plus)
+    {
+        tower2.AD += plus;
+    }
+
+    public void TowerADminus(float minus)
+    {
+        tower2.AD -= minus;
     }
 
     private void OnMouseDown()

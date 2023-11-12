@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8195130384257559909
 Transform:
   m_ObjectHideFlags: 0
@@ -168,6 +168,7 @@ MonoBehaviour:
   red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
   green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
   blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
+  tower2: {fileID: 1751307746015396026}
 --- !u!136 &6229638470891338317
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -383,6 +384,10 @@ PrefabInstance:
     - target: {fileID: 798227400495738838, guid: d2f4566fdb7de474cae063586fe6f84d, type: 3}
       propertyPath: m_Name
       value: MagicTower_1_V
+      objectReference: {fileID: 0}
+    - target: {fileID: 798227400495738838, guid: d2f4566fdb7de474cae063586fe6f84d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

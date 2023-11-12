@@ -54,6 +54,7 @@ MonoBehaviour:
   red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
   green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
   blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
+  tower2: {fileID: 9203436449731484869}
 --- !u!114 &6641165845702339527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,6 +70,7 @@ MonoBehaviour:
   <ID>k__BackingField: 1
   highRankTower: {fileID: 3167145786215906099, guid: 424517f2cae9d1946b25c4ec8e6f2eed, type: 3}
   visualBox: {fileID: 1973455155566144194}
+  field: {fileID: 0}
 --- !u!136 &162917530973100646
 CapsuleCollider:
   m_ObjectHideFlags: 0
