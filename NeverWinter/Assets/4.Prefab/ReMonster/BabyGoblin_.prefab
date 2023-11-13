@@ -735,6 +735,7 @@ MonoBehaviour:
   Reward: 20
   isEnemyDie: 0
   isEnd: 0
+  animator: {fileID: 0}
 --- !u!136 &5801614297963810998
 CapsuleCollider:
   m_ObjectHideFlags: 0

@@ -38,6 +38,7 @@ public class EnemyCtrl : MonoBehaviour
 
     private Transform target;
     private Gate gate1;
+    Color originalColor;
     //public NavMeshAgent agent;
 
     [HideInInspector] public Animator animator;
@@ -51,6 +52,7 @@ public class EnemyCtrl : MonoBehaviour
         container = GameObject.Find("WayContainer").GetComponent<WayContainer>();
         manager = GameObject.Find("GameManager").GetComponent<GameManager>();
         Enemy_HP = Max_Hp;
+        originalColor = render.material.color;
     }
 
     private void Update()
@@ -157,7 +159,7 @@ public class EnemyCtrl : MonoBehaviour
 
     IEnumerator DamageEvent()
     {
-        Color originalColor = render.material.color;
+       
         if (render)
             render.material.color = Color.red;
 

@@ -25,6 +25,16 @@ public class PoisonDamage : MonoBehaviour
         }
     }
 
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Enemy"))
+        {
+            float damageThisFrame = damagePerSecond * Time.deltaTime;
+            EnemyCtrl enemyCtrl = other.GetComponent<EnemyCtrl>();
+            enemyCtrl.Enemy_HP -= damageThisFrame;
+        }
+    }
+
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Enemy"))
