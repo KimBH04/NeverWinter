@@ -8,50 +8,41 @@ public class PoisonDamage : MonoBehaviour
 {
     public float damagePerSecond = 10f;
     public float speedNuff = 0.5f;
-    private float speed;
-    Color originalColor;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    private void OnTriggerStay(Collider other)
-    {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Unit"))
-        {
-            float damageThisFrame = damagePerSecond * Time.deltaTime;
-            EnemyCtrl enemyCtrl = other.GetComponent<EnemyCtrl>();
-            originalColor = enemyCtrl.render.material.color;
-            enemyCtrl.TakeDamage(damageThisFrame);         
-        }
-    }
-
+    public GameObject poisonEffect;
+    private Queue<GameObject> poisonEffects = new Queue<GameObject>();
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Unit")) 
-        {         
-            EnemyCtrl enemyCtrl = other.GetComponent<EnemyCtrl>();
-            speed = enemyCtrl.Enemy_move_Speed;
-            enemyCtrl.Enemy_move_Speed *= speedNuff;
+        if (other.CompareTag("Enemy"))
+        {
+            EnemyCtrl eneCon = other.GetComponent<EnemyCtrl>();
+            eneCon.Enemy_move_Speed *= speedNuff;
+            eneCon.animator.speed *= speedNuff;
+
+            GameObject effect = Instantiate(poisonEffect, other.transform.position, Quaternion.Euler(-90f, 0f, 0), other.transform);
+            poisonEffects.Enqueue(effect);
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Unit"))
+        if (other.CompareTag("Enemy"))
         {
-            EnemyCtrl enemyCtrl = other.GetComponent<EnemyCtrl>();                       
-            enemyCtrl.Enemy_move_Speed *= speed;
-            enemyCtrl.render.material.color = originalColor;
+            EnemyCtrl eneCon = other.GetComponent<EnemyCtrl>();
+            eneCon.Enemy_move_Speed /= speedNuff;
+            eneCon.animator.speed /= speedNuff;
+
+            deq:
+            if (poisonEffects.Count > 0)
+            {
+                GameObject effect = poisonEffects.Dequeue();
+                if (effect == null)
+                {
+                    goto deq;
+                }
+                Destroy(effect);
+            }
         }
     }
-
-
 }

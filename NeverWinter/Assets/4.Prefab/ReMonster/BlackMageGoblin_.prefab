@@ -594,6 +594,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 825619b32973a4a4f8eb042f2d15ec08, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 1082271958561512970, guid: 825619b32973a4a4f8eb042f2d15ec08, type: 3}
       propertyPath: m_Layer
       value: 3
@@ -763,11 +767,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyName: MagicGoblin
   render: {fileID: 2891736802336664492}
+  structure: 0
   movePoints: []
   Enemy_HP: 30
   Max_Hp: 30
   atk: 6
   Enemy_move_Speed: 3.3
+  Enemy_Speed_Save: 0
   Enemy_Spell: 
   Reward: 50
   isEnemyDie: 0

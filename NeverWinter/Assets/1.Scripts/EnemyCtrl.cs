@@ -1,7 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -42,7 +40,7 @@ public class EnemyCtrl : MonoBehaviour
     private Gate gate1;
     //public NavMeshAgent agent;
 
-    private Animator animator;
+    [HideInInspector] public Animator animator;
     private readonly int hashAttack = Animator.StringToHash("Attack");
     private readonly int hashDie = Animator.StringToHash("Die");
     
@@ -58,12 +56,6 @@ public class EnemyCtrl : MonoBehaviour
     private void Update()
     {
         MoveWay();
-
-        if (gate1 == null) {
-            structure = false;
-            animator.SetBool(hashAttack, false);
-            Enemy_move_Speed = Enemy_Speed_Save;
-        }
     }
 
     // 적이 데미지 받았을 때 쓰는 함수
@@ -89,9 +81,10 @@ public class EnemyCtrl : MonoBehaviour
         if (other.gameObject.layer == LayerMask.NameToLayer("Gate")) //
         {
             structure = true;
-            Enemy_move_Speed = 0.0f;
+            //Enemy_move_Speed = 0.0f;
             gate1 = other.GetComponent<Gate>();
             animator.SetBool(hashAttack, true);
+            isEnd = true;
         }
     }
 
@@ -106,6 +99,12 @@ public class EnemyCtrl : MonoBehaviour
 
         if (structure == true)
         {
+            if (gate1.hp - atk <= 0)
+            {
+                structure = false;
+                animator.SetBool(hashAttack, false);
+                isEnd = false;
+            }
             gate1.hp -= atk;
         }
         //Debug.Log("아야");
@@ -172,7 +171,7 @@ public class EnemyCtrl : MonoBehaviour
         if (!isEnd)
         {
             Transform tr = container.WayPoints[idx];
-            transform.LookAt(tr);
+            transform.LookAt(tr, transform.up);
 
             transform.position = Vector3.MoveTowards(transform.position, tr.position, Enemy_move_Speed * Time.deltaTime);
 

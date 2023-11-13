@@ -610,6 +610,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a023e01f3478c664dae7782ce0c7eb89, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 1082271958561512970, guid: a023e01f3478c664dae7782ce0c7eb89, type: 3}
       propertyPath: m_Layer
       value: 3
@@ -786,11 +790,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyName: BugBear
   render: {fileID: 6252267845279722300}
+  structure: 0
   movePoints: []
   Enemy_HP: 500
   Max_Hp: 500
   atk: 10
   Enemy_move_Speed: 3
+  Enemy_Speed_Save: 0
   Enemy_Spell: 
   Reward: 50
   isEnemyDie: 0

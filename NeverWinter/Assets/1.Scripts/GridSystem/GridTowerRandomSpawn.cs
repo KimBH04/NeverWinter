@@ -58,13 +58,13 @@ public class GridTowerRandomSpawn : MonoBehaviour
         int gridIdx = Random.Range(0, grids.Count);
         int towerIdx = Random.Range(0, towersCount);
 
-        
+        //그리드에 타워 소환
         grids[gridIdx].havingTowerParent = Instantiate(towers[towerIdx], grids[gridIdx].transform.position, Quaternion.identity);
 
-        
+        //그리드에 타워 정보 전달
         grids[gridIdx].havingTower = grids[gridIdx].havingTowerParent.GetComponentInChildren<GridTower>();
 
-        
+        //타워에 그리드 정보 전달
         grids[gridIdx].havingTower.field = grids[gridIdx];
 
         grids.RemoveAt(gridIdx);
