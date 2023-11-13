@@ -785,7 +785,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyName: BugBear
-  render: {fileID: 0}
+  render: {fileID: 6252267845279722300}
   movePoints: []
   Enemy_HP: 500
   Max_Hp: 500
@@ -839,3 +839,8 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!137 &6252267845279722300 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7718005148109985798, guid: a023e01f3478c664dae7782ce0c7eb89, type: 3}
+  m_PrefabInstance: {fileID: 4764992363808033990}
+  m_PrefabAsset: {fileID: 0}

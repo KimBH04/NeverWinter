@@ -734,6 +734,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 4827741549702744434}
   m_SourcePrefab: {fileID: 100100000, guid: 825619b32973a4a4f8eb042f2d15ec08, type: 3}
+--- !u!137 &2891736802336664492 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -2650192008914155992, guid: 825619b32973a4a4f8eb042f2d15ec08, type: 3}
+  m_PrefabInstance: {fileID: 8293698827196870020}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8400227438287243887 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 825619b32973a4a4f8eb042f2d15ec08, type: 3}
@@ -757,7 +762,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyName: MagicGoblin
-  render: {fileID: 0}
+  render: {fileID: 2891736802336664492}
   movePoints: []
   Enemy_HP: 30
   Max_Hp: 30

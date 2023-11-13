@@ -750,6 +750,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1782439904832490627}
   m_SourcePrefab: {fileID: 100100000, guid: 4402a76aa14ffea4cb42af2233ac18e2, type: 3}
+--- !u!137 &228887045443375706 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -2650192008914155992, guid: 4402a76aa14ffea4cb42af2233ac18e2, type: 3}
+  m_PrefabInstance: {fileID: 6347133073552872562}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6112759321094629667 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 4402a76aa14ffea4cb42af2233ac18e2, type: 3}
@@ -768,10 +773,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyName: ArcherGoblin
-  render: {fileID: 0}
+  render: {fileID: 228887045443375706}
   movePoints: []
-  Enemy_HP: 15
-  Max_Hp: 15
+  Enemy_HP: 100
+  Max_Hp: 100
   atk: 4
   Enemy_move_Speed: 2.8
   Enemy_Spell: 

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -13,6 +14,8 @@ public class EnemyCtrl : MonoBehaviour
     private WayContainer container;
     private int idx;
     public Renderer render = null;
+    public bool structure = false;
+    
     public Transform[] movePoints;
     private GameManager manager;
     // 체력  #미완성#
@@ -22,6 +25,7 @@ public class EnemyCtrl : MonoBehaviour
     public int atk;
     // 이동속도
     public float Enemy_move_Speed;
+    public float Enemy_Speed_Save;
     
     //능력 #미완성#
     public string Enemy_Spell;
@@ -35,6 +39,7 @@ public class EnemyCtrl : MonoBehaviour
     private Coroutine damageCoroutine = null;
 
     private Transform target;
+    private Gate gate1;
     //public NavMeshAgent agent;
 
     private Animator animator;
@@ -44,7 +49,7 @@ public class EnemyCtrl : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-        
+        Enemy_Speed_Save = Enemy_move_Speed;
         container = GameObject.Find("WayContainer").GetComponent<WayContainer>();
         manager = GameObject.Find("GameManager").GetComponent<GameManager>();
         Enemy_HP = Max_Hp;
@@ -53,6 +58,12 @@ public class EnemyCtrl : MonoBehaviour
     private void Update()
     {
         MoveWay();
+
+        if (gate1 == null) {
+            structure = false;
+            animator.SetBool(hashAttack, false);
+            Enemy_move_Speed = Enemy_Speed_Save;
+        }
     }
 
     // 적이 데미지 받았을 때 쓰는 함수
@@ -72,26 +83,31 @@ public class EnemyCtrl : MonoBehaviour
 
         }
     }
-    
-    
-/*
-    public void OnCollisionEnter(Collision other)
+
+    private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.gameObject.tag);
-        if (other.gameObject.CompareTag("Castle"))
+        if (other.gameObject.layer == LayerMask.NameToLayer("Gate")) //
         {
-            Debug.Log("othe");
+            structure = true;
+            Enemy_move_Speed = 0.0f;
+            gate1 = other.GetComponent<Gate>();
             animator.SetBool(hashAttack, true);
-            //Attack();
-            
         }
     }
-*/
+
     
+    
+   
 
     public void Attack()
     {
+        if (structure == false)
         GameManager.instance.Lives -= atk;
+
+        if (structure == true)
+        {
+            gate1.hp -= atk;
+        }
         //Debug.Log("아야");
     }
 
@@ -142,12 +158,13 @@ public class EnemyCtrl : MonoBehaviour
 
     IEnumerator DamageEvent()
     {
+        Color originalColor = render.material.color;
         if (render)
             render.material.color = Color.red;
 
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.2f);
         if (render)
-            render.material.color = Color.white;
+            render.material.color = originalColor;
     }
 
     void MoveWay()
@@ -172,5 +189,6 @@ public class EnemyCtrl : MonoBehaviour
         {
             animator.SetBool(hashAttack, true);
         }
+        
     }
 }

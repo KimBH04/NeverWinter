@@ -32,9 +32,14 @@ public class Attack : MonoBehaviour
 
     void Update()
     {
+        if (target.isEnemyDie == true)
+        {
+            Destroy(gameObject);
+        }
+
         if (target == null)
         {
-            Destroy(gameObject); // ´ë»óÀÌ ¾øÀ¸¸é ÃÑ¾ËÀ» ÆÄ±«
+            Destroy(gameObject); // ëŒ€ìƒì´ ì—†ìœ¼ë©´ ì´ì•Œì„ íŒŒê´´
             return;
         }
 
@@ -49,7 +54,7 @@ public class Attack : MonoBehaviour
 
         //if (direction.magnitude <= distanceThisFrame)
         //{
-        //    HitTarget(); // ÃÑ¾ËÀÌ ´ë»ó¿¡ µµ´ŞÇÏ¸é ´ë»óÀ» °ø°İ
+        //    HitTarget(); // ì´ì•Œì´ ëŒ€ìƒì— ë„ë‹¬í•˜ë©´ ëŒ€ìƒì„ ê³µê²©
         //    return;
         //}
     }
@@ -67,7 +72,7 @@ public class Attack : MonoBehaviour
             EnemyCtrl unit = collision.gameObject.GetComponent<EnemyCtrl>();
             if (unit)
             {
-                //Damage(Random.Range(3, 6)); µ¥¹ÌÁö
+                //Damage(Random.Range(3, 6)); ë°ë¯¸ì§€
                 //Debug.Log(unit);
                 unit.TakeDamage(tower1.AD/*+Tower2.ad*/);
             }
