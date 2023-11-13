@@ -8,24 +8,29 @@ public class SkillControl : MonoBehaviour
 {
     
    
-    public GameObject pen;
+     public GameObject[] pen;
 
-    public GameObject hideSkillButton;
-    public GameObject textPro;
-    public TextMeshProUGUI hideSkillTimeText;
-    public Image hideSkillmage;
-    private bool isHideSkill= false;
-    private float skiiTimes = 10;
-    private float getSkillTime = 0;
+    public GameObject[] hideSkillButtons;
+    public GameObject[] textPros;
+    public TextMeshProUGUI[] hideSkillTimeTexts;
+    public Image[] hideSkillmages;
+    private bool[] isHideSkills= {false,false,false,false,false,false,false,false,false,false};
+    private float[] skiiTimes = {10,20};
+    private float[] getSkillTimes = {10,20,0,0,0,0,0,0,0,0};
     
 
     // Start is called before the first frame update
     void Start()
     {
-        hideSkillTimeText = textPro.GetComponent<TextMeshProUGUI>();
-        hideSkillButton.SetActive(false);
-        pen.SetActive(false);
-      
+        for (int i = 0; i < textPros.Length; i++)
+        {
+          
+
+            hideSkillTimeTexts[i] = textPros[i].GetComponent<TextMeshProUGUI>();
+            hideSkillButtons[i].SetActive(false);
+             pen[i].SetActive(false);
+        }
+
     }
 
     // Update is called once per frame
@@ -37,42 +42,62 @@ public class SkillControl : MonoBehaviour
 
     public void HideSkiiSetting(int skillNum)
     {
-        hideSkillButton.SetActive(true);
-        pen.SetActive(true);
-        getSkillTime = skiiTimes;
-        isHideSkill = true;
+        hideSkillButtons[skillNum].SetActive(true);
+        pen[skillNum].SetActive(true);
+        getSkillTimes[skillNum] = skiiTimes[skillNum];
+        isHideSkills[skillNum] = true;
     }
 
     private void HideSkillChk()
     {
-        if(isHideSkill)
+        if(isHideSkills[0])
         {
             
-            StartCoroutine(SkillTimeChk());
+            StartCoroutine(SkillTimeChk(0));
+        }
+        if(isHideSkills[1])
+        {
+            
+            StartCoroutine(SkillTimeChk(1));
+        }
+        if(isHideSkills[2])
+        {
+            
+            StartCoroutine(SkillTimeChk(2));
+        }
+        if(isHideSkills[3])
+        {
+            
+            StartCoroutine(SkillTimeChk(3));
+        }
+        if(isHideSkills[4])
+        {
+            
+            StartCoroutine(SkillTimeChk(4));
         }
     }
 
-    IEnumerator SkillTimeChk()
+    IEnumerator SkillTimeChk(int skillNum)
     {
         yield return null;
 
-        if(getSkillTime>0)
+        if(getSkillTimes[skillNum]>0)
         {
-            getSkillTime -= Time.deltaTime;
+            getSkillTimes[skillNum] -= Time.deltaTime;
 
-            if(getSkillTime<0)
+            if(getSkillTimes[skillNum]<0)
             {
-                getSkillTime = 0;
-                isHideSkill = false;
-                hideSkillButton.SetActive(false);
-                pen.SetActive(false);
+                getSkillTimes[skillNum] = 0;
+                isHideSkills[skillNum] = false;
+                hideSkillButtons[skillNum].SetActive(false);
+                pen[skillNum].SetActive(false);
 
             }
-            hideSkillTimeText.text = getSkillTime.ToString("00");
+            hideSkillTimeTexts[skillNum].text = getSkillTimes[skillNum].ToString("00");
 
 
-            float time = getSkillTime / skiiTimes;
-            hideSkillmage.fillAmount = time;
+            float time = getSkillTimes[skillNum] / skiiTimes[skillNum];
+            hideSkillmages[skillNum].fillAmount = time;
             
 
         }
