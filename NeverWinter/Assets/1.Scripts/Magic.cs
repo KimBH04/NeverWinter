@@ -15,7 +15,7 @@ public class Magic : MonoBehaviour
     {
         if (attack && Input.GetMouseButtonDown(0))
         {
-            
+            SkillControl.instance.HideSkiiSetting(0);
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out RaycastHit hit, 100f, 1 << 10))
             {
