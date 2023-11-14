@@ -311,7 +311,7 @@ MonoBehaviour:
   distance: 6.5
   spin: 50
   TowerSell: 0
-  AD: 24
+  AD: 36
   Bullet: {fileID: 3363792763524686498, guid: 09728805abd033349a465d16143e8b21, type: 3}
   PlusAD: 0
 --- !u!4 &2853612529191417216 stripped

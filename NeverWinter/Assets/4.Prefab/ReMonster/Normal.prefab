@@ -646,11 +646,10 @@ MonoBehaviour:
   render: {fileID: 217309342234719122}
   structure: 0
   movePoints: []
-  Enemy_HP: 120
-  Max_Hp: 120
+  Enemy_HP: 260
+  Max_Hp: 260
   atk: 2
   Enemy_move_Speed: 2.5
-  Enemy_Speed_Save: 0
   Enemy_Spell: 
   Reward: 30
   isEnemyDie: 0

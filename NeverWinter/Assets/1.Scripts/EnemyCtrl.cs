@@ -24,7 +24,6 @@ public class EnemyCtrl : MonoBehaviour
     public int atk;
     // 이동속도
     public float Enemy_move_Speed;
-    public float Enemy_Speed_Save;
     
     //능력 #미완성#
     public string Enemy_Spell;
@@ -49,7 +48,7 @@ public class EnemyCtrl : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-        Enemy_Speed_Save = Enemy_move_Speed;
+        
         container = GameObject.Find("WayContainer").GetComponent<WayContainer>();
         manager = GameObject.Find("GameManager").GetComponent<GameManager>();
         Enemy_HP = Max_Hp;
@@ -168,7 +167,28 @@ public class EnemyCtrl : MonoBehaviour
 
     void MoveWay()
     {
-        if (!isEnd)
+        //if (!isEnd)
+        //{
+        //    Transform tr = container.WayPoints[idx];
+        //    transform.LookAt(tr, transform.up);
+
+        //    transform.position = Vector3.MoveTowards(transform.position, tr.position, Enemy_move_Speed * Time.deltaTime);
+
+        //    if ((transform.position - tr.position).sqrMagnitude < 0.05f)
+        //    {
+        //        idx++;
+        //        if (idx >= container.WayPoints.Length)
+        //        {
+        //            isEnd = true;
+        //        }
+        //    }
+        //}
+        //else
+        //{
+        //    animator.SetBool(hashAttack, true);
+        //} 원래 코드
+
+        if (!isEnd && idx < container.WayPoints.Length)
         {
             Transform tr = container.WayPoints[idx];
             transform.LookAt(tr, transform.up);
@@ -188,6 +208,6 @@ public class EnemyCtrl : MonoBehaviour
         {
             animator.SetBool(hashAttack, true);
         }
-        
+
     }
 }

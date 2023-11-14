@@ -279,7 +279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Rank: 0
-  attackBoost: 2
+  attackBoost: 0.3
 --- !u!65 &6828177520729839763
 BoxCollider:
   m_ObjectHideFlags: 0

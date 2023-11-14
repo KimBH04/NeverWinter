@@ -14,9 +14,9 @@ public class TutorialManager : MonoBehaviour
         tutorial[index].SetActive(false);
         AudioManager.instance.PlaySfx(AudioManager.Sfx.Ck);
 
-        if (index < 7)
+        if (index < 15)
         {
-            if (index == 6)
+            if (index == 14)
             {
                 SkipButton.SetActive(false);
                 return;
@@ -31,7 +31,4 @@ public class TutorialManager : MonoBehaviour
         AllTutorial.SetActive(false);
         SkipButton.SetActive(false);
     }
-    
-
- 
 }

@@ -652,8 +652,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a45593183dcccd4986de54d79cf188a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damagePerSecond: 10
-  speedNuff: 0.5
+  damagePerSecond: 5
+  speedNuff: 0.7
   poisonEffect: {fileID: 9091052932160950336, guid: a17cf1d435df86a489949b05c9ddd868, type: 3}
 --- !u!65 &6292003640942412976
 BoxCollider:

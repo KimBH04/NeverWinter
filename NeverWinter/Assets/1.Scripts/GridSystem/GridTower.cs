@@ -53,26 +53,34 @@ public class GridTower : MonoBehaviour
 
     protected void OnMouseUp()
     {
-        bool t = targetField.MovingTower(this, transform.parent);
-
-        //목표 그리드에 이동 및 병합 성공시 현재 위치의 그리드의 타워 정보를 지우고 
-        //현재 인스턴스의 그리드 정보를 목표 그리드로 변경
-
-        //타워를 옮겨서 비게 된 그리드를 랜덤 스폰 그리드로 추가하고 옮겨진 곳은 삭제
-        if (t)
+        if (targetField != null && field != null)
         {
-            field.havingTower = null;
-            field.havingTowerParent = null;
-            GridTowerRandomSpawn.grids.Add(field);
+            bool t = targetField.MovingTower(this, transform.parent);
 
-            field = targetField;
-            GridTowerRandomSpawn.grids.Remove(field);
+            //목표 그리드에 이동 및 병합 성공시 현재 위치의 그리드의 타워 정보를 지우고 
+            //현재 인스턴스의 그리드 정보를 목표 그리드로 변경
+
+            //타워를 옮겨서 비게 된 그리드를 랜덤 스폰 그리드로 추가하고 옮겨진 곳은 삭제
+            if (t)
+            {
+                field.havingTower = null;
+                field.havingTowerParent = null;
+                GridTowerRandomSpawn.grids.Add(field);
+
+                field = targetField;
+                GridTowerRandomSpawn.grids.Remove(field);
+            }
+            targetField = null;
+
+            transform.DOKill();
+            transform.localPosition = boxPosition;
+
+            visualBox.SetActive(false);
         }
-        targetField = null;
-
-        transform.DOKill();
-        transform.localPosition = boxPosition;
-
-        visualBox.SetActive(false);
+        else
+        {
+            Debug.LogWarning("targetField or field is null. Make sure they are properly assigned.");
+        }
     }
+
 }
