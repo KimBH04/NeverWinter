@@ -1171,15 +1171,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyName: VikingGoblin
   render: {fileID: 0}
+  structure: 0
   movePoints: []
   Enemy_HP: 150
   Max_Hp: 150
   atk: 3
   Enemy_move_Speed: 2.7
+  Enemy_Speed_Save: 0
   Enemy_Spell: 
   Reward: 50
   isEnemyDie: 0
   isEnd: 0
+  animator: {fileID: 0}
 --- !u!136 &5456099134319313492
 CapsuleCollider:
   m_ObjectHideFlags: 0

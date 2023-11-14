@@ -803,8 +803,8 @@ MonoBehaviour:
   render: {fileID: 6252267845279722300}
   structure: 0
   movePoints: []
-  Enemy_HP: 500
-  Max_Hp: 500
+  Enemy_HP: 900
+  Max_Hp: 900
   atk: 10
   Enemy_move_Speed: 3
   Enemy_Speed_Save: 0

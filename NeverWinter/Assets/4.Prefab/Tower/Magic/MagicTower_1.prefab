@@ -308,7 +308,7 @@ MonoBehaviour:
   TowerSelf: {fileID: 0}
   shootPoint: {fileID: 3595985080804619159}
   shootDelay: 2
-  distance: 7
+  distance: 6.5
   spin: 100
   TowerSell: 0
   AD: 12

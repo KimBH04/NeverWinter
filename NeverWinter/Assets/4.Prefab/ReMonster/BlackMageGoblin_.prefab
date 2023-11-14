@@ -769,8 +769,8 @@ MonoBehaviour:
   render: {fileID: 2891736802336664492}
   structure: 0
   movePoints: []
-  Enemy_HP: 30
-  Max_Hp: 30
+  Enemy_HP: 240
+  Max_Hp: 240
   atk: 6
   Enemy_move_Speed: 3.3
   Enemy_Speed_Save: 0
@@ -778,6 +778,7 @@ MonoBehaviour:
   Reward: 50
   isEnemyDie: 0
   isEnd: 0
+  animator: {fileID: 0}
 --- !u!95 &-3643779091210806222
 Animator:
   serializedVersion: 5

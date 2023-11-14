@@ -183,6 +183,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <ID>k__BackingField: 12
   highRankTower: {fileID: 0}
+  tower: {fileID: 0}
   visualBox: {fileID: 2964374878523042537}
   field: {fileID: 0}
 --- !u!1001 &1209388982181503729
@@ -283,7 +284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Rank: 0
-  attackBoost: 20
+  attackBoost: 10
 --- !u!65 &1941549923765479881
 BoxCollider:
   m_ObjectHideFlags: 0
