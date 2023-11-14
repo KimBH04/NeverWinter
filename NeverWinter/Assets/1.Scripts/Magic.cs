@@ -36,6 +36,7 @@ public class Magic : MonoBehaviour
 
     public void click()
     {
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Ck);
         attack = true;
     }
 

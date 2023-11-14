@@ -9,8 +9,7 @@ public class Tower2 : MonoBehaviour
     public GameObject TowerSelf;
     public GameObject shootPoint;
     EnemyCtrl targetUnit = null;
-    public static float shootdelay = 1.0f;
-    public static float ad = 0f;
+    
     public float shootDelay = 0.8f;
     public float distance = 7.0f;
     public float spin = 50f;
@@ -99,23 +98,23 @@ public class Tower2 : MonoBehaviour
 
     }
 
-    public void plus(int a)
-    {
-        if (PlusAD != a)
-        {
-            PlusAD += a;
-            ad += a;
-        }
-    }
+    //public void plus(int a)
+    //{
+    //    if (PlusAD != a)
+    //    {
+    //        PlusAD += a;
+    //        ad += a;
+    //    }
+    //}
 
-    public void exit(int a)
-    {
-        if (PlusAD == a)
-        {
-            PlusAD -= a;
-            ad -= a;
-        }
-    }
+    //public void exit(int a)
+    //{
+    //    if (PlusAD == a)
+    //    {
+    //        PlusAD -= a;
+    //        ad -= a;
+    //    }
+    //}
 
     /*public IEnumerator BulletBustShoot()
     {

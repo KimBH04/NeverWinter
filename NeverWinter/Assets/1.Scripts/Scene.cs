@@ -26,7 +26,7 @@ public class Scene : MonoBehaviour
 
     public void MainMenu()
     {
-        
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Ck);
         SceneManager.LoadScene("Main");
     }
 
@@ -39,6 +39,7 @@ public class Scene : MonoBehaviour
 
     public void Quit()
     {
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Ck);
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #else

@@ -21,6 +21,7 @@ public bool summon = false;
       if(summon&& Input.GetMouseButtonDown(0))
       {
          SummonBarricade();
+            Cost.Coin -= 40;
       }
    }
 
@@ -45,7 +46,8 @@ public bool summon = false;
    
    public void click()
    {
-      summon = true;
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Ck);
+        summon = true;
    }
    
 }
