@@ -7,7 +7,7 @@ public class PoisonTower : GridTower
 {
     [Header("Poison")]
     [SerializeField] private float maxDistance = 10f;
-    [SerializeField] private Vector3 offset;            //Áß½ÉÁ¡ À§Ä¡
+    [SerializeField] private Vector3 offset;            //ì¤‘ì‹¬ì  ìœ„ì¹˜
 
     private const float DIAGONAL = 0.7071067811865475f;
     private readonly Vector3[] directions = {
@@ -35,14 +35,14 @@ public class PoisonTower : GridTower
 
     private void Update()
     {
-        //foreach (var item in directions)
-        //    Debug.DrawRay(transform.position + offset, item * maxDistance, Color.red);
+        foreach (var item in directions)
+            Debug.DrawRay(transform.position + offset, item * maxDistance, Color.red);
     }
 
     private void WatchNearestRoad()
     {
-        Vector3 v = Vector3.zero;   //¹Ù¶ó º¼ À§Ä¡
-        float min = float.MaxValue; //¹Ù¶óº¼ À§Ä¡ÀÇ ÃÖ¼Ú°ª
+        Vector3 v = Vector3.zero;   //ë°”ë¼ ë³¼ ìœ„ì¹˜
+        float min = float.MaxValue; //ë°”ë¼ë³¼ ìœ„ì¹˜ì˜ ìµœì†Ÿê°’
 
         foreach (Vector3 dir in directions)
         {

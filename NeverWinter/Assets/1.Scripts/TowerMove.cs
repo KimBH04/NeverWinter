@@ -57,11 +57,7 @@ public class TowerMove : MonoBehaviour
 
     private void OnMouseDrag()
     {
-        Ray mousePos = Camera.main.ScreenPointToRay(Input.mousePosition);
-        Vector3 direction = mousePos.direction;
-        float multi = -CameraCtrl.floorPos / direction.y;
-
-        transform.position = direction * multi + Camera.main.transform.position;
+        transform.position = CameraCtrl.FloorPos + Camera.main.transform.position;
         
 
         if (target != null)

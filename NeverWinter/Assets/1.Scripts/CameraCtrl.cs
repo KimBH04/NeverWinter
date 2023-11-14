@@ -13,7 +13,19 @@ public class CameraCtrl : MonoBehaviour
     private bool isPanning = false;
     private Vector3 lastMousePosition;
 
-    public static float floorPos { get; private set; }
+    private static float floorPos;
+
+    public static Vector3 FloorPos
+    {
+        get
+        {
+            Ray mousePos = Camera.main.ScreenPointToRay(Input.mousePosition);
+            Vector3 dir = mousePos.direction;
+            float multi = -floorPos / dir.y;
+            return dir * multi;
+        }
+    }
+
 
     private void Start()
     {
@@ -44,7 +56,7 @@ public class CameraCtrl : MonoBehaviour
             Vector3 deltaMouse = Input.mousePosition - lastMousePosition;
             //X = Mathf.Clamp(X - deltaMouse.x / 50, -10, 10);
             //Z = Mathf.Clamp(Z - deltaMouse.y / 50, -10, -2);
-            //¹Ø¿¡¼­ ÃÖ´ëÃÖ¼Ò Á¶Á¤µÇ´Ï ±»ÀÌ ¿©±â¼­ ÇÒ ÇÊ¿ä ¾ø½À´Ï´Ù
+            //ë°‘ì—ì„œ ìµœëŒ€ìµœì†Œ ì¡°ì •ë˜ë‹ˆ êµ³ì´ ì—¬ê¸°ì„œ í•  í•„ìš” ì—†ìŠµë‹ˆë‹¤
             X -= deltaMouse.x * 0.05f;
             Z -= deltaMouse.y * 0.05f;
             lastMousePosition = Input.mousePosition;

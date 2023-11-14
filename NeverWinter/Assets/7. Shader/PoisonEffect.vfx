@@ -33,7 +33,7 @@ MonoBehaviour:
   categories: []
   uiBounds:
     serializedVersion: 2
-    x: -0
+    x: 0
     y: -190
     width: 3318
     height: 2608
@@ -1520,7 +1520,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 3.4
+      m_SerializableObject: 1.3
     m_Space: 2147483647
   m_Property:
     name: A
@@ -1554,7 +1554,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 6.7
+      m_SerializableObject: 2.4
     m_Space: 2147483647
   m_Property:
     name: B
@@ -2131,7 +2131,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEditor.VFX.AABox, Unity.VisualEffectGraph.Editor,
           Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"center":{"x":-0.5706658363342285,"y":-1.4773650169372559,"z":-0.9935543537139893},"size":{"x":6.5,"y":1.0,"z":6.5}}'
+      m_SerializableObject: '{"center":{"x":0.1468503475189209,"y":-0.8086878061294556,"z":-0.11612880229949951},"size":{"x":1.5,"y":1.0,"z":1.5}}'
     m_Space: 0
   m_Property:
     name: Box
