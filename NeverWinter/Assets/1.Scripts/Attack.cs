@@ -69,12 +69,12 @@ public class Attack : MonoBehaviour
 
         if (collision.gameObject.layer == LayerMask.NameToLayer("Unit"))
         {
-            EnemyCtrl unit = collision.gameObject.GetComponent<EnemyCtrl>();
-            if (unit)
+            //EnemyCtrl unit = collision.gameObject.GetComponent<EnemyCtrl>();
+            if (target)
             {
                 //Damage(Random.Range(3, 6)); 데미지
                 //Debug.Log(unit);
-                unit.TakeDamage(tower1.AD/*+Tower2.ad*/);
+                target.TakeDamage(tower1.AD/*+Tower2.ad*/);
             }
             Destroy(gameObject);
         }

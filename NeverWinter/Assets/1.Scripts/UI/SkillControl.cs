@@ -15,8 +15,8 @@ public class SkillControl : MonoBehaviour
     public TextMeshProUGUI[] hideSkillTimeTexts;
     public Image[] hideSkillmages;
     private bool[] isHideSkills= {false,false,false,false,false,false,false,false,false,false};
-    private float[] skiiTimes = {10,5};
-    private float[] getSkillTimes = {10,5,0,0,0,0,0,0,0,0};
+    private float[] skiiTimes = {10,10};
+    private float[] getSkillTimes = {0,0,0,0,0,0,0,0,0,0};
     
 
     // Start is called before the first frame update

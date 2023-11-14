@@ -38,7 +38,7 @@ public class MagicBullet : Attack
             if (unit)
             {
                 //Damage(Random.Range(3, 6)); ������
-                unit.TakeDamage(tower1.AD + Tower2.ad);
+                unit.TakeDamage(tower1.AD);
             }
             Destroy(gameObject, 0.1f);
         }

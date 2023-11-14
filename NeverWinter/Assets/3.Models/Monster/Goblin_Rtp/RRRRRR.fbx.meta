@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:NeverWinter/Assets/3.Models/Monster/Goblin_Rtp/RRRRRR.fbx.meta
 guid: 27fa25664415dda4e864b2429cfd160e
+========
+guid: d6b74413e58ec6b458e3299299ab5546
+>>>>>>>> 5f6aa49b63f8481d623b25656beb436c4d087f9e:NeverWinter/Assets/3.Models/Monster/Goblin_Rtp/NewNomalRIG_COR.fbx.meta
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
