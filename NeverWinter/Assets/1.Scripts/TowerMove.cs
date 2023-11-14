@@ -33,7 +33,7 @@ public class TowerMove : MonoBehaviour
 
     private void Start()
     {
-        popup = GameObject.Find("TowerPopup").transform.Find("Popup").GetComponent<TowerExplanationPopup>();
+        //popup = GameObject.Find("TowerPopup").transform.Find("Popup").GetComponent<TowerExplanationPopup>();
         visualMesh = visualBox.GetComponent<MeshRenderer>();
     }
 

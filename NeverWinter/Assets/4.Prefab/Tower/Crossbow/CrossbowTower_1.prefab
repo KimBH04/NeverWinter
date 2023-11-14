@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3363010394052262399}
-  - component: {fileID: 8721849570727353317}
   - component: {fileID: 1675970130812145506}
   - component: {fileID: 7333022169986930785}
-  m_Layer: 0
+  - component: {fileID: 2859171436986722659}
+  m_Layer: 7
   m_Name: Visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35,25 +35,6 @@ Transform:
   - {fileID: 236553185017792070}
   m_Father: {fileID: 8800975873090639509}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8721849570727353317
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 408318798472844126}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9643ec941691d748bb2114d365502fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <ID>k__BackingField: 4
-  highRankTower: {fileID: 7212395481395608511, guid: 6d22a5ef5c783844fbed48b92ad0e0aa, type: 3}
-  visualBox: {fileID: 4758528599987774896}
-  red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
-  green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
-  blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
-  tower2: {fileID: 7884781112960504325}
 --- !u!136 &1675970130812145506
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -104,6 +85,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2859171436986722659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408318798472844126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d784ecda2ab8ea04abe2f4101e734d20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <ID>k__BackingField: 4
+  highRankTower: {fileID: 7212395481395608511, guid: 6d22a5ef5c783844fbed48b92ad0e0aa, type: 3}
+  visualBox: {fileID: 4758528599987774896}
+  field: {fileID: 0}
 --- !u!1 &609214837490548786
 GameObject:
   m_ObjectHideFlags: 0

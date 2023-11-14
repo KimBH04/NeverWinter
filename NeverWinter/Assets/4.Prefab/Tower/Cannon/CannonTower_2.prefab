@@ -124,11 +124,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7999133851091917235}
-  - component: {fileID: 5466151766282149066}
   - component: {fileID: 6194716337747121641}
   - component: {fileID: 8604523856510179524}
   - component: {fileID: 5657722897029429417}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -151,25 +150,6 @@ Transform:
   - {fileID: 9056010986923264047}
   m_Father: {fileID: 2357677163105640841}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5466151766282149066
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8232608141714029336}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9643ec941691d748bb2114d365502fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <ID>k__BackingField: 2
-  highRankTower: {fileID: 7503228120775296053, guid: b5c555ad9e8b2ac4e976c93c5ccae5d9, type: 3}
-  visualBox: {fileID: 548296364965128044}
-  red: {fileID: 2100000, guid: 8840c2fb30e7fd84da3906576bcbdfe7, type: 2}
-  green: {fileID: 2100000, guid: bb92cace9a339664a9f2c0c99495d2e9, type: 2}
-  blue: {fileID: 2100000, guid: 78a0b12f024b20e4dba85b7d610d99ef, type: 2}
-  tower2: {fileID: 1562040896483485314}
 --- !u!114 &6194716337747121641
 MonoBehaviour:
   m_ObjectHideFlags: 0
