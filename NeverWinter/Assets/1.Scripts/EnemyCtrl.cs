@@ -85,7 +85,7 @@ public class EnemyCtrl : MonoBehaviour
             structure = true;
             //Enemy_move_Speed = 0.0f;
             gate1 = other.GetComponent<Gate>();
-            animator.SetBool(hashAttack, true);
+            //animator.SetBool(hashAttack, true);
             isEnd = true;
         }
     }
