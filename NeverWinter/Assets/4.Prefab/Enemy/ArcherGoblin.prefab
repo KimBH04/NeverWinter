@@ -1559,15 +1559,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyName: ArcherGoblin
   render: {fileID: 0}
+  structure: 0
   movePoints: []
   Enemy_HP: 15
   Max_Hp: 15
   atk: 4
   Enemy_move_Speed: 2.8
+  Enemy_Speed_Save: 0
   Enemy_Spell: 
   Reward: 30
   isEnemyDie: 0
   isEnd: 0
+  animator: {fileID: 0}
 --- !u!136 &4286367590222170423
 CapsuleCollider:
   m_ObjectHideFlags: 0

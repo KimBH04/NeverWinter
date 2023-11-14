@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -90,10 +91,6 @@ public class EnemyCtrl : MonoBehaviour
         }
     }
 
-    
-    
-   
-
     public void Attack()
     {
         if (structure == false)
@@ -101,13 +98,14 @@ public class EnemyCtrl : MonoBehaviour
 
         if (structure == true)
         {
+            gate1.hp -= atk;
             if (gate1.hp - atk <= 0)
-            {
-                structure = false;
+            {             
                 animator.SetBool(hashAttack, false);
                 isEnd = false;
+                structure = false;
             }
-            gate1.hp -= atk;
+            
         }
         //Debug.Log("아야");
     }
@@ -163,7 +161,7 @@ public class EnemyCtrl : MonoBehaviour
         if (render)
             render.material.color = Color.red;
 
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.1f);
         if (render)
             render.material.color = originalColor;
     }

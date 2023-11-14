@@ -374,6 +374,90 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &7927489325833870112
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3608800303058083565}
+  - component: {fileID: 3431693495447868293}
+  - component: {fileID: 4933987523748486102}
+  m_Layer: 0
+  m_Name: ArcherGoblin_Bow (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3608800303058083565
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7927489325833870112}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.18170494, y: 0.17445244, z: -0.9081372, w: -0.3344196}
+  m_LocalPosition: {x: 0.0016996381, y: 0.010575813, z: -0.007862881}
+  m_LocalScale: {x: 0.93155164, y: 0.9315517, z: 0.93155146}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1704499759080399006}
+  m_LocalEulerAnglesHint: {x: 22.479, y: 373.349, z: -218.177}
+--- !u!33 &3431693495447868293
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7927489325833870112}
+  m_Mesh: {fileID: 4164511204261677510, guid: 008ef330daab1c84cbb6250479e2eca1, type: 3}
+--- !u!23 &4933987523748486102
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7927489325833870112}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: -2416719745063247026, guid: 008ef330daab1c84cbb6250479e2eca1, type: 3}
+  - {fileID: 2216991656431249491, guid: 008ef330daab1c84cbb6250479e2eca1, type: 3}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1001 &6347133073552872562
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -743,6 +827,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4402a76aa14ffea4cb42af2233ac18e2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2633034768396116441}
+    - targetCorrespondingSourceObject: {fileID: -3480699329000672020, guid: 4402a76aa14ffea4cb42af2233ac18e2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3608800303058083565}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4402a76aa14ffea4cb42af2233ac18e2, type: 3}
       insertIndex: -1
@@ -757,6 +844,11 @@ PrefabInstance:
 --- !u!137 &228887045443375706 stripped
 SkinnedMeshRenderer:
   m_CorrespondingSourceObject: {fileID: -2650192008914155992, guid: 4402a76aa14ffea4cb42af2233ac18e2, type: 3}
+  m_PrefabInstance: {fileID: 6347133073552872562}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1704499759080399006 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -3480699329000672020, guid: 4402a76aa14ffea4cb42af2233ac18e2, type: 3}
   m_PrefabInstance: {fileID: 6347133073552872562}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &6112759321094629667 stripped
@@ -789,6 +881,7 @@ MonoBehaviour:
   Reward: 30
   isEnemyDie: 0
   isEnd: 0
+  animator: {fileID: 0}
 --- !u!95 &1369652838574185066
 Animator:
   serializedVersion: 5
