@@ -16,11 +16,15 @@ public class BarricadeSummon : MonoBehaviour
     {
         if (summon)
         {
-            barricadeVisual.position = CameraCtrl.FloorPos + Camera.main.transform.position;
-            if (Input.GetMouseButtonDown(0))
+            if (Cost.Coin >= 40)
             {
-                SummonBarricade();
-                Cost.Coin -= 40;
+                barricadeVisual.position = CameraCtrl.FloorPos + Camera.main.transform.position;
+                if (Input.GetMouseButtonDown(0))
+                {
+                    SummonBarricade();
+
+                    Cost.Coin -= 40;
+                }
             }
         }
     }
@@ -32,6 +36,7 @@ public class BarricadeSummon : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out RaycastHit hit, 100f, 1 << 10))
         {
+            barricadeVisual.position = new Vector3(-14.55f, -2, 0);
             summon = false;
             SkillControl.instance.HideSkiiSetting(1);
             spawnPos = hit.point;

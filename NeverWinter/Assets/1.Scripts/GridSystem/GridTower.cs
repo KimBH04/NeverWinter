@@ -9,7 +9,7 @@ public class GridTower : MonoBehaviour
 
     [SerializeField] private GameObject highRankTower;          //상위 타워
     public GameObject HighRankTower => highRankTower;
-
+    public Tower2 tower;
     [Header("Visualizing")]
     [SerializeField] private GameObject visualBox;
     private MeshRenderer visualMesh;
@@ -29,6 +29,16 @@ public class GridTower : MonoBehaviour
         visualBox.SetActive(true);
     }
 
+
+    public void TowerADUP(float plus)
+    {
+        tower.AD += plus;
+    }
+
+    public void TowerADminus(float minus)
+    {
+        tower.AD -= minus;
+    }
     private void OnMouseDrag()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);

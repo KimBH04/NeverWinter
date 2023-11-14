@@ -49,6 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <ID>k__BackingField: 1
   highRankTower: {fileID: 3167145786215906099, guid: 424517f2cae9d1946b25c4ec8e6f2eed, type: 3}
+  tower: {fileID: 9203436449731484869}
   visualBox: {fileID: 1973455155566144194}
   field: {fileID: 0}
 --- !u!136 &162917530973100646

@@ -37,15 +37,7 @@ public class TowerMove : MonoBehaviour
         visualMesh = visualBox.GetComponent<MeshRenderer>();
     }
 
-    public void TowerADUP(float plus)
-    {
-        tower2.AD += plus;
-    }
-
-    public void TowerADminus(float minus)
-    {
-        tower2.AD -= minus;
-    }
+    
 
     private void OnMouseDown()
     {

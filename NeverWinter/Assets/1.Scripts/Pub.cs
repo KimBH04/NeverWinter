@@ -21,8 +21,8 @@ public class Pub : MonoBehaviour
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("TOWER")) //
         {
-            TowerMove playerAttack = other.GetComponent<TowerMove>();
-            other.GetComponent<TowerMove>().TowerADUP(attackBoost);
+            GridTower playerAttack = other.GetComponent<GridTower>();
+            other.GetComponent<GridTower>().TowerADUP(attackBoost);
             Debug.Log("플레이어의 공격력이 올라갔습니다: " + playerAttack);
         }
 
@@ -32,8 +32,8 @@ public class Pub : MonoBehaviour
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("TOWER"))
         {
-            TowerMove playerAttack = other.GetComponent<TowerMove>();
-            other.GetComponent<TowerMove>().TowerADminus(attackBoost);
+            GridTower playerAttack = other.GetComponent<GridTower>();
+            other.GetComponent<GridTower>().TowerADminus(attackBoost);
             Debug.Log("플레이어의 공격력이 올라갔습니다: " + playerAttack);
         }
     }

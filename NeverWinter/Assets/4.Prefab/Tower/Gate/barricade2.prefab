@@ -227,7 +227,7 @@ GameObject:
   - component: {fileID: 4889044920127628786}
   - component: {fileID: 7189127710394614835}
   - component: {fileID: 6981895293498281697}
-  - component: {fileID: 6891400667807184702}
+  - component: {fileID: 290371512175116007}
   m_Layer: 13
   m_Name: barricade2
   m_TagString: Untagged
@@ -350,7 +350,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0077322004, y: 0.0076519814, z: 0.014898224}
   m_Center: {x: -0.000053609605, y: 0.003770766, z: -0.00008474779}
---- !u!114 &6891400667807184702
+--- !u!114 &290371512175116007
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -492,4 +492,4 @@ MonoBehaviour:
   hpGauge: {fileID: 6307163976987149544}
   hpValue: {fileID: 0}
   distValue: {fileID: 0}
-  gate: {fileID: 6891400667807184702}
+  gate: {fileID: 290371512175116007}
