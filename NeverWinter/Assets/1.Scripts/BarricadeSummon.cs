@@ -20,11 +20,16 @@ public class BarricadeSummon : MonoBehaviour
             if (Cost.Coin >= 40)
             {
                 barricadeVisual.position = CameraCtrl.FloorPos + Camera.main.transform.position;
+                if (Input.GetMouseButtonDown(1))
+                {
+                    summon=false;
+                    barricadeVisual.position = new Vector3(0, -2, 0);
+                }
                 if (Input.GetMouseButtonDown(0))
                 {
                     SummonBarricade();
 
-                    Cost.Coin -= 40;
+                    
                 }
             }
         }
@@ -44,6 +49,7 @@ public class BarricadeSummon : MonoBehaviour
             int random = Random.Range(0, 2);
             float y = (random == 0) ? 45f : 135f;
             GameObject barricade = Instantiate(barricadePrefab, spawnPos, Quaternion.Euler(0, y, 0));
+            Cost.Coin -= 40;
         }
 
     }

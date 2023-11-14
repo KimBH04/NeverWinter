@@ -14,6 +14,11 @@ public class Magic : MonoBehaviour
         {
             area.position = CameraCtrl.FloorPos + Camera.main.transform.position;
 
+            if (Input.GetMouseButtonDown((1)))
+            {
+                attack = false;
+                area.position = new Vector3(0, -2, 0);
+            }
             if (Input.GetMouseButtonDown(0))
             {
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
