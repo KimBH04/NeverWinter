@@ -20,19 +20,19 @@ public bool summon = false;
    {
       if(summon&& Input.GetMouseButtonDown(0))
       {
-         summon = false;
          SummonBarricade();
       }
    }
 
    private void SummonBarricade()
    {
-      SkillControl. instance.HideSkiiSetting(1);
       Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
       RaycastHit hit;
 
-      if (Physics.Raycast(ray, out hit))
+      if (Physics.Raycast(ray, out hit, 100f, 1 << 10))
       {
+         summon = false;
+         SkillControl. instance.HideSkiiSetting(1);
          spawnPos = hit.point;
          int random = Random.Range(0, 2);
          float y = (random==0)?45f:135f;
