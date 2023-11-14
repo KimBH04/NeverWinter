@@ -1,20 +1,14 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
 public class BarricadeSummon : MonoBehaviour
 {
-   [SerializeField]
-   private GameObject barricadePrefab;
+    [SerializeField] private Transform barricadeVisual;
 
-  
+    [SerializeField]
+    private GameObject barricadePrefab;
 
-   private Vector3 spawnPos;
-   
-public bool summon = false;
 
    private void Update()
    {
@@ -25,10 +19,7 @@ public bool summon = false;
       }
    }
 
-   private void SummonBarricade()
-   {
-      Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-      RaycastHit hit;
+    private Vector3 spawnPos;
 
       if (Physics.Raycast(ray, out hit, 100f, 1 << 10))
       {
