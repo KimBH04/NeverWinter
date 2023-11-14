@@ -14,9 +14,9 @@ public class TutorialManager : MonoBehaviour
         tutorial[index].SetActive(false);
         AudioManager.instance.PlaySfx(AudioManager.Sfx.Ck);
 
-        if (index < 15)
+        if (index < tutorial.Length)
         {
-            if (index == 14)
+            if (index == tutorial.Length - 1)
             {
                 SkipButton.SetActive(false);
                 return;
