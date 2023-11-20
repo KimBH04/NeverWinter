@@ -17,7 +17,9 @@ public class Gate : MonoBehaviour
     {
         if (hp <= 0)
         {
+            BarricadeSummon.BarricadeCnt--;
             Destroy(gameObject);
+            print(BarricadeSummon.BarricadeCnt);
         }
     }
 
