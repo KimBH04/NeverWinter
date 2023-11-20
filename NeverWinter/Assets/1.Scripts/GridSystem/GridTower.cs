@@ -13,9 +13,6 @@ public class GridTower : MonoBehaviour
     public GameObject HighRankTower => highRankTower;
     public Tower2 tower;
 
-    [Header("Visualizing")]
-    [SerializeField] private GameObject visualBox;
-    private MeshRenderer visualMesh;
     private Vector3 boxPosition;        //설치 가능 시각화 상자의 이동 전 위치
 
     private GridField targetField;      //새로 이동하려는 위치의 그리드
@@ -23,13 +20,12 @@ public class GridTower : MonoBehaviour
 
     protected void Start()
     {
-        visualMesh = visualBox.GetComponent<MeshRenderer>();
         boxPosition = transform.localPosition;
     }
 
     private void OnMouseDown()
     {
-        visualBox.SetActive(true);
+        isClick = true;
     }
 
     public void TowerADUP(float plus)
@@ -50,8 +46,9 @@ public class GridTower : MonoBehaviour
             targetField = hit.transform.GetComponent<GridField>();
 
             transform.DOMove(hit.transform.position, 0.1f).SetEase(Ease.OutSine);
-            targetField.VisualizeMovable(this, visualMesh);
+            targetField.VisualizeMovable(this);
         }
+        VisualTowerManager.VisualizingTower(ID, transform.position);
     }
 
     protected void OnMouseUp()
@@ -74,16 +71,17 @@ public class GridTower : MonoBehaviour
                 GridTowerRandomSpawn.grids.Remove(field);
             }
             targetField = null;
-
-            transform.DOKill();
-            transform.localPosition = boxPosition;
-
-            visualBox.SetActive(false);
         }
         else
         {
             Debug.LogWarning("targetField or field is null. Make sure they are properly assigned.");
         }
-    }
 
+        transform.DOKill();
+        transform.localPosition = boxPosition;
+
+        VisualTowerManager.EndVisualizing(ID);
+
+        isClick = false;
+    }
 }

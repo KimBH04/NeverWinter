@@ -22,7 +22,7 @@ public class GridTowerRandomSpawn : MonoBehaviour
 
     private void Start()
     {
-        GetComponentsInChildren<GridField>(grids);
+        GetComponentsInChildren(grids);
         towersCount = towers.Length;
     }
 

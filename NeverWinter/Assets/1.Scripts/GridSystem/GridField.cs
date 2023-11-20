@@ -17,19 +17,19 @@ public class GridField : MonoBehaviour
     /// </summary>
     /// <param name="tower">타워</param>
     /// <param name="visual">비주얼 박스</param>
-    public void VisualizeMovable(GridTower tower, MeshRenderer visual)
+    public void VisualizeMovable(GridTower tower)
     {
         if (havingTower == null)
         {
-            visual.material = green;
+            VisualTowerManager.visualBox.material = green;
         }
         else if (havingTower != tower && havingTower.HighRankTower != null && tower.ID == havingTower.ID)
         {
-            visual.material = blue;
+            VisualTowerManager.visualBox.material = blue;
         }
         else
         {
-            visual.material = red;
+            VisualTowerManager.visualBox.material = red;
         }
     }
 
