@@ -60,111 +60,111 @@ namespace NeverWiter
                 case UpgradeItemType.Potion:
                     {
                         if (icon)
-                            icon.sprite = Resources.Load<Sprite>("Sprites/Áõ°­ ¹°¾à");
+                            icon.sprite = Resources.Load<Sprite>("Sprites/ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
 
                         if (title)
-                            title.text = string.Format("{0} Lv. {1}", "¹°¾à", level);
+                            title.text = string.Format("{0} Lv. {1}", "ï¿½ï¿½ï¿½ï¿½", level);
                         if (explain)
-                            explain.text = "ÁÖ¹® ½ºÅ³ ÄðÅ¸ÀÓ °¨¼Ò";
+                            explain.text = "ï¿½Ö¹ï¿½ ï¿½ï¿½Å³ ï¿½ï¿½Å¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½";
                     }
                     break;
                 case UpgradeItemType.Axe:
                     {
                         if (icon)
-                            icon.sprite = Resources.Load<Sprite>("Sprites/Áõ°­ µµ³¢");
+                            icon.sprite = Resources.Load<Sprite>("Sprites/ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
 
                         if (title)
-                            title.text = string.Format("{0} Lv. {1}", "µµ³¢", level);
+                            title.text = string.Format("{0} Lv. {1}", "ï¿½ï¿½ï¿½ï¿½", level);
                         if (explain)
-                            explain.text = "ÁÖ¹® ½ºÅ³ °ø°Ý·Â Áõ°¡";
+                            explain.text = "ï¿½Ö¹ï¿½ ï¿½ï¿½Å³ ï¿½ï¿½ï¿½Ý·ï¿½ ï¿½ï¿½ï¿½ï¿½";
                     }
                     break;
                 case UpgradeItemType.Book:
                     {
                         if (icon)
-                            icon.sprite = Resources.Load<Sprite>("Sprites/Áõ°­ °í¼­");
+                            icon.sprite = Resources.Load<Sprite>("Sprites/ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
 
                         if (title)
-                            title.text = string.Format("{0} Lv. {1}", "Áõ°­ °í¼­", level);
+                            title.text = string.Format("{0} Lv. {1}", "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½", level);
                         if (explain)
-                            explain.text = "¸¶¹ý Å¸¿öÀÇ °ø°Ý·Â°ú °ø°Ý¼Óµµ°¡ »ó½Â.";
+                            explain.text = "ï¿½ï¿½ï¿½ï¿½ Å¸ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ý·Â°ï¿½ ï¿½ï¿½ï¿½Ý¼Óµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½.";
                     }
                     break;
                 case UpgradeItemType.Xbow:
                     {
                         if (icon)
-                            icon.sprite = Resources.Load<Sprite>("Sprites/Áõ°­ ¼®±Ã");
+                            icon.sprite = Resources.Load<Sprite>("Sprites/ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
 
                         if (title)
-                            title.text = string.Format("{0} Lv. {1}", "Áõ°­ ¼®±Ã", level);
+                            title.text = string.Format("{0} Lv. {1}", "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½", level);
                         if (explain)
-                            explain.text = "¼®±Ã Å¸¿öÀÇ °ø°Ý·Â°ú °ø°Ý¼Óµµ »ó½Â";
+                            explain.text = "ï¿½ï¿½ï¿½ï¿½ Å¸ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ý·Â°ï¿½ ï¿½ï¿½ï¿½Ý¼Óµï¿½ ï¿½ï¿½ï¿½";
                     }
                     break;
                 case UpgradeItemType.Pub:
                     {
                         if (icon)
-                            icon.sprite = Resources.Load<Sprite>("Sprites/Áõ°­ ¼±¼úÁý");
+                            icon.sprite = Resources.Load<Sprite>("Sprites/ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 
                         if (title)
-                            title.text = string.Format("{0} Lv. {1}", "Áõ°­ ¼±¼úÁý", level);
+                            title.text = string.Format("{0} Lv. {1}", "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", level);
                         if (explain)
-                            explain.text = "¼±¼úÁýÀÇ °ñµå ¼ö±Þ·® Áõ°¡";
+                            explain.text = "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Þ·ï¿½ ï¿½ï¿½ï¿½ï¿½";
                     }
                     break;
                 case UpgradeItemType.scout:
                     {
                         if (icon)
-                            icon.sprite = Resources.Load<Sprite>("Sprites/Áõ°­ Á¤Âû´ë");
+                            icon.sprite = Resources.Load<Sprite>("Sprites/ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 
                         if (title)
-                            title.text = string.Format("{0} Lv. {1}", "Áõ°­ Á¤Âû´ë", level);
+                            title.text = string.Format("{0} Lv. {1}", "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", level);
                         if (explain)
-                            explain.text = "Àû ¸ó½ºÅÍµéÀÇ ¹æ¾î·Â °¨¼Ò";
+                            explain.text = "ï¿½ï¿½ ï¿½ï¿½ï¿½Íµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½";
                     }
                     break;
                 case UpgradeItemType.Knight:
                     {
                         if (icon)
-                            icon.sprite = Resources.Load<Sprite>("Sprites/Áõ°­ ±â¸¶º´");
+                            icon.sprite = Resources.Load<Sprite>("Sprites/ï¿½ï¿½ï¿½ï¿½ ï¿½â¸¶ï¿½ï¿½");
 
                         if (title)
-                            title.text = string.Format("{0} Lv. {1}", "Àû ÀÌµ¿¼Óµµ °¨¼Ò", level);
+                            title.text = string.Format("{0} Lv. {1}", "ï¿½ï¿½ ï¿½Ìµï¿½ï¿½Óµï¿½ ï¿½ï¿½ï¿½ï¿½", level);
                         if (explain)
-                            explain.text = "Àû ÀÌµ¿¼Óµµ°¡ 10¸¸Å­ °¨¼ÒÇÕ´Ï´Ù.";
+                            explain.text = "ï¿½ï¿½ ï¿½Ìµï¿½ï¿½Óµï¿½ï¿½ï¿½ 10ï¿½ï¿½Å­ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.";
                     }
                     break;
                 case UpgradeItemType.Gold:
                     {
                         if (icon)
-                            icon.sprite = Resources.Load<Sprite>("Sprites/Áõ°­ °ñµå");
+                            icon.sprite = Resources.Load<Sprite>("Sprites/ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½");
 
                         if (title)
-                            title.text = string.Format("{0} Lv. {1}", "Áõ°­ °ñµå", level);
+                            title.text = string.Format("{0} Lv. {1}", "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½", level);
                         if (explain)
-                            explain.text = "Àû ¸ó½ºÅÍ Ã³Ä¡½Ã È¹µæ °ñµå·® Áõ°¡";
+                            explain.text = "ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Ã³Ä¡ï¿½ï¿½ È¹ï¿½ï¿½ ï¿½ï¿½å·® ï¿½ï¿½ï¿½ï¿½";
                     }
                     break;
                 case UpgradeItemType.Clover:
                     {
                         if (icon)
-                            icon.sprite = Resources.Load<Sprite>("Sprites/Áõ°­ Å¬·Î¹ö");
+                            icon.sprite = Resources.Load<Sprite>("Sprites/ï¿½ï¿½ï¿½ï¿½ Å¬ï¿½Î¹ï¿½");
 
                         if (title)
-                            title.text = string.Format("{0} Lv. {1}", "Áõ°­ Å¬·Î¹ö", level);
+                            title.text = string.Format("{0} Lv. {1}", "ï¿½ï¿½ï¿½ï¿½ Å¬ï¿½Î¹ï¿½", level);
                         if (explain)
-                            explain.text = "¹«ÀÛÀ§ Å¸¿ö 1±â È¹µæ (1~3¼º)";
+                            explain.text = "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Å¸ï¿½ï¿½ 1ï¿½ï¿½ È¹ï¿½ï¿½ (1~3ï¿½ï¿½)";
                     }
                     break;
                 case UpgradeItemType.Shield:
                     {
                         if (icon)
-                            icon.sprite = Resources.Load<Sprite>("Sprites/Áõ°­ ¹æÆÐ");
+                            icon.sprite = Resources.Load<Sprite>("Sprites/ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
 
                         if (title)
-                            title.text = string.Format("{0} Lv. {1}", "Áõ°­ ¹æÆÐ", level);
+                            title.text = string.Format("{0} Lv. {1}", "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½", level);
                         if (explain)
-                            explain.text = "°ø¼º ³»±¸µµ ¼öÄ¡ Áõ°¡ (ÇÇ È¸º¹)";
+                            explain.text = "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ ï¿½ï¿½ï¿½ï¿½ (ï¿½ï¿½ È¸ï¿½ï¿½)";
                     }
 
                     break;
@@ -173,12 +173,12 @@ namespace NeverWiter
                 case UpgradeItemType.Crown:
                     {
                         if (icon)
-                            icon.sprite = Resources.Load<Sprite>("Sprites/Áõ°­ ¿Õ°ü");
+                            icon.sprite = Resources.Load<Sprite>("Sprites/ï¿½ï¿½ï¿½ï¿½ ï¿½Õ°ï¿½");
 
                         if (title)
-                            title.text = string.Format("{0} Lv. {1}", "Áõ°­ ¿Õ°ü", level);
+                            title.text = string.Format("{0} Lv. {1}", "ï¿½ï¿½ï¿½ï¿½ ï¿½Õ°ï¿½", level);
                         if (explain)
-                            explain.text = "Àû ÀÌµ¿¼Óµµ°¡ 10¸¸Å­ °¨¼ÒÇÕ´Ï´Ù.";
+                            explain.text = "ï¿½ï¿½ ï¿½Ìµï¿½ï¿½Óµï¿½ï¿½ï¿½ 10ï¿½ï¿½Å­ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.";
                     }
 
                     break;

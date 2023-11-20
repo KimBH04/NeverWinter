@@ -10,7 +10,15 @@ public class BarricadeSummon : MonoBehaviour
     private GameObject barricadePrefab;
 
     private bool summon;
+    
+    // 바리게이트 갯수 제한 변수
+    public static int BarricadeCnt=0;
 
+
+    private void Start()
+    {
+        BarricadeCnt = 0;
+    }
 
     private void Update()
     {
@@ -50,6 +58,8 @@ public class BarricadeSummon : MonoBehaviour
             float y = (random == 0) ? 45f : 135f;
             GameObject barricade = Instantiate(barricadePrefab, spawnPos, Quaternion.Euler(0, y, 0));
             Cost.Coin -= 40;
+            BarricadeCnt++;
+            print(BarricadeCnt);
         }
 
     }
@@ -57,7 +67,20 @@ public class BarricadeSummon : MonoBehaviour
     public void click()
     {
         AudioManager.instance.PlaySfx(AudioManager.Sfx.Ck);
-        summon = true;
+        if (Cost.Coin >= 40 && BarricadeCnt <= 4)
+        {
+            summon = true;
+        }
+        
+        else if (Cost.Coin < 40)
+        {
+          print("코인이 부족합니다.");  
+        }
+        
+        else if(BarricadeCnt > 4)
+        {
+            print("바리케이트는 5개까지만 설치할 수 있습니다.");
+        }
     }
 
 }
