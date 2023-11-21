@@ -15,7 +15,7 @@ public class SkillControl : MonoBehaviour
     public TextMeshProUGUI[] hideSkillTimeTexts;
     public Image[] hideSkillmages;
     private bool[] isHideSkills= {false,false,false,false,false,false,false,false,false,false};
-    private float[] skiiTimes = {10,10};
+    public float[] skiiTimes = {10,10};
     private float[] getSkillTimes = {0,0,0,0,0,0,0,0,0,0};
     
 

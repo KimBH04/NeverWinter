@@ -211,14 +211,18 @@ public class GameManager : MonoBehaviour
         switch (uType)
         {
             case UpgradeItemType.Axe:
-
+                
+                Tower2.instance.AD += 5.0f;
+                print(Tower2.instance.AD);;
                 //Tower2.ad += 5.0f;
                 //Debug.Log("포션");
 
                 break;
             case UpgradeItemType.Potion:
-
-                //Debug.Log("도끼");
+                for(int i=0;i< SkillControl.instance.skiiTimes.Length;i++)
+                {
+                    SkillControl.instance.skiiTimes[i] *= 0.9f;
+                }
 
                 break;
 
@@ -228,12 +232,12 @@ public class GameManager : MonoBehaviour
 
                 break;
             case UpgradeItemType.Xbow:
-
+                Tower2.instance.shootDelay*=0.9f;
                 //Tower2.shootdelay *= 0.9f;
 
                 break;
             case UpgradeItemType.Pub:
-
+                
                 //Canon.shootDelay -= 0.2f;
 
                 break;

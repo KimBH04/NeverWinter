@@ -5,6 +5,7 @@ using static UnityEngine.GraphicsBuffer;
 
 public class Tower2 : MonoBehaviour
 {
+    public static Tower2 instance;
     // 타워 파는 것 #미완성#
     public GameObject TowerSelf;
     public GameObject shootPoint;
@@ -28,6 +29,7 @@ public class Tower2 : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
+        instance= this;
         temp = shootDelay;
     }
 

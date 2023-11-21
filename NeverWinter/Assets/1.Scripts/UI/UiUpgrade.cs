@@ -57,17 +57,17 @@ namespace NeverWiter
 
             switch (upradeItemType)
             {
-                case UpgradeItemType.Potion:
-                    {
-                        if (icon)
-                            icon.sprite = Resources.Load<Sprite>("Sprites/증강 물약");
-
-                        if (title)
-                            title.text = string.Format("{0} Lv. {1}", "물약", level);
-                        if (explain)
-                            explain.text = "주문 스킬 쿨타임 감소";
-                    }
-                    break;
+                // case UpgradeItemType.Potion:
+                //     {
+                //         if (icon)
+                //             icon.sprite = Resources.Load<Sprite>("Sprites/증강 물약");
+                //
+                //         if (title)
+                //             title.text = string.Format("{0} Lv. {1}", "물약", level);
+                //         if (explain)
+                //             explain.text = "주문 스킬 쿨타임 감소";
+                //     }
+                //     break;
                 case UpgradeItemType.Axe:
                     {
                         if (icon)
