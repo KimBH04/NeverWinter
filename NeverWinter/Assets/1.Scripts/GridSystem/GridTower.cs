@@ -23,19 +23,20 @@ public class GridTower : MonoBehaviour
         boxPosition = transform.localPosition;
     }
 
+    private void Update()
+    {
+        if (!isClick)
+        {
+            if (Input.GetMouseButtonDown(1))
+            {
+                //타워 정보
+            }
+        }
+    }
+
     private void OnMouseDown()
     {
         isClick = true;
-    }
-
-    public void TowerADUP(float plus)
-    {
-        tower.AD += plus;
-    }
-
-    public void TowerADminus(float minus)
-    {
-        tower.AD -= minus;
     }
 
     private void OnMouseDrag()
@@ -83,5 +84,15 @@ public class GridTower : MonoBehaviour
         VisualTowerManager.EndVisualizing(ID);
 
         isClick = false;
+    }
+
+    public void TowerADUP(float plus)
+    {
+        tower.AD += plus;
+    }
+
+    public void TowerADminus(float minus)
+    {
+        tower.AD -= minus;
     }
 }
