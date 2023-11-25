@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BarricadeSummon : MonoBehaviour
 {
@@ -8,6 +9,9 @@ public class BarricadeSummon : MonoBehaviour
 
     [SerializeField]
     private GameObject barricadePrefab;
+
+    [SerializeField] private Text text;
+    [SerializeField] private GameObject textObj;
 
     private bool summon;
     
@@ -17,6 +21,7 @@ public class BarricadeSummon : MonoBehaviour
 
     private void Start()
     {
+        textObj.SetActive(false);
         BarricadeCnt = 0;
     }
 
@@ -73,14 +78,26 @@ public class BarricadeSummon : MonoBehaviour
         }
         
         else if (Cost.Coin < 40)
-        {
-          print("코인이 부족합니다.");  
+        { 
+            textObj.SetActive(true);
+            text.text = "코인이 부족합니다.";
+          print("코인이 부족합니다.");
+          Invoke("Hide", 1.0f);
         }
         
         else if(BarricadeCnt > 4)
         {
+            textObj.SetActive(true);
+            text.text = "바리케이트는 5개까지만 설치할 수 있습니다.";
             print("바리케이트는 5개까지만 설치할 수 있습니다.");
+            Invoke("Hide", 1.0f);
         }
     }
+
+    private void Hide()
+    {
+        textObj.SetActive(false);
+    }
+    
 
 }
