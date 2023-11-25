@@ -29,7 +29,7 @@ public class GridTowerRandomSpawn : MonoBehaviour
     private void Update()
     {
 #if UNITY_EDITOR
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Pause))
         {
             UnityEditor.EditorApplication.isPaused = !UnityEditor.EditorApplication.isPaused;
         }

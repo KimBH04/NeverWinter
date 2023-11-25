@@ -5,6 +5,9 @@ using DG.Tweening;
 
 public class GridTower : MonoBehaviour
 {
+    public delegate bool GridTowerDelegate();
+    public static GridTowerDelegate MovedEvent;
+
     static bool isClick;
 
     [field: SerializeField] public int ID { get; private set; } //타워 고유 아이디
@@ -70,6 +73,8 @@ public class GridTower : MonoBehaviour
 
                 field = targetField;
                 GridTowerRandomSpawn.grids.Remove(field);
+
+                MovedEvent?.Invoke();
             }
             targetField = null;
         }
