@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GridTowerRandomSpawn : MonoBehaviour
 {
-    [SerializeField] private GameObject noCoinMessage;              
-    [SerializeField] private GameObject maxTowerMessage;    
+    [SerializeField] private GameObject TextObj;
+    [SerializeField] private Text text;
+    // [SerializeField] private GameObject maxTowerMessage;    
     [SerializeField] private Transform[] towers;                    
     public static List<GridField> grids = new List<GridField>();    
 
@@ -16,8 +18,7 @@ public class GridTowerRandomSpawn : MonoBehaviour
 
     private void Awake()
     {
-        noCoinMessage.SetActive(false);
-        maxTowerMessage.SetActive(false);
+        TextObj.SetActive(false);
     }
 
     private void Start()
@@ -41,15 +42,17 @@ public class GridTowerRandomSpawn : MonoBehaviour
         AudioManager.instance.PlaySfx(AudioManager.Sfx.Sum);
         if (Cost.Coin < 100)
         {
-            noCoinMessage.SetActive(true);
-            StartCoroutine(CloseMessage(noCoinMessage));
+            TextObj.SetActive(true);
+            text.text = "소지금이 부족합니다.";
+            Invoke(nameof(Hide),1f);
             return;
         }
 
         if (grids.Count == 0)
         {
-            maxTowerMessage.SetActive(true);
-            StartCoroutine(CloseMessage(maxTowerMessage));
+            TextObj.SetActive(true);
+            text.text = "더이상 소환할 수 없습니다.";
+            Invoke(nameof(Hide),1f);
             return;
         }
 
@@ -70,9 +73,12 @@ public class GridTowerRandomSpawn : MonoBehaviour
         grids.RemoveAt(gridIdx);
     }
 
-    private IEnumerator CloseMessage(GameObject obj)
+    // Hide 함수 두개 째  다음 프로젝트에는 자주 쓰는 함수를 게임매니저스트립트에 넣고 싱글톤으로 만들어서 쓸 것  그럼 편함
+    private void Hide()
     {
-        yield return new WaitForSeconds(1);
-        obj.SetActive(false);
+        TextObj.SetActive(false);
     }
+    
+
+   
 }
