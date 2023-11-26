@@ -15,7 +15,9 @@ public class Tutorial : MonoBehaviour
 
     [SerializeField] private Button[] buttons;
 
-    [SerializeField] private TextMeshProUGUI tutorialTxt;
+    [SerializeField] private Text tutorialTxt;
+    [SerializeField] private GameObject tutorialTxtObj;
+    [SerializeField] private GameObject tutorialPanel;
 
     private Vector3 cameraPos;
     private float counter = 0f;
@@ -80,11 +82,13 @@ public class Tutorial : MonoBehaviour
         tutorialEvents.Add((
             delegate
             {
+                tutorialTxt.text = "마우스 휠를 눌러 카메라를 움직여보세요";
                 counter = 0f;
             },
         new TutorialNext(
             next: delegate
             {
+                
                 return counter >= 15f;
             },
             wait: delegate
@@ -94,6 +98,10 @@ public class Tutorial : MonoBehaviour
 
                 cameraPos = new Vector3(cam.position.x, 0f, cam.position.z);
             },
+            end: delegate
+            {
+                tutorialTxt.text = string.Empty;
+            },
             time: 1f)
         ));
         #endregion
@@ -102,6 +110,7 @@ public class Tutorial : MonoBehaviour
         tutorialEvents.Add((
             delegate
             {
+                tutorialTxt.text = "마우스 휠를 스크롤해서 카메라를 줌 인/아웃 해보세요";
                 counter = 0f;
             },
         new TutorialNext(
@@ -113,6 +122,10 @@ public class Tutorial : MonoBehaviour
             {
                 counter += Mathf.Abs(Input.GetAxisRaw("Mouse ScrollWheel"));
             },
+            end: delegate
+            {
+                tutorialTxt.text = string.Empty;
+            },
             time: 1f)
         ));
         #endregion
@@ -121,6 +134,7 @@ public class Tutorial : MonoBehaviour
         tutorialEvents.Add((
             delegate
             {
+                tutorialTxt.text = "타워를 소환해보세요";
                 @event = false;
                 buttons[0].onClick.AddListener(() => @event = true);
 
@@ -137,6 +151,7 @@ public class Tutorial : MonoBehaviour
             },
             end: delegate
             {
+                tutorialTxt.text = string.Empty;
                 buttons[0].onClick.RemoveListener(() => @event = true);
                 backgroundPanel.SetActive(false);
             })
