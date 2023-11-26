@@ -4,6 +4,7 @@ public class CameraCtrl : MonoBehaviour
 {
     [SerializeField]
     private float floorIns;
+    public float speed;
     public float zoomInOutSpeed;
     private float X, Z, Zoom;
     
@@ -35,11 +36,11 @@ public class CameraCtrl : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(1))
-        {
+        CamreaMove();
+    }
 
-        }
-
+    private void CamreaMove()
+    {
         if (Input.GetMouseButtonDown(2))
         {
             isPanning = true;
@@ -50,37 +51,18 @@ public class CameraCtrl : MonoBehaviour
         {
             isPanning = false;
         }
-        
+
         if (isPanning)
         {
             Vector3 deltaMouse = Input.mousePosition - lastMousePosition;
             //X = Mathf.Clamp(X - deltaMouse.x / 50, -10, 10);
             //Z = Mathf.Clamp(Z - deltaMouse.y / 50, -10, -2);
             //밑에서 최대최소 조정되니 굳이 여기서 할 필요 없습니다
-            X -= deltaMouse.x * 0.05f;
-            Z -= deltaMouse.y * 0.05f;
+            X -= deltaMouse.x * speed * 0.01f;
+            Z -= deltaMouse.y * speed * 0.01f;
             lastMousePosition = Input.mousePosition;
         }
-        
-        /*
-        if (Input.mousePosition.x > Screen.width - w)
-        {
-            X = Mathf.Clamp(X + wSpeed, -10, 10);
-        }
-        else if (Input.mousePosition.x < w)
-        {
-            X = Mathf.Clamp(X - wSpeed, -10, 10);
-        }
 
-        if (Input.mousePosition.y > Screen.height - h)
-        {
-            Z = Mathf.Clamp(Z + hSpeed, -10, -2);
-        }
-        else if (Input.mousePosition.y < h)
-        {
-            Z = Mathf.Clamp(Z - hSpeed, -10, -2);
-        }
-*/
         float x = Input.GetAxisRaw("Horizontal") * 0.5f;
         float z = Input.GetAxisRaw("Vertical") * 0.5f;
 

@@ -90,7 +90,7 @@ public class BarricadeSummon : MonoBehaviour
             textObj.SetActive(true);
             text.text = "바리케이트는 5개까지만 설치할 수 있습니다.";
             print("바리케이트는 5개까지만 설치할 수 있습니다.");
-            Invoke("Hide", 1.0f);
+            Invoke(nameof(Hide), 1.0f);
         }
     }
 

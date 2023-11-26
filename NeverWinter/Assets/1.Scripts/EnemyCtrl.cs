@@ -133,7 +133,7 @@ public class EnemyCtrl : MonoBehaviour
         //Debug.Log("주금   ");
         animator.SetTrigger(hashDie);
 
-        manager.count += 1;
+        GameManager.count++;
         
     }
 

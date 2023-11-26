@@ -4,6 +4,9 @@ using DG.Tweening;
 
 public class EnemySpawnPoint : MonoBehaviour
 {
+    public delegate void EnemySpawnPointEvent();
+    public static EnemySpawnPointEvent WaveFinished;
+
     public float spawnDelay = 1f;
     public GameManager manager;
     public WaveContainer[] containers;
@@ -19,8 +22,8 @@ public class EnemySpawnPoint : MonoBehaviour
     {
 
         AudioManager.instance.PlaySfx(AudioManager.Sfx.Wave);
-        manager.Sumonbutton.gameObject.transform.DOLocalMoveY(-658, 1f);
-        manager.Wavebutton.gameObject.transform.DOLocalMoveY(-658, 1f);
+        manager.Sumonbutton.transform.DOLocalMoveY(-658, 1f);
+        manager.Wavebutton.transform.DOLocalMoveY(-658, 1f);
         
         // manager.Sumonbutton.gameObject.SetActive(false);
         // manager.Wavebutton.gameObject.SetActive(false);
@@ -59,6 +62,7 @@ public class EnemySpawnPoint : MonoBehaviour
         }
         containerIndex++;
         isFinishedCoroutine = true;
+        WaveFinished?.Invoke();
     }
 
    
