@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
     private bool gameWon = false;
     public Image waveFlag;
 
-    public int count = 0;
+    public static int count = 0;
     public WaveContainer []wave;
     public Sprite []image;
     //public WaveContainer[] WaveContainer;

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,8 +11,11 @@ public class Tutorial : MonoBehaviour
     private readonly List<(TutorialEvent, TutorialNext)> tutorialEvents = new List<(TutorialEvent, TutorialNext)>();
 
     [SerializeField] private GameObject backgroundPanel;
-    [SerializeField] private Transform pointArrow;
-    [SerializeField] private GameObject[] buttons;
+    [SerializeField] private Transform point;
+
+    [SerializeField] private Button[] buttons;
+
+    [SerializeField] private TextMeshProUGUI tutorialTxt;
 
     private Vector3 cameraPos;
     private float counter = 0f;
@@ -56,6 +60,7 @@ public class Tutorial : MonoBehaviour
          * 1.5. 카메라 줌 인/아웃
          * 2. 타워 소환
          * 3. 웨이브 버튼
+         * 3.5. 증강체
          * 4. 타워 병합
          * 5. 마법
          * 6. 속도
@@ -69,7 +74,9 @@ public class Tutorial : MonoBehaviour
         Transform cam = main.transform;
         cameraPos = new Vector3(cam.position.x, 0f, cam.position.z);
 
-        //카메라 이동
+        bool @event = false;
+
+        #region 카메라 이동
         tutorialEvents.Add((
             delegate
             {
@@ -89,8 +96,9 @@ public class Tutorial : MonoBehaviour
             },
             time: 1f)
         ));
+        #endregion
 
-        //카메라 줌 인/아웃
+        #region 카메라 줌 인/아웃
         tutorialEvents.Add((
             delegate
             {
@@ -107,41 +115,42 @@ public class Tutorial : MonoBehaviour
             },
             time: 1f)
         ));
+        #endregion
 
-        //타워 소환
-        Button button;  //제어할 버튼
-        bool isClick = false;
+        #region 타워 소환
         tutorialEvents.Add((
             delegate
             {
-                button = buttons[0].GetComponent<Button>();
-                button.onClick.AddListener(() => isClick = true);
+                @event = false;
+                buttons[0].onClick.AddListener(() => @event = true);
 
                 backgroundPanel.transform.SetAsLastSibling();
                 backgroundPanel.SetActive(true);
             
                 buttons[0].transform.SetAsLastSibling();
-                buttons[0].SetActive(true);
+                buttons[0].gameObject.SetActive(true);
             },
         new TutorialNext(
             next: delegate
             {
-                return isClick;
+                return @event;
             },
             end: delegate
             {
+                buttons[0].onClick.RemoveListener(() => @event = true);
                 backgroundPanel.SetActive(false);
             })
         ));
+        #endregion
 
-        //타워 이동
+        #region 타워 이동
         Transform summonedTower = transform;
-        bool isMoved = false;
         tutorialEvents.Add((
             delegate
             {
-                pointArrow.gameObject.SetActive(true);
-                GridTower.MovedEvent += () => isMoved = true;
+                @event = false;
+                point.gameObject.SetActive(true);
+                GridTower.MovedEvent += () => @event = true;
 
                 GridField[] fields = FindObjectsOfType<GridField>();
 
@@ -157,36 +166,112 @@ public class Tutorial : MonoBehaviour
         new TutorialNext(
             next: delegate
             {
-                return isMoved;
+                return @event;
             },
             wait: delegate
             {
                 float w = Screen.width / 8f;
-                float h = Screen.height / 8f;
 
                 Vector3 summonedTowerPos = main.WorldToScreenPoint(summonedTower.position);
 
-                Vector3 arrowPos = new Vector3(
-                    Mathf.Clamp(summonedTowerPos.x, w, Screen.width - w),
-                    Mathf.Clamp(summonedTowerPos.y, h, Screen.height - h),
-                    0f);
+                point.gameObject.SetActive(true);
+                point.position = new Vector3(w, summonedTowerPos.y, 0f);
 
-                pointArrow.position = arrowPos;
-
-                float x = summonedTowerPos.x - Screen.width / 2f;
-                float y = summonedTowerPos.y - Screen.height / 2f;
-
-                float degree = Mathf.Atan2(y, x) * Mathf.Rad2Deg;
-
-                pointArrow.eulerAngles = new Vector3(0f, 0f, degree);
+                if (summonedTowerPos.x < w)
+                {
+                    point.eulerAngles = Vector3.zero;
+                }
+                else if (summonedTowerPos.x > Screen.width - w)
+                {
+                    point.eulerAngles = new Vector3(0f, 0f, 180f);
+                }
+                else
+                {
+                    point.gameObject.SetActive(false);
+                }
             },
             end: delegate
             {
-                pointArrow.gameObject.SetActive(false);
-                GridTower.MovedEvent -= () => isMoved = false;
+                point.gameObject.SetActive(false);
+                GridTower.MovedEvent -= () => @event = false;
             },
             time: 1f)
         ));
+        #endregion
+
+        #region 웨이브
+        tutorialEvents.Add((
+            delegate
+            {
+                buttons[1].onClick.AddListener(() => backgroundPanel.SetActive(false));
+
+                @event = false;
+                EnemySpawnPoint.WaveFinished += () => @event = true;
+
+                backgroundPanel.transform.SetAsLastSibling();
+                backgroundPanel.SetActive(true);
+
+                buttons[1].transform.SetAsLastSibling();
+                buttons[1].gameObject.SetActive(true);
+            },
+        new TutorialNext(
+            next: delegate
+            {
+                return @event && GameManager.count <= 0;
+            },
+            end: delegate
+            {
+                buttons[1].onClick.RemoveListener(() => backgroundPanel.SetActive(false));
+                EnemySpawnPoint.WaveFinished -= () => @event = true;
+
+                backgroundPanel.SetActive(false);
+            })
+        ));
+        #endregion
+
+        #region 증강체
+        tutorialEvents.Add((
+            delegate
+            {
+                tutorialTxt.text = "증강체에 대한 설명...";
+            },
+        new TutorialNext(
+            next: delegate
+            {
+                return Input.GetMouseButtonDown(0);
+            },
+            end: delegate
+            {
+                tutorialTxt.text = string.Empty;
+            })
+        ));
+
+        tutorialEvents.Add((
+            delegate
+            {
+                @event = false;
+
+                buttons[2].onClick.AddListener(() => @event = true);
+                buttons[3].onClick.AddListener(() => @event = true);
+                buttons[4].onClick.AddListener(() => @event = true);
+
+                tutorialTxt.text = "아무 능력을 선택해보세요";
+            },
+        new TutorialNext(
+            next: delegate
+            {
+                return @event;
+            },
+            end: delegate
+            {
+                buttons[2].onClick.RemoveListener(() => @event = true);
+                buttons[3].onClick.RemoveListener(() => @event = true);
+                buttons[4].onClick.RemoveListener(() => @event = true);
+
+                tutorialTxt.text = string.Empty;
+            })
+        ));
+        #endregion
 
         StartCoroutine(EventOccurrence());
     }
