@@ -64,7 +64,7 @@ public class GameManager : MonoBehaviour
         Castle_HpText.text = 100+" / 100";
         lives = 100;
         Max_lives = lives;
-       
+        
         //Debug.Log(lives);
 
 
@@ -87,11 +87,12 @@ public class GameManager : MonoBehaviour
                 if (wavecount < 6)
                 {
                     WAVEEvent();
-
+                    GridTower.PlayClick = true;
                     waveFlag.sprite = image[wavecount];
                     return;
                 }
             }
+
             return;
         }
 

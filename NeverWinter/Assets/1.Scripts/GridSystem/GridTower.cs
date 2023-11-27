@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using Unity.VisualScripting;
 
 public class GridTower : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class GridTower : MonoBehaviour
     public static GridTowerDelegate MovedEvent;
 
     static bool isClick;
+    public static bool PlayClick= true;// 웨이브 나올 때 클릭 금지
 
     [field: SerializeField] public int ID { get; private set; } //타워 고유 아이디
 
@@ -42,22 +44,26 @@ public class GridTower : MonoBehaviour
         isClick = true;
     }
 
+    
     private void OnMouseDrag()
     {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out RaycastHit hit, 100f, 1 << 12))
+        if (PlayClick == true)
         {
-            targetField = hit.transform.GetComponent<GridField>();
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out RaycastHit hit, 100f, 1 << 12))
+            {
+                targetField = hit.transform.GetComponent<GridField>();
 
-            transform.DOMove(hit.transform.position, 0.1f).SetEase(Ease.OutSine);
-            targetField.VisualizeMovable(this);
+                transform.DOMove(hit.transform.position, 0.1f).SetEase(Ease.OutSine);
+                targetField.VisualizeMovable(this);
+            }
+            VisualTowerManager.VisualizingTower(ID, transform.position);
         }
-        VisualTowerManager.VisualizingTower(ID, transform.position);
     }
 
     protected void OnMouseUp()
     {
-        if (targetField != null && field != null)
+        if (targetField != null && field != null&& PlayClick == true)
         {
             bool t = targetField.MovingTower(this, transform.parent);
 

@@ -1,11 +1,15 @@
 using System.Collections;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.UI;
 
 public class EnemySpawnPoint : MonoBehaviour
 {
     public delegate void EnemySpawnPointEvent();
     public static EnemySpawnPointEvent WaveFinished;
+
+    [SerializeField] private GameObject TextObj;
+    [SerializeField] private Text text;
 
     public float spawnDelay = 1f;
     public GameManager manager;
@@ -20,7 +24,14 @@ public class EnemySpawnPoint : MonoBehaviour
    
     public void WaveStart()
     {
-
+        GridTower.PlayClick = false;
+        if (Cost.Coin >= 450)
+        {
+            TextObj.SetActive(true);
+            text.text = "타워를 소환하여 주세요.";
+            Invoke(nameof(Hide1), 1f);
+            return;
+        }
         AudioManager.instance.PlaySfx(AudioManager.Sfx.Wave);
         manager.Sumonbutton.transform.DOLocalMoveY(-658, 1f);
         manager.Wavebutton.transform.DOLocalMoveY(-658, 1f);
@@ -40,8 +51,11 @@ public class EnemySpawnPoint : MonoBehaviour
             //Debug.Log("Unfinished wave!");
         }
     }
-
-   public IEnumerator EnemySpawn()
+    private void Hide1()
+    {
+        TextObj.SetActive(false);
+    }
+    public IEnumerator EnemySpawn()
     {
         if (containerIndex >= containers.Length)
         {
@@ -54,9 +68,9 @@ public class EnemySpawnPoint : MonoBehaviour
              GameObject enemy = containers[containerIndex].GetEnemy();
             if (enemy == null)
             {
+               
                 break;
             }
-
             Instantiate(enemy, transform.position, Quaternion.Euler(0f, 0f, 90f));
             yield return new WaitForSeconds(spawnDelay);
         }
