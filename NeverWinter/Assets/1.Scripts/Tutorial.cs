@@ -15,9 +15,10 @@ public class Tutorial : MonoBehaviour
 
     [SerializeField] private Button[] buttons;
 
-    [SerializeField] private Text tutorialTxt;
-    [SerializeField] private GameObject tutorialTxtObj;
+    [SerializeField] private TextMeshProUGUI tutorialTxt;
     [SerializeField] private GameObject tutorialPanel;
+
+    [SerializeField] private GameObject levelUpInfomationPanel;
 
     private Vector3 cameraPos;
     private float counter = 0f;
@@ -82,6 +83,8 @@ public class Tutorial : MonoBehaviour
         tutorialEvents.Add((
             delegate
             {
+                tutorialPanel.SetActive(true);
+                tutorialTxt.gameObject.SetActive(true);
                 tutorialTxt.text = "마우스 휠를 눌러 카메라를 움직여보세요";
                 counter = 0f;
             },
@@ -100,7 +103,8 @@ public class Tutorial : MonoBehaviour
             },
             end: delegate
             {
-                tutorialTxt.text = string.Empty;
+                tutorialPanel.SetActive(false);
+                tutorialTxt.gameObject.SetActive(false);
             },
             time: 1f)
         ));
@@ -110,7 +114,9 @@ public class Tutorial : MonoBehaviour
         tutorialEvents.Add((
             delegate
             {
-                tutorialTxt.text = "마우스 휠를 스크롤해서 카메라를 줌 인/아웃 해보세요";
+                tutorialPanel.SetActive(true);
+                tutorialTxt.gameObject.SetActive(true);
+                tutorialTxt.text = "마우스 휠를 스크롤해서\n카메라를 줌 인/아웃 해보세요";
                 counter = 0f;
             },
         new TutorialNext(
@@ -124,7 +130,8 @@ public class Tutorial : MonoBehaviour
             },
             end: delegate
             {
-                tutorialTxt.text = string.Empty;
+                tutorialPanel.SetActive(false);
+                tutorialTxt.gameObject.SetActive(false);
             },
             time: 1f)
         ));
@@ -134,7 +141,9 @@ public class Tutorial : MonoBehaviour
         tutorialEvents.Add((
             delegate
             {
+                tutorialTxt.gameObject.SetActive(true);
                 tutorialTxt.text = "타워를 소환해보세요";
+
                 @event = false;
                 buttons[0].onClick.AddListener(() => @event = true);
 
@@ -151,9 +160,9 @@ public class Tutorial : MonoBehaviour
             },
             end: delegate
             {
-                tutorialTxt.text = string.Empty;
                 buttons[0].onClick.RemoveListener(() => @event = true);
                 backgroundPanel.SetActive(false);
+                tutorialTxt.gameObject.SetActive(false);
             })
         ));
         #endregion
@@ -163,6 +172,10 @@ public class Tutorial : MonoBehaviour
         tutorialEvents.Add((
             delegate
             {
+                tutorialPanel.SetActive(true);
+                tutorialTxt.gameObject.SetActive(true);
+                tutorialTxt.text = "타워를 드래그해 움직여 보세요";
+
                 @event = false;
                 point.gameObject.SetActive(true);
                 GridTower.MovedEvent += () => @event = true;
@@ -186,11 +199,14 @@ public class Tutorial : MonoBehaviour
             wait: delegate
             {
                 float w = Screen.width / 8f;
+                float h = Screen.height / 8f;
 
                 Vector3 summonedTowerPos = main.WorldToScreenPoint(summonedTower.position);
 
-                point.gameObject.SetActive(true);
-                point.position = new Vector3(w, summonedTowerPos.y, 0f);
+                point.position = new Vector3(
+                    Mathf.Clamp(summonedTowerPos.x, w, Screen.width - w),
+                    Mathf.Clamp(summonedTowerPos.y, h, Screen.width - h),
+                    0f);
 
                 if (summonedTowerPos.x < w)
                 {
@@ -200,17 +216,23 @@ public class Tutorial : MonoBehaviour
                 {
                     point.eulerAngles = new Vector3(0f, 0f, 180f);
                 }
-                else
+                else if (summonedTowerPos.y < h)
                 {
-                    point.gameObject.SetActive(false);
+                    point.eulerAngles = new Vector3(0f, 0f, 90f);
+                }
+                else if (summonedTowerPos.y > Screen.height - h)
+                {
+                    point.eulerAngles = new Vector3(0f, 0f, -90f);
                 }
             },
             end: delegate
             {
                 point.gameObject.SetActive(false);
                 GridTower.MovedEvent -= () => @event = false;
-            },
-            time: 1f)
+
+                tutorialPanel.SetActive(false);
+                tutorialTxt.gameObject.SetActive(false);
+            })
         ));
         #endregion
 
@@ -218,10 +240,13 @@ public class Tutorial : MonoBehaviour
         tutorialEvents.Add((
             delegate
             {
+                tutorialTxt.gameObject.SetActive(true);
+                tutorialTxt.text = "준비를 마치면 웨이브 버튼을 눌러 전투를 시작하세요\n! 웨이브가 시작되면 타워를 소환/이동할 수 없습니다 !";
                 buttons[1].onClick.AddListener(() => backgroundPanel.SetActive(false));
+                buttons[1].onClick.AddListener(() => tutorialTxt.gameObject.SetActive(false));
 
                 @event = false;
-                EnemySpawnPoint.WaveFinished += () => @event = true;
+                GameManager.WaveEndEvent += () => @event = true;
 
                 backgroundPanel.transform.SetAsLastSibling();
                 backgroundPanel.SetActive(true);
@@ -232,12 +257,13 @@ public class Tutorial : MonoBehaviour
         new TutorialNext(
             next: delegate
             {
-                return @event && GameManager.count <= 0;
+                return @event;
             },
             end: delegate
             {
                 buttons[1].onClick.RemoveListener(() => backgroundPanel.SetActive(false));
-                EnemySpawnPoint.WaveFinished -= () => @event = true;
+                buttons[1].onClick.RemoveListener(() => tutorialTxt.gameObject.SetActive(false));
+                GameManager.WaveEndEvent -= () => @event = true;
 
                 backgroundPanel.SetActive(false);
             })
@@ -248,6 +274,8 @@ public class Tutorial : MonoBehaviour
         tutorialEvents.Add((
             delegate
             {
+                levelUpInfomationPanel.SetActive(true);
+                tutorialTxt.gameObject.SetActive(true);
                 tutorialTxt.text = "증강체에 대한 설명...";
             },
         new TutorialNext(
@@ -257,7 +285,8 @@ public class Tutorial : MonoBehaviour
             },
             end: delegate
             {
-                tutorialTxt.text = string.Empty;
+                levelUpInfomationPanel.SetActive(false);
+                tutorialTxt.gameObject.SetActive(false);
             })
         ));
 
@@ -266,9 +295,9 @@ public class Tutorial : MonoBehaviour
             {
                 @event = false;
 
-                buttons[2].onClick.AddListener(() => @event = true);
-                buttons[3].onClick.AddListener(() => @event = true);
                 buttons[4].onClick.AddListener(() => @event = true);
+                buttons[5].onClick.AddListener(() => @event = true);
+                buttons[6].onClick.AddListener(() => @event = true);
 
                 tutorialTxt.text = "아무 능력을 선택해보세요";
             },
@@ -279,11 +308,11 @@ public class Tutorial : MonoBehaviour
             },
             end: delegate
             {
-                buttons[2].onClick.RemoveListener(() => @event = true);
-                buttons[3].onClick.RemoveListener(() => @event = true);
                 buttons[4].onClick.RemoveListener(() => @event = true);
+                buttons[5].onClick.RemoveListener(() => @event = true);
+                buttons[6].onClick.RemoveListener(() => @event = true);
 
-                tutorialTxt.text = string.Empty;
+                tutorialTxt.gameObject.SetActive(false);
             })
         ));
         #endregion

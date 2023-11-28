@@ -5,9 +5,6 @@ using UnityEngine.UI;
 
 public class EnemySpawnPoint : MonoBehaviour
 {
-    public delegate void EnemySpawnPointEvent();
-    public static EnemySpawnPointEvent WaveFinished;
-
     [SerializeField] private GameObject TextObj;
     [SerializeField] private Text text;
 
@@ -76,7 +73,6 @@ public class EnemySpawnPoint : MonoBehaviour
         }
         containerIndex++;
         isFinishedCoroutine = true;
-        WaveFinished?.Invoke();
     }
 
    

@@ -11,6 +11,9 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
+    public delegate void GameManagerEvent();
+    public static GameManagerEvent WaveEndEvent;
+
     public static GameManager instance;
 
     public static int lives = 100;
@@ -82,6 +85,8 @@ public class GameManager : MonoBehaviour
                 Wavebutton.gameObject.transform.DOLocalMoveY(-441, 1f);
                 Sumonbutton.gameObject.transform.DOLocalMoveY(-441, 1f);
                 count = 0;
+
+                WaveEndEvent();
                
                 wavecount++;
                 if (wavecount < 6)
@@ -89,7 +94,6 @@ public class GameManager : MonoBehaviour
                     WAVEEvent();
                     GridTower.PlayClick = true;
                     waveFlag.sprite = image[wavecount];
-                    return;
                 }
             }
 
