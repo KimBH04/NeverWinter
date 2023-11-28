@@ -201,8 +201,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
-
     public void SelectUpgrade(UpgradeItemType uType)
     {
         //Time.timeScale = 1.0f;
