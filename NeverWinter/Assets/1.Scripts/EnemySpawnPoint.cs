@@ -24,17 +24,26 @@ public class EnemySpawnPoint : MonoBehaviour
    
     public void WaveStart()
     {
-        GridTower.PlayClick = false;
+        
+        
         if (Cost.Coin >= 450)
         {
+            AudioManager.instance.PlaySfx(AudioManager.Sfx.Ck);
             TextObj.SetActive(true);
             text.text = "타워를 소환하여 주세요.";
-            Invoke(nameof(Hide1), 1f);
+            Invoke(nameof(Hide1),1f);
             return;
         }
-        AudioManager.instance.PlaySfx(AudioManager.Sfx.Wave);
-        manager.Sumonbutton.transform.DOLocalMoveY(-658, 1f);
-        manager.Wavebutton.transform.DOLocalMoveY(-658, 1f);
+        else
+        {
+            GridTower.PlayClick = false;
+            AudioManager.instance.PlaySfx(AudioManager.Sfx.Wave);
+            manager.Sumonbutton.transform.DOLocalMoveY(-658, 1f);
+            manager.Wavebutton.transform.DOLocalMoveY(-658, 1f);
+            
+        }
+       
+        
         
         // manager.Sumonbutton.gameObject.SetActive(false);
         // manager.Wavebutton.gameObject.SetActive(false);
