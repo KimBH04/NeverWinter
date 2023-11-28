@@ -25,6 +25,8 @@ public class GridTower : MonoBehaviour
 
     protected void Start()
     {
+        // static를 사용하면 게임이 꺼질 때 까지 값이 유지되므로 Start() 나 Awake()에서 값을 초기화 해줘야함
+        PlayClick= true;
         boxPosition = transform.localPosition;
     }
 
