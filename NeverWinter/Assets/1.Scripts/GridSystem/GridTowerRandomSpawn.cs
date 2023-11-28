@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using TMPro;
 public class GridTowerRandomSpawn : MonoBehaviour
 {
     [SerializeField] private GameObject TextObj;
-    [SerializeField] private Text text;
+    [SerializeField] private TextMeshProUGUI text;
     // [SerializeField] private GameObject maxTowerMessage;    
     [SerializeField] private Transform[] towers;                    
     public static List<GridField> grids = new List<GridField>();    

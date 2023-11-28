@@ -2,11 +2,12 @@ using System.Collections;
 using UnityEngine;
 using DG.Tweening;
 using UnityEngine.UI;
+using TMPro;
 
 public class EnemySpawnPoint : MonoBehaviour
 {
     [SerializeField] private GameObject TextObj;
-    [SerializeField] private Text text;
+    [SerializeField] private TextMeshProUGUI text;
 
     public float spawnDelay = 1f;
     public GameManager manager;
