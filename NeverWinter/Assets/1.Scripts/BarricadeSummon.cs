@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class BarricadeSummon : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class BarricadeSummon : MonoBehaviour
     [SerializeField]
     private GameObject barricadePrefab;
 
-    [SerializeField] private Text text;
+    [SerializeField] private TextMeshProUGUI text;
     [SerializeField] private GameObject textObj;
 
     private bool summon;
