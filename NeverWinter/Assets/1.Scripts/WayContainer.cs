@@ -4,5 +4,10 @@ using UnityEngine;
 
 public class WayContainer : MonoBehaviour
 {
-    public Transform[] WayPoints;
+    public List<Transform> WayPoints = new List<Transform>();
+
+    private void Start()
+    {
+        GetComponentsInChildren(WayPoints);
+    }
 }

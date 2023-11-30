@@ -11,25 +11,24 @@ public class EnemySpawnPoint : MonoBehaviour
 
     public float spawnDelay = 1f;
     public GameManager manager;
-    public WaveContainer[] containers;
 
-    int containerIndex = 0;
-    
-    
-    bool isFinishedCoroutine = true;
+    public Transform[] containers;
 
+    private int containerIndex = 0;
     
-   
+    
+    private static int isFinishedCoroutine = 2;
+
+
+
     public void WaveStart()
     {
-        
-        
         if (Cost.Coin >= 450)
         {
             AudioManager.instance.PlaySfx(AudioManager.Sfx.Ck);
             TextObj.SetActive(true);
             text.text = "타워를 소환하여 주세요.";
-            Invoke(nameof(Hide1),1f);
+            Invoke(nameof(Hide1), 1f);
             return;
         }
         else
@@ -38,52 +37,40 @@ public class EnemySpawnPoint : MonoBehaviour
             AudioManager.instance.PlaySfx(AudioManager.Sfx.Wave);
             manager.Sumonbutton.transform.DOLocalMoveY(-658, 1f);
             manager.Wavebutton.transform.DOLocalMoveY(-658, 1f);
-            
         }
-       
-        
-        
-        // manager.Sumonbutton.gameObject.SetActive(false);
-        // manager.Wavebutton.gameObject.SetActive(false);
-        //Debug.Log(manager.wavecount);
-
-
-        if (isFinishedCoroutine)
+        if (isFinishedCoroutine >= 2)
         {
-            isFinishedCoroutine = false;
-            StartCoroutine(EnemySpawn());
-        }
-        else
-        {
-            //Debug.Log("Unfinished wave!");
+            isFinishedCoroutine = 0;
+
+            if (containerIndex < containers.Length)
+            {
+                WaveContainer[] waves = containers[containerIndex].GetComponentsInChildren<WaveContainer>();
+                StartCoroutine(EnemySpawn(waves[0], true));
+                StartCoroutine(EnemySpawn(waves[1], false));
+                containerIndex++;
+            }
         }
     }
+
     private void Hide1()
     {
         TextObj.SetActive(false);
     }
-    public IEnumerator EnemySpawn()
-    {
-        if (containerIndex >= containers.Length)
-        {
-            isFinishedCoroutine = true;
-            yield break;
-        }
 
+    private IEnumerator EnemySpawn(WaveContainer container, bool isLeft)
+    {
         for (; ; )
         {
-             GameObject enemy = containers[containerIndex].GetEnemy();
+            GameObject enemy = container.GetEnemy();
             if (enemy == null)
             {
-               
                 break;
             }
-            Instantiate(enemy, transform.position, Quaternion.Euler(0f, 0f, 90f));
+
+            Instantiate(enemy, container.way.WayPoints[0].position, Quaternion.Euler(0f, isLeft ? 90f : -90f, 0f));
             yield return new WaitForSeconds(spawnDelay);
         }
-        containerIndex++;
-        isFinishedCoroutine = true;
-    }
 
-   
+        isFinishedCoroutine++;
+    }
 }

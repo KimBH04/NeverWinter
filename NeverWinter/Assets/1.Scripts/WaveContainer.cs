@@ -2,7 +2,9 @@ using UnityEngine;
 
 public class WaveContainer : MonoBehaviour
 {
+    public WayContainer way;
     public GameObject[] enemies;
+
 
     int enemyCount = 0;
 
@@ -16,7 +18,7 @@ public class WaveContainer : MonoBehaviour
              return null;
         }
 
-
+        enemies[enemyCount].GetComponent<EnemyCtrl>().container = way;
         return enemies[enemyCount++];
 
     }
