@@ -10,7 +10,7 @@ using UnityEngine.AI;
 public class EnemyCtrl : MonoBehaviour
 {
     public string EnemyName;
-    private WayContainer container;
+    public WayContainer container;
     private int idx;
     public Renderer render = null;
     public bool structure = false;
@@ -49,7 +49,7 @@ public class EnemyCtrl : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         
-        container = GameObject.Find("WayContainer").GetComponent<WayContainer>();
+        //container = GameObject.Find("WayContainer").GetComponent<WayContainer>();
         manager = GameObject.Find("GameManager").GetComponent<GameManager>();
         Enemy_HP = Max_Hp;
         originalColor = render.material.color;
@@ -188,7 +188,7 @@ public class EnemyCtrl : MonoBehaviour
         //    animator.SetBool(hashAttack, true);
         //} 원래 코드
 
-        if (!isEnd && idx < container.WayPoints.Length)
+        if (!isEnd && idx < container.WayPoints.Count)
         {
             Transform tr = container.WayPoints[idx];
             transform.LookAt(tr, transform.up);
@@ -198,7 +198,7 @@ public class EnemyCtrl : MonoBehaviour
             if ((transform.position - tr.position).sqrMagnitude < 0.05f)
             {
                 idx++;
-                if (idx >= container.WayPoints.Length)
+                if (idx >= container.WayPoints.Count)
                 {
                     isEnd = true;
                 }
