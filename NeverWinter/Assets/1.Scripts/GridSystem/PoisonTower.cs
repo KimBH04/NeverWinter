@@ -8,6 +8,7 @@ public class PoisonTower : GridTower
     [Header("Poison")]
     [SerializeField] private float maxDistance = 10f;
     [SerializeField] private Vector3 offset;            //중심점 위치
+    
 
     private const float DIAGONAL = 0.7071067811865475f;
     private readonly Vector3[] directions = {

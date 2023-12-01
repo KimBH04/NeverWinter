@@ -49,7 +49,6 @@ MonoBehaviour:
   <ID>k__BackingField: 1
   highRankTower: {fileID: 3167145786215906099, guid: 424517f2cae9d1946b25c4ec8e6f2eed, type: 3}
   tower: {fileID: 9203436449731484869}
-  visualBox: {fileID: 0}
   field: {fileID: 0}
 --- !u!136 &162917530973100646
 CapsuleCollider:
@@ -220,15 +219,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d8130d8fc5b74c40883534adcd678bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TowerSelf: {fileID: 0}
+  TowerName: Cannon
+  TowerInfo: 
   shootPoint: {fileID: 8869995736291556244}
   shootDelay: 1
   distance: 6.5
   spin: 130
-  TowerSell: 0
   AD: 7
   Bullet: {fileID: 8520817353141550526, guid: d04d15af43a5ec44bbe62adb98e6d44b, type: 3}
-  PlusAD: 0
 --- !u!4 &8392989937141952002 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -3517408740899222311, guid: 1899916ca6ee74643b96c96fbc652cb7, type: 3}

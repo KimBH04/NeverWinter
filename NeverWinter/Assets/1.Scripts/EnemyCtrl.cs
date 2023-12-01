@@ -115,13 +115,51 @@ public class EnemyCtrl : MonoBehaviour
     {
         isEnd = true;
         isEnemyDie = true;
-        if(EnemyName == "BabyGoblin") AudioManager.instance.PlaySfx(AudioManager.Sfx.BabyGoblin);
-        else if(EnemyName == "BasicGoblin") AudioManager.instance.PlaySfx(AudioManager.Sfx.BasicGoblin);
-        else if (EnemyName == "BugBear") AudioManager.instance.PlaySfx(AudioManager.Sfx.BugBear);
-        else if (EnemyName == "MagicGoblin") AudioManager.instance.PlaySfx(AudioManager.Sfx.MagicGoblin);
-        else if (EnemyName == "VikingGoblin") AudioManager.instance.PlaySfx(AudioManager.Sfx.VikingGoblin);
-        else if (EnemyName == "ArcherGoblin") AudioManager.instance.PlaySfx(AudioManager.Sfx.ArcherGoblin);
-        else AudioManager.instance.PlaySfx(AudioManager.Sfx.Dead);
+        
+        // 적 사망 사운드
+        switch (EnemyName)
+        {
+            case "BabyGoblin":
+                AudioManager.instance.PlaySfx(AudioManager.Sfx.BabyGoblin);
+                break;
+            case "ArcherGoblin":
+                AudioManager.instance.PlaySfx(AudioManager.Sfx.ArcherGoblin);
+                break;
+            case "BugBear":
+                AudioManager.instance.PlaySfx(AudioManager.Sfx.BugBear);
+                break;
+            case "MagicGoblin":
+                AudioManager.instance.PlaySfx(AudioManager.Sfx.MagicGoblin);
+                break;
+            case "VikingGoblin":
+                AudioManager.instance.PlaySfx(AudioManager.Sfx.VikingGoblin);
+                break;
+            case "BabyDragonborn":
+                AudioManager.instance.PlaySfx(AudioManager.Sfx.BabyDragonborn);
+                break;
+            case "BabyLizardman":
+                AudioManager.instance.PlaySfx(AudioManager.Sfx.BabyLizardman);
+                break;
+            case "Bear":
+                AudioManager.instance.PlaySfx(AudioManager.Sfx.Bear);
+                break;
+            // case "Boss":
+            //     AudioManager.instance.PlaySfx(AudioManager.Sfx.Boss);
+            //     break;
+            // 보스는 아직 사운드가 없음
+            case "Lizardman":
+                AudioManager.instance.PlaySfx(AudioManager.Sfx.Lizardman);
+                break;
+            case "Werewolf":
+                AudioManager.instance.PlaySfx(AudioManager.Sfx.Werewolf);
+                break;
+            case "BasicGoblin":
+                AudioManager.instance.PlaySfx(AudioManager.Sfx.BasicGoblin);
+                break;
+            default:
+                AudioManager.instance.PlaySfx(AudioManager.Sfx.Dead);
+                break;
+        }
 
 
         //agent.enabled = false;

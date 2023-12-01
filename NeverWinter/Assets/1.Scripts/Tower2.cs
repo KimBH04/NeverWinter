@@ -2,26 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
+using TMPro;
+
+
 
 public class Tower2 : MonoBehaviour
 {
     public static Tower2 instance;
-    // 타워 파는 것 #미완성#
-    public GameObject TowerSelf;
     public GameObject shootPoint;
     EnemyCtrl targetUnit = null;
     
     public float shootDelay = 0.8f;
     public float distance = 7.0f;
     public float spin = 50f;
-    public int TowerSell;
     public float AD;
     private float Dist;
     public GameObject Bullet;
-    public float PlusAD;
     Transform head;
-
-
+    
 
 
     private float temp;
@@ -99,7 +97,7 @@ public class Tower2 : MonoBehaviour
 
 
     }
-
+    
     //public void plus(int a)
     //{
     //    if (PlusAD != a)

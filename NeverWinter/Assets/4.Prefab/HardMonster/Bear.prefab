@@ -622,7 +622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b04a3cc236dd8d54da618a0f68f440d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyName: 
+  EnemyName: Bear
   container: {fileID: 0}
   render: {fileID: 5362287072340751791}
   structure: 0

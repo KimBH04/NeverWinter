@@ -25,9 +25,29 @@ public class AudioManager : MonoBehaviour
     //AudioManager.instance.PlayBgm(false);
     //AudioManager.instance.PlayBgm(true);
 
-    
-    public enum Sfx { Dead ,Ck,Won,Sum,Wave,Level, BabyGoblin, ArcherGoblin , BasicGoblin , BugBear,
-    MagicGoblin, VikingGoblin}
+
+    public enum Sfx
+    {
+        Dead,
+        Ck,
+        Won,
+        Sum,
+        Wave,
+        Level,
+        BabyGoblin,
+        ArcherGoblin,
+        BasicGoblin,
+        VikingGoblin,
+        MagicGoblin,
+        BugBear,
+        BabyDragonborn,
+        BabyLizardman,
+        // Boss, 보스는 아직 사운드가 없음
+        Bear,
+        Werewolf,
+        Lizardman
+       
+    };
 
     void Awake()
     {

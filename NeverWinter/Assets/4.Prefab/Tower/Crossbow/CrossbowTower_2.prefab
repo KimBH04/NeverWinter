@@ -99,7 +99,6 @@ MonoBehaviour:
   <ID>k__BackingField: 5
   highRankTower: {fileID: 2178543250837703675, guid: f663045780a7e41408753051334536f2, type: 3}
   tower: {fileID: 9209165498457090653}
-  visualBox: {fileID: 0}
   field: {fileID: 0}
 --- !u!1 &7492912034331340976
 GameObject:
@@ -215,15 +214,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d8130d8fc5b74c40883534adcd678bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TowerSelf: {fileID: 0}
+  TowerName: Crossbow
+  TowerInfo: 
   shootPoint: {fileID: 7492912034331340976}
   shootDelay: 0.5
   distance: 6.5
   spin: 50
-  TowerSell: 0
   AD: 10
   Bullet: {fileID: 4718135259905426346, guid: ff509cd70a63e434ebeb2ec8ee3ee067, type: 3}
-  PlusAD: 0
 --- !u!4 &8024363225196257541 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4a45e5c7e0ba6624486a2c0fe922205c, type: 3}

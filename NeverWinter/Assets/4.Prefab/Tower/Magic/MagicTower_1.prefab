@@ -130,7 +130,6 @@ MonoBehaviour:
   <ID>k__BackingField: 7
   highRankTower: {fileID: 7331116140587621504, guid: 37dd09264710e5843805e935e2540c68, type: 3}
   tower: {fileID: 1751307746015396026}
-  visualBox: {fileID: 0}
   field: {fileID: 0}
 --- !u!1001 &563713317630448263
 PrefabInstance:
@@ -220,15 +219,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d8130d8fc5b74c40883534adcd678bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TowerSelf: {fileID: 0}
+  TowerName: Magic
+  TowerInfo: 
   shootPoint: {fileID: 3595985080804619159}
   shootDelay: 2
   distance: 6.5
   spin: 100
-  TowerSell: 0
   AD: 12
   Bullet: {fileID: 8520817353141550526, guid: 3819d4554c7a5f54da5420b3e1add5f7, type: 3}
-  PlusAD: 0
 --- !u!4 &2030053831456791743 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -7206175626147787208, guid: 9fbeafd39a1babf4890cf2817060c22c, type: 3}
