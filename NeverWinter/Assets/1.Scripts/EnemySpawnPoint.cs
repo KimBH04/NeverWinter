@@ -35,8 +35,8 @@ public class EnemySpawnPoint : MonoBehaviour
         {
             GridTower.PlayClick = false;
             AudioManager.instance.PlaySfx(AudioManager.Sfx.Wave);
-            manager.Sumonbutton.transform.DOLocalMoveY(-658, 1f);
-            manager.Wavebutton.transform.DOLocalMoveY(-658, 1f);
+            manager.Sumonbutton.transform.DOLocalMoveY(-675, 1f);
+            manager.Wavebutton.transform.DOLocalMoveY(-675, 1f);
         }
         if (isFinishedCoroutine >= 2)
         {

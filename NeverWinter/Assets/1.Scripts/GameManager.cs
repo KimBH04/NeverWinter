@@ -82,11 +82,11 @@ public class GameManager : MonoBehaviour
         {
             if (count >= wave[wavecount].enemies.Length)
             {
-                Wavebutton.gameObject.transform.DOLocalMoveY(-441, 1f);
-                Sumonbutton.gameObject.transform.DOLocalMoveY(-441, 1f);
+                Wavebutton.transform.DOLocalMoveY(-400, 1f);
+                Sumonbutton.transform.DOLocalMoveY(-400, 1f);
                 count = 0;
 
-                WaveEndEvent();
+                WaveEndEvent?.Invoke();
                
                 wavecount++;
                 if (wavecount < 6)
