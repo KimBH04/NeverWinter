@@ -45,8 +45,10 @@ public class EnemySpawnPoint : MonoBehaviour
             if (containerIndex < containers.Length)
             {
                 WaveContainer[] waves = containers[containerIndex].GetComponentsInChildren<WaveContainer>();
-                StartCoroutine(EnemySpawn(waves[0], true));
-                StartCoroutine(EnemySpawn(waves[1], false));
+                foreach (WaveContainer container in waves)
+                {
+                    StartCoroutine(EnemySpawn(container));
+                }
                 containerIndex++;
             }
         }
@@ -57,7 +59,7 @@ public class EnemySpawnPoint : MonoBehaviour
         TextObj.SetActive(false);
     }
 
-    private IEnumerator EnemySpawn(WaveContainer container, bool isLeft)
+    private IEnumerator EnemySpawn(WaveContainer container)
     {
         for (; ; )
         {
@@ -67,7 +69,7 @@ public class EnemySpawnPoint : MonoBehaviour
                 break;
             }
 
-            Instantiate(enemy, container.way.WayPoints[0].position, Quaternion.Euler(0f, isLeft ? 90f : -90f, 0f));
+            Instantiate(enemy, container.way.WayPoints[0].position, Quaternion.identity);
             yield return new WaitForSeconds(spawnDelay);
         }
 
