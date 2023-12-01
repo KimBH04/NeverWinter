@@ -8023,11 +8023,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   way: {fileID: 365252379}
   enemies:
-  - {fileID: 7240873002885431037, guid: fdbef2775cef1ea4cb7b85a9c0916051, type: 3}
-  - {fileID: 7240873002885431037, guid: fdbef2775cef1ea4cb7b85a9c0916051, type: 3}
-  - {fileID: 7240873002885431037, guid: fdbef2775cef1ea4cb7b85a9c0916051, type: 3}
-  - {fileID: 7240873002885431037, guid: fdbef2775cef1ea4cb7b85a9c0916051, type: 3}
-  - {fileID: 7240873002885431037, guid: fdbef2775cef1ea4cb7b85a9c0916051, type: 3}
+  - {fileID: 8188168246657359349, guid: 4b1a0ac16d9487c47913fe4138b9807f, type: 3}
+  - {fileID: 8188168246657359349, guid: 4b1a0ac16d9487c47913fe4138b9807f, type: 3}
+  - {fileID: 8188168246657359349, guid: 4b1a0ac16d9487c47913fe4138b9807f, type: 3}
+  - {fileID: 8188168246657359349, guid: 4b1a0ac16d9487c47913fe4138b9807f, type: 3}
+  - {fileID: 8188168246657359349, guid: 4b1a0ac16d9487c47913fe4138b9807f, type: 3}
 --- !u!1 &410455497
 GameObject:
   m_ObjectHideFlags: 0

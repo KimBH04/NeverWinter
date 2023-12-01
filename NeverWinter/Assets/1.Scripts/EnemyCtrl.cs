@@ -98,7 +98,7 @@ public class EnemyCtrl : MonoBehaviour
         if (structure == true)
         {
             gate1.hp -= atk;
-            if (gate1.hp - atk <= 0)
+            if (gate1.hp<= 0)
             {             
                 animator.SetBool(hashAttack, false);
                 isEnd = false;
