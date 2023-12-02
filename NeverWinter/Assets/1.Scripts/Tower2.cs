@@ -17,6 +17,11 @@ public class Tower2 : MonoBehaviour
     public float spin = 50f;
     public float AD;
     private float Dist;
+    public bool stun1 = false;
+    public float animationInterval = 3.0f;
+    private float timer = 0f;
+
+    public GameObject StunImage;
     public GameObject Bullet;
     Transform head;
     
@@ -27,13 +32,28 @@ public class Tower2 : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        instance= this;
+        stun1 = false;
+        StunImage.SetActive(false);
+        instance = this;
         temp = shootDelay;
     }
 
     // Update is called once per frame
     void Update()
-    {       
+    {
+        if (stun1 == true)
+        {
+            timer += Time.deltaTime;
+            if (timer >= animationInterval)
+            {
+                stun1 = false;
+                StunImage.SetActive(false);
+                timer = 0f;
+            }
+            else
+            return;
+        }
+
         if (targetUnit == null)
         {
             Collider[] colliderList = Physics.OverlapSphere(transform.position, distance, LayerMask.GetMask("Unit"));
@@ -48,6 +68,7 @@ public class Tower2 : MonoBehaviour
                     break;
                 }
             }
+            
         }
         
         if (targetUnit != null)
@@ -80,7 +101,13 @@ public class Tower2 : MonoBehaviour
 
     }
 
-    
+    public void Stun()
+    {
+        StunImage.SetActive(true);
+        Debug.Log("dkdk");
+        stun1 = true;
+    }
+
     public void BulletShoot(EnemyCtrl a)
     {
         //�Ѿ��� �����Ѵ�

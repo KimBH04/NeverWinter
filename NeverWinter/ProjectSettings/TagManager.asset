@@ -9,6 +9,7 @@ TagManager:
   - Castle
   - dd
   - AREA
+  - Boss
   layers:
   - Default
   - TransparentFX

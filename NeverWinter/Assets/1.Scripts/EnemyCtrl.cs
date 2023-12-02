@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
+using static UnityEditor.ShaderGraph.Internal.KeywordDependentCollection;
 
 
 // 메모장
@@ -35,6 +36,12 @@ public class EnemyCtrl : MonoBehaviour
     public bool isEnemyDie = false;
     public bool isEnd = false;
     private Coroutine damageCoroutine = null;
+    //보스 스킬
+    public float animationInterval = 15f;
+    private float timer = 0f;
+    public float distance = 7.0f;
+    public bool skillcool = true;
+    public GameObject unitPrefab;
 
     private Transform target;
     private Gate gate1;
@@ -44,7 +51,8 @@ public class EnemyCtrl : MonoBehaviour
     [HideInInspector] public Animator animator;
     private readonly int hashAttack = Animator.StringToHash("Attack");
     private readonly int hashDie = Animator.StringToHash("Die");
-    
+    private readonly int hashSkill = Animator.StringToHash("Skill");
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -58,6 +66,42 @@ public class EnemyCtrl : MonoBehaviour
     private void Update()
     {
         MoveWay();
+        if (gameObject.CompareTag("Boss"))
+        {
+            timer += Time.deltaTime;
+            if (timer >= animationInterval)
+            {
+                animator.SetBool(hashSkill, true);
+                skillcool = false;
+                timer = 0f;
+            }
+        }
+    }
+
+    public void Skill()
+    {
+        
+        Collider[] colliderList = Physics.OverlapSphere(transform.position, distance, LayerMask.GetMask("TOWER"));
+
+        for (int i = 0; i < colliderList.Length; i++)
+        {
+            Debug.Log(i);
+            GridTower searchTarget = colliderList[i].GetComponent<GridTower>();
+            if (searchTarget) //&& searchTarget.isDie == false)
+            {
+                searchTarget.tower.Stun();
+            }
+        }
+        skillcool = true;
+        Vector3 spawnPosition = new Vector3(-24.10f, 0.16f, 0f);
+        for (int i =0; i<3; i++)
+        {
+            GameObject newUnit = Instantiate(unitPrefab, spawnPosition, Quaternion.identity);
+            spawnPosition.x -= 1f;
+             
+        }
+       
+        animator.SetBool(hashSkill, false);
     }
 
     // 적이 데미지 받았을 때 쓰는 함수
@@ -205,8 +249,13 @@ public class EnemyCtrl : MonoBehaviour
 
     void MoveWay()
     {
-        //if (!isEnd)
+        //if (!isEnd && idx < container.WayPoints.Count)
         //{
+        //    if (gameObject.CompareTag("Boss")&& skillcool == false)
+        //    {
+        //        return;
+        //    }
+
         //    Transform tr = container.WayPoints[idx];
         //    transform.LookAt(tr, transform.up);
 
@@ -215,19 +264,19 @@ public class EnemyCtrl : MonoBehaviour
         //    if ((transform.position - tr.position).sqrMagnitude < 0.05f)
         //    {
         //        idx++;
-        //        if (idx >= container.WayPoints.Length)
+        //        if (idx >= container.WayPoints.Count)
         //        {
         //            isEnd = true;
         //        }
         //    }
         //}
-        //else
-        //{
-        //    animator.SetBool(hashAttack, true);
-        //} 원래 코드
-
-        if (!isEnd && idx < container.WayPoints.Count)
+        if (container != null && !isEnd && idx < container.WayPoints.Count)
         {
+            if (gameObject.CompareTag("Boss") && skillcool == false)
+            {
+                return;
+            }
+
             Transform tr = container.WayPoints[idx];
             transform.LookAt(tr, transform.up);
 
@@ -242,7 +291,7 @@ public class EnemyCtrl : MonoBehaviour
                 }
             }
         }
-        else
+        else 
         {
             animator.SetBool(hashAttack, true);
         }
