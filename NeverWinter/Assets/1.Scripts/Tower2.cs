@@ -65,7 +65,7 @@ public class Tower2 : MonoBehaviour
                 {
                     //StartCoroutine(BulletBustShoot2());
                     targetUnit = searchTarget;
-                    break;
+                    break;            //타워 공격에서 에러나면 이거 다시 재활성화
                 }
             }
             

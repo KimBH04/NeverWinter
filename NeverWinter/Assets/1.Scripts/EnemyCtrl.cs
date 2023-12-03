@@ -42,6 +42,7 @@ public class EnemyCtrl : MonoBehaviour
     public float distance = 7.0f;
     public bool skillcool = true;
     public GameObject unitPrefab;
+    public GameObject Skilleffect;
 
     private Transform target;
     private Gate gate1;
@@ -56,7 +57,6 @@ public class EnemyCtrl : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-        
         //container = GameObject.Find("WayContainer").GetComponent<WayContainer>();
         manager = GameObject.Find("GameManager").GetComponent<GameManager>();
         Enemy_HP = Max_Hp;
@@ -73,6 +73,7 @@ public class EnemyCtrl : MonoBehaviour
             {
                 animator.SetBool(hashSkill, true);
                 skillcool = false;
+                Skilleffect.SetActive(true);
                 timer = 0f;
             }
         }
@@ -92,15 +93,16 @@ public class EnemyCtrl : MonoBehaviour
                 searchTarget.tower.Stun();
             }
         }
+
         skillcool = true;
         Vector3 spawnPosition = new Vector3(-24.10f, 0.16f, 0f);
         for (int i =0; i<3; i++)
         {
             GameObject newUnit = Instantiate(unitPrefab, spawnPosition, Quaternion.identity);
             spawnPosition.x -= 1f;
-             
+            manager.count--;
         }
-       
+        Skilleffect.SetActive(false);
         animator.SetBool(hashSkill, false);
     }
 
@@ -215,7 +217,7 @@ public class EnemyCtrl : MonoBehaviour
         //Debug.Log("주금   ");
         animator.SetTrigger(hashDie);
 
-        GameManager.count++;
+        manager.count++;
         
     }
 

@@ -195,11 +195,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: STURN
       objectReference: {fileID: 0}
+    - target: {fileID: 7517376597954522797, guid: 2c08dbc33a2eac44eb09b35924d266bb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c08dbc33a2eac44eb09b35924d266bb, type: 3}
+--- !u!1 &5137581398302023811 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7517376597954522797, guid: 2c08dbc33a2eac44eb09b35924d266bb, type: 3}
+  m_PrefabInstance: {fileID: 3395517444592995886}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5478501005270334009 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7140675477174858775, guid: 2c08dbc33a2eac44eb09b35924d266bb, type: 3}
@@ -324,5 +333,5 @@ MonoBehaviour:
   AD: 60
   stun1: 0
   animationInterval: 3
-  StunImage: {fileID: 0}
+  StunImage: {fileID: 5137581398302023811}
   Bullet: {fileID: 8520817353141550526, guid: d04d15af43a5ec44bbe62adb98e6d44b, type: 3}

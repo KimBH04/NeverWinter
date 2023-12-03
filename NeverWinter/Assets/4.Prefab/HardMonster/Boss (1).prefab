@@ -374,6 +374,113 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1001 &5453105138637311929
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8540602793671370741}
+    m_Modifications:
+    - target: {fileID: 1960596957029050670, guid: d5db59c9c13708043a5783e3899cfdd1, type: 3}
+      propertyPath: m_Name
+      value: Magic circle 2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1960596957029050670, guid: d5db59c9c13708043a5783e3899cfdd1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3718625935925968933, guid: d5db59c9c13708043a5783e3899cfdd1, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 3718625935925968933, guid: d5db59c9c13708043a5783e3899cfdd1, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 3718625935925968933, guid: d5db59c9c13708043a5783e3899cfdd1, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 3718625935925968933, guid: d5db59c9c13708043a5783e3899cfdd1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0013
+      objectReference: {fileID: 0}
+    - target: {fileID: 3718625935925968933, guid: d5db59c9c13708043a5783e3899cfdd1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.003
+      objectReference: {fileID: 0}
+    - target: {fileID: 3718625935925968933, guid: d5db59c9c13708043a5783e3899cfdd1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.0018
+      objectReference: {fileID: 0}
+    - target: {fileID: 3718625935925968933, guid: d5db59c9c13708043a5783e3899cfdd1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3718625935925968933, guid: d5db59c9c13708043a5783e3899cfdd1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3718625935925968933, guid: d5db59c9c13708043a5783e3899cfdd1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3718625935925968933, guid: d5db59c9c13708043a5783e3899cfdd1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3718625935925968933, guid: d5db59c9c13708043a5783e3899cfdd1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3718625935925968933, guid: d5db59c9c13708043a5783e3899cfdd1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3718625935925968933, guid: d5db59c9c13708043a5783e3899cfdd1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3718625935925968933, guid: d5db59c9c13708043a5783e3899cfdd1, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6180718317253298375, guid: d5db59c9c13708043a5783e3899cfdd1, type: 3}
+      propertyPath: m_BoundingSphereOverride.x
+      value: 8.02e-43
+      objectReference: {fileID: 0}
+    - target: {fileID: 6180718317253298375, guid: d5db59c9c13708043a5783e3899cfdd1, type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: NaN
+      objectReference: {fileID: 0}
+    - target: {fileID: 6180718317253298375, guid: d5db59c9c13708043a5783e3899cfdd1, type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: 4e-44
+      objectReference: {fileID: 0}
+    - target: {fileID: 6840315195757264258, guid: d5db59c9c13708043a5783e3899cfdd1, type: 3}
+      propertyPath: lengthInSec
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6840315195757264258, guid: d5db59c9c13708043a5783e3899cfdd1, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d5db59c9c13708043a5783e3899cfdd1, type: 3}
+--- !u!1 &5807429859411502743 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1960596957029050670, guid: d5db59c9c13708043a5783e3899cfdd1, type: 3}
+  m_PrefabInstance: {fileID: 5453105138637311929}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8662221629569994652 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3718625935925968933, guid: d5db59c9c13708043a5783e3899cfdd1, type: 3}
+  m_PrefabInstance: {fileID: 5453105138637311929}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8146142565641535518
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -599,6 +706,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: cb29822606f32ab4aac93f9415d52424, type: 3}
       insertIndex: 1
       addedObject: {fileID: 2068636923709906816}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: cb29822606f32ab4aac93f9415d52424, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8662221629569994652}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cb29822606f32ab4aac93f9415d52424, type: 3}
       insertIndex: -1
@@ -665,8 +775,8 @@ MonoBehaviour:
   render: {fileID: 1279222742067940802}
   structure: 0
   movePoints: []
-  Enemy_HP: 1000
-  Max_Hp: 1000
+  Enemy_HP: 250
+  Max_Hp: 250
   atk: 20
   Enemy_move_Speed: 0.6
   Enemy_Spell: 
@@ -677,6 +787,7 @@ MonoBehaviour:
   distance: 5
   skillcool: 1
   unitPrefab: {fileID: 3075729921610331372, guid: d77ef5ff467cecd4d8aaea5037f0d940, type: 3}
+  Skilleffect: {fileID: 5807429859411502743}
   animator: {fileID: 0}
 --- !u!95 &4709109279282935188
 Animator:

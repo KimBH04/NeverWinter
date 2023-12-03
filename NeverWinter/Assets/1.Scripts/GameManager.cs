@@ -8,6 +8,7 @@ using Random = UnityEngine.Random;
 using UnityEngine.UI;
 using DG.Tweening;
 using TMPro;
+using UnityEditor;
 
 public class GameManager : MonoBehaviour
 {
@@ -25,7 +26,7 @@ public class GameManager : MonoBehaviour
     private bool gameWon = false;
     public Image waveFlag;
 
-    public static int count = 0;
+    public int count = 0;
     public WaveContainer []wave;
     public Sprite []image;
     //public WaveContainer[] WaveContainer;
@@ -33,6 +34,10 @@ public class GameManager : MonoBehaviour
     public Button Sumonbutton;
     
     public int wavecount = 0;
+
+    public GameObject[] RandomTower = new GameObject[4];
+    public Image[] icon = new Image[5];
+    public int cnt = 0;
 
     [SerializeField]
     private GameObject  gameoverUI, AnyBtn;
@@ -67,7 +72,7 @@ public class GameManager : MonoBehaviour
         Castle_HpText.text = 100+" / 100";
         lives = 100;
         Max_lives = lives;
-        
+
         //Debug.Log(lives);
 
 
@@ -214,60 +219,72 @@ public class GameManager : MonoBehaviour
         switch (uType)
         {
             case UpgradeItemType.Axe:
-                
-                Tower2.instance.AD += 5.0f;
-                print(Tower2.instance.AD);;
+
+                //Tower2.instance.AD += 5.0f;
+                //print(Tower2.instance.AD);;
                 //Tower2.ad += 5.0f;
                 //Debug.Log("포션");
+                icon[cnt].gameObject.SetActive(true);
+                icon[cnt].sprite = Resources.Load<Sprite>("Sprites/증강_맹독");
+                cnt++;
 
                 break;
+
             case UpgradeItemType.Potion:
                 for(int i=0;i< SkillControl.instance.skiiTimes.Length;i++)
                 {
                     SkillControl.instance.skiiTimes[i] *= 0.9f;
                 }
-
+                icon[cnt].gameObject.SetActive(true);
+                icon[cnt].sprite = Resources.Load<Sprite>("Sprites/증강_스킬쿨타임감소(화약통)");
+                cnt++;
                 break;
 
             case UpgradeItemType.Book:
-
-                //Debug.Log("책");
-
+                icon[cnt].gameObject.SetActive(true);
+                icon[cnt].sprite = Resources.Load<Sprite>("Sprites/증강_마법");
+                cnt++;
                 break;
+
             case UpgradeItemType.Xbow:
-                Tower2.instance.shootDelay*=0.9f;
+                //Tower2.instance.shootDelay*=0.9f;
                 //Tower2.shootdelay *= 0.9f;
-
+                icon[cnt].gameObject.SetActive(true);
+                icon[cnt].sprite = Resources.Load<Sprite>("Sprites/증강_석궁");
+                cnt++;
                 break;
+
             case UpgradeItemType.Pub:
-                
-                //Canon.shootDelay -= 0.2f;
-
+                icon[cnt].gameObject.SetActive(true);
+                icon[cnt].sprite = Resources.Load<Sprite>("Sprites/증강_선술집");
+                cnt++;
                 break;
+
             case UpgradeItemType.scout:
-
-                //Debug.Log("아아아 ");
-
+                icon[cnt].gameObject.SetActive(true);
+                icon[cnt].sprite = Resources.Load<Sprite>("Sprites/증강_바리게이트");
+                cnt++;
                 break;
 
-            case UpgradeItemType.Knight:
-/*
-                for (int i = 0; i < EnemySpeed.Length; i++)
-                {
-                    EnemySpeed[i].agent.speed *= 0.5f;
-                }
-*/
+            case UpgradeItemType.Knight:            
+                icon[cnt].gameObject.SetActive(true);
+                icon[cnt].sprite = Resources.Load<Sprite>("Sprites/증강_대포");
+                cnt++;
+
                 break;
 
             case UpgradeItemType.Gold:
-
-                //Debug.Log("아아아아");
+                icon[cnt].gameObject.SetActive(true);
+                icon[cnt].sprite = Resources.Load<Sprite>("Sprites/증강_골드");
+                cnt++;
 
                 break;
 
             case UpgradeItemType.Clover:
 
-                
+                icon[cnt].gameObject.SetActive(true);
+                icon[cnt].sprite = Resources.Load<Sprite>("Sprites/증강_클로버");
+                cnt++;
                 //Vector3 a = new Vector3(0.05f, 0.2f, -1.75f);
                 //Instantiate(tower, a, Quaternion.identity);
 
@@ -277,14 +294,22 @@ public class GameManager : MonoBehaviour
                 lives += 20;
                 Max_lives += 20;
                 Castle_Hpbar.value += 20;
-
+                Castle_HpText.text += 20;
+                icon[cnt].gameObject.SetActive(true);
+                icon[cnt].sprite = Resources.Load<Sprite>("Sprites/증강_체력");
+                cnt++;
 
 
                 break;
 
             case UpgradeItemType.Crown:
+                //Vector3 spawnPosition = new Vector3(-8.04f, 0.1499987f, 7.98f);
+                int result = Random.Range(0, 4);
+                //GameObject newUnit = Instantiate(RandomTower[result], spawnPosition, Quaternion.identity);
+                icon[cnt].gameObject.SetActive(true);
+                icon[cnt].sprite = Resources.Load<Sprite>("Sprites/증강_타워소환");
+                cnt++;
 
-               
 
                 break;
         }
