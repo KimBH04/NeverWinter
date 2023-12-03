@@ -25719,7 +25719,7 @@ MonoBehaviour:
   Castle_HpText: {fileID: 1303363939}
   waveFlag: {fileID: 874606338}
   wave:
-  - {fileID: 0}
+  - {fileID: 386151449}
   image:
   - {fileID: 21300000, guid: 5ec8d7ad0326b8d4b8825fe09c9f5c9f, type: 3}
   - {fileID: 21300000, guid: e1aa42c05d38ec140aff27b990644a7b, type: 3}
@@ -35227,14 +35227,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1108336196}
         m_TargetAssemblyTypeName: Time_UI, Assembly-CSharp
-        m_MethodName: GameTry
-        m_Mode: 1
+        m_MethodName: GoToNewMap
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: GridGameScene 1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1686421189

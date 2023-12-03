@@ -81,6 +81,12 @@ public class Time_UI : MonoBehaviour
         Time.timeScale = nowattach;
     }
 
+    public void GoToNewMap(string newMap)
+    {
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Ck);
+        SceneManager.LoadScene(newMap);
+    }
+
 
 
 }
