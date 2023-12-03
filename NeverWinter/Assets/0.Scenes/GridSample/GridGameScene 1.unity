@@ -1925,7 +1925,9 @@ RectTransform:
   - {fileID: 824249400}
   - {fileID: 433369646}
   - {fileID: 1787194452}
+  - {fileID: 2089160225}
   - {fileID: 326853485}
+  - {fileID: 949804414}
   - {fileID: 412787384}
   m_Father: {fileID: 1055556702}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6527,12 +6529,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 325242623}
-  - {fileID: 949804414}
   m_Father: {fileID: 78913222}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -622.5, y: -428.2}
+  m_AnchoredPosition: {x: -622.49994, y: -428.2}
   m_SizeDelta: {x: 225, y: 225}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &326853486
@@ -23325,12 +23326,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 326853485}
+  m_Father: {fileID: 78913222}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -622.50006, y: -428.2}
+  m_SizeDelta: {x: -1695, y: -854.99994}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &949804415
 MonoBehaviour:
@@ -34032,6 +34033,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1569068668}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1587029886 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5726773812841759564, guid: 7877e7f5518c83a4eb0e9413f143b791, type: 3}
+  m_PrefabInstance: {fileID: 588563882713998350}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1595741247
 GameObject:
   m_ObjectHideFlags: 0
@@ -36618,7 +36624,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 31589362}
-  - {fileID: 2089160225}
   m_Father: {fileID: 78913222}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -41191,7 +41196,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2089160225
 RectTransform:
   m_ObjectHideFlags: 0
@@ -41204,12 +41209,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1787194452}
+  m_Father: {fileID: 78913222}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000061035156, y: -0.0000076293945}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -852.049, y: -429.578}
+  m_SizeDelta: {x: -1724.771, y: -884.783}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2089160226
 MonoBehaviour:
@@ -42908,13 +42913,38 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5726773812841759564, guid: 7877e7f5518c83a4eb0e9413f143b791, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 588563882713998354}
   m_SourcePrefab: {fileID: 100100000, guid: 7877e7f5518c83a4eb0e9413f143b791, type: 3}
 --- !u!4 &588563882713998351 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4914068056231188982, guid: 7877e7f5518c83a4eb0e9413f143b791, type: 3}
   m_PrefabInstance: {fileID: 588563882713998350}
   m_PrefabAsset: {fileID: 0}
+--- !u!64 &588563882713998354
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587029886}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 1466850820345451325, guid: a4598dce052043247836c187e8bb1a3d, type: 3}
 --- !u!1001 &1347084948698591804
 PrefabInstance:
   m_ObjectHideFlags: 0
