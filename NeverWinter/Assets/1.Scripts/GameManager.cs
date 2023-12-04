@@ -38,6 +38,12 @@ public class GameManager : MonoBehaviour
     public GameObject[] RandomTower = new GameObject[4];
     public Image[] icon = new Image[5];
     public int cnt = 0;
+    public GameObject []poison= new GameObject[3];
+    public GameObject[] Xbow = new GameObject[3];
+    public GameObject[] Cannon = new GameObject[3];
+    public GameObject[] Magic = new GameObject[3];
+    public GameObject[] Pub = new GameObject[3];
+    private GridTowerRandomSpawn Coin;
 
     [SerializeField]
     private GameObject  gameoverUI, AnyBtn;
@@ -72,10 +78,7 @@ public class GameManager : MonoBehaviour
         Castle_HpText.text = 100+" / 100";
         lives = 100;
         Max_lives = lives;
-
-        //Debug.Log(lives);
-
-
+        Coin = GameObject.Find("Grids").GetComponent<GridTowerRandomSpawn>();
         Application.targetFrameRate = 60;
         Castle_Hpbar.value = Max_lives;
     }
@@ -218,26 +221,37 @@ public class GameManager : MonoBehaviour
 
         switch (uType)
         {
-            case UpgradeItemType.Axe:
-
-                //Tower2.instance.AD += 5.0f;
-                //print(Tower2.instance.AD);;
-                //Tower2.ad += 5.0f;
-                //Debug.Log("포션");
-                icon[cnt].gameObject.SetActive(true);
-                icon[cnt].sprite = Resources.Load<Sprite>("Sprites/증강_맹독");
-                cnt++;
-
-                break;
-
             case UpgradeItemType.Potion:
-                for(int i=0;i< SkillControl.instance.skiiTimes.Length;i++)
+                for (int i = 0; i < SkillControl.instance.skiiTimes.Length; i++)
                 {
                     SkillControl.instance.skiiTimes[i] *= 0.9f;
                 }
                 icon[cnt].gameObject.SetActive(true);
                 icon[cnt].sprite = Resources.Load<Sprite>("Sprites/증강_스킬쿨타임감소(화약통)");
                 cnt++;
+                break;
+
+            case UpgradeItemType.Axe:
+                for(int i =0; i<3; i++)
+                {
+                    //PoisonDamage poisonDamageScript = poison[i].GetComponent<PoisonDamage>();
+                    Transform childTransform = poison[i].transform.Find("Poison1");
+                    
+                    if (childTransform != null)
+                    {
+                        PoisonDamage childScript = childTransform.GetComponent<PoisonDamage>();
+                        // 자식 객체에 있는 함수 호출
+                        if (childScript != null)
+                        {
+                            childScript.damagePerSecond += 2f;
+                            Debug.Log(childScript.damagePerSecond);
+                        }
+                    }
+                }        
+                icon[cnt].gameObject.SetActive(true);
+                icon[cnt].sprite = Resources.Load<Sprite>("Sprites/증강_맹독");
+                cnt++;
+
                 break;
 
             case UpgradeItemType.Book:
@@ -247,14 +261,45 @@ public class GameManager : MonoBehaviour
                 break;
 
             case UpgradeItemType.Xbow:
-                //Tower2.instance.shootDelay*=0.9f;
-                //Tower2.shootdelay *= 0.9f;
+
+                for (int i = 0; i < 3; i++)
+                {
+                    //PoisonDamage poisonDamageScript = poison[i].GetComponent<PoisonDamage>();
+                    Transform childTransform = Xbow[i].transform.Find("Xbow");
+                  
+                    if (childTransform != null)
+                    {
+                        Tower2 childScript = childTransform.GetComponent<Tower2>();
+                        // 자식 객체에 있는 함수 호출
+                        if (childScript != null)
+                        {
+                            childScript.shootDelay *=0.9f;
+                            Debug.Log(childScript.shootDelay);
+                        }
+                    }
+                }
                 icon[cnt].gameObject.SetActive(true);
                 icon[cnt].sprite = Resources.Load<Sprite>("Sprites/증강_석궁");
                 cnt++;
                 break;
 
             case UpgradeItemType.Pub:
+                for (int i = 0; i < 3; i++)
+                {
+                    //PoisonDamage poisonDamageScript = poison[i].GetComponent<PoisonDamage>();
+                    Transform childTransform = Pub[i].transform.Find("intersection");
+       
+                    if (childTransform != null)
+                    {
+                        Pub childScript = childTransform.GetComponent<Pub>();
+                        // 자식 객체에 있는 함수 호출
+                        if (childScript != null)
+                        {
+                            childScript.attackBoost += 0.2f;
+                            Debug.Log(childScript.attackBoost);
+                        }
+                    }
+                }
                 icon[cnt].gameObject.SetActive(true);
                 icon[cnt].sprite = Resources.Load<Sprite>("Sprites/증강_선술집");
                 cnt++;
@@ -266,7 +311,23 @@ public class GameManager : MonoBehaviour
                 cnt++;
                 break;
 
-            case UpgradeItemType.Knight:            
+            case UpgradeItemType.Knight:
+                for (int i = 0; i < 3; i++)
+                {
+                    //PoisonDamage poisonDamageScript = poison[i].GetComponent<PoisonDamage>();
+                    Transform childTransform = Cannon[i].transform.Find("Cannon");
+                    
+                    if (childTransform != null)
+                    {
+                        Tower2 childScript = childTransform.GetComponent<Tower2>();
+                        // 자식 객체에 있는 함수 호출
+                        if (childScript != null)
+                        {
+                            childScript.AD += 2.5f;
+                            Debug.Log(childScript.AD);
+                        }
+                    }
+                }
                 icon[cnt].gameObject.SetActive(true);
                 icon[cnt].sprite = Resources.Load<Sprite>("Sprites/증강_대포");
                 cnt++;
@@ -274,6 +335,7 @@ public class GameManager : MonoBehaviour
                 break;
 
             case UpgradeItemType.Gold:
+                Coin.LevelCost -= 10;
                 icon[cnt].gameObject.SetActive(true);
                 icon[cnt].sprite = Resources.Load<Sprite>("Sprites/증강_골드");
                 cnt++;
@@ -281,7 +343,22 @@ public class GameManager : MonoBehaviour
                 break;
 
             case UpgradeItemType.Clover:
-
+                for (int i = 0; i < 3; i++)
+                {
+                    //PoisonDamage poisonDamageScript = poison[i].GetComponent<PoisonDamage>();
+                    Transform childTransform = Magic[i].transform.Find("Magic");
+                    
+                    if (childTransform != null)
+                    {
+                        Tower2 childScript = childTransform.GetComponent<Tower2>();
+                        // 자식 객체에 있는 함수 호출
+                        if (childScript != null)
+                        {
+                            childScript.AD += 3.5f;
+                            Debug.Log(childScript.AD);
+                        }
+                    }
+                }
                 icon[cnt].gameObject.SetActive(true);
                 icon[cnt].sprite = Resources.Load<Sprite>("Sprites/증강_클로버");
                 cnt++;
@@ -291,10 +368,10 @@ public class GameManager : MonoBehaviour
                 break;
 
             case UpgradeItemType.Shield:
+                Castle_HpText.text = (lives + 20).ToString() +" / "+ (lives + 20).ToString();
                 lives += 20;
                 Max_lives += 20;
-                Castle_Hpbar.value += 20;
-                Castle_HpText.text += 20;
+                Castle_Hpbar.value += 20;      
                 icon[cnt].gameObject.SetActive(true);
                 icon[cnt].sprite = Resources.Load<Sprite>("Sprites/증강_체력");
                 cnt++;

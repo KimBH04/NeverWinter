@@ -144,7 +144,7 @@ namespace NeverWiter
                             icon.sprite = Resources.Load<Sprite>("Sprites/증강_클로버");
 
                         if (title)
-                            title.text = string.Format("{0} Lv. {1}", "증강 2개 획득", level);
+                            title.text = string.Format("{0} Lv. {1}", "마법 타워 공격력 증가", level);
                         /*if (explain)
                             explain.text = "무작위 타워 1기 획득 (1~3성)";*/
                     }

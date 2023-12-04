@@ -275,6 +275,10 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8495814768684275415, guid: a6f8e31587ffa6b47baf926ca41e7116, type: 3}
+      propertyPath: m_Name
+      value: Magic
+      objectReference: {fileID: 0}
+    - target: {fileID: 8495814768684275415, guid: a6f8e31587ffa6b47baf926ca41e7116, type: 3}
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}

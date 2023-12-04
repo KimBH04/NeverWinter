@@ -180,6 +180,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -3418087240547010690, guid: 1899916ca6ee74643b96c96fbc652cb7, type: 3}
+      propertyPath: m_Name
+      value: Cannon
+      objectReference: {fileID: 0}
+    - target: {fileID: -3418087240547010690, guid: 1899916ca6ee74643b96c96fbc652cb7, type: 3}
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}

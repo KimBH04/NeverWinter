@@ -192,6 +192,10 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 931271811887603179, guid: 9c51203ab8aa35449b9873727dde73a8, type: 3}
+      propertyPath: m_Name
+      value: Xbow
+      objectReference: {fileID: 0}
+    - target: {fileID: 931271811887603179, guid: 9c51203ab8aa35449b9873727dde73a8, type: 3}
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}

@@ -24036,6 +24036,7 @@ MonoBehaviour:
   text: {fileID: 2053757102}
   towers:
   - {fileID: 4385659407143421232, guid: c6cd10ba6c2f2f946becf9c763af09fe, type: 3}
+  LevelCost: 100
 --- !u!4 &989508338
 Transform:
   m_ObjectHideFlags: 0
@@ -25719,6 +25720,7 @@ MonoBehaviour:
   Castle_Hpbar: {fileID: 332476218}
   Castle_HpText: {fileID: 1303363939}
   waveFlag: {fileID: 874606338}
+  count: 0
   wave:
   - {fileID: 386151449}
   image:
@@ -25731,6 +25733,38 @@ MonoBehaviour:
   Wavebutton: {fileID: 433369649}
   Sumonbutton: {fileID: 824249403}
   wavecount: 0
+  RandomTower:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  icon:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  cnt: 0
+  poison:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  Xbow:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  Cannon:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  Magic:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  Pub:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   gameoverUI: {fileID: 499130}
   AnyBtn: {fileID: 1055556701}
   gamewonUI: {fileID: 1381193507}

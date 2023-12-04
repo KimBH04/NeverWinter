@@ -9,7 +9,8 @@ public class GridTowerRandomSpawn : MonoBehaviour
     [SerializeField] private TextMeshProUGUI text;
     // [SerializeField] private GameObject maxTowerMessage;    
     [SerializeField] private Transform[] towers;                    
-    public static List<GridField> grids = new List<GridField>();    
+    public static List<GridField> grids = new List<GridField>();
+    public int LevelCost = 100;
 
     private int towersCount;    
 
@@ -23,6 +24,7 @@ public class GridTowerRandomSpawn : MonoBehaviour
 
     private void Start()
     {
+        LevelCost = 100;
         GetComponentsInChildren(grids);
         towersCount = towers.Length;
     }
@@ -40,7 +42,7 @@ public class GridTowerRandomSpawn : MonoBehaviour
     public void SpawningTowerToRandomPosition()
     {
         AudioManager.instance.PlaySfx(AudioManager.Sfx.Sum);
-        if (Cost.Coin < 100)
+        if (Cost.Coin < LevelCost)
         {
             TextObj.SetActive(true);
             text.text = "소지금이 부족합니다.";
@@ -56,7 +58,7 @@ public class GridTowerRandomSpawn : MonoBehaviour
             return;
         }
 
-        Cost.Coin -= 100;
+        Cost.Coin -= LevelCost;
 
         int gridIdx = Random.Range(0, grids.Count);
         int towerIdx = Random.Range(0, towersCount);

@@ -36,6 +36,7 @@ public class Pub : MonoBehaviour
             other.GetComponent<GridTower>().TowerADminus(attackBoost);
             Debug.Log("플레이어의 공격력이 올라갔습니다: " + playerAttack);
         }
+        Debug.Log(attackBoost);
     }
 
     //private void OnMouseDown()

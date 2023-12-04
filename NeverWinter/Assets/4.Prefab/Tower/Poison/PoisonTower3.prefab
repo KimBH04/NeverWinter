@@ -160,7 +160,6 @@ MonoBehaviour:
   <ID>k__BackingField: 15
   highRankTower: {fileID: 0}
   tower: {fileID: 0}
-  visualBox: {fileID: 0}
   field: {fileID: 0}
   maxDistance: 10
   offset: {x: 0, y: 0, z: 0}
@@ -458,6 +457,10 @@ PrefabInstance:
     - target: {fileID: 3316992658331686828, guid: 588c53498d38d7d4e83cefc6cd19864f, type: 3}
       propertyPath: m_LocalPosition.z
       value: -1.498
+      objectReference: {fileID: 0}
+    - target: {fileID: 8700725330082129686, guid: 588c53498d38d7d4e83cefc6cd19864f, type: 3}
+      propertyPath: m_Name
+      value: Poison1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -140,6 +140,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8761909141947372711, guid: 9fbeafd39a1babf4890cf2817060c22c, type: 3}
+      propertyPath: m_Name
+      value: Magic
+      objectReference: {fileID: 0}
+    - target: {fileID: -8761909141947372711, guid: 9fbeafd39a1babf4890cf2817060c22c, type: 3}
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
