@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
 
     public int count = 0;
     public WaveContainer []wave;
+    public WaveContainer[] wave2;
     public Sprite []image;
     //public WaveContainer[] WaveContainer;
     public Button Wavebutton;
@@ -88,7 +89,7 @@ public class GameManager : MonoBehaviour
     {
         if (wavecount < 6)
         {
-            if (count >= wave[wavecount].enemies.Length)
+            if (count >= wave[wavecount].enemies.Length + wave2[wavecount].enemies.Length)
             {
                 Wavebutton.transform.DOLocalMoveY(-400, 1f);
                 Sumonbutton.transform.DOLocalMoveY(-400, 1f);

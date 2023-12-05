@@ -713,6 +713,11 @@ MonoBehaviour:
   Reward: 0
   isEnemyDie: 0
   isEnd: 0
+  animationInterval: 15
+  distance: 7
+  skillcool: 1
+  unitPrefab: {fileID: 0}
+  Skilleffect: {fileID: 0}
   animator: {fileID: 0}
 --- !u!4 &8856864196723558223 stripped
 Transform:
