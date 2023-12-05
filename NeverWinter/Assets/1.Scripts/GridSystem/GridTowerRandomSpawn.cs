@@ -39,7 +39,7 @@ public class GridTowerRandomSpawn : MonoBehaviour
 #endif
     }
 
-    public void SpawningTowerToRandomPosition()
+    public void SpawningTowerToRandomPosition(bool Level)
     {
         AudioManager.instance.PlaySfx(AudioManager.Sfx.Sum);
         if (Cost.Coin < LevelCost)
@@ -57,8 +57,28 @@ public class GridTowerRandomSpawn : MonoBehaviour
             Invoke(nameof(Hide),1f);
             return;
         }
+        if (Level == true)    
+            Cost.Coin -= LevelCost;
 
-        Cost.Coin -= LevelCost;
+        if (Level == false)
+        {
+            for(int i =0; i<3; i++)
+            {
+                int gridIdx2 = Random.Range(0, grids.Count);
+                int towerIdx2 = Random.Range(0, towersCount);
+
+                //그리드에 타워 소환
+                grids[gridIdx2].havingTowerParent = Instantiate(towers[towerIdx2], grids[gridIdx2].transform.position, Quaternion.identity);
+
+                //그리드에 타워 정보 전달
+                grids[gridIdx2].havingTower = grids[gridIdx2].havingTowerParent.GetComponentInChildren<GridTower>();
+
+                //타워에 그리드 정보 전달
+                grids[gridIdx2].havingTower.field = grids[gridIdx2];
+
+                grids.RemoveAt(gridIdx2);
+            }
+        }
 
         int gridIdx = Random.Range(0, grids.Count);
         int towerIdx = Random.Range(0, towersCount);

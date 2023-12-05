@@ -18372,14 +18372,14 @@ MonoBehaviour:
       - m_Target: {fileID: 989508337}
         m_TargetAssemblyTypeName: GridTowerRandomSpawn, Assembly-CSharp
         m_MethodName: SpawningTowerToRandomPosition
-        m_Mode: 1
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!4 &825139665 stripped
 Transform:
@@ -23275,6 +23275,7 @@ MonoBehaviour:
   - {fileID: 9024546112853833137, guid: a5a1e39097f806641bc4b4113af75543, type: 3}
   - {fileID: 6250254239936603731, guid: fa2177c4a47558645ac1311668e031e5, type: 3}
   - {fileID: 8951542351368212421, guid: ac4a33d740f12e24fa037ce37a25d085, type: 3}
+  Summon: {fileID: 989508337}
   gameoverUI: {fileID: 499130}
   AnyBtn: {fileID: 1055556701}
   gamewonUI: {fileID: 1381193507}

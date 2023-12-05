@@ -12,6 +12,7 @@ public class EnemyCtrl : MonoBehaviour
 {
     public string EnemyName;
     public WayContainer container;
+    private WayContainer Babyway;
     private int idx;
     public Renderer render = null;
     public bool structure = false;
@@ -56,6 +57,7 @@ public class EnemyCtrl : MonoBehaviour
 
     void Start()
     {
+        Babyway = GameObject.Find("Left_WayContainer").GetComponent<WayContainer>();
         animator = GetComponent<Animator>();
         //container = GameObject.Find("WayContainer").GetComponent<WayContainer>();
         manager = GameObject.Find("GameManager").GetComponent<GameManager>();
@@ -99,9 +101,11 @@ public class EnemyCtrl : MonoBehaviour
         for (int i =0; i<3; i++)
         {
             GameObject newUnit = Instantiate(unitPrefab, spawnPosition, Quaternion.identity);
+            newUnit.GetComponent<EnemyCtrl>().container = Babyway;
             spawnPosition.x -= 1f;
             manager.count--;
         }
+
         Skilleffect.SetActive(false);
         animator.SetBool(hashSkill, false);
     }

@@ -87,13 +87,13 @@ public class Tower2 : MonoBehaviour
                 shootDelay -= Time.deltaTime;
             }
 
-            Quaternion rot = Quaternion.LookRotation(viewPos) ;
+            Quaternion rot = Quaternion.LookRotation(viewPos);
             
             gameObject.transform.rotation = Quaternion.Lerp(gameObject.transform.rotation, rot, Time.deltaTime * spin);
 
             
             Dist = Vector3.Distance(gameObject.transform.position, targetUnit.transform.position);
-            if (Dist > distance/*+2.0f*/|| targetUnit.isEnd == true)
+            if (Dist > distance/*+2.0f*/|| targetUnit.isEnemyDie == true)
             {
                 targetUnit = null;
             }

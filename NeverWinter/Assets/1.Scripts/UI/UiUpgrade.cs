@@ -169,7 +169,7 @@ namespace NeverWiter
                             icon.sprite = Resources.Load<Sprite>("Sprites/증강_타워소환");
 
                         if (title)
-                            title.text = string.Format("{0} Lv. {1}", "랜덤 타워 획득", level);
+                            title.text = string.Format("{0} Lv. {1}", "랜덤 타워3개 획득", level);
                       /*  if (explain)
                             explain.text = "적 이동속도가 10만큼 감소합니다";*/
                     }

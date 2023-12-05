@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     public static GameManagerEvent WaveEndEvent;
 
     public static GameManager instance;
-
+    
     public static int lives = 100;
     public int Max_lives;
     public Slider Castle_Hpbar;
@@ -44,6 +44,7 @@ public class GameManager : MonoBehaviour
     public GameObject[] Cannon = new GameObject[3];
     public GameObject[] Magic = new GameObject[3];
     public GameObject[] Pub = new GameObject[3];
+    public GridTowerRandomSpawn Summon;
     private GridTowerRandomSpawn Coin;
 
     [SerializeField]
@@ -387,6 +388,7 @@ public class GameManager : MonoBehaviour
                 icon[cnt].gameObject.SetActive(true);
                 icon[cnt].sprite = Resources.Load<Sprite>("Sprites/증강_타워소환");
                 cnt++;
+                Summon.SpawningTowerToRandomPosition(false);
 
 
                 break;
