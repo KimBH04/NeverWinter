@@ -19957,11 +19957,11 @@ MonoBehaviour:
   count: 0
   wave:
   - {fileID: 1200758136}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 742142205}
+  - {fileID: 656620879}
+  - {fileID: 102783714}
+  - {fileID: 308628451}
+  - {fileID: 1956723183}
   wave2: []
   image:
   - {fileID: 21300000, guid: 5ec8d7ad0326b8d4b8825fe09c9f5c9f, type: 3}
@@ -20005,6 +20005,22 @@ MonoBehaviour:
   - {fileID: 9024546112853833137, guid: a5a1e39097f806641bc4b4113af75543, type: 3}
   - {fileID: 6250254239936603731, guid: fa2177c4a47558645ac1311668e031e5, type: 3}
   - {fileID: 8951542351368212421, guid: ac4a33d740f12e24fa037ce37a25d085, type: 3}
+  Xbow1:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  Cannon1:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  Magic1:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  Pub1:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   Summon: {fileID: 0}
   gameoverUI: {fileID: 499130}
   AnyBtn: {fileID: 1055556701}
@@ -20731,7 +20747,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   way: {fileID: 757687868}
   enemies:
-  - {fileID: 9065042711401069903, guid: 342cfd755b0ef3b448028d42837a56ef, type: 3}
   - {fileID: 3075729921610331372, guid: d77ef5ff467cecd4d8aaea5037f0d940, type: 3}
   - {fileID: 8188168246657359349, guid: 4b1a0ac16d9487c47913fe4138b9807f, type: 3}
 --- !u!1 &1211798366

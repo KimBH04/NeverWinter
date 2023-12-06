@@ -44,11 +44,14 @@ public class EnemySpawnPoint : MonoBehaviour
 
             if (containerIndex < containers.Length)
             {
+                int enemyCount = 0;
                 WaveContainer[] waves = containers[containerIndex].GetComponentsInChildren<WaveContainer>();
                 foreach (WaveContainer container in waves)
                 {
                     StartCoroutine(EnemySpawn(container));
+                    enemyCount += container.enemies.Length;
                 }
+                manager.enemyCount = enemyCount;
                 containerIndex++;
             }
         }

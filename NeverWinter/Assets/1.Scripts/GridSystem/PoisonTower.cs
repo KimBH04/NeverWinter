@@ -34,12 +34,6 @@ public class PoisonTower : GridTower
         WatchNearestRoad();
     }
 
-    private void Update()
-    {
-        foreach (var item in directions)
-            Debug.DrawRay(transform.position + offset, item * maxDistance, Color.red);
-    }
-
     private void WatchNearestRoad()
     {
         Vector3 v = Vector3.zero;   //바라 볼 위치

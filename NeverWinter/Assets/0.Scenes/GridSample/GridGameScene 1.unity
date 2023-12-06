@@ -23569,20 +23569,7 @@ MonoBehaviour:
   Castle_HpText: {fileID: 1303363939}
   waveFlag: {fileID: 874606338}
   count: 0
-  wave:
-  - {fileID: 386151449}
-  - {fileID: 1017925923}
-  - {fileID: 169606375}
-  - {fileID: 1272236658}
-  - {fileID: 59628778}
-  - {fileID: 927842647}
-  wave2:
-  - {fileID: 942943412}
-  - {fileID: 1479938507}
-  - {fileID: 1662053853}
-  - {fileID: 844850981}
-  - {fileID: 517793111}
-  - {fileID: 1526261378}
+  enemyCount: 2147483647
   image:
   - {fileID: 21300000, guid: 5ec8d7ad0326b8d4b8825fe09c9f5c9f, type: 3}
   - {fileID: 21300000, guid: e1aa42c05d38ec140aff27b990644a7b, type: 3}
