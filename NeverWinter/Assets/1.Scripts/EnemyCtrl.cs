@@ -81,9 +81,13 @@ public class EnemyCtrl : MonoBehaviour
         }
     }
 
+    public void skill1()
+    {
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.DragonBone_Skill);
+    }
+
     public void Skill()
     {
-        
         Collider[] colliderList = Physics.OverlapSphere(transform.position, distance, LayerMask.GetMask("TOWER"));
 
         for (int i = 0; i < colliderList.Length; i++)
@@ -106,6 +110,7 @@ public class EnemyCtrl : MonoBehaviour
             manager.count--;
         }
 
+        
         Skilleffect.SetActive(false);
         animator.SetBool(hashSkill, false);
     }
@@ -193,10 +198,9 @@ public class EnemyCtrl : MonoBehaviour
             case "Bear":
                 AudioManager.instance.PlaySfx(AudioManager.Sfx.Bear);
                 break;
-            // case "Boss":
-            //     AudioManager.instance.PlaySfx(AudioManager.Sfx.Boss);
-            //     break;
-            // 보스는 아직 사운드가 없음
+            case "Boss":
+                AudioManager.instance.PlaySfx(AudioManager.Sfx.DragonBone_Dead);
+                break;
             case "Lizardman":
                 AudioManager.instance.PlaySfx(AudioManager.Sfx.Lizardman);
                 break;

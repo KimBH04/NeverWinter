@@ -7,6 +7,8 @@ public class CameraCtrl : MonoBehaviour
     public float speed;
     public float zoomInOutSpeed;
     private float X, Z, Zoom;
+
+    [SerializeField] private float cameraMaxView;
     
     private float w = Screen.width / 25f;
     private float h = Screen.height / 10f;
@@ -55,9 +57,6 @@ public class CameraCtrl : MonoBehaviour
         if (isPanning)
         {
             Vector3 deltaMouse = Input.mousePosition - lastMousePosition;
-            //X = Mathf.Clamp(X - deltaMouse.x / 50, -10, 10);
-            //Z = Mathf.Clamp(Z - deltaMouse.y / 50, -10, -2);
-            //밑에서 최대최소 조정되니 굳이 여기서 할 필요 없습니다
             X -= deltaMouse.x * speed * 0.01f;
             Z -= deltaMouse.y * speed * 0.01f;
             lastMousePosition = Input.mousePosition;
@@ -71,7 +70,7 @@ public class CameraCtrl : MonoBehaviour
         Zoom = Mathf.Clamp(Zoom + zoom, -1, 0.5f);
 
         X = Mathf.Clamp(X + x, -(10 * Zoom + 10), 10 * Zoom + 10);
-        Z = Mathf.Clamp(Z + z, -(4 * Zoom + 10), 4 * Zoom - 2);
+        Z = Mathf.Clamp(Z + z, -(4 * Zoom + 20), 4 * Zoom + 10);
 
         transform.position = new Vector3(X, 10, Z) + (Zoom * zoomInOutSpeed * transform.forward);
         floorPos = transform.position.y - floorIns;

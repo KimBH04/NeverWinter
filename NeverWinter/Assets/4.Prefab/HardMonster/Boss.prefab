@@ -532,7 +532,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: cb29822606f32ab4aac93f9415d52424, type: 3}
       propertyPath: m_Name
-      value: Boss (1) 1
+      value: Boss
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: cb29822606f32ab4aac93f9415d52424, type: 3}
       propertyPath: m_Layer

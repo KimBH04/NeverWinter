@@ -45,8 +45,9 @@ public class AudioManager : MonoBehaviour
         // Boss, 보스는 아직 사운드가 없음
         Bear,
         Werewolf,
-        Lizardman
-       
+        Lizardman,
+        DragonBone_Skill,
+        DragonBone_Dead
     };
 
     void Awake()

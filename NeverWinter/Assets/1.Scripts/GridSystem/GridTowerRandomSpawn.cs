@@ -1,4 +1,4 @@
-    using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,6 +10,7 @@ public class GridTowerRandomSpawn : MonoBehaviour
     // [SerializeField] private GameObject maxTowerMessage;    
     [SerializeField] private Transform[] towers;                    
     public static List<GridField> grids = new List<GridField>();
+    public static int gridsMaxCount;
     public int LevelCost = 100;
 
     private int towersCount;    
@@ -26,7 +27,9 @@ public class GridTowerRandomSpawn : MonoBehaviour
     {
         LevelCost = 100;
         GetComponentsInChildren(grids);
+
         towersCount = towers.Length;
+        gridsMaxCount = grids.Count;
     }
 
     private void Update()

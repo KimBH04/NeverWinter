@@ -23,7 +23,7 @@ public class EnemySpawnPoint : MonoBehaviour
 
     public void WaveStart()
     {
-        if (Cost.Coin >= 450)
+        if (GridTowerRandomSpawn.grids.Count == GridTowerRandomSpawn.gridsMaxCount)
         {
             AudioManager.instance.PlaySfx(AudioManager.Sfx.Ck);
             TextObj.SetActive(true);
