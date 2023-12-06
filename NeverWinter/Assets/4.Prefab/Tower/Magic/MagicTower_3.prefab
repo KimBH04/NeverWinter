@@ -320,7 +320,8 @@ MonoBehaviour:
   shootDelay: 2
   distance: 6.5
   spin: 100
-  AD: 88
+  AD: 120
+  Reset: 0
   stun1: 0
   animationInterval: 3
   StunImage: {fileID: 7925332258870586633}

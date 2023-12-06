@@ -334,7 +334,7 @@ MonoBehaviour:
   shootDelay: 1
   distance: 6.5
   spin: 150
-  AD: 45
+  AD: 80
   Reset: 0
   stun1: 0
   animationInterval: 3

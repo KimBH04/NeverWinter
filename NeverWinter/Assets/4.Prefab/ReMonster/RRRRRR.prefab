@@ -861,6 +861,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyName: 
+  container: {fileID: 0}
   render: {fileID: 6218081764023153234}
   structure: 0
   movePoints: []
@@ -869,9 +870,14 @@ MonoBehaviour:
   atk: 4
   Enemy_move_Speed: 2.8
   Enemy_Spell: 
-  Reward: 50
+  Reward: 120
   isEnemyDie: 0
   isEnd: 0
+  animationInterval: 15
+  distance: 7
+  skillcool: 1
+  unitPrefab: {fileID: 0}
+  Skilleffect: {fileID: 0}
   animator: {fileID: 0}
 --- !u!95 &3595732863790840199
 Animator:

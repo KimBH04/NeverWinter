@@ -869,6 +869,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyName: ArcherGoblin
+  container: {fileID: 0}
   render: {fileID: 228887045443375706}
   structure: 0
   movePoints: []
@@ -877,9 +878,14 @@ MonoBehaviour:
   atk: 4
   Enemy_move_Speed: 3.2
   Enemy_Spell: 
-  Reward: 40
+  Reward: 100
   isEnemyDie: 0
   isEnd: 0
+  animationInterval: 15
+  distance: 7
+  skillcool: 1
+  unitPrefab: {fileID: 0}
+  Skilleffect: {fileID: 0}
   animator: {fileID: 0}
 --- !u!95 &1369652838574185066
 Animator:

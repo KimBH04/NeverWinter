@@ -388,15 +388,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4cd586801879e6941bfede4a465162b0, type: 3}
       propertyPath: m_LocalScale.x
-      value: 20
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4cd586801879e6941bfede4a465162b0, type: 3}
       propertyPath: m_LocalScale.y
-      value: 20
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4cd586801879e6941bfede4a465162b0, type: 3}
       propertyPath: m_LocalScale.z
-      value: 20
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4cd586801879e6941bfede4a465162b0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -688,18 +688,19 @@ MonoBehaviour:
   render: {fileID: 4073022126670947842}
   structure: 0
   movePoints: []
-  Enemy_HP: 20
-  Max_Hp: 20
+  Enemy_HP: 200
+  Max_Hp: 200
   atk: 1
   Enemy_move_Speed: 3.5
   Enemy_Spell: 
-  Reward: 0
+  Reward: 20
   isEnemyDie: 0
   isEnd: 0
   animationInterval: 15
   distance: 7
   skillcool: 1
   unitPrefab: {fileID: 0}
+  Skilleffect: {fileID: 0}
   animator: {fileID: 0}
 --- !u!95 &2298672672029493876
 Animator:
@@ -711,7 +712,7 @@ Animator:
   m_GameObject: {fileID: 3075729921610331372}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a908ce6af9d863347b86d2abb453d2c5, type: 2}
+  m_Controller: {fileID: 9100000, guid: 6822558a136a93647b5cfe037f611a90, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

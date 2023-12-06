@@ -22,7 +22,7 @@ public class Cost : MonoBehaviour
 
     private void Awake()
     {
-        Coin = 1000;
+        Coin = 2000;
         // if (instance != null && instance != this)
         // {
         //     Destroy(this.gameObject);

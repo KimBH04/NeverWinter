@@ -38,7 +38,7 @@ public class EnemyCtrl : MonoBehaviour
     public bool isEnd = false;
     private Coroutine damageCoroutine = null;
     //보스 스킬
-    public float animationInterval = 15f;
+    public float animationInterval = 30f;
     private float timer = 0f;
     public float distance = 7.0f;
     public bool skillcool = true;
@@ -102,7 +102,7 @@ public class EnemyCtrl : MonoBehaviour
 
         skillcool = true;
         Vector3 spawnPosition = new Vector3(-24.10f, 0.16f, 0f);
-        for (int i =0; i<3; i++)
+        for (int i =0; i<16; i++)
         {
             GameObject newUnit = Instantiate(unitPrefab, spawnPosition, Quaternion.identity);
             newUnit.GetComponent<EnemyCtrl>().container = Babyway;

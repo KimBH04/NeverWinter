@@ -388,15 +388,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 01613e401dfd7a643b4dc01d1231cb75, type: 3}
       propertyPath: m_LocalScale.x
-      value: 20
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 01613e401dfd7a643b4dc01d1231cb75, type: 3}
       propertyPath: m_LocalScale.y
-      value: 20
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 01613e401dfd7a643b4dc01d1231cb75, type: 3}
       propertyPath: m_LocalScale.z
-      value: 20
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 01613e401dfd7a643b4dc01d1231cb75, type: 3}
       propertyPath: m_LocalPosition.x
@@ -437,6 +437,10 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 01613e401dfd7a643b4dc01d1231cb75, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 01613e401dfd7a643b4dc01d1231cb75, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -7657966619581158213, guid: 01613e401dfd7a643b4dc01d1231cb75, type: 3}
       propertyPath: m_Layer
@@ -632,9 +636,14 @@ MonoBehaviour:
   atk: 3
   Enemy_move_Speed: 2.5
   Enemy_Spell: 
-  Reward: 0
+  Reward: 90
   isEnemyDie: 0
   isEnd: 0
+  animationInterval: 15
+  distance: 7
+  skillcool: 1
+  unitPrefab: {fileID: 0}
+  Skilleffect: {fileID: 0}
   animator: {fileID: 0}
 --- !u!136 &2049605878949058660
 CapsuleCollider:

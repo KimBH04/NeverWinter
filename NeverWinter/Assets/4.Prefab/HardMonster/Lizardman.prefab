@@ -374,6 +374,80 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1001 &6570504979482200724
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 7992142606278294152}
+    m_Modifications:
+    - target: {fileID: 7045654313460719000, guid: 6928a3a0a15559d4d923b50674233cc6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7045654313460719000, guid: 6928a3a0a15559d4d923b50674233cc6, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7045654313460719000, guid: 6928a3a0a15559d4d923b50674233cc6, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7045654313460719000, guid: 6928a3a0a15559d4d923b50674233cc6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.003378088
+      objectReference: {fileID: 0}
+    - target: {fileID: 7045654313460719000, guid: 6928a3a0a15559d4d923b50674233cc6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.008849492
+      objectReference: {fileID: 0}
+    - target: {fileID: 7045654313460719000, guid: 6928a3a0a15559d4d923b50674233cc6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.003193481
+      objectReference: {fileID: 0}
+    - target: {fileID: 7045654313460719000, guid: 6928a3a0a15559d4d923b50674233cc6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.48829743
+      objectReference: {fileID: 0}
+    - target: {fileID: 7045654313460719000, guid: 6928a3a0a15559d4d923b50674233cc6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.5256302
+      objectReference: {fileID: 0}
+    - target: {fileID: 7045654313460719000, guid: 6928a3a0a15559d4d923b50674233cc6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.41466546
+      objectReference: {fileID: 0}
+    - target: {fileID: 7045654313460719000, guid: 6928a3a0a15559d4d923b50674233cc6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.5597599
+      objectReference: {fileID: 0}
+    - target: {fileID: 7045654313460719000, guid: 6928a3a0a15559d4d923b50674233cc6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 6.239
+      objectReference: {fileID: 0}
+    - target: {fileID: 7045654313460719000, guid: 6928a3a0a15559d4d923b50674233cc6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -100.452
+      objectReference: {fileID: 0}
+    - target: {fileID: 7045654313460719000, guid: 6928a3a0a15559d4d923b50674233cc6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -91.149
+      objectReference: {fileID: 0}
+    - target: {fileID: 7677759852897503010, guid: 6928a3a0a15559d4d923b50674233cc6, type: 3}
+      propertyPath: m_Name
+      value: Lizadman_weapon
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6928a3a0a15559d4d923b50674233cc6, type: 3}
+--- !u!4 &4244693446532437772 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7045654313460719000, guid: 6928a3a0a15559d4d923b50674233cc6, type: 3}
+  m_PrefabInstance: {fileID: 6570504979482200724}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8600863262853072192
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -388,15 +462,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a197454e1e7b89942ac87f11e02807b6, type: 3}
       propertyPath: m_LocalScale.x
-      value: 20
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a197454e1e7b89942ac87f11e02807b6, type: 3}
       propertyPath: m_LocalScale.y
-      value: 20
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a197454e1e7b89942ac87f11e02807b6, type: 3}
       propertyPath: m_LocalScale.z
-      value: 20
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a197454e1e7b89942ac87f11e02807b6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -437,6 +511,10 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: a197454e1e7b89942ac87f11e02807b6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a197454e1e7b89942ac87f11e02807b6, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -7657966619581158213, guid: a197454e1e7b89942ac87f11e02807b6, type: 3}
       propertyPath: m_Layer
@@ -567,6 +645,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: a197454e1e7b89942ac87f11e02807b6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8872057895934140230}
+    - targetCorrespondingSourceObject: {fileID: 1852576806548013000, guid: a197454e1e7b89942ac87f11e02807b6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4244693446532437772}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a197454e1e7b89942ac87f11e02807b6, type: 3}
       insertIndex: -1
@@ -581,6 +662,11 @@ PrefabInstance:
 --- !u!137 &3198901510721717096 stripped
 SkinnedMeshRenderer:
   m_CorrespondingSourceObject: {fileID: -2650192008914155992, guid: a197454e1e7b89942ac87f11e02807b6, type: 3}
+  m_PrefabInstance: {fileID: 8600863262853072192}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7992142606278294152 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1852576806548013000, guid: a197454e1e7b89942ac87f11e02807b6, type: 3}
   m_PrefabInstance: {fileID: 8600863262853072192}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &8130931282569716395 stripped
@@ -654,12 +740,17 @@ MonoBehaviour:
   render: {fileID: 3198901510721717096}
   structure: 0
   movePoints: []
-  Enemy_HP: 200
-  Max_Hp: 200
+  Enemy_HP: 700
+  Max_Hp: 700
   atk: 4
   Enemy_move_Speed: 2.7
   Enemy_Spell: 
-  Reward: 0
+  Reward: 120
   isEnemyDie: 0
   isEnd: 0
+  animationInterval: 15
+  distance: 7
+  skillcool: 1
+  unitPrefab: {fileID: 0}
+  Skilleffect: {fileID: 0}
   animator: {fileID: 0}

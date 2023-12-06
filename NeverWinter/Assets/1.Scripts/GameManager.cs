@@ -192,8 +192,6 @@ public class GameManager : MonoBehaviour
 
     public void GameVictory()
     {
-
-        
         if (!gameWon)
         {
             AudioManager.instance.PlaySfx(AudioManager.Sfx.Won);

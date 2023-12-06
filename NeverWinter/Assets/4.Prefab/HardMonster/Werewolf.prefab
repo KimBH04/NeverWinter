@@ -388,15 +388,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 162bc0f8c09fee24282a6d8f1d1db55f, type: 3}
       propertyPath: m_LocalScale.x
-      value: 20
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 162bc0f8c09fee24282a6d8f1d1db55f, type: 3}
       propertyPath: m_LocalScale.y
-      value: 20
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 162bc0f8c09fee24282a6d8f1d1db55f, type: 3}
       propertyPath: m_LocalScale.z
-      value: 20
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 162bc0f8c09fee24282a6d8f1d1db55f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -804,14 +804,19 @@ MonoBehaviour:
   render: {fileID: 6669065150191216734}
   structure: 0
   movePoints: []
-  Enemy_HP: 60
-  Max_Hp: 60
+  Enemy_HP: 900
+  Max_Hp: 900
   atk: 4
   Enemy_move_Speed: 3.2
   Enemy_Spell: 
-  Reward: 0
+  Reward: 140
   isEnemyDie: 0
   isEnd: 0
+  animationInterval: 15
+  distance: 7
+  skillcool: 1
+  unitPrefab: {fileID: 0}
+  Skilleffect: {fileID: 0}
   animator: {fileID: 0}
 --- !u!4 &4308715420562981481 stripped
 Transform:

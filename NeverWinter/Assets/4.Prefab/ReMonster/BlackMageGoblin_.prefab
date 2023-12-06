@@ -766,6 +766,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyName: MagicGoblin
+  container: {fileID: 0}
   render: {fileID: 2891736802336664492}
   structure: 0
   movePoints: []
@@ -774,9 +775,14 @@ MonoBehaviour:
   atk: 6
   Enemy_move_Speed: 3.3
   Enemy_Spell: 
-  Reward: 60
+  Reward: 140
   isEnemyDie: 0
   isEnd: 0
+  animationInterval: 15
+  distance: 7
+  skillcool: 1
+  unitPrefab: {fileID: 0}
+  Skilleffect: {fileID: 0}
   animator: {fileID: 0}
 --- !u!95 &-3643779091210806222
 Animator:

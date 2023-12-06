@@ -723,6 +723,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyName: BabyGoblin
+  container: {fileID: 0}
   render: {fileID: 3712503316621116804}
   structure: 0
   movePoints: []
@@ -731,9 +732,14 @@ MonoBehaviour:
   atk: 1
   Enemy_move_Speed: 3.5
   Enemy_Spell: 
-  Reward: 20
+  Reward: 40
   isEnemyDie: 0
   isEnd: 0
+  animationInterval: 15
+  distance: 7
+  skillcool: 1
+  unitPrefab: {fileID: 0}
+  Skilleffect: {fileID: 0}
   animator: {fileID: 0}
 --- !u!136 &5801614297963810998
 CapsuleCollider:
