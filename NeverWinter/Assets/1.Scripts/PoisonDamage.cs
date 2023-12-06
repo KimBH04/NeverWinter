@@ -32,6 +32,10 @@ public class PoisonDamage : MonoBehaviour
             float damageThisFrame = damagePerSecond * Time.deltaTime;
             EnemyCtrl enemyCtrl = other.GetComponent<EnemyCtrl>();
             enemyCtrl.Enemy_HP -= damageThisFrame;
+            if (enemyCtrl.Enemy_HP <= 0)
+            {
+                enemyCtrl.EnemyDie();
+            }
         }
     }
 

@@ -166,7 +166,7 @@ public class EnemyCtrl : MonoBehaviour
 
     // 적이 죽었을 때 쓰는 함수  # 미완성 #
     // 애니메이션 추가 예정
-    private void EnemyDie()
+    public void EnemyDie()
     {
         isEnd = true;
         isEnemyDie = true;

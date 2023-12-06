@@ -4,9 +4,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Scene : MonoBehaviour
-{ 
+{
+
+
     public void MainMove(string sceneName)
     {
+        
         AudioManager.instance.PlaySfx(AudioManager.Sfx.Ck);
         //StartCoroutine(Delay());
         LodingScene.LoadScene(sceneName);

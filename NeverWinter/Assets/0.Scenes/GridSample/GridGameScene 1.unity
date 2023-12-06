@@ -6874,21 +6874,6 @@ MonoBehaviour:
   way: {fileID: 365252379}
   enemies:
   - {fileID: 8188168246657359349, guid: 4b1a0ac16d9487c47913fe4138b9807f, type: 3}
-  - {fileID: 8188168246657359349, guid: 4b1a0ac16d9487c47913fe4138b9807f, type: 3}
-  - {fileID: 8188168246657359349, guid: 4b1a0ac16d9487c47913fe4138b9807f, type: 3}
-  - {fileID: 8188168246657359349, guid: 4b1a0ac16d9487c47913fe4138b9807f, type: 3}
-  - {fileID: 8188168246657359349, guid: 4b1a0ac16d9487c47913fe4138b9807f, type: 3}
-  - {fileID: 8188168246657359349, guid: 4b1a0ac16d9487c47913fe4138b9807f, type: 3}
-  - {fileID: 8188168246657359349, guid: 4b1a0ac16d9487c47913fe4138b9807f, type: 3}
-  - {fileID: 8188168246657359349, guid: 4b1a0ac16d9487c47913fe4138b9807f, type: 3}
-  - {fileID: 8188168246657359349, guid: 4b1a0ac16d9487c47913fe4138b9807f, type: 3}
-  - {fileID: 8188168246657359349, guid: 4b1a0ac16d9487c47913fe4138b9807f, type: 3}
-  - {fileID: 6360159871082604353, guid: df37452afa14b6645a02eb0a807fed3b, type: 3}
-  - {fileID: 6360159871082604353, guid: df37452afa14b6645a02eb0a807fed3b, type: 3}
-  - {fileID: 6360159871082604353, guid: df37452afa14b6645a02eb0a807fed3b, type: 3}
-  - {fileID: 6360159871082604353, guid: df37452afa14b6645a02eb0a807fed3b, type: 3}
-  - {fileID: 6360159871082604353, guid: df37452afa14b6645a02eb0a807fed3b, type: 3}
-  - {fileID: 6360159871082604353, guid: df37452afa14b6645a02eb0a807fed3b, type: 3}
 --- !u!1 &393035736
 GameObject:
   m_ObjectHideFlags: 0
@@ -20544,9 +20529,6 @@ MonoBehaviour:
   way: {fileID: 1464365107}
   enemies:
   - {fileID: 7240873002885431037, guid: fdbef2775cef1ea4cb7b85a9c0916051, type: 3}
-  - {fileID: 7240873002885431037, guid: fdbef2775cef1ea4cb7b85a9c0916051, type: 3}
-  - {fileID: 7240873002885431037, guid: fdbef2775cef1ea4cb7b85a9c0916051, type: 3}
-  - {fileID: 7240873002885431037, guid: fdbef2775cef1ea4cb7b85a9c0916051, type: 3}
 --- !u!1 &949804413
 GameObject:
   m_ObjectHideFlags: 0
@@ -23625,9 +23607,9 @@ MonoBehaviour:
   - {fileID: 7331116140587621504, guid: b71e0dc0f55f1284abb1a9ec9662542a, type: 3}
   - {fileID: 7012168354268822805, guid: f0c1a67c1a9b7d943810b6a17671faf0, type: 3}
   Pub1:
-  - {fileID: 9024546112853833137, guid: a5a1e39097f806641bc4b4113af75543, type: 3}
-  - {fileID: 6250254239936603731, guid: fa2177c4a47558645ac1311668e031e5, type: 3}
-  - {fileID: 8951542351368212421, guid: ac4a33d740f12e24fa037ce37a25d085, type: 3}
+  - {fileID: 9024546112853833137, guid: 23df66fe53d6f8a4b92d2579d1c2d7b5, type: 3}
+  - {fileID: 6250254239936603731, guid: db185fb5b76035c4087bde1950c27acb, type: 3}
+  - {fileID: 8951542351368212421, guid: 7f514f93913270d479bde37d26199750, type: 3}
   Summon: {fileID: 989508337}
   gameoverUI: {fileID: 499130}
   AnyBtn: {fileID: 1055556701}
