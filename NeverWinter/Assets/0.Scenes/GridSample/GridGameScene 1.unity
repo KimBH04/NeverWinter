@@ -4392,14 +4392,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1108336196}
         m_TargetAssemblyTypeName: Time_UI, Assembly-CSharp
-        m_MethodName: GameTry
-        m_Mode: 1
+        m_MethodName: GoToNewMap
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: GameScene
+          m_StringArgument: GridGameScene 1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &260866161
