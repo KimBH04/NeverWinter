@@ -45,7 +45,7 @@ public class GridTowerRandomSpawn : MonoBehaviour
     public void SpawningTowerToRandomPosition(bool Level)
     {
         AudioManager.instance.PlaySfx(AudioManager.Sfx.Sum);
-        if (Cost.Coin < LevelCost)
+        if (Cost.Coin < LevelCost&&Level==true)
         {
             TextObj.SetActive(true);
             text.text = "소지금이 부족합니다.";

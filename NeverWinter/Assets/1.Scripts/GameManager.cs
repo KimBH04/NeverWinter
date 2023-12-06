@@ -53,7 +53,7 @@ public class GameManager : MonoBehaviour
 
     public GridTowerRandomSpawn Summon;
     private GridTowerRandomSpawn Coin;
-
+    
     [SerializeField]
     private GameObject  gameoverUI, AnyBtn;
 
