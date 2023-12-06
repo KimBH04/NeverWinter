@@ -28,6 +28,11 @@ public class Pub : MonoBehaviour
 
     }
 
+    public void plisad(float plus)
+    {
+        attackBoost += plus;
+    }
+
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("TOWER"))

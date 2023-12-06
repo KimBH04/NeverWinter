@@ -61,8 +61,7 @@ public class Time_UI : MonoBehaviour
         AudioManager.instance.PlaySfx(AudioManager.Sfx.Ck);
         //Debug.Log("요시 카이쵸");
         GamePause.SetActive(false);
-        Time.timeScale = nowattach;
-        
+        Time.timeScale = nowattach;        
     }
 
     public void GameTry()

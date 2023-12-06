@@ -9,6 +9,7 @@ using TMPro;
 public class Tower2 : MonoBehaviour
 {
     public static Tower2 instance;
+    public static float PlusAD;
     public GameObject shootPoint;
     EnemyCtrl targetUnit = null;
     
@@ -16,6 +17,7 @@ public class Tower2 : MonoBehaviour
     public float distance = 7.0f;
     public float spin = 50f;
     public float AD;
+    public float Reset;
     private float Dist;
     public bool stun1 = false;
     public float animationInterval = 3.0f;
@@ -32,6 +34,7 @@ public class Tower2 : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
+        //AD = Reset;
         stun1 = false;
         StunImage.SetActive(false);
         instance = this;
@@ -100,6 +103,11 @@ public class Tower2 : MonoBehaviour
         }
 
     }
+    public void PlusAD1(float plusad)
+    {
+        //Tower2.PlusAD = plusad;
+        AD += plusad;
+    }
 
     public void Stun()
     {
@@ -109,8 +117,7 @@ public class Tower2 : MonoBehaviour
     }
 
     public void BulletShoot(EnemyCtrl a)
-    {
-        //�Ѿ��� �����Ѵ�
+    {   
         GameObject bullet = Instantiate(Bullet, shootPoint.transform.position, Quaternion.identity);
         if (bullet)
         {

@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour
     public GameObject[] Pub = new GameObject[3];
     public GridTowerRandomSpawn Summon;
     private GridTowerRandomSpawn Coin;
-
+    
     [SerializeField]
     private GameObject  gameoverUI, AnyBtn;
 
@@ -236,19 +236,18 @@ public class GameManager : MonoBehaviour
             case UpgradeItemType.Axe:
                 for(int i =0; i<3; i++)
                 {
-                    //PoisonDamage poisonDamageScript = poison[i].GetComponent<PoisonDamage>();
-                    Transform childTransform = poison[i].transform.Find("Poison1");
                     
-                    if (childTransform != null)
-                    {
-                        PoisonDamage childScript = childTransform.GetComponent<PoisonDamage>();
-                        // 자식 객체에 있는 함수 호출
-                        if (childScript != null)
-                        {
-                            childScript.damagePerSecond += 2f;
-                            Debug.Log(childScript.damagePerSecond);
-                        }
-                    }
+                    //Transform childTransform = poison[i].transform.Find("Poison1");                  
+                    //if (childTransform != null)
+                    //{
+                    //    PoisonDamage childScript = childTransform.GetComponent<PoisonDamage>();
+                    //    // 자식 객체에 있는 함수 호출
+                    //    if (childScript != null)
+                    //    {
+                    //        childScript.damagePerSecond += 2f;
+                    //        Debug.Log(childScript.damagePerSecond);
+                    //    }
+                    //}
                 }        
                 icon[cnt].gameObject.SetActive(true);
                 icon[cnt].sprite = Resources.Load<Sprite>("Sprites/증강_맹독");
@@ -257,29 +256,47 @@ public class GameManager : MonoBehaviour
                 break;
 
             case UpgradeItemType.Book:
+
+                for (int i = 0; i < 3; i++)
+                {
+                    float[] PlusADp = new float[3];
+                    PlusADp[i] = 2.2f;
+                    //PoisonDamage poisonDamageScript = poison[i].GetComponent<PoisonDamage>();
+                    Transform childTransform = Magic[i].transform.Find("Magic");
+                    if (childTransform != null)
+                    {
+                        Tower2 childScript = childTransform.GetComponent<Tower2>();
+                        if (childScript != null)
+                        {
+                            childScript.PlusAD1(PlusADp[i]);
+                        }
+                    }
+                }
+
                 icon[cnt].gameObject.SetActive(true);
                 icon[cnt].sprite = Resources.Load<Sprite>("Sprites/증강_마법");
                 cnt++;
+
+
                 break;
 
             case UpgradeItemType.Xbow:
 
                 for (int i = 0; i < 3; i++)
-                {
+                {                    
+                    float PlusADp = 0.7f;
                     //PoisonDamage poisonDamageScript = poison[i].GetComponent<PoisonDamage>();
                     Transform childTransform = Xbow[i].transform.Find("Xbow");
-                  
                     if (childTransform != null)
                     {
                         Tower2 childScript = childTransform.GetComponent<Tower2>();
-                        // 자식 객체에 있는 함수 호출
                         if (childScript != null)
                         {
-                            childScript.shootDelay *=0.9f;
-                            Debug.Log(childScript.shootDelay);
+                            childScript.PlusAD1(PlusADp);
                         }
                     }
                 }
+
                 icon[cnt].gameObject.SetActive(true);
                 icon[cnt].sprite = Resources.Load<Sprite>("Sprites/증강_석궁");
                 cnt++;
@@ -288,17 +305,16 @@ public class GameManager : MonoBehaviour
             case UpgradeItemType.Pub:
                 for (int i = 0; i < 3; i++)
                 {
-                    //PoisonDamage poisonDamageScript = poison[i].GetComponent<PoisonDamage>();
+                    float[] PlusADp = new float[3];
+                    PlusADp[i] = 0.1f;
                     Transform childTransform = Pub[i].transform.Find("intersection");
-       
                     if (childTransform != null)
                     {
                         Pub childScript = childTransform.GetComponent<Pub>();
                         // 자식 객체에 있는 함수 호출
                         if (childScript != null)
-                        {
-                            childScript.attackBoost += 0.2f;
-                            Debug.Log(childScript.attackBoost);
+                        {                      
+                            childScript.plisad(PlusADp[i]);           
                         }
                     }
                 }
@@ -316,19 +332,19 @@ public class GameManager : MonoBehaviour
             case UpgradeItemType.Knight:
                 for (int i = 0; i < 3; i++)
                 {
+                     float []PlusADp =new float[3];                    
+                    PlusADp[i] = 1.5f;
                     //PoisonDamage poisonDamageScript = poison[i].GetComponent<PoisonDamage>();
-                    Transform childTransform = Cannon[i].transform.Find("Cannon");
-                    
+                    Transform childTransform = Cannon[i].transform.Find("Cannon");                                     
                     if (childTransform != null)
                     {
                         Tower2 childScript = childTransform.GetComponent<Tower2>();
-                        // 자식 객체에 있는 함수 호출
                         if (childScript != null)
                         {
-                            childScript.AD += 2.5f;
-                            Debug.Log(childScript.AD);
+                            childScript.PlusAD1(PlusADp[i]);
                         }
                     }
+                    
                 }
                 icon[cnt].gameObject.SetActive(true);
                 icon[cnt].sprite = Resources.Load<Sprite>("Sprites/증강_대포");
@@ -345,27 +361,7 @@ public class GameManager : MonoBehaviour
                 break;
 
             case UpgradeItemType.Clover:
-                for (int i = 0; i < 3; i++)
-                {
-                    //PoisonDamage poisonDamageScript = poison[i].GetComponent<PoisonDamage>();
-                    Transform childTransform = Magic[i].transform.Find("Magic");
-                    
-                    if (childTransform != null)
-                    {
-                        Tower2 childScript = childTransform.GetComponent<Tower2>();
-                        // 자식 객체에 있는 함수 호출
-                        if (childScript != null)
-                        {
-                            childScript.AD += 3.5f;
-                            Debug.Log(childScript.AD);
-                        }
-                    }
-                }
-                icon[cnt].gameObject.SetActive(true);
-                icon[cnt].sprite = Resources.Load<Sprite>("Sprites/증강_클로버");
-                cnt++;
-                //Vector3 a = new Vector3(0.05f, 0.2f, -1.75f);
-                //Instantiate(tower, a, Quaternion.identity);
+                
 
                 break;
 

@@ -21393,9 +21393,8 @@ MonoBehaviour:
   - {fileID: 4385659407143421232, guid: c6cd10ba6c2f2f946becf9c763af09fe, type: 3}
   - {fileID: 8800975873090639509, guid: 8d9283b1fa8422e4c8a58a2257e87983, type: 3}
   - {fileID: 24786547957593452, guid: 38e1008609b6e3e428bfdc85523cc23f, type: 3}
-  - {fileID: 7310993955127755527, guid: 1e696ea12134cf04499f9ab198a053b6, type: 3}
   - {fileID: 8536133618558873355, guid: a5a1e39097f806641bc4b4113af75543, type: 3}
-  LevelCost: 100
+  LevelCost: 57
 --- !u!4 &989508338
 Transform:
   m_ObjectHideFlags: 0
@@ -28917,7 +28916,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thisButton: {fileID: 1464812136}
   manager: {fileID: 1108336194}
-  upradeItemType: 6
+  upradeItemType: 11
   icon: {fileID: 1464812138}
   title: {fileID: 97038235}
 --- !u!114 &1464812138
@@ -30817,7 +30816,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thisButton: {fileID: 1597209466}
   manager: {fileID: 1108336194}
-  upradeItemType: 6
+  upradeItemType: 11
   icon: {fileID: 1597209468}
   title: {fileID: 984255105}
 --- !u!114 &1597209468
@@ -37820,7 +37819,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thisButton: {fileID: 2113177452}
   manager: {fileID: 1108336194}
-  upradeItemType: 6
+  upradeItemType: 11
   icon: {fileID: 2113177454}
   title: {fileID: 962122628}
 --- !u!114 &2113177454
