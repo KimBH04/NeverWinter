@@ -317,10 +317,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootPoint: {fileID: 6096927252070223462}
-  shootDelay: 2
+  shootDelay: 1.6
   distance: 6.5
   spin: 100
-  AD: 120
+  AD: 200
   Reset: 0
   stun1: 0
   animationInterval: 3

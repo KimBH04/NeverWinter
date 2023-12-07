@@ -688,12 +688,12 @@ MonoBehaviour:
   render: {fileID: 4073022126670947842}
   structure: 0
   movePoints: []
-  Enemy_HP: 50
-  Max_Hp: 50
+  Enemy_HP: 300
+  Max_Hp: 300
   atk: 1
-  Enemy_move_Speed: 3.5
+  Enemy_move_Speed: 3.2
   Enemy_Spell: 
-  Reward: 20
+  Reward: 0
   isEnemyDie: 0
   isEnd: 0
   animationInterval: 15

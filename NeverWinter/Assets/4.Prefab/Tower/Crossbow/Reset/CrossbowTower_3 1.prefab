@@ -185,7 +185,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9c51203ab8aa35449b9873727dde73a8, type: 3}
       propertyPath: m_Name
-      value: CrossbowTower_3
+      value: CrossbowTower_3 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9c51203ab8aa35449b9873727dde73a8, type: 3}
       propertyPath: m_Layer
@@ -246,7 +246,8 @@ MonoBehaviour:
   shootDelay: 0.5
   distance: 6.5
   spin: 50
-  AD: 36
+  AD: 50
+  Reset: 0
   stun1: 0
   animationInterval: 3
   StunImage: {fileID: 6784940141953627370}

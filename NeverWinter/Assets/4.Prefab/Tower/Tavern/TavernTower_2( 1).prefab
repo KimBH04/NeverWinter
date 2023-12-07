@@ -99,7 +99,6 @@ MonoBehaviour:
   <ID>k__BackingField: 11
   highRankTower: {fileID: 8951542351368212421, guid: ac4a33d740f12e24fa037ce37a25d085, type: 3}
   tower: {fileID: 0}
-  visualBox: {fileID: 0}
   field: {fileID: 0}
 --- !u!1001 &216938328202505599
 PrefabInstance:
@@ -194,7 +193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Rank: 0
-  attackBoost: 1
+  attackBoost: 4
 --- !u!65 &838931887033438523
 BoxCollider:
   m_ObjectHideFlags: 0

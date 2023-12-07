@@ -347,7 +347,7 @@ public class GameManager : MonoBehaviour
                 for (int i = 0; i < 3; i++)
                 {
                     float[] PlusADp = new float[3];
-                    PlusADp[i] = 0.1f;
+                    PlusADp[i] = 0.5f;
                     Transform childTransform = Pub[i].transform.Find("intersection");
                     if (childTransform != null)
                     {

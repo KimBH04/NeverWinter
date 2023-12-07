@@ -38,7 +38,7 @@ public class EnemyCtrl : MonoBehaviour
     public bool isEnd = false;
     private Coroutine damageCoroutine = null;
     //보스 스킬
-    public float animationInterval = 10f;
+    public float animationInterval = 90f;
     private float timer = 0f;
     public float distance = 7.0f;
     public bool skillcool = true;

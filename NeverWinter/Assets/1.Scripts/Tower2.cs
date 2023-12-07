@@ -20,7 +20,7 @@ public class Tower2 : MonoBehaviour
     public float Reset;
     private float Dist;
     public bool stun1 = false;
-    public float animationInterval = 3.0f;
+    public float animationInterval = 4.0f;
     private float timer = 0f;
 
     public GameObject StunImage;

@@ -268,7 +268,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a6f8e31587ffa6b47baf926ca41e7116, type: 3}
       propertyPath: m_Name
-      value: MagicTower_3
+      value: MagicTower_3 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a6f8e31587ffa6b47baf926ca41e7116, type: 3}
       propertyPath: m_Layer
@@ -317,10 +317,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootPoint: {fileID: 6096927252070223462}
-  shootDelay: 2
+  shootDelay: 1.6
   distance: 6.5
   spin: 100
-  AD: 88
+  AD: 200
+  Reset: 0
   stun1: 0
   animationInterval: 3
   StunImage: {fileID: 7925332258870586633}

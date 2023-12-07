@@ -732,7 +732,7 @@ MonoBehaviour:
   atk: 1
   Enemy_move_Speed: 3.5
   Enemy_Spell: 
-  Reward: 40
+  Reward: 10
   isEnemyDie: 0
   isEnd: 0
   animationInterval: 15
