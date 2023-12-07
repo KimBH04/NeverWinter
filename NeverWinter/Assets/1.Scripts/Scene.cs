@@ -5,8 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class Scene : MonoBehaviour
 {
-
-
     public void MainMove(string sceneName)
     {
         
@@ -38,6 +36,13 @@ public class Scene : MonoBehaviour
         AudioManager.instance.PlaySfx(AudioManager.Sfx.Ck);
         SceneManager.LoadScene("GameScene");
         Time.timeScale = 1f;
+    }
+
+    public void ArtBook(string sceneName)
+    {
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Ck);
+        //StartCoroutine(Delay());
+        LodingScene.LoadScene(sceneName);
     }
 
     public void Quit()
