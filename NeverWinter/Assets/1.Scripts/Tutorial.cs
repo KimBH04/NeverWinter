@@ -241,7 +241,7 @@ public class Tutorial : MonoBehaviour
             delegate
             {
                 tutorialTxt.gameObject.SetActive(true);
-                tutorialTxt.text = "준비를 마치면 웨이브 버튼을 눌러 전투를 시작하세요\n! 웨이브가 시작되면 타워를 소환/이동할 수 없습니다 !";
+                tutorialTxt.text = "준비를 마치면 웨이브 버튼을 눌러 전투를 시작하세요!\n 웨이브가 시작되면 타워를 소환/이동할 수 없습니다!";
                 buttons[1].onClick.AddListener(() => backgroundPanel.SetActive(false));
                 buttons[1].onClick.AddListener(() => tutorialTxt.gameObject.SetActive(false));
 
