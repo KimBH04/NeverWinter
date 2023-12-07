@@ -42,7 +42,6 @@ public class AudioManager : MonoBehaviour
         BugBear,
         BabyDragonborn,
         BabyLizardman,
-        // Boss, 보스는 아직 사운드가 없음
         Bear,
         Werewolf,
         Lizardman,
