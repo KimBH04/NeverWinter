@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8368013985910836804
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9025739989732865797}
+  - component: {fileID: 4472045009268459990}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9025739989732865797
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8368013985910836804}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4472045009268459990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8368013985910836804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f0493f05e5794fab89531b5341ca090, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bgmClip: {fileID: 8300000, guid: 7c2e88cbccfb74d26822186fa53f852a, type: 3}
+  bgmVolume: 0.3
+  sfxClips:
+  - {fileID: 8300000, guid: 3da1bf3e1e846084b90f743508ad7324, type: 3}
+  - {fileID: 8300000, guid: fb78fa5bedbf694419221ff27194df0f, type: 3}
+  - {fileID: 8300000, guid: 1cea8af612c924185bb014f74759fde3, type: 3}
+  - {fileID: 8300000, guid: af13f6c465b74b546aee547dd9e3b2a9, type: 3}
+  - {fileID: 8300000, guid: 728c998253f68e34e8fadd9551b1f06f, type: 3}
+  - {fileID: 8300000, guid: 50bbbba0584c6624988e6284d92618bb, type: 3}
+  - {fileID: 8300000, guid: 95efd6038c8e00c488259c142a4da474, type: 3}
+  - {fileID: 8300000, guid: 99d3e7104fc174ff0bbf20a858541589, type: 3}
+  - {fileID: 8300000, guid: 19fc22de718ab4aa7b1fa6dd9ba7d55b, type: 3}
+  - {fileID: 8300000, guid: 3089bd5a8479e40fa980f28a848e192d, type: 3}
+  - {fileID: 8300000, guid: a664bac5f603043feb9c492dfd7b65aa, type: 3}
+  - {fileID: 8300000, guid: ae0f6799fa9e44e92aea5801306aaeb9, type: 3}
+  - {fileID: 8300000, guid: 5b84ec557b7c746269ab78a4b95e9047, type: 3}
+  - {fileID: 8300000, guid: 26401b28e78d641ccb88ced32eb79ad4, type: 3}
+  - {fileID: 8300000, guid: 10409fb0a56894d3c8b7b56a413f95b2, type: 3}
+  - {fileID: 8300000, guid: 8285e66a6e5c341d399b210c086e37ce, type: 3}
+  - {fileID: 8300000, guid: c220b097b6582467d82181df6cb9e79b, type: 3}
+  - {fileID: 8300000, guid: 0efbd2f0779fc4150a3b2612565d260f, type: 3}
+  - {fileID: 8300000, guid: 7cceeee2cb4ba49599b58a8902b183b6, type: 3}
+  sfxVolume: 0.3
+  channels: 10

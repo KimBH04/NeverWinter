@@ -26,6 +26,7 @@ public class VisualizePosition : MonoBehaviour
         }
         else
         {
+            
             visualCube.transform.position = new Vector3(5, -0.3f);
             visualCube.SetActive(false);
         }

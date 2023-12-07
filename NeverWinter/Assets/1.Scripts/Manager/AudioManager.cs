@@ -45,7 +45,8 @@ public class AudioManager : MonoBehaviour
         Werewolf,
         Lizardman,
         DragonBone_Skill,
-        DragonBone_Dead
+        DragonBone_Dead,
+        TowerMerge
     };
 
     void Awake()

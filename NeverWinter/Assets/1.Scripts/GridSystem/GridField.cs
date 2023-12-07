@@ -52,6 +52,7 @@ public class GridField : MonoBehaviour
         }
         else if (havingTower != tower && havingTower.HighRankTower != null && tower.ID == havingTower.ID)
         {
+            AudioManager.instance.PlaySfx(AudioManager.Sfx.TowerMerge);
             GameObject high = Instantiate(havingTower.HighRankTower, transform.position, Quaternion.identity);
 
             Destroy(parent.gameObject);
