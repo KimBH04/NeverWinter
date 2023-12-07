@@ -17,10 +17,10 @@ public class EnemySpawnPoint : MonoBehaviour
     private int containerIndex = 0;
     
     
-    private static int isFinishedCoroutine = 2;
+    public static int isFinishedCoroutine = 2;
 
 
-
+   
     public void WaveStart()
     {
         if (GridTowerRandomSpawn.grids.Count == GridTowerRandomSpawn.gridsMaxCount)

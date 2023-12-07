@@ -79,6 +79,7 @@ public class GameManager : MonoBehaviour
         //    destroy(gameobject);
         //}
         //dontdestroyonload(gameobject);
+        EnemySpawnPoint.isFinishedCoroutine= 2;
     }
 
     void Start()
