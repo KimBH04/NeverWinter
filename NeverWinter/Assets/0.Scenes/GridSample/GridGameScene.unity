@@ -13901,7 +13901,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &666351971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16632,7 +16632,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1381607226}
         m_TargetAssemblyTypeName: GridTowerRandomSpawn, Assembly-CSharp
         m_MethodName: SpawningTowerToRandomPosition
-        m_Mode: 1
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -19955,14 +19955,7 @@ MonoBehaviour:
   Castle_HpText: {fileID: 1303363939}
   waveFlag: {fileID: 874606338}
   count: 0
-  wave:
-  - {fileID: 1200758136}
-  - {fileID: 742142205}
-  - {fileID: 656620879}
-  - {fileID: 102783714}
-  - {fileID: 308628451}
-  - {fileID: 1956723183}
-  wave2: []
+  enemyCount: 2147483647
   image:
   - {fileID: 21300000, guid: 5ec8d7ad0326b8d4b8825fe09c9f5c9f, type: 3}
   - {fileID: 21300000, guid: e1aa42c05d38ec140aff27b990644a7b, type: 3}

@@ -11,7 +11,7 @@ public class Cost : MonoBehaviour
    // public static Cost instance;
     
     public GameObject[] Towers;
-    
+
     public static int Coin;
     public int GetCoin;
     public TextMeshProUGUI CoinText;
@@ -22,7 +22,7 @@ public class Cost : MonoBehaviour
 
     private void Awake()
     {
-        Coin = 2000;
+        Coin = 1500;
         // if (instance != null && instance != this)
         // {
         //     Destroy(this.gameObject);
