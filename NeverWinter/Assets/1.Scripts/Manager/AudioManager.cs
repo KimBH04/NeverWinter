@@ -40,7 +40,6 @@ public class AudioManager : MonoBehaviour
         VikingGoblin,
         MagicGoblin,
         BugBear,
-        BabyDragonborn,
         BabyLizardman,
         Bear,
         Werewolf,

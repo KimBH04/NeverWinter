@@ -199,7 +199,7 @@ public class EnemyCtrl : MonoBehaviour
                 AudioManager.instance.PlaySfx(AudioManager.Sfx.VikingGoblin);
                 break;
             case "BabyDragonborn":
-                AudioManager.instance.PlaySfx(AudioManager.Sfx.BabyDragonborn);
+                // 무음
                 break;
             case "BabyLizardman":
                 AudioManager.instance.PlaySfx(AudioManager.Sfx.BabyLizardman);
