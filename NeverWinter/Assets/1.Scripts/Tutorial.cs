@@ -85,7 +85,7 @@ public class Tutorial : MonoBehaviour
             {
                 tutorialPanel.SetActive(true);
                 tutorialTxt.gameObject.SetActive(true);
-                tutorialTxt.text = "마우스 휠를 눌러 카메라를 움직여보세요";
+                tutorialTxt.text = "마우스 휠을 눌러 카메라를 움직여보세요";
                 counter = 0f;
             },
         new TutorialNext(
