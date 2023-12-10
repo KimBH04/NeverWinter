@@ -8,6 +8,7 @@ public class CameraCtrl : MonoBehaviour
     public float zoomInOutSpeed;
     private float X, Z, Zoom;
 
+    [SerializeField] private float cameraMinView;
     [SerializeField] private float cameraMaxView;
     
     private float w = Screen.width / 25f;
@@ -70,7 +71,7 @@ public class CameraCtrl : MonoBehaviour
         Zoom = Mathf.Clamp(Zoom + zoom, -1, 0.5f);
 
         X = Mathf.Clamp(X + x, -(10 * Zoom + 10), 10 * Zoom + 10);
-        Z = Mathf.Clamp(Z + z, -(4 * Zoom + 20), 4 * Zoom + 10);
+        Z = Mathf.Clamp(Z + z, -(4 * Zoom + 10) + cameraMinView, 4 * Zoom - 2 + cameraMaxView);
 
         transform.position = new Vector3(X, 10, Z) + (Zoom * zoomInOutSpeed * transform.forward);
         floorPos = transform.position.y - floorIns;

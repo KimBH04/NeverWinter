@@ -4257,7 +4257,8 @@ MonoBehaviour:
   floorIns: 0.5
   speed: 1.2
   zoomInOutSpeed: 10
-  cameraMaxView: 0
+  cameraMinView: -8
+  cameraMaxView: 8
 --- !u!81 &264373432
 AudioListener:
   m_ObjectHideFlags: 0
