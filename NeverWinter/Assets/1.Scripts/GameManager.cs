@@ -32,8 +32,9 @@ public class GameManager : MonoBehaviour
     //public WaveContainer[] WaveContainer;
     public Button Wavebutton;
     public Button Sumonbutton;
-    
-    public int wavecount = 0;
+
+    public int waveMaxCount = 6;
+    public int waveCount = 0;
 
     public GameObject[] RandomTower = new GameObject[4];
     public Image[] icon = new Image[5];
@@ -87,37 +88,37 @@ public class GameManager : MonoBehaviour
         for (int i = 0; i < 3; i++)
         {
             Transform childTransform_1 = Magic[i].transform.Find("Magic");
-            Transform childTransform_10 = Magic1[i].transform.Find("Magic");
+            //Transform childTransform_10 = Magic1[i].transform.Find("Magic");
 
             Transform childTransform_2 = Cannon[i].transform.Find("Cannon");
-            Transform childTransform_20 = Cannon1[i].transform.Find("Cannon");
+            //Transform childTransform_20 = Cannon1[i].transform.Find("Cannon");
 
             Transform childTransform_3 = Xbow[i].transform.Find("Xbow");
-            Transform childTransform_30 = Xbow1[i].transform.Find("Xbow");
+            //Transform childTransform_30 = Xbow1[i].transform.Find("Xbow");
 
             Transform childTransform_4 = Pub[i].transform.Find("intersection");
-            Transform childTransform_40 = Pub1[i].transform.Find("intersection");
+            //Transform childTransform_40 = Pub1[i].transform.Find("intersection");
 
             Tower2 childScript_1 = childTransform_1.GetComponent<Tower2>();
-            Tower2 childScript_10 = childTransform_10.GetComponent<Tower2>();
-            childScript_10.AD = childScript_1.AD;
+            //Tower2 childScript_10 = childTransform_10.GetComponent<Tower2>();
+            //childScript_10.AD = childScript_1.AD;
 
 
             Tower2 childScript_2 = childTransform_2.GetComponent<Tower2>();
-            Tower2 childScript_20 = childTransform_20.GetComponent<Tower2>();
+            //Tower2 childScript_20 = childTransform_20.GetComponent<Tower2>();
 
-            childScript_2.AD = childScript_20.AD;
+            //childScript_2.AD = childScript_20.AD;
 
 
             Tower2 childScript_3 = childTransform_3.GetComponent<Tower2>();
-            Tower2 childScript_30 = childTransform_30.GetComponent<Tower2>();
+            //Tower2 childScript_30 = childTransform_30.GetComponent<Tower2>();
 
-            childScript_30.AD = childScript_3.AD;
+            //childScript_30.AD = childScript_3.AD;
 
             Pub childScript_4 = childTransform_4.GetComponent<Pub>();
-            Pub childScript_40 = childTransform_40.GetComponent<Pub>();
+            //Pub childScript_40 = childTransform_40.GetComponent<Pub>();
 
-            childScript_40.attackBoost = childScript_4.attackBoost;
+            //childScript_40.attackBoost = childScript_4.attackBoost;
 
         }
 
@@ -132,7 +133,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (wavecount < 6)
+        if (waveCount < waveMaxCount)
         {
             if (count >= enemyCount)
             {
@@ -142,12 +143,12 @@ public class GameManager : MonoBehaviour
 
                 WaveEndEvent?.Invoke();
 
-                wavecount++;
-                if (wavecount < 6)
+                waveCount++;
+                if (waveCount < waveMaxCount)
                 {
                     WAVEEvent();
                     GridTower.PlayClick = true;
-                    waveFlag.sprite = image[wavecount];
+                    waveFlag.sprite = image[waveCount];
                 }
             }
 
@@ -395,7 +396,7 @@ public class GameManager : MonoBehaviour
                 break;
 
             case UpgradeItemType.Gold:
-                Coin.LevelCost -= 10;
+                GridTowerRandomSpawn.LevelCost -= 10;
                 icon[cnt].gameObject.SetActive(true);
                 icon[cnt].sprite = Resources.Load<Sprite>("Sprites/증강_골드");
                 cnt++;

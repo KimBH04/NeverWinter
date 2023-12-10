@@ -11,7 +11,7 @@ public class GridTowerRandomSpawn : MonoBehaviour
     [SerializeField] private Transform[] towers;                    
     public static List<GridField> grids = new List<GridField>();
     public static int gridsMaxCount;
-    public int LevelCost = 100;
+    public static int LevelCost = 100;
 
     private int towersCount;    
 

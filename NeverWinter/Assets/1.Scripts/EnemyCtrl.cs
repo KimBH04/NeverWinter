@@ -312,7 +312,6 @@ public class EnemyCtrl : MonoBehaviour
         }
         else 
         {
-            Debug.Log(animator.name);
             animator.SetBool(hashAttack, true);
         }
 

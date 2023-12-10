@@ -59,11 +59,11 @@ public class Tutorial : MonoBehaviour
         */
 
         /* 설명해야 할 것
-         * 1. 카메라 이동
-         * 1.5. 카메라 줌 인/아웃
-         * 2. 타워 소환
-         * 3. 웨이브 버튼
-         * 3.5. 증강체
+         * 1. 카메라 이동v
+         * 1.5. 카메라 줌 인/아웃v
+         * 2. 타워 소환v
+         * 3. 웨이브 버튼v
+         * 3.5. 증강체v
          * 4. 타워 병합
          * 5. 마법
          * 6. 속도
@@ -276,7 +276,7 @@ public class Tutorial : MonoBehaviour
             {
                 levelUpInfomationPanel.SetActive(true);
                 tutorialTxt.gameObject.SetActive(true);
-                tutorialTxt.text = "증강체에 대한 설명...";
+                tutorialTxt.text = "웨이브가 끝나면 랜덤한 3개의 증강 중\n하나를 고를 수 있습니다";
             },
         new TutorialNext(
             next: delegate
@@ -298,8 +298,6 @@ public class Tutorial : MonoBehaviour
                 buttons[4].onClick.AddListener(() => @event = true);
                 buttons[5].onClick.AddListener(() => @event = true);
                 buttons[6].onClick.AddListener(() => @event = true);
-
-                tutorialTxt.text = "아무 능력을 선택해보세요";
             },
         new TutorialNext(
             next: delegate
@@ -311,7 +309,25 @@ public class Tutorial : MonoBehaviour
                 buttons[4].onClick.RemoveListener(() => @event = true);
                 buttons[5].onClick.RemoveListener(() => @event = true);
                 buttons[6].onClick.RemoveListener(() => @event = true);
+            })
+        ));
 
+        tutorialEvents.Add((
+            delegate
+            {
+                backgroundPanel.transform.SetAsLastSibling();
+                backgroundPanel.SetActive(true);
+                tutorialTxt.gameObject.SetActive(true);
+                tutorialTxt.text = "적용 된 증강체는 체력 바 밑에 표시됩니다.";
+            },
+        new TutorialNext(
+            next: delegate
+            {
+                return Input.GetMouseButtonDown(0);
+            },
+            end: delegate
+            {
+                backgroundPanel.SetActive(false);
                 tutorialTxt.gameObject.SetActive(false);
             })
         ));
