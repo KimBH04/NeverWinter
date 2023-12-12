@@ -2694,6 +2694,7 @@ MonoBehaviour:
   - {fileID: 651371903}
   - {fileID: 1519645350}
   - {fileID: 2001989227}
+  wayCount: 2
 --- !u!4 &150864077
 Transform:
   m_ObjectHideFlags: 0
@@ -20775,7 +20776,6 @@ MonoBehaviour:
   - {fileID: 8800975873090639509, guid: 8d9283b1fa8422e4c8a58a2257e87983, type: 3}
   - {fileID: 7310993955127755527, guid: 1e696ea12134cf04499f9ab198a053b6, type: 3}
   - {fileID: 8536133618558873355, guid: a5a1e39097f806641bc4b4113af75543, type: 3}
-  LevelCost: 100
 --- !u!4 &989508338
 Transform:
   m_ObjectHideFlags: 0
@@ -22616,7 +22616,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 42aef0846079a6649803f82db0753b91, type: 3}
   Wavebutton: {fileID: 433369649}
   Sumonbutton: {fileID: 824249403}
-  wavecount: 0
+  waveMaxCount: 6
+  waveCount: 0
   RandomTower:
   - {fileID: 0}
   - {fileID: 0}

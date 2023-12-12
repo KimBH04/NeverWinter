@@ -59,7 +59,6 @@ public class EnemyCtrl : MonoBehaviour
     {
         Babyway = GameObject.Find("Left_WayContainer").GetComponent<WayContainer>();
         animator = GetComponent<Animator>();
-        Debug.Log(animator);
         //container = GameObject.Find("WayContainer").GetComponent<WayContainer>();
         manager = GameObject.Find("GameManager").GetComponent<GameManager>();
         Enemy_HP = Max_Hp;

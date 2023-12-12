@@ -2759,6 +2759,7 @@ MonoBehaviour:
   containers:
   - {fileID: 1200758135}
   - {fileID: 742142204}
+  wayCount: 1
 --- !u!4 &217050881
 Transform:
   m_ObjectHideFlags: 0
@@ -3290,22 +3291,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6469893607990777058, guid: 3076f4b9a1f97b64fa26096044c1a080, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 18.796576
-      objectReference: {fileID: 0}
-    - target: {fileID: 6469893607990777058, guid: 3076f4b9a1f97b64fa26096044c1a080, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -14.491747
-      objectReference: {fileID: 0}
-    - target: {fileID: 6469893607990777058, guid: 3076f4b9a1f97b64fa26096044c1a080, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.35932928
-      objectReference: {fileID: 0}
-    - target: {fileID: 6469893607990777058, guid: 3076f4b9a1f97b64fa26096044c1a080, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
     - target: {fileID: 254515938975199900, guid: 474603d6dc1bba3449a822b6365ab088, type: 3}
       propertyPath: m_Name
       value: (prototype5)stage (1)
@@ -3437,6 +3422,22 @@ PrefabInstance:
     - target: {fileID: 8380805322310750029, guid: 474603d6dc1bba3449a822b6365ab088, type: 3}
       propertyPath: m_Layer
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6469893607990777058, guid: 3076f4b9a1f97b64fa26096044c1a080, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 18.796576
+      objectReference: {fileID: 0}
+    - target: {fileID: 6469893607990777058, guid: 3076f4b9a1f97b64fa26096044c1a080, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -14.491747
+      objectReference: {fileID: 0}
+    - target: {fileID: 6469893607990777058, guid: 3076f4b9a1f97b64fa26096044c1a080, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.35932928
+      objectReference: {fileID: 0}
+    - target: {fileID: 6469893607990777058, guid: 3076f4b9a1f97b64fa26096044c1a080, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15047,6 +15048,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   way: {fileID: 757687868}
   enemies:
+  - {fileID: 8188168246657359349, guid: 4b1a0ac16d9487c47913fe4138b9807f, type: 3}
+  - {fileID: 8188168246657359349, guid: 4b1a0ac16d9487c47913fe4138b9807f, type: 3}
   - {fileID: 8188168246657359349, guid: 4b1a0ac16d9487c47913fe4138b9807f, type: 3}
 --- !u!1 &743030887
 GameObject:

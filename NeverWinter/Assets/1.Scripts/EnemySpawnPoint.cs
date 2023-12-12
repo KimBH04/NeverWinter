@@ -14,8 +14,8 @@ public class EnemySpawnPoint : MonoBehaviour
 
     public Transform[] containers;
 
+    public int wayCount;
     private int containerIndex = 0;
-    
     
     public static int isFinishedCoroutine = 2;
 
@@ -38,7 +38,7 @@ public class EnemySpawnPoint : MonoBehaviour
             manager.Sumonbutton.transform.DOLocalMoveY(-675, 1f);
             manager.Wavebutton.transform.DOLocalMoveY(-675, 1f);
         }
-        if (isFinishedCoroutine >= 2)
+        if (isFinishedCoroutine >= wayCount)
         {
             isFinishedCoroutine = 0;
 

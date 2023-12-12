@@ -64,13 +64,13 @@ public class Tutorial : MonoBehaviour
          * 2. 타워 소환v
          * 3. 웨이브 버튼v
          * 3.5. 증강체v
-         * 4. 타워 병합
+         * 4. 타워 병합v
          * 5. 마법
-         * 6. 속도
+         * 6. 속도 <- 취소
          * 
-         * 순서 미정
-         * -웨이브 깃발
-         * -체력바
+         * 순서 미정 <- 취소
+         * -웨이브 깃발 <- 취소
+         * -체력바 <- 취소
          */
 
         Camera main = Camera.main;
@@ -91,7 +91,6 @@ public class Tutorial : MonoBehaviour
         new TutorialNext(
             next: delegate
             {
-                
                 return counter >= 15f;
             },
             wait: delegate
@@ -105,8 +104,7 @@ public class Tutorial : MonoBehaviour
             {
                 tutorialPanel.SetActive(false);
                 tutorialTxt.gameObject.SetActive(false);
-            },
-            time: 1f)
+            })
         ));
         #endregion
 
@@ -122,7 +120,7 @@ public class Tutorial : MonoBehaviour
         new TutorialNext(
             next: delegate
             {
-                return counter >= 2f;
+                return counter >= 1f;
             },
             wait: delegate
             {
@@ -160,7 +158,6 @@ public class Tutorial : MonoBehaviour
             },
             end: delegate
             {
-                buttons[0].onClick.RemoveListener(() => @event = true);
                 backgroundPanel.SetActive(false);
                 tutorialTxt.gameObject.SetActive(false);
             })
@@ -228,7 +225,7 @@ public class Tutorial : MonoBehaviour
             end: delegate
             {
                 point.gameObject.SetActive(false);
-                GridTower.MovedEvent -= () => @event = false;
+                GridTower.MovedEvent = null;
 
                 tutorialPanel.SetActive(false);
                 tutorialTxt.gameObject.SetActive(false);
@@ -261,9 +258,7 @@ public class Tutorial : MonoBehaviour
             },
             end: delegate
             {
-                buttons[1].onClick.RemoveListener(() => backgroundPanel.SetActive(false));
-                buttons[1].onClick.RemoveListener(() => tutorialTxt.gameObject.SetActive(false));
-                GameManager.WaveEndEvent -= () => @event = true;
+                GameManager.WaveEndEvent = null;
 
                 backgroundPanel.SetActive(false);
             })
@@ -303,12 +298,6 @@ public class Tutorial : MonoBehaviour
             next: delegate
             {
                 return @event;
-            },
-            end: delegate
-            {
-                buttons[4].onClick.RemoveListener(() => @event = true);
-                buttons[5].onClick.RemoveListener(() => @event = true);
-                buttons[6].onClick.RemoveListener(() => @event = true);
             })
         ));
 
@@ -333,6 +322,100 @@ public class Tutorial : MonoBehaviour
         ));
         #endregion
 
+        #region 타워 합치기
+        tutorialEvents.Add((
+            delegate
+            {
+                @event = false;
+                GridField.TowerMerge += () => @event = true;
+
+                tutorialPanel.SetActive(true);
+                tutorialTxt.gameObject.SetActive(true);
+                tutorialTxt.text = "타워를 드래그 해 같은 타워와 합치면\n더 강한 타워로 만들 수 있습니다";
+                counter = 0f;
+            },
+        new TutorialNext(
+            next: delegate
+            {
+                return @event;
+            },
+            end: delegate
+            {
+                tutorialPanel.SetActive(false);
+                tutorialTxt.gameObject.SetActive(false);
+
+                GridField.TowerMerge = null;
+            },
+            time: 1f)
+        ));
+        #endregion
+
+        #region 마법
+        tutorialEvents.Add((
+            delegate
+            {
+                @event = false;
+            },
+        new TutorialNext(
+            next: delegate
+            {
+                return @event;
+            })
+        ));
+
+        tutorialEvents.Add((
+            delegate
+            {
+                counter = 0f;
+            },
+        new TutorialNext(
+            next: delegate
+            {
+                return counter >= 2f;
+            },
+            wait: delegate
+            {
+                counter += Time.deltaTime;
+            })
+        ));
+
+        tutorialEvents.Add((
+            delegate
+            {
+                backgroundPanel.transform.SetAsLastSibling();
+                buttons[2].transform.SetAsLastSibling();
+                buttons[3].transform.SetAsLastSibling();
+
+                backgroundPanel.SetActive(true);
+                buttons[2].gameObject.SetActive(true);
+                buttons[3].gameObject.SetActive(true);
+
+                tutorialTxt.gameObject.SetActive(true);
+                tutorialTxt.text = "메테오와 바리케이드로\n적들의 진격을 방해할 수 있습니다";
+            },
+        new TutorialNext(
+            next: delegate
+            {
+                //다음 튜토리얼 이벤트로 넘길 조건 이벤트
+                //ex) Input.GetMouseButtonDown(0)등의 리턴 값이 bool인 것
+                //아니면 본인이 직접 만들어도 됨
+                return true;
+            },
+            wait: delegate
+            {
+                //대기 중에 발생시킬 이벤트
+                //생략 가능
+
+                //Update() 함수와 비슷함
+            },
+            end: delegate
+            {
+                //끝났을 때 이벤트
+                //생략 가능
+            })
+        ));
+        #endregion
+
         StartCoroutine(EventOccurrence());
     }
 
@@ -340,12 +423,10 @@ public class Tutorial : MonoBehaviour
     {
         foreach (var (tuto, next) in tutorialEvents)
         {
-            Debug.Log("start");
             tuto();
 
             yield return next;
             next.end?.Invoke();
-            Debug.Log("done");
             yield return new WaitForSeconds(next.time);
         }
     }

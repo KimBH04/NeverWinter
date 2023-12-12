@@ -6,7 +6,7 @@ using Unity.VisualScripting;
 
 public class GridTower : MonoBehaviour
 {
-    public delegate bool GridTowerDelegate();
+    public delegate void GridTowerDelegate();
     public static GridTowerDelegate MovedEvent;
 
     static bool isClick;
@@ -65,7 +65,7 @@ public class GridTower : MonoBehaviour
 
     protected void OnMouseUp()
     {
-        if (targetField != null && field != null&& PlayClick == true)
+        if (targetField != null && field != null && PlayClick == true)
         {
             bool t = targetField.MovingTower(this, transform.parent);
 

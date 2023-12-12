@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class GridField : MonoBehaviour
 {
+    public delegate void TowerMergeEvent();
+    public static TowerMergeEvent TowerMerge;
+
     public GridTower havingTower;       //현재 위치해 있는 타워 정보
     public Transform havingTowerParent; //현재 위치해 있는 타워 오브젝트
 
@@ -63,6 +66,7 @@ public class GridField : MonoBehaviour
 
             havingTower.field = this;
 
+            TowerMerge?.Invoke();
             return true;
         }
         else
