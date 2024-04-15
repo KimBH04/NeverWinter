@@ -1169,19 +1169,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b04a3cc236dd8d54da618a0f68f440d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: a252c007d25dbd843a20b18b0e1af01e, type: 2}
   EnemyName: VikingGoblin
+  container: {fileID: 0}
   render: {fileID: 0}
   structure: 0
   movePoints: []
   Enemy_HP: 150
-  Max_Hp: 150
-  atk: 3
-  Enemy_move_Speed: 2.7
-  Enemy_Speed_Save: 0
+  currentSpeed: 1
   Enemy_Spell: 
-  Reward: 50
   isEnemyDie: 0
   isEnd: 0
+  animationInterval: 90
+  skillcool: 1
+  unitPrefab: {fileID: 0}
+  Skilleffect: {fileID: 0}
   animator: {fileID: 0}
 --- !u!136 &5456099134319313492
 CapsuleCollider:

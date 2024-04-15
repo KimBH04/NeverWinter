@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c42fc377df2a4c48b5adf48df249e59, type: 3}
+  m_Name: New Enemy Data Extract
+  m_EditorClassIdentifier: 
+  enemyCtrls:
+  - {fileID: 4945350288106209011, guid: 20912da4d5b65e24d8349e70ea91393f, type: 3}
+  - {fileID: 2362453264007708394, guid: 7b3b365c93a05674ba3d6052fc3b43da, type: 3}
+  - {fileID: 8737704044013284350, guid: 17c74c0e8b1f8b44087650714c933ed9, type: 3}
+  - {fileID: -2137085348711868038, guid: 3f639313f4fbd604fab2ca7e49c63ec7, type: 3}
+  - {fileID: 2121720775480736991, guid: 4b1a0ac16d9487c47913fe4138b9807f, type: 3}
+  - {fileID: 283263122761196934, guid: 55395574576fef04e83e74b6090af9cf, type: 3}
+  - {fileID: 2521575659580067050, guid: 58f112b383db98f42aca0abe86eb7a72, type: 3}
+  - {fileID: 2962331597694697658, guid: 5adb33af70fd66540840c4f41a569141, type: 3}
+  - {fileID: -2807730336303942290, guid: 8bcdd84b7a9e9b5488974c3c1c4110c4, type: 3}
+  - {fileID: 3481186958672133293, guid: 93e12421922873b49ac63f4a169722a5, type: 3}
+  - {fileID: 5567777625579904783, guid: 98038e1a5aeaaf2468715e460a4f8f89, type: 3}
+  - {fileID: 4175520250704038521, guid: d77ef5ff467cecd4d8aaea5037f0d940, type: 3}
+  - {fileID: 2485934010169149080, guid: df37452afa14b6645a02eb0a807fed3b, type: 3}
+  - {fileID: -3226452761056973875, guid: fdbef2775cef1ea4cb7b85a9c0916051, type: 3}
+  - {fileID: 1878350589278094907, guid: caad9ad6e2caf4646b2be9dae3997686, type: 3}
+  - {fileID: 9171338523760762810, guid: df6c8ddb57f87bd4db7c06fef52dbabb, type: 3}
+  - {fileID: 5426123875491015420, guid: e2cadbfcdef0e95439bc630ada5a9dbc, type: 3}
+  - {fileID: 8930672922493557829, guid: 9078ee6ece6db96488c528b5c46ff819, type: 3}
+  - {fileID: 3361426826655403560, guid: 4a26836d28ec2d34ab87cf43e839987d, type: 3}
+  - {fileID: 4589004083356822745, guid: 755ae159ca3f99244824bcbea5da0d23, type: 3}

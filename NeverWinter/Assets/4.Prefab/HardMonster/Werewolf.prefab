@@ -799,21 +799,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b04a3cc236dd8d54da618a0f68f440d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: c8c73df6552e49543909d9b81d9e0d98, type: 2}
   EnemyName: Werewolf
   container: {fileID: 0}
   render: {fileID: 6669065150191216734}
   structure: 0
   movePoints: []
   Enemy_HP: 800
-  Max_Hp: 800
-  atk: 5
-  Enemy_move_Speed: 2.8
+  currentSpeed: 1
   Enemy_Spell: 
-  Reward: 55
   isEnemyDie: 0
   isEnd: 0
   animationInterval: 15
-  distance: 7
   skillcool: 1
   unitPrefab: {fileID: 0}
   Skilleffect: {fileID: 0}

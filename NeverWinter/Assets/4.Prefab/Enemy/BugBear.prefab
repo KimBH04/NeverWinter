@@ -951,17 +951,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b04a3cc236dd8d54da618a0f68f440d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 64ab055de03747546a539b35396e9fd9, type: 2}
   EnemyName: BugBear
+  container: {fileID: 0}
   render: {fileID: 0}
+  structure: 0
   movePoints: []
   Enemy_HP: 500
-  Max_Hp: 500
-  atk: 10
-  Enemy_move_Speed: 3
+  currentSpeed: 1
   Enemy_Spell: 
-  Reward: 50
   isEnemyDie: 0
   isEnd: 0
+  animationInterval: 90
+  skillcool: 1
+  unitPrefab: {fileID: 0}
+  Skilleffect: {fileID: 0}
+  animator: {fileID: 0}
 --- !u!136 &8885882865086797675
 CapsuleCollider:
   m_ObjectHideFlags: 0

@@ -759,17 +759,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b04a3cc236dd8d54da618a0f68f440d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 1c1f14bc7f31c9145b0abd76e37906d0, type: 2}
   EnemyName: BasicGoblin
+  container: {fileID: 0}
   render: {fileID: 0}
+  structure: 0
   movePoints: []
   Enemy_HP: 50
-  Max_Hp: 50
-  atk: 2
-  Enemy_move_Speed: 2.5
+  currentSpeed: 1
   Enemy_Spell: 
-  Reward: 30
   isEnemyDie: 0
   isEnd: 0
+  animationInterval: 90
+  skillcool: 1
+  unitPrefab: {fileID: 0}
+  Skilleffect: {fileID: 0}
+  animator: {fileID: 0}
 --- !u!95 &6595278948017443134
 Animator:
   serializedVersion: 5

@@ -1557,19 +1557,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b04a3cc236dd8d54da618a0f68f440d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 09941c0ee0eaccf408d52d5c030a8f1e, type: 2}
   EnemyName: ArcherGoblin
+  container: {fileID: 0}
   render: {fileID: 0}
   structure: 0
   movePoints: []
   Enemy_HP: 15
-  Max_Hp: 15
-  atk: 4
-  Enemy_move_Speed: 2.8
-  Enemy_Speed_Save: 0
+  currentSpeed: 1
   Enemy_Spell: 
-  Reward: 30
   isEnemyDie: 0
   isEnd: 0
+  animationInterval: 90
+  skillcool: 1
+  unitPrefab: {fileID: 0}
+  Skilleffect: {fileID: 0}
   animator: {fileID: 0}
 --- !u!136 &4286367590222170423
 CapsuleCollider:

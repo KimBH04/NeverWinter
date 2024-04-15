@@ -741,17 +741,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b04a3cc236dd8d54da618a0f68f440d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: ec1c1aee736f93249ad69d0c962a41ec, type: 2}
+  EnemyName: 
+  container: {fileID: 0}
   render: {fileID: 602465022151060635}
+  structure: 0
   movePoints: []
-  manager: {fileID: 0}
   Enemy_HP: 20
-  Max_Hp: 0
-  atk: 1
-  Enemy_move_Speed: 5
+  currentSpeed: 1
   Enemy_Spell: 
-  Reward: 10
   isEnemyDie: 0
   isEnd: 0
+  animationInterval: 90
+  skillcool: 1
+  unitPrefab: {fileID: 0}
+  Skilleffect: {fileID: 0}
+  animator: {fileID: 0}
 --- !u!54 &5142834387861282162
 Rigidbody:
   m_ObjectHideFlags: 0

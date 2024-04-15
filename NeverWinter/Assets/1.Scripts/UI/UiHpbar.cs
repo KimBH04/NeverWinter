@@ -34,7 +34,7 @@ public class UiHpbar : MonoBehaviour
         if (hpValue)
             hpValue.text = string.Format("{0}/{1}", Enemy.Enemy_HP, Enemy.Max_Hp);
         if (hpGauge)
-            hpGauge.fillAmount = (float)Enemy.Enemy_HP / (float)Enemy.Max_Hp;
+            hpGauge.fillAmount = Enemy.Enemy_HP / (float)Enemy.Max_Hp;
 
         if (Camera.main && Enemy)
         {

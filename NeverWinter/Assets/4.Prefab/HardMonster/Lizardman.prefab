@@ -735,21 +735,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b04a3cc236dd8d54da618a0f68f440d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 044562b617e26654085454f66f34eda3, type: 2}
   EnemyName: Lizardman
   container: {fileID: 0}
   render: {fileID: 3198901510721717096}
   structure: 0
   movePoints: []
   Enemy_HP: 700
-  Max_Hp: 700
-  atk: 4
-  Enemy_move_Speed: 2.7
+  currentSpeed: 1
   Enemy_Spell: 
-  Reward: 50
   isEnemyDie: 0
   isEnd: 0
   animationInterval: 15
-  distance: 7
   skillcool: 1
   unitPrefab: {fileID: 0}
   Skilleffect: {fileID: 0}

@@ -626,21 +626,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b04a3cc236dd8d54da618a0f68f440d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: b24d935a768df7f438fba8c5f6307f88, type: 2}
   EnemyName: Bear
   container: {fileID: 0}
   render: {fileID: 5362287072340751791}
   structure: 0
   movePoints: []
   Enemy_HP: 350
-  Max_Hp: 350
-  atk: 3
-  Enemy_move_Speed: 2.6
+  currentSpeed: 1
   Enemy_Spell: 
-  Reward: 45
   isEnemyDie: 0
   isEnd: 0
   animationInterval: 15
-  distance: 7
   skillcool: 1
   unitPrefab: {fileID: 0}
   Skilleffect: {fileID: 0}

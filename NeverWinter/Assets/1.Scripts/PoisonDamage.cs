@@ -17,7 +17,7 @@ public class PoisonDamage : MonoBehaviour
         if (other.CompareTag("Enemy"))
         {
             EnemyCtrl eneCon = other.GetComponent<EnemyCtrl>();
-            eneCon.Enemy_move_Speed *= speedNuff;
+            eneCon.currentSpeed = speedNuff;
             eneCon.animator.speed *= speedNuff;
 
             GameObject effect = Instantiate(poisonEffect, other.transform.position, Quaternion.Euler(-90f, 0f, 0), other.transform);
@@ -44,7 +44,7 @@ public class PoisonDamage : MonoBehaviour
         if (other.CompareTag("Enemy"))
         {
             EnemyCtrl eneCon = other.GetComponent<EnemyCtrl>();
-            eneCon.Enemy_move_Speed /= speedNuff;
+            eneCon.currentSpeed = speedNuff;
             eneCon.animator.speed /= speedNuff;
 
             deq:

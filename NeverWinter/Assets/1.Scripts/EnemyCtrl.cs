@@ -2,14 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.AI;
-
-
-
-// 메모장
 
 public class EnemyCtrl : MonoBehaviour
 {
+    public EnemyData data;
+
     public string EnemyName;
     public WayContainer container;
     private WayContainer Babyway;
@@ -22,16 +19,17 @@ public class EnemyCtrl : MonoBehaviour
     // 체력  #미완성#
    
     public float Enemy_HP;
-    public float Max_Hp;
-    public int atk;
+    public float Max_Hp => data.Hp;
+    public int atk => data.Atk;
     // 이동속도
-    public float Enemy_move_Speed;
+    public float currentSpeed = 1f;
+    public float Enemy_move_Speed => data.Speed * currentSpeed;
     
     //능력 #미완성#
     public string Enemy_Spell;
 
     // 현상금
-    public int Reward;
+    public int Reward => data.Reward;
     
     //적 사망여부 
     public bool isEnemyDie = false;
@@ -40,7 +38,7 @@ public class EnemyCtrl : MonoBehaviour
     //보스 스킬
     public float animationInterval = 90f;
     private float timer = 0f;
-    public float distance = 7.0f;
+    public float distance => data.Distance;
     public bool skillcool = true;
     public GameObject unitPrefab;
     public GameObject Skilleffect;
